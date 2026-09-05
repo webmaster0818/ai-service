@@ -1,0 +1,67 @@
+/* 配色は3色: 濃紺墨(ink) / 白(paper) / 深緑(accent)。
+   B2Bの発注検討で読まれるサイトなので、装飾より数字の可読性を優先する。 */
+:root {
+  --ink: #101418;
+  --ink-soft: #5b636c;
+  --paper: #ffffff;
+  --paper-2: #f7f8f7;
+  --accent: #10695e;
+  --line: #e2e5e3;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+  font-family: 'Zen Kaku Gothic New', system-ui, sans-serif;
+  line-height: 1.9; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+.num { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; }
+
+header.site { border-bottom: 1px solid var(--line); }
+header.site .inner { display: flex; align-items: baseline; gap: 22px; padding: 20px 24px; max-width: 980px; margin: 0 auto; flex-wrap: wrap; }
+header.site a.logo { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: .04em; text-decoration: none; }
+header.site nav { display: flex; gap: 16px; font-size: 13px; flex-wrap: wrap; }
+header.site nav a { text-decoration: none; color: var(--ink-soft); }
+header.site nav a:hover { color: var(--accent); }
+
+h1 { font-size: 29px; line-height: 1.5; margin: 0 0 18px; }
+h2 { font-size: 20px; margin: 60px 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+h3 { font-size: 16px; margin: 32px 0 10px; }
+p { margin: 0 0 16px; }
+
+.verdict { background: var(--paper-2); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 26px 28px; margin: 26px 0; }
+.verdict .tag { display: inline-block; font-size: 11px; letter-spacing: .16em; color: var(--accent); margin-bottom: 8px; }
+.verdict .headline { font-size: 19px; font-weight: 700; margin: 0 0 12px; line-height: 1.6; }
+
+/* 開示率のバー。数字だけだと比率が伝わらない */
+.bar { height: 10px; background: var(--line); margin: 8px 0 4px; }
+.bar > span { display: block; height: 100%; background: var(--accent); }
+
+table.data { width: 100%; border-collapse: collapse; font-size: 14px; margin: 18px 0; }
+table.data th, table.data td { border-bottom: 1px solid var(--line); padding: 12px 10px; text-align: left; vertical-align: top; }
+table.data th { color: var(--ink-soft); font-weight: 500; width: 36%; }
+table.data thead th { color: var(--ink); }
+
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); }
+.card { display: block; text-decoration: none; border: 1px solid var(--line); padding: 18px; background: var(--paper); }
+.card:hover { border-color: var(--accent); }
+.card .t { font-size: 15px; font-weight: 700; margin: 0 0 8px; line-height: 1.5; }
+.card .k { font-size: 12px; color: var(--ink-soft); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+.tags span, .tags a { font-size: 11px; border: 1px solid var(--line); padding: 3px 9px; color: var(--ink-soft); text-decoration: none; }
+.tags a:hover { border-color: var(--accent); color: var(--accent); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.chips a { font-size: 13px; text-decoration: none; border: 1px solid var(--line); padding: 8px 14px; }
+.chips a:hover { border-color: var(--accent); color: var(--accent); }
+
+.note { font-size: 12px; color: var(--ink-soft); line-height: 1.8; }
+.src { font-size: 12px; color: var(--ink-soft); margin-top: 10px; }
+.src a { color: var(--accent); }
+.unknown { color: var(--ink-soft); }
+.scroll-x { overflow-x: auto; }
+
+footer.site { margin-top: 84px; border-top: 1px solid var(--line); background: var(--paper-2); padding: 32px 0 54px; }
+@media (max-width: 600px) { h1 { font-size: 23px; } .wrap { padding: 0 18px; } }

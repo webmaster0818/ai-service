@@ -1,0 +1,1062 @@
+[
+ {
+  "name": "ナイル株式会社",
+  "officialUrl": "https://nyle.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "llmo": "https://nyle.co.jp/business/digital-marketing/",
+   "web-seisaku": "https://nyle.co.jp/business/digital-marketing/",
+   "dx-consul": "https://nyle.co.jp/business/digital-marketing/",
+   "naisei-shien": "https://nyle.co.jp/business/digital-marketing/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "支援実績2,000社",
+  "casesSource": "https://nyle.co.jp/business/digital-marketing/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Speee",
+  "officialUrl": "https://speee.jp/",
+  "categories": [
+   "dx-consul",
+   "aeo"
+  ],
+  "categorySource": {
+   "dx-consul": "https://speee.jp/service/",
+   "aeo": "https://speee.jp/contact/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://speee.jp/event/33248/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社CINC",
+  "officialUrl": "https://www.cinc-j.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "dx-consul",
+   "naisei-shien",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "aeo": "https://www.cinc-j.co.jp/",
+   "llmo": "https://www.cinc-j.co.jp/",
+   "dx-consul": "https://www.cinc-j.co.jp/service/analytics/geoconsulting",
+   "naisei-shien": "https://www.cinc-j.co.jp/service/analytics/geoconsulting",
+   "ai-kaihatsu": "https://www.cinc-j.co.jp/about/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "価格が異なるため、 お気軽にお問い合わせ",
+  "priceSource": "https://www.cinc-j.co.jp/analytics/seo/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.cinc-j.co.jp/service/analytics/geoconsulting",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社PLAN-B",
+  "officialUrl": "https://www.plan-b.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "llmo"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://www.plan-b.co.jp/",
+   "llmo": "https://www.plan-b.co.jp/terms/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "導入社数3,500社",
+  "casesSource": "https://www.plan-b.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ニュートラルワークス",
+  "officialUrl": "https://n-works.link/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "dx-consul",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://n-works.link/",
+   "web-seisaku": "https://n-works.link/",
+   "dx-consul": "https://n-works.link/",
+   "aeo": "https://n-works.link/llmo-construction"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://n-works.link/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "バクリ株式会社",
+  "officialUrl": "https://www.bakuri.co.jp/",
+  "categories": [
+   "llmo",
+   "naisei-shien",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://www.bakuri.co.jp/",
+   "naisei-shien": "https://www.bakuri.co.jp/",
+   "aeo": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "費用目安 月額 30万円",
+  "priceSource": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.bakuri.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "Queue株式会社",
+  "officialUrl": "https://queue-tech.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "ai-kaihatsu",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "aeo": "https://queue-tech.jp/",
+   "llmo": "https://queue-tech.jp/",
+   "ai-kaihatsu": "https://queue-tech.jp/",
+   "naisei-shien": "https://queue-tech.jp/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金・プラン 企業の規模や利用形態に応じた個別見積",
+  "priceSource": "https://queue-tech.jp/service",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://queue-tech.jp/chatgpt-ads",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社メディアエクシード",
+  "officialUrl": "https://mediaexceed.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "llmo",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://mediaexceed.co.jp/",
+   "llmo": "https://mediaexceed.co.jp/service/seo/",
+   "naisei-shien": "https://mediaexceed.co.jp/marketing/market_rates_for_negative_seo_services/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "料金プラン ミニマムプラン 月額 5,500 円",
+  "priceSource": "https://mediaexceed.co.jp/service/domain-server/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://mediaexceed.co.jp/service/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社WeBridge",
+  "officialUrl": "https://webridge.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://webridge.co.jp/",
+   "web-seisaku": "https://webridge.co.jp/",
+   "aeo": "https://webridge.co.jp/llmo-genius/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "費用は、月々9,800円",
+  "priceSource": "https://webridge.co.jp/service/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://webridge.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "アムール株式会社",
+  "officialUrl": "https://amour-inc.jp/",
+  "categories": [
+   "llmo"
+  ],
+  "categorySource": {
+   "llmo": "https://amour-inc.jp/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 2,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Hakuhodo DY ONE",
+  "officialUrl": "https://www.hakuhodody-one.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "llmo": "https://www.hakuhodody-one.co.jp/",
+   "web-seisaku": "https://www.hakuhodody-one.co.jp/service/",
+   "dx-consul": "https://www.hakuhodody-one.co.jp/service/",
+   "naisei-shien": "https://www.hakuhodody-one.co.jp/service/data_technology/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.hakuhodody-one.co.jp/service/transformation/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社メディアリーチ",
+  "officialUrl": "https://mediareach.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "naisei-shien",
+   "aeo",
+   "dx-consul",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "llmo": "https://mediareach.co.jp/",
+   "web-seisaku": "https://mediareach.co.jp/",
+   "naisei-shien": "https://mediareach.co.jp/",
+   "aeo": "https://mediareach.co.jp/seo-consulting/llmo-service",
+   "dx-consul": "https://mediareach.co.jp/case/seo-case-next-mar-cari",
+   "ai-kaihatsu": "https://mediareach.co.jp/case/seo-case-metatechno"
+  },
+  "priceDisclosed": true,
+  "priceNote": "月額 110,000円",
+  "priceSource": "https://mediareach.co.jp/seo-consulting/llmo-service",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://mediareach.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社divx",
+  "officialUrl": "https://divx.co.jp/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "dx-consul": "https://divx.co.jp/",
+   "ai-kaihatsu": "https://www.divx.co.jp/lp/gai-engine",
+   "web-seisaku": "https://www.divx.co.jp/4984858"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Vareal",
+  "officialUrl": "https://www.vareal.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.vareal.co.jp/",
+   "dx-consul": "https://www.vareal.co.jp/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "価格15万円",
+  "priceSource": "https://www.vareal.co.jp/works/kasyuu_ai-workshop/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.vareal.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "アーガイル株式会社",
+  "officialUrl": "https://argyle.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://argyle.jp/",
+   "dx-consul": "https://argyle.jp/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "費用と期間 受託開発の流れ お問い合わせ",
+  "priceSource": "https://ai-agent-developer.argyle.jp/",
+  "casesDisclosed": true,
+  "casesCount": "支援 支援実績500社",
+  "casesSource": "https://argyle.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ノーコード総合研究所",
+  "officialUrl": "https://nocoderi.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "naisei-shien",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://nocoderi.co.jp/",
+   "naisei-shien": "https://nocoderi.co.jp/",
+   "dx-consul": "https://nocoderi.co.jp/service/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "費用は100-500万円",
+  "priceSource": "https://nocoderi.co.jp/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://nocoderi.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "JAPAN AI株式会社",
+  "officialUrl": "https://japan-ai.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien",
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://japan-ai.co.jp/",
+   "dx-consul": "https://japan-ai.co.jp/",
+   "naisei-shien": "https://japan-ai.co.jp/agent/",
+   "aeo": "https://japan-ai.co.jp/chat/",
+   "llmo": "https://japan-ai.co.jp/marketing/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "費用はお問い合わせください お問い合わせ",
+  "priceSource": "https://japan-ai.co.jp/price/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://japan-ai.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社AI Market",
+  "officialUrl": "https://ai-market.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://ai-market.jp/",
+   "dx-consul": "https://ai-market.jp/",
+   "naisei-shien": "https://ai-market.jp/",
+   "llmo": "https://ai-market.jp/services/claude-mcp/",
+   "web-seisaku": "https://ai-market.jp/services/image_recognition_ai_company/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "実績 1,000社",
+  "casesSource": "https://ai-market.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社AVILEN",
+  "officialUrl": "https://avilen.co.jp/",
+  "categories": [
+   "dx-consul",
+   "naisei-shien",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://avilen.co.jp/",
+   "naisei-shien": "https://avilen.co.jp/",
+   "ai-kaihatsu": "https://avilen.co.jp/ai-cases/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://avilen.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社エクサウィザーズ",
+  "officialUrl": "https://exawizards.com/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "dx-consul": "https://exawizards.com/works/",
+   "ai-kaihatsu": "https://exawizards.com/exabase/assess-learning/training/",
+   "naisei-shien": "https://exawizards.com/business/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "Sakana AI株式会社",
+  "officialUrl": "https://sakana.ai/",
+  "categories": [
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://sakana.ai/rsi-lab/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金の詳細につきましては、営業チームにお問い合わせ",
+  "priceSource": "https://sakana.ai/fugu/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://sakana.ai/namazu/",
+  "pagesChecked": 11,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社AIdeaLab",
+  "officialUrl": "https://aidealab.com/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://aidealab.com/",
+   "dx-consul": "https://aidealab.com/casestudy/RhovjXuq",
+   "naisei-shien": "https://aidealab.com/technology/vertical_ai"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社エクスプラザ",
+  "officialUrl": "https://explaza.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://explaza.jp/",
+   "dx-consul": "https://partner.explaza.jp/genai-partner"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://partner.explaza.jp/genai-partner",
+  "pagesChecked": 14,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "アドマノ株式会社",
+  "officialUrl": "https://admano.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "aeo": "https://admano.co.jp/",
+   "llmo": "https://admano.co.jp/",
+   "web-seisaku": "https://admano.co.jp/",
+   "naisei-shien": "https://admano.co.jp/service/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://admano.co.jp/service/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社プリンシプル",
+  "officialUrl": "https://www.principle-c.com/",
+  "categories": [
+   "llmo",
+   "dx-consul",
+   "naisei-shien",
+   "aeo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "llmo": "https://www.principle-c.com/",
+   "dx-consul": "https://www.principle-c.com/",
+   "naisei-shien": "https://www.principle-c.com/",
+   "aeo": "https://www.principle-c.com/service/llmo/",
+   "web-seisaku": "https://www.principle-c.com/service/llmo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "価格 SEO + LLMOセット価格 初期調査/分析戦略策定：280万円",
+  "priceSource": "https://www.principle-c.com/service/llmo/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.principle-c.com/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ピボーテ",
+  "officialUrl": "https://pivo-te.co.jp/",
+  "categories": [
+   "llmo",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://pivo-te.co.jp/",
+   "aeo": "https://pivo-te.co.jp/feed"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ABEJA",
+  "officialUrl": "https://www.abejainc.com/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.abejainc.com/",
+   "ai-kaihatsu": "https://www.abejainc.com/platform-biz"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.abejainc.com/abejallmseries",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ブレインパッド",
+  "officialUrl": "https://www.brainpad.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.brainpad.co.jp/",
+   "dx-consul": "https://www.brainpad.co.jp/services/products/entertainment_solution/lynley/",
+   "naisei-shien": "https://www.brainpad.co.jp/services/professionals/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.brainpad.co.jp/case/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Laboro.AI",
+  "officialUrl": "https://laboro.ai/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://laboro.ai/",
+   "dx-consul": "https://laboro.ai/case/generative-ai-housing/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://laboro.ai/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Cogent Labs",
+  "officialUrl": "https://www.cogent.co.jp/",
+  "categories": [
+   "dx-consul"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.cogent.co.jp/about"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.cogent.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社アラヤ",
+  "officialUrl": "https://www.araya.org/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.araya.org/",
+   "dx-consul": "https://www.araya.org/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.araya.org/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "HACARUS株式会社",
+  "officialUrl": "https://hacarus.com/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://hacarus.com/case-study/tel/",
+   "ai-kaihatsu": "https://hacarus.com/ai-lab/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社オプティム",
+  "officialUrl": "https://www.optim.co.jp/",
+  "categories": [
+   "llmo",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "llmo": "https://www.optim.co.jp/",
+   "dx-consul": "https://www.optim.co.jp/construction/optim-geo-scan/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.optim.co.jp/construction/optim-geo-scan/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社ヘッドウォータース",
+  "officialUrl": "https://www.headwaters.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "naisei-shien",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.headwaters.co.jp/",
+   "naisei-shien": "https://www.headwaters.co.jp/",
+   "dx-consul": "https://www.headwaters.co.jp/service/ai_agent.html"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社FIXER",
+  "officialUrl": "https://fixer.co.jp/",
+  "categories": [
+   "dx-consul"
+  ],
+  "categorySource": {
+   "dx-consul": "https://fixer.co.jp/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "価格 320,000円",
+  "priceSource": "https://fixer.co.jp/service/course/",
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社AI Native",
+  "officialUrl": "https://www.ai-native.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.ai-native.jp/",
+   "dx-consul": "https://www.ai-native.jp/services",
+   "naisei-shien": "https://www.ai-native.jp/services/design-harness"
+  },
+  "priceDisclosed": true,
+  "priceNote": "料金プラン 企業規模・メディア規模に合わせて選べる3つのプラン ライトプラン 750,000 円",
+  "priceSource": "https://www.ai-native.jp/services/microcms-media",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.ai-native.jp/cases/asoview",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社Lightblue",
+  "officialUrl": "https://www.lightblue-tech.com/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.lightblue-tech.com/feed/",
+   "ai-kaihatsu": "https://www.lightblue-tech.com/llms.txt",
+   "naisei-shien": "https://www.lightblue-tech.com/llms.txt"
+  },
+  "priceDisclosed": true,
+  "priceNote": "月額 ／ 1ユーザー 1,500 円",
+  "priceSource": "https://www.lightblue-tech.com/lightblue/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.lightblue-tech.com/feed/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社neoAI",
+  "officialUrl": "https://neoai.jp/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://neoai.jp/",
+   "ai-kaihatsu": "https://neoai.jp/business"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金プランについて詳しく知りたい方 お問い合わせ",
+  "priceSource": "https://neoai.jp/neoaichat",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://neoai.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "ストックマーク株式会社",
+  "officialUrl": "https://stockmark.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://stockmark.co.jp/",
+   "dx-consul": "https://stockmark.co.jp/solution/ai-bpr/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://sat.stockmark.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "SpiralAI株式会社",
+  "officialUrl": "https://go-spiral.ai/",
+  "categories": [
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://go-spiral.ai/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社PKSHA Technology",
+  "officialUrl": "https://www.pkshatech.com/",
+  "categories": [
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.pkshatech.com/ai-solution/product/pksha-security/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "実績 創業から10年で2,000社",
+  "casesSource": "https://www.pkshatech.com/ai-solution/product/pksha-security/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "AI inside 株式会社",
+  "officialUrl": "https://inside.ai/",
+  "categories": [
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://inside.ai/about/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://inside.ai/cube",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社LANY",
+  "officialUrl": "https://www.lany.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "aeo": "https://www.lany.co.jp/",
+   "llmo": "https://www.lany.co.jp/",
+   "web-seisaku": "https://www.lany.co.jp/",
+   "naisei-shien": "https://www.lany.co.jp/service/digitalmarketing/seo-consulting"
+  },
+  "priceDisclosed": false,
+  "priceNote": "費用をご提示させていただきますので、お気軽にお問い合わせ",
+  "priceSource": "https://www.lany.co.jp/service/digitalmarketing/consulting",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.lany.co.jp/service/digitalmarketing/llmo",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "シースリーレーヴ株式会社",
+  "officialUrl": "https://www.c3reve.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.c3reve.co.jp/",
+   "dx-consul": "https://www.c3reve.co.jp/",
+   "web-seisaku": "https://www.c3reve.co.jp/contact"
+  },
+  "priceDisclosed": true,
+  "priceNote": "費用 400〜600万円",
+  "priceSource": "https://www.c3reve.co.jp/",
+  "casesDisclosed": true,
+  "casesCount": "実績・事例 200件",
+  "casesSource": "https://www.c3reve.co.jp/services/ai",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社LionAI",
+  "officialUrl": "https://www.lion-ai.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.lion-ai.co.jp/",
+   "dx-consul": "https://www.lion-ai.co.jp/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金を知りたい ▶︎ 今すぐ資料請求 ▶︎ お問い合わせ",
+  "priceSource": "https://www.lion-ai.co.jp/",
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 9,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "HEROZ株式会社",
+  "officialUrl": "https://heroz.co.jp/",
+  "categories": [
+   "dx-consul",
+   "naisei-shien",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://heroz.co.jp/",
+   "naisei-shien": "https://heroz.co.jp/service/bloomworks/",
+   "ai-kaihatsu": "https://heroz.co.jp/service/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "月額900円",
+  "priceSource": "https://heroz.co.jp/service/herozask/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://heroz.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社FRONTEO",
+  "officialUrl": "https://www.fronteo.com/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.fronteo.com/",
+   "dx-consul": "https://www.fronteo.com/",
+   "naisei-shien": "https://www.fronteo.com/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 4,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "株式会社イノーバ",
+  "officialUrl": "https://innova-jp.com/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku",
+   "naisei-shien",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "aeo": "https://innova-jp.com/",
+   "llmo": "https://innova-jp.com/",
+   "web-seisaku": "https://innova-jp.com/",
+   "naisei-shien": "https://innova-jp.com/",
+   "dx-consul": "https://innova-jp.com/download/p-service-ai-content-inhouse"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://innova-jp.com/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ },
+ {
+  "name": "TechSuite株式会社",
+  "officialUrl": "https://techsuite.co.jp/",
+  "categories": [
+   "dx-consul",
+   "llmo",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://techsuite.co.jp/",
+   "llmo": "https://techsuite.co.jp/business",
+   "ai-kaihatsu": "https://techsuite.co.jp/recruit-new-grads"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-08-14"
+ }
+]
