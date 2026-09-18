@@ -4,7 +4,7 @@ import path from 'node:path'
 
 const ROOT = process.cwd()
 const OUT = path.join(ROOT, 'out')
-const ORIGIN = 'https://ai-service-navi.com'
+const ORIGIN = 'https://to-x-ai.com'
 const all = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'service-facts.json'), 'utf-8'))
 const CATS = ['ai-kaihatsu','dx-consul','naisei-shien','llmo','aeo','web-seisaku']
 

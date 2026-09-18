@@ -1,4 +1,10 @@
-import { companies, disclosure, CATEGORIES, inCategory, specialists, slugOf } from '@/lib/data'
+import type { Metadata } from 'next'
+import { companies, disclosure, CATEGORIES, inCategory, specialists, slugOf, SITE } from '@/lib/data'
+
+// ⚠️ トップにも自己canonicalを置く。無いと pages.dev 側のURLが正規と判断されうる。
+export const metadata: Metadata = {
+  alternates: { canonical: `${SITE.origin}/` },
+}
 
 export default function Home() {
   const all = companies()

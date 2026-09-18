@@ -110,7 +110,7 @@ export function specialists(cat: string) {
 export const SITE = {
   name: 'AIサービス比較ナビ',
   // ⚠️ ドメインはMediaXAI側で取得中。確定後ここだけ差し替えれば canonical と sitemap が追随する。
-  origin: 'https://ai-service-navi.com',
+  origin: 'https://to-x-ai.com',
   description:
     'AI開発・DXコンサル・LLMO対策などを手がける企業を1社ずつ公式サイトで確認し、料金と実績の開示状況を横断集計しています。他社のおすすめ記事は情報源にしていません。',
 }
