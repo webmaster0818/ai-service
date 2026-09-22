@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { companies, findBySlug, slugOf, profileOf, CATEGORIES, labelOf, inCategory, SITE } from '@/lib/data'
+import { JsonLd, breadcrumb, companyLd } from '@/lib/seo'
 
 export function generateStaticParams() {
   return companies().map((c) => ({ slug: slugOf(c) }))
@@ -32,8 +33,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const cats = c.categories || []
   const isSpecialist = cats.length === 1
 
+  const ld = [
+    companyLd(c),
+    breadcrumb([
+      { name: 'トップ', url: '/' },
+      ...(cats[0] ? [{ name: labelOf(cats[0]), url: `/category/${cats[0]}/` }] : []),
+      { name: c.name, url: `/company/${slug}/` },
+    ]),
+  ]
+
   return (
     <article>
+      <JsonLd data={ld} />
       <p className="note" style={{ marginTop: 28 }}><a href="/">トップ</a> ／ {c.name}</p>
       <h1>{c.name}が公式サイトで掲げている領域</h1>
 

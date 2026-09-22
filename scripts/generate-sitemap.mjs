@@ -27,3 +27,12 @@ fs.writeFileSync(path.join(odir, 'ai-service-facts.csv'),
   cols.join(',') + '\n' + all.map(c => cols.map(k => esc(c[k])).join(',')).join('\n') + '\n')
 
 console.log(`sitemap ${urls.length} URL / opendata ${all.length}社 を out/ に書き出しました`)
+
+// 404 は not-found.tsx に metadata を書いても App Router では効かない（ルートlayoutの
+// 既定タイトルのまま＝トップと重複する）。noindex なので実害は無いが監査で毎回出るので直す。
+for (const f of ['404.html', '404/index.html']) {
+  const fp = path.join(OUT, f)
+  if (!fs.existsSync(fp)) continue
+  fs.writeFileSync(fp, fs.readFileSync(fp, 'utf8')
+    .replace(/<title>[^<]*<\/title>/, '<title>ページが見つかりません｜AIサービス比較ナビ</title>'))
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { companies, disclosure, CATEGORIES, inCategory, specialists, slugOf, SITE } from '@/lib/data'
+import { JsonLd, websiteLd, itemListLd } from '@/lib/seo'
 
 // ⚠️ トップにも自己canonicalを置く。無いと pages.dev 側のURLが正規と判断されうる。
 export const metadata: Metadata = {
@@ -12,8 +13,14 @@ export default function Home() {
   const cases = disclosure('casesDisclosed')
   const checked = all.map((c) => c.checkedAt).sort()
 
+  const ld = [
+    websiteLd(),
+    itemListLd('領域から探す', CATEGORIES.filter((c) => inCategory(c.slug).length > 0).map((c) => `/category/${c.slug}/`)),
+  ]
+
   return (
     <article>
+      <JsonLd data={ld} />
       <h1 style={{ marginTop: 44 }}>
         AIの発注先を、他社のおすすめ記事ではなく<br />公式サイトを1社ずつ見て比べる。
       </h1>

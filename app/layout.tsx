@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.origin),
   title: { default: `${SITE.name}｜AI開発・LLMO対策の発注先を1社ずつ確認して比較`, template: `%s｜${SITE.name}` },
   description: SITE.description,
+  // OGPは1枚を全ページ共通で使う。会社ごとに画像を作ると、他社のロゴや版面を
+  // 当サイトの成果物のように配ることになる。
+  openGraph: {
+    type: 'website',
+    siteName: SITE.name,
+    locale: 'ja_JP',
+    url: `${SITE.origin}/`,
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: SITE.name }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/og-image.png'] },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

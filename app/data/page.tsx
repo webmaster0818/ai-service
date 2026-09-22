@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { companies, disclosure, CATEGORIES, inCategory, specialists, SITE } from '@/lib/data'
+import { JsonLd, breadcrumb } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'AI関連企業49社の開示状況調査（データ公開）',
@@ -39,7 +40,7 @@ export default function Page() {
 
   return (
     <article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
+      <JsonLd data={[dataset, breadcrumb([{ name: 'トップ', url: '/' }, { name: '調査データの公開', url: '/data/' }])]} />
       <p className="note" style={{ marginTop: 28 }}><a href="/">トップ</a> ／ 調査データ</p>
       <h1>AI関連企業{all.length}社の開示状況調査</h1>
 

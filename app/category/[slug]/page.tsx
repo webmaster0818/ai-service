@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CATEGORIES, inCategory, specialists, slugOf, labelOf, SITE } from '@/lib/data'
+import { JsonLd, breadcrumb, itemListLd } from '@/lib/seo'
 
 export function generateStaticParams() {
   return CATEGORIES.filter((c) => inCategory(c.slug).length > 0).map((c) => ({ slug: c.slug }))
@@ -30,8 +31,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const priceJudged = rows.filter((x) => x.priceDisclosed !== null && x.priceDisclosed !== undefined).length
   const casesYes = rows.filter((x) => x.casesDisclosed === true).length
 
+  const ld = [
+    breadcrumb([{ name: 'トップ', url: '/' }, { name: c.label, url: `/category/${slug}/` }]),
+    itemListLd(`${c.label}を掲げている企業`, rows.map((x) => `/company/${slugOf(x)}/`)),
+  ]
+
   return (
     <article>
+      <JsonLd data={ld} />
       <p className="note" style={{ marginTop: 28 }}><a href="/">トップ</a> ／ {c.label}</p>
       <h1>{c.label}を掲げている企業{rows.length}社</h1>
 
