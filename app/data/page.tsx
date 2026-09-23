@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { companies, disclosure, CATEGORIES, inCategory, specialists, SITE } from '@/lib/data'
+import { companies, disclosure, CATEGORIES, inCategory, specialists, focused, FOCUS_MAX, SITE } from '@/lib/data'
 import { JsonLd, breadcrumb } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ export default function Page() {
       <h2>領域別の内訳</h2>
       <div className="scroll-x">
         <table className="data">
-          <thead><tr><th style={{ width: '30%' }}>領域</th><th>掲げている</th><th>うち専業</th><th>料金公開</th><th>実績公開</th></tr></thead>
+          <thead><tr><th style={{ width: '30%' }}>領域</th><th>掲げている</th><th>うち3領域以内</th><th>うち専業</th><th>料金公開</th><th>実績公開</th></tr></thead>
           <tbody>
             {CATEGORIES.map((c) => {
               const rows = inCategory(c.slug)
@@ -64,6 +64,7 @@ export default function Page() {
                 <tr key={c.slug}>
                   <td><a href={`/category/${c.slug}/`}>{c.label}</a></td>
                   <td className="num">{rows.length}社</td>
+                  <td className="num">{focused(c.slug).length}社</td>
                   <td className="num">{specialists(c.slug).length}社</td>
                   <td className="num">{rows.filter((x) => x.priceDisclosed === true).length}社</td>
                   <td className="num">{rows.filter((x) => x.casesDisclosed === true).length}社</td>

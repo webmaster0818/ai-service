@@ -6,10 +6,16 @@ const ROOT = process.cwd()
 const OUT = path.join(ROOT, 'out')
 const ORIGIN = 'https://to-x-ai.com'
 const all = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'service-facts.json'), 'utf-8'))
-const CATS = ['ai-kaihatsu','dx-consul','naisei-shien','llmo','aeo','web-seisaku']
+// ⚠️ 領域一覧をここに二重で持つと、増やしたときに sitemap から漏れる
+//    （2026-09-23に8領域足したとき、実際に8本漏れた）。lib/data.ts から読む。
+const CATS = [...fs.readFileSync(path.join(ROOT, 'lib', 'data.ts'), 'utf-8')
+  .matchAll(/\{\s*slug:\s*'([a-z0-9-]+)',\s*label:/g)].map((m) => m[1])
+if (CATS.length < 6) throw new Error('lib/data.ts から領域を読めませんでした')
+// 実際に会社が1社もいない領域はページが生成されないので、sitemapにも入れない
+const has = (c) => all.some((x) => (x.categories || []).includes(c))
 
 const slugOf = (c) => { try { return new URL(c.officialUrl).hostname.replace(/^www\./,'').split('.')[0].toLowerCase() } catch { return c.name } }
-const urls = ['/', '/data/', ...CATS.map(c => `/category/${c}/`), ...all.map(c => `/company/${slugOf(c)}/`)]
+const urls = ['/', '/data/', ...CATS.filter(has).map(c => `/category/${c}/`), ...all.map(c => `/company/${slugOf(c)}/`)]
 const today = all.map(c => c.checkedAt).sort().pop()
 
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'),

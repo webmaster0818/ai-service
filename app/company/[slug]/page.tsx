@@ -11,10 +11,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const c = findBySlug(slug)
   if (!c) return {}
-  const cats = (c.categories || []).map(labelOf).join('・')
+  const cs = c.categories || []
+  const cats = cs.map(labelOf).join('・')
   return {
     title: `${c.name}が公式サイトで掲げている領域と開示状況`,
-    description: `${c.name}が公式サイトで掲げているのは${cats}です。料金の公開状況・実績の公開状況を、確認日と出典URLつきで掲載しています。`,
+    // ⚠️ 領域を14に増やしたら、全部並べる書き方では説明文が120字を超えた（17社）。
+    //    数と代表的な3つまでにして、残りは件数で示す。
+    description: cs.length > 3
+      ? `${c.name}が公式サイトで掲げているのは${cs.slice(0, 3).map(labelOf).join('・')}ほか計${cs.length}領域です。料金と実績の公開状況を、確認日と出典URLつきで掲載しています。`
+      : `${c.name}が公式サイトで掲げているのは${cats}です。料金と実績の公開状況を、確認日と出典URLつきで掲載しています。`,
     alternates: { canonical: `${SITE.origin}/company/${slug}/` },
   }
 }

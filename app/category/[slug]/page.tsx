@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { CATEGORIES, inCategory, specialists, slugOf, labelOf, SITE } from '@/lib/data'
+import { CATEGORIES, inCategory, focused, FOCUS_MAX, slugOf, labelOf, SITE } from '@/lib/data'
 import { JsonLd, breadcrumb, itemListLd } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const rows = inCategory(slug)
   return {
     title: `${c.label}を掲げている企業${rows.length}社の開示状況`,
-    description: `${c.label}を公式サイトで掲げている${rows.length}社について、料金と実績の公開状況を1社ずつ確認しました。うち${specialists(slug).length}社はこの領域だけを掲げています。`,
+    description: `${c.label}を公式サイトで掲げている${rows.length}社について、料金と実績の公開状況を1社ずつ確認しました。うち${focused(slug).length}社は掲げている領域を${FOCUS_MAX}つ以内に絞っています。`,
     alternates: { canonical: `${SITE.origin}/category/${slug}/` },
   }
 }
@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const rows = inCategory(slug)
   if (!rows.length) notFound()
 
-  const sp = specialists(slug)
+  const sp = focused(slug)
   const priceYes = rows.filter((x) => x.priceDisclosed === true).length
   const priceJudged = rows.filter((x) => x.priceDisclosed !== null && x.priceDisclosed !== undefined).length
   const casesYes = rows.filter((x) => x.casesDisclosed === true).length
@@ -45,12 +45,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div className="verdict">
         <div className="tag">まず結論</div>
         <p className="headline">
-          {rows.length}社のうち、{c.label}<strong>だけ</strong>を掲げているのは<span className="num">{sp.length}</span>社です。
+          {rows.length}社のうち、掲げている領域を<strong>{FOCUS_MAX}つ以内</strong>に絞っているのは<span className="num">{sp.length}</span>社です。
         </p>
         <p style={{ margin: 0 }}>
           {sp.length === 0
-            ? `この領域を専業として掲げている会社は、当サイトの調査範囲にはありませんでした。つまり${c.label}は、既存事業に足したメニューとして提供されているのが実情です。`
-            : `残る${rows.length - sp.length}社は、他の領域と併せて${c.label}を提供しています。${c.label}を専門にしている会社なのか、既存事業に足したメニューなのかは、発注前に確認する価値があります。`}
+            ? `${c.label}を掲げている会社は全社、他にも多くの領域を掲げていました。つまり${c.label}は単体の商売ではなく、既存事業に足したメニューとして提供されているのが実情です。`
+            : `残る${rows.length - sp.length}社は、これを含めて4つ以上の領域を掲げています。${c.label}に絞っている会社なのか、メニューの1つなのかは、発注前に確認する価値があります。`}
         </p>
       </div>
 
@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
       {sp.length > 0 && (
         <>
-          <h2>{c.label}だけを掲げている会社</h2>
+          <h2>{c.label}を含めて{FOCUS_MAX}領域以内に絞っている会社</h2>
           <div className="grid">
             {sp.map((x) => (
               <a className="card" key={x.officialUrl} href={`/company/${slugOf(x)}/`}>

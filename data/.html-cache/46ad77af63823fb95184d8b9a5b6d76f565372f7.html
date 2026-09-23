@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ai-agent-developer.argyle.jp/">
+<!-- ファビコン -->
+<link rel="icon" href="img/favicon.ico">
+<!-- スマホ用アイコン -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<title>AIエージェント開発会社（生成AI活用システム・LLMで業務自動化・各種データベースのAPI連携、PoCの受託開発）ならアーガイル</title>
+<meta name="description" content="業務タスクを自動処理する、法人向けAIエージェントを受託開発する開発会社です。産総研様、ドワンゴ学園様ほか、生成AIを活用した各種エージェントやシステムの設計・開発・運用実績も多数。" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<!-- OGP設定 -->
+<meta property="og:title" content="AIエージェント開発会社（生成AI活用システム・LLMで業務自動化・各種データベースのAPI連携、PoCの受託開発）ならアーガイル" />
+<meta property="og:type" content="website" /> <!--またはwebsite, blog-->
+<meta property="og:url" content="https://ai-agent-developer.argyle.jp/" />
+<meta property="og:image" content="https://ai-agent-developer.argyle.jp/img/ogp.jpg" />
+<meta property="og:site_name" content="AIエージェント開発会社（生成AI活用システム・LLMで業務自動化・各種データベースのAPI連携、PoCの受託開発）ならアーガイル" />
+<meta property="og:description" content="業務タスクを自動処理する、法人向けAIエージェントを受託開発する開発会社です。産総研様、ドワンゴ学園様ほか、生成AIを活用した各種エージェントやシステムの設計・開発・運用実績も多数。" />
+<!-- TwitterCards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="BJksqTh4dGtL0HX5e21LU-LaTajV_Lwg776DJpIVQ2E" />
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-947414782"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-947414782', {'allow_enhanced_conversions':true});
+</script>
+<!-- yahoo計測タグ（ジェネラルタグ） -->
+<script async src="https://s.yimg.jp/images/listing/tool/cv/ytag.js"></script>
+<script>
+window.yjDataLayer = window.yjDataLayer || [];
+function ytag() { yjDataLayer.push(arguments); }
+ytag({"type":"ycl_cookie", "config":{"ycl_use_non_cookie_storage":true}});
+</script>
+<!-- Bing計測タグ -->
+<script> (function(w,d,t,r,u) { var f,n,i; w[u]=w[u]||[],f=function() { var o={ti:"97151202", enableAutoSpaTracking: true}; o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad") }, n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function() { var s=this.readyState; s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null) }, i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i) }) (window,document,"script","//bat.bing.com/bat.js","uetq"); </script>
+<!-- Google tag (gtag.js)アナリティクス -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H80WMD93KE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H80WMD93KE');
+</script>
+<!-- slick -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- fontawesome -->
+<link rel="stylesheet" href="css/all.min.css">
+<!-- Bootstrap_スタイル -->
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/icomoon.css">
+<link rel="stylesheet" href="css/style.css" media="all" />
+<!-- googleフォント -->
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oxygen:700,400" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.css"/>
+<!-- aos -->
+<link rel="stylesheet" href="css/aos.css">
+<script src="js/aos.js" defer></script>
+<!-- フッターの日付表示 -->
+<script language="JavaScript" type="text/javascript">
+function year() {  var data = new Date();  var now_year = data.getFullYear();  document.write(now_year);  }
+</script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+	// #で始まるアンカーをクリックした場合に処理
+		var headerHight = 100; //ヘッダの高さ
+		$('a[href^=#]' + 'a:not("#myTabs .nav-link")' + 'a:not(".carousel-control-prev")' + 'a:not(".carousel-control-next")' + 'a:not(".nav-tabs")').click(function() {
+		// スクロールの速度
+			var speed = 400; // ミリ秒
+		// アンカーの値取得
+			var href= $(this).attr("href");
+		// 移動先を取得
+			var target = $(href == "#" || href == "" ? 'html' : href);
+		// 移動先を数値で取得
+			var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
+		// スムーススクロール
+			$('body,html').animate({scrollTop:position}, speed, 'swing');
+			return false;
+		});
+	});
+</script>
+<script>
+	$(document).ready(function() {
+		AOS.init();
+	});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://argyle.jp/#org",
+      "name": "アーガイル株式会社",
+      "url": "https://argyle.jp/",
+      "logo": "https://argyle.jp/wp-content/uploads/logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "url": "https://ai-agent-developer.argyle.jp/#contact",
+          "availableLanguage": ["ja"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://argyle.jp/contact/",
+          "availableLanguage": ["ja"]
+        }
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://ai-agent-developer.argyle.jp/#webpage",
+      "url": "https://ai-agent-developer.argyle.jp/",
+      "name": "AIエージェント受託開発",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://ai-agent-developer.argyle.jp/#website",
+        "url": "https://ai-agent-developer.argyle.jp/",
+        "name": "AIエージェント受託開発（アーガイル株式会社）",
+        "inLanguage": "ja",
+        "publisher": { "@id": "https://argyle.jp/#org" }
+      },
+      "about": { "@id": "https://ai-agent-developer.argyle.jp/#service" },
+      "publisher": { "@id": "https://argyle.jp/#org" }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://ai-agent-developer.argyle.jp/#service",
+      "name": "AIエージェント受託開発",
+      "url": "https://ai-agent-developer.argyle.jp/",
+      "provider": { "@id": "https://argyle.jp/#org" },
+      "audience": { "@type": "BusinessAudience", "audienceType": "法人・官公庁・団体" },
+      "areaServed": "JP",
+      "serviceType": [
+        "AIエージェント開発",
+        "生成AI受託開発",
+        "外部データ連携システム開発",
+        "PoC支援"
+      ],
+      "description": "環境情報（センサや外部DB等）を自律的に取得・認識し、目標に応じてタスク分解・計画・実行を行うAIエージェントの受託開発。単体/マルチエージェント連携、PoCから本番開発・保守運用まで対応。",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://ai-agent-developer.argyle.jp/#contact",
+        "availableLanguage": ["ja"]
+      },
+      "hasOfferCatalog": { "@id": "https://ai-agent-developer.argyle.jp/#catalog" },
+      "featureList": [
+        "タスクの切り分け（分解）とプランニング",
+        "外部データベース/API/センサ連携による情報取得・認識",
+        "単体エージェント/マルチエージェント連携設計",
+        "業務実行と結果評価（フィードバック）ループ設計",
+        "PoC（概念検証・実証実験）設計・実装",
+        "本番開発・保守運用まで一気通貫対応",
+        "官公庁・IT・製造・エンタメ等の開発実績に基づく提案"
+      ]
+    },
+
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://ai-agent-developer.argyle.jp/#catalog",
+      "name": "提供メニュー",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "@id": "https://ai-agent-developer.argyle.jp/#offer-idea",
+          "name": "企画・設計相談（要件整理/アイデア具体化）",
+          "itemOffered": { "@id": "https://ai-agent-developer.argyle.jp/#service" },
+          "availability": "https://schema.org/InStock",
+          "url": "https://ai-agent-developer.argyle.jp/#contact"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://ai-agent-developer.argyle.jp/#offer-poc",
+          "name": "PoC（概念検証・実証実験）",
+          "itemOffered": { "@id": "https://ai-agent-developer.argyle.jp/#service" },
+          "availability": "https://schema.org/InStock",
+          "url": "https://ai-agent-developer.argyle.jp/#contact"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://ai-agent-developer.argyle.jp/#offer-dev",
+          "name": "本番開発（AIエージェント/連携システム）",
+          "itemOffered": { "@id": "https://ai-agent-developer.argyle.jp/#service" },
+          "availability": "https://schema.org/InStock",
+          "url": "https://ai-agent-developer.argyle.jp/#contact"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://ai-agent-developer.argyle.jp/#offer-ops",
+          "name": "保守・運用",
+          "itemOffered": { "@id": "https://ai-agent-developer.argyle.jp/#service" },
+          "availability": "https://schema.org/InStock",
+          "url": "https://ai-agent-developer.argyle.jp/#contact"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://ai-agent-developer.argyle.jp/#faq",
+      "isPartOf": { "@id": "https://ai-agent-developer.argyle.jp/#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "AIエージェントは開発できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。AI エージェントの開発が可能です。具体的には、環境情報（センサや外部データベース連携）を自律的に取得・認識し、ユーザーの目標に応じてタスクの切り分けとプランニングを行います。その後、必要に応じて複数のエージェント同士で連携しながら業務を遂行し、結果の評価とフィードバック学習を繰り返すことで、システム全体の最適化を続けます。これらの機能を統合した AI エージェントや部分的な機能の開発実績も多数ございますので、ぜひご相談ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "お見積りは出せますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。開発仕様についてヒアリングした上で、工数（期間、費用）をお見積りします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "アイデアだけでも相談できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。企画、設計のサポートから、まるごと請け負うこともできます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ChatGPTや生成AI関連のサービス開発実績はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、2022年12月から開発を開始しており、官公庁、ITサービス、製造業、エンタメ企業などの各分野で多数の受託開発実績がございます。サイトにて実名公開可能な顧客事例は多くありませんが、お打ち合わせにて、一部内容をご紹介できます。ChatGPT連携の自社サービス（BtoB、BtoC）開発と運用の実績もございます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PoC（概念検証、実証実験）のプロジェクトもお願いできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。ゼロベースでの生成AI活用システム設計、テストプロンプトの作成とチューニングなどを、非常に得意としています。テスト後の本番開発や保守運用までシームレスに対応できます。PoCのご発注は、こちらから。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+	<div class="loading">
+		<img class="loading__logo" src="img/logo_argyle.png" alt="アーガイル株式会社">
+	</div>
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand m-auto" href="https://ai-agent-developer.argyle.jp/">
+				<picture>
+					<source type="image/webp" srcset="img/logo_argyle.webp" width="180" height="45">
+					<img src="img/logo_argyle.png" class="d-block m-auto" alt="AIアシスタント with ChatGPT / Gemini / Claude" width="180" height="45">
+				</picture>
+			</a>
+			<div class="d-flex navbar-collapse justify-content-center justify-content-lg-end" id="navbarSupportedContent">
+				<ul class="navbar-nav d-flex justify-content-between justify-content-lg-between align-items-center flex-row text-center m-md-auto m-lg-0">
+					<li class="nav-item font-weight-bold"><a class="nav-link" href="#work">受託開発実績</a></li>
+					<li class="nav-item font-weight-bold"><a class="nav-link" href="#prize">費用と期間</a></li>
+					<li class="nav-item font-weight-bold"><a class="nav-link" href="#flow">受託開発の流れ</a></li>
+					<li class="nav-item bg_maincolor px-sm-2 px-1 contact_button"><a class="nav-link text-white" href="#contact" target="_blank"><i class="far fa-envelope"></i> お問い合わせ</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="particles-js"></div>
+	<div id="wrapper">
+	<section id="firstview" class="firstview pb-0">
+		<div id="mainvisual" class="jumbotron mb-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 justify-content-center align-items-center">
+						<div class="firstview_box d-flex flex-column h-100 justify-content-center text-center">
+							<h1 class="mb-4">
+								AIエージェント開発会社<br>
+								（生成AI活用システム・LLMで業務自動化・<br>
+								各種データベースのAPI連携、PoC）<br>
+								ならアーガイル
+							</h1>
+							<a href="#contact" class="mx-auto py-2 bg_maincolor"><i class="fa-solid fa-envelope"></i> お問い合わせはこちら</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="bg_maincolor">
+		<section id="intro" class="intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 mx-auto">
+						<h3 class="font-weight-bold mb-0 text-white">生成AIを活用したAIエージェント、社内システム、SaaS、アプリなどの設計から開発、インフラ実装や保守管理まで、受託開発を請け負います。<br>
+						BtoB、BtoCの商用サービスの開発も、既存サービスや社内業務システム、自社データとの連携も、幅広くご相談ください。</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+<!--シェアボタン-->
+	<div class="contents_field">
+	<section id="sns_share_button" class="sns_share_button">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mx-auto">
+					<div class="sns_share">
+						<div class="sns_share_title">シェアする</div>
+						<a href="https://twitter.com/share?url=https%3A%2F%2Fai-agent-developer.argyle.jp%2F&text=AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E5%8F%97%E8%A8%97%E9%96%8B%E7%99%BA%EF%BC%88%E7%94%9F%E6%88%90AI%E6%B4%BB%E7%94%A8%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%BBLLM%E3%81%A7%E6%A5%AD%E5%8B%99%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E5%90%84%E7%A8%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AEAPI%E9%80%A3%E6%90%BA%E3%80%81PoC%EF%BC%89%E3%81%AA%E3%82%89%E3%82%A2%E3%83%BC%E3%82%AC%E3%82%A4%E3%83%AB" target="_blank"><span class="icon-twitter"></span></a>
+						<a href="http://www.facebook.com/sharer.php?u=https://ai-agent-developer.argyle.jp/" target="_blank"><span class="icon-facebook"></span></a>
+						<a href="http://line.me/R/msg/text/?AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E5%8F%97%E8%A8%97%E9%96%8B%E7%99%BA%EF%BC%88%E7%94%9F%E6%88%90AI%E6%B4%BB%E7%94%A8%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%BBLLM%E3%81%A7%E6%A5%AD%E5%8B%99%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E5%90%84%E7%A8%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AEAPI%E9%80%A3%E6%90%BA%E3%80%81PoC%EF%BC%89%E3%81%AA%E3%82%89%E3%82%A2%E3%83%BC%E3%82%AC%E3%82%A4%E3%83%AB%0D%0Ahttps%3A%2F%2Fai-agent-developer.argyle.jp%2F" target="_blank"><span class="icon-line"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--シェアボタン-->
+<!--導入企業-->
+	<section id="company" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-8 col-md-6 col-sm-8 col-12 text-center mx-auto">
+					<h2>会社概要</h2>
+				</div>
+			</div>
+			<div class="row mb-4 mt-2">
+				<div class="col-12 text-left mx-auto argyle_intro">
+					<div class="d-flex align-items-center mb-sm-5 mb-4 justify-content-around">
+						<div class="mb-4 mb-sm-0">
+							<picture>
+								<source type="image/webp" srcset="img/logo_argyle.webp" width="275" height="68">
+								<img src="img/logo_argyle.png" class="w-100 mx-auto" alt="アーガイル株式会社" width="275" height="68">
+							</picture>
+						</div>
+						<div class="font-weight-bold">
+							<p class="mb-2"><span class="font-weight-bold">電気通信事業法に基づく電気通信事業届出事業者</span>　A-30-16580</p>
+							<p class="mb-2"><span class="font-weight-bold">全省庁統一資格</span>　業者コード：0000216251　令和7年度〜9年度</p>
+							<p class="mb-0">※情報処理、ソフトウェア開発、調査研究、広告宣伝など</p>
+						</div>
+					</div>
+					<h3 class="font-weight-bold text-sm-center text-left mb-2">アーガイルは、2009年よりビッグデータの分析、自然言語解析、機械学習、AI連携のサービスを開発して来た、言語モデル活用のパイオニアです。<a href="https://chatgpt-api-developper.argyle.jp/" target="_blank">ChatGPTを中心にLLM活用の受託開発</a>、<a href="https://ai-uranai.jp/" target="_blank">AI活用サービス運営</a>でも、多数の実績がございます。</h3>
+					<p class="text-center mb-0"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h4 class="font-weight-bold d-flex align-items-center justify-content-center text-center mb-0">システム受託開発、<br class="sp_320">API連携システム導入<br class="sp_320">のご支援実績</h4>
+					<p class="text-center mb-0 caption">（実績の一部。順不同）</p>
+				</div>
+			</div>
+			<div class="row justify-content-center mb-sm-5 mb-4">
+				<div class="col-12">
+					<div class="row justify-content-center align-items-center">
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_wowow.webp" width="130" height="68">
+								<img src="img/logo_wowow.png" alt="WOWOW様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_fuji.webp" width="130" height="68">
+								<img src="img/logo_fuji.png" alt="富士急行様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_daiwa.webp" width="130" height="68">
+								<img src="img/logo_daiwa.png" alt="大和証券様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_jcb.webp" width="130" height="68">
+								<img src="img/logo_jcb.png" alt="JCB様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_king-records.webp" width="130" height="68">
+								<img src="img/logo_king-records.png" alt="キングレコード様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_kadokawadwango.webp" width="130" height="68">
+								<img src="img/logo_kadokawadwango.png" alt="角川ドワンゴ学園様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_bookoff.webp" width="130" height="68">
+								<img src="img/logo_bookoff.png" alt="ブックオフ様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_sanrio.webp" width="130" height="68">
+								<img src="img/logo_sanrio.png" alt="サンリオ様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_kagome.webp" width="130" height="68">
+								<img src="img/logo_kagome.png" alt="カゴメ様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_kanro.webp" width="130" height="68">
+								<img src="img/logo_kanro.png" alt="カンロ様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_united-cinemas.webp" width="130" height="68">
+								<img src="img/logo_united-cinemas.png" alt="ユナイテッドシネマ様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_lalaport.webp" width="130" height="68">
+								<img src="img/logo_lalaport.png" alt="ララポート様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_tyusyoukigyou.webp" width="130" height="68">
+								<img src="img/logo_tyusyoukigyou.png" alt="中小企業庁様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_noevir.webp" width="130" height="68">
+								<img src="img/logo_noevir.png" alt="常盤薬品様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_seijogakuen.webp" width="130" height="68">
+								<img src="img/logo_seijogakuen.png" alt="成城学園様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_stellaseed.webp" width="130" height="68">
+								<img src="img/logo_stellaseed.png" alt="ステラシード様" width="130" height="68">
+							</picture>
+						</div>
+						<div class="col-lg-15 col-md-2 col-4 mt-2 text-center">
+							<picture>
+								<source type="image/webp" srcset="img/logo_trigger.webp" width="130" height="68">
+								<img src="img/logo_trigger.png" alt="トリガー様" width="130" height="68">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--導入企業-->
+<!--開発事例-->
+	<section id="work" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-4 col-md-6 col-sm-8 col-12 text-center mx-auto">
+					<h2>受託開発実績</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 mb-4 text-center mx-auto">
+					<p class="mb-0">弊社受託開発事例を一部ご紹介いたします。</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 mx-auto">
+					<div class="row">
+						<div id="carouselExampleControls" class="carousel slide col-12 m-auto" data-ride="carousel">
+						<!-- スライドさせる画像の設定 -->
+							<div class="contents_box py-4 m-auto container">
+								<div class="row m-auto carousel-inner">
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">各業界の企業様と共に、Q&Aチャットポット、レコメンドツール開発</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img05_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img05_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img05.webp" width="345" height="183">
+												<img src="img/work_img05.png" class="mx-auto mb-lg-0 mb-3" alt="チャットボット" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="case_company d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">各業界の企業様と共に、Q&Aチャットポット、レコメンドツール開発</h3>
+												<p>各種の生成AI、LLMを利用し、高度な受け答えや業務遂行のできるエージェントの設計・開発、運用・保守を多数請け負っております。</p>
+												<a href="https://chatgpt-api-developper.argyle.jp/chatbot/" class="text-white bg_maincolor text-center py-3 d-block align-content-end" target="_blank">サービス詳細を見る</a>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item active align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">弊社開発事例「AI占い by チャットGPT - 日本初の本格AI占い」</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img01_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img01_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img01.webp" width="345" height="183">
+												<img src="img/work_img01.png" class="mx-auto mb-lg-0 mb-3" alt="弊社開発事例「AI占い by チャットGPT - 日本初の本格AI占い」" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">弊社開発事例「AI占い by チャットGPT - 日本初の本格AI占い」</h3>
+												<p>実在の占い師のアルゴリズムを反映させた、日本初の「AI占い」を自社サービス展開しています（Google検索1位）。このサービスのOEM提供なども行っています。</p>
+												<a href="https://ai-uranai.jp/" class="text-white bg_maincolor text-center py-3 d-block align-content-end" target="_blank">実際のページを見る</a>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">2024年度 「AI入学式」全ての生成AIコンテンツを監修・開発</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img02_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img02_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img02.webp" width="345" height="183">
+												<img src="img/work_img02.png" class="mx-auto mb-lg-0 mb-3" alt="2024年度 「AI入学式」全ての生成AIコンテンツを監修・開発" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">2024年度 「AI入学式」全ての生成AIコンテンツを監修・開発</h3>
+												<p>校長先生の人格・声・顔などをコピーしたAIアバターモデルを作成。1万人の生徒向けに個別の入学式の挨拶をリアルタイムに自動生成、配信しました。</p>
+												<a href="https://nnn.ed.jp/lp/entrance_ceremony_2024/" class="text-white bg_maincolor text-center py-3 d-block align-content-end" target="_blank">実際のページを見る</a>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">弁護土ベンチャー企業様と共に、ロボット弁護士サービスを開発</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img03_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img03_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img03.webp" width="345" height="183">
+												<img src="img/work_img03.png" class="mx-auto mb-lg-0 mb-3" alt="弁護土ベンチャー企業様と共に、ロボット弁護士サービスを開発" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">弁護土ベンチャー企業様と共に、ロボット弁護士サービスを開発</h3>
+												<p class="mb-0">様々な分野の法律相談に精度の高い回答を返す、エージェント型のロボット弁護士を共同開発いたしました。</p>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">ゲーム開発会社様と共に、キャラクターAIや対話型ゲームを開発</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img04_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img04_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img04.webp" width="345" height="183">
+												<img src="img/work_img04.png" class="mx-auto mb-lg-0 mb-3" alt="ゲーム開発会社様と共に、キャラクターAIや対話型ゲームを開発" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">ゲーム開発会社様と共に、キャラクターAIや対話型ゲームを開発</h3>
+												<p class="mb-0">オンラインゲーム内で自律稼働する、キャラクターAIエージェントを開発しました。</p>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">東京都市大学様と共に、音声対話型のAI英会話学習システムの企画・開発</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img06_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img06_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img06.webp" width="345" height="183">
+												<img src="img/work_img06.png" class="mx-auto mb-lg-0 mb-3" alt="東京都市大学様" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">東京都市大学様と共に、音声対話型のAI英会話学習システムの企画・開発</h3>
+												<p class="mb-0">AIが個々の英語の理解力を判定し、改善点を提示していく学習システムを開発しました。</p>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								<!-- /.carousel-item -->
+									<div class="carousel-item align-items-center">
+										<div class="col-lg-6">
+											<h3 class="sp font-weight-bold mb-4">大手ブランド企業様の、生成AI活用SNSキャンベーンの企画・制作</h3>
+											<picture>
+												<source type="image/webp" srcset="img/work_img07_sp.webp" media="(max-width: 480px)" width="390" height="205">
+												<source type="image/webp" srcset="img/work_img07_ipad.webp" media="(max-width: 768px)" width="630" height="331">
+												<source type="image/webp" srcset="img/work_img07.webp" width="345" height="183">
+												<img src="img/work_img07.png" class="mx-auto mb-lg-0 mb-3" alt="大手ブランド企業様の、生成AI活用SNSキャンベーンの企画・制作" width="345" height="183">
+											</picture>
+										</div>
+										<div class="col-lg-6">
+											<div class="d-flex flex-column h-100 justify-content-between">
+												<h3 class="pc font-weight-bold mb-4">大手ブランド企業様の、生成AI活用SNSキャンベーンの企画・制作</h3>
+												<p class="mb-0">キャラクター型AIエージェントを構築し、対話型の診断コンテンツを提供しました。</p>
+											</div>
+										</div>
+									</div>
+								<!-- /.carousel-item -->
+								</div><!-- /.carousel-inner -->
+								<!-- スライドコントロールの設定 -->
+								<a class="carousel-control-prev w-auto" href="#carouselExampleControls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon bg_maincolor" aria-hidden="true"></span>
+									<span class="sr-only">前へ</span>
+								</a>
+								<a class="carousel-control-next w-auto" href="#carouselExampleControls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon bg_maincolor" aria-hidden="true"></span>
+									<span class="sr-only">次へ</span>
+								</a>
+								<!-- スライドコントロールの設定 -->
+							</div><!-- /.carousel -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--開発事例-->
+<!--ご相談ください-->
+	<section id="prize" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-12 text-center mx-auto title_group">
+					<h2>費用と期間</h2>
+				</div>
+			</div>
+			<div class="row mb-4 prize_description align-items-center mb-5">
+				<div class="col-sm-8 col-12 mx-auto">
+					<p>AIエージェントなど、生成AI、LLM、ChatGPTなどを活用したシステム開発なら、お任せください。開発費用のお見積りいたします。</p>
+				</div>
+				<div class="col-sm-4 col-6 mx-auto">
+					<picture>
+						<source type="image/webp" srcset="img/prize_img01.webp" width="296" height="188">
+						<img src="img/prize_img01.png" alt="AIエージェントなど、生成AI、LLM、ChatGPTなどを活用したシステム開発なら、お任せください。開発費用のお見積りいたします。">
+					</picture>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col-sm-6 col-12 mx-auto text-center">
+					<h3 class="py-3 mb-0">開発費用の価格帯と工数（概算）</h3>
+				</div>
+			</div>
+			<div class="row align-items-center text-left mb-5" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+				<div class="col-lg-4 mx-auto mb-sm-0 mb-4">
+					<div class="contents_box text-center p-4">
+						<h4 class="mb-4"><i class="fa-solid fa-coins mb-2"></i><br>費用</h4>
+						<p class="prize_value mb-4">200<br>~<br>2000<span class="small">万</span></p>
+						<p class="mb-0">(400万〜800万が最多価格帯)</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mx-auto mb-sm-0 mb-4">
+					<div class="contents_box text-center p-4">
+						<h4 class="mb-4"><i class="fa-regular fa-calendar-days mb-2"></i><br>期間</h4>
+						<p class="prize_value mb-4">2<span class="small">ヶ月</span><br>~<br>12<span class="small">ヶ月</span></p>
+						<p class="mb-0">(平均3〜4ヶ月)</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mx-auto mb-sm-0">
+					<div class="contents_box text-center p-4">
+						<h4 class="mb-4"><i class="fa-solid fa-wrench mb-2"></i><br>運用コスト</h4>
+						<p class="prize_value mb-4">5<span class="small">万</span><br>~<br>20<span class="small">万/月</span></p>
+						<p class="mb-0">(使用回数による)</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-12 mt-5 mx-auto">
+					<a href="#contact" class="py-2 mx-auto bg_maincolor text-center">今すぐお見積り</a>
+				</div>
+			</div>
+			<div class="row text-left mb-4 prize_feature">
+				<div class="col-lg-12 mb-4">
+					<h4 class="mb-3">常に最新のAIモデルに対応</h4>
+					<p class="mb-0">ChatGPT、Claude、GeminiなどのAPIはもちろん、推論モデル（o1、o3等）、OSS（Llama、DeepSeek等）の最新バージョンに常に対応。Web検索、データベースや他のアプリとの連携、ファインチューニングや専門分野での強化学習、RAGなどの自社データ学習、音声入出力・画像認識・画像生成に特化したAPIも合わせて、用途ごとにAIモデルの特性を活かしたエージェントシステムの設計をご提案できます。</p>
+				</div>
+				<div class="col-lg-12 mb-0">
+					<h4 class="mb-3">アイデアレベルで気軽にご相談ください</h4>
+					<div class="container">
+						<div class="row justify-content-start" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AI活用のPoC（実証実験）</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">汎用的なAIエージェントシステムの開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">企業特化のAIエージェントシステム開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AIとの連携で業務の自動化</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">推論モデル（o1、o3等）を活用し強化学習をしたエキスパートシステム</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">自社データと連携した、RAGやファインチューニングによる参照学習システム</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">ChatGPTなどLLM連動チャットボット開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AI連動のWebサービス開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AI連動のスマホアプリ開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">既存システム、API、DBとのChatGPT連携</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">人物やキャラクターに似せたAIモデル生成</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AIを活用したコンテンツやキャンペーン企画制作</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">弊社のAI関連サービスのOEM提供</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<h4 class="mb-3">バックエンド開発以外も全て対応可能</h4>
+					<div class="container">
+						<div class="row justify-content-start" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">生成AI導入コンサルティング</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">UI/UX設計、デザイン制作、フロントエンド開発</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">インフラ構築（GCP,AWS,Azure他のクラウド）</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">各種SNS連携、課金システム、API構築も対応可</p>
+								</div>
+							</div>
+							<div class="col-sm-15 col-6 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="mb-0">開発後のインフラ運用保守、追加機能開発</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--ご相談ください-->
+<!--よくあるご質問-->
+	<section id="flow" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-lg-4 col-md-6 col-sm-8 col-12 text-center mx-auto">
+					<h2>受託開発の流れ</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 mb-4 text-center mx-auto">
+					<p class="mb-0">詳細項目やスケジュールは、開発要件によって異なります。サービス開発の企画・ビジネスアイデア出し、設計支援、コンサルティングも可能です。</p>
+				</div>
+			</div>
+			<div class="row text-left mb-4 flow_detail">
+				<div class="col-lg-12 mb-0">
+					<h3 class="mb-3">お問い合わせからご発注まで <br class="sp_320"><span class="small">※最短一週間</span></h4>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-12 mb-md-0 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 1</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img01.webp" width="125" height="125">
+										<img src="img/flow_img01.png" class="w-100 mb-3" alt="フォームからお問い合わせ">
+									</picture>
+									<p class="mb-0">フォームから<br>お問い合わせ</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-12 mb-md-0 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 2</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img02.webp"width="125" height="125">
+										<img src="img/flow_img02.png" class="w-100 mb-3" alt="WEB会議でヒアリング">
+									</picture>
+									<p class="mb-0">WEB会議で<br>ヒアリング</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-12 mb-md-0 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 3</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img03.webp" width="125" height="125">
+										<img src="img/flow_img03.png" class="w-100 mb-3" alt="開発費用のお見積り">
+									</picture>
+									<p class="mb-0">開発費用の<br>お見積り</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-12 mb-0">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 4</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img04.webp" width="125" height="125">
+										<img src="img/flow_img04.png" class="w-100 mb-3" alt="正式ご発注">
+									</picture>
+									<p class="mb-0">正式ご発注</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 my-5 flow_option"><p class="bg_maincolor text-center mb-0 p-3">サービスアイデア検証・企画協力(オプション)</p></div>
+				<div class="col-lg-12">
+					<h3 class="mb-3">仕様設計、開発、納品まで <br class="sp_320"><span class="small">※納期は時期によって変動します</span></h4>
+					<div class="container">
+						<div class="row justify-content-start">
+							<div class="col-md-15 col-12 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 1</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img05.webp" width="125" height="125">
+										<img src="img/flow_img05.png" class="w-100 mb-3" alt="詳細仕様確定、設計、スケジューリング">
+									</picture>
+									<p class="mb-0">詳細仕様確定、設計、スケジューリング</p>
+								</div>
+							</div>
+							<div class="col-md-15 col-12 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 2</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img06.webp" width="125" height="125">
+										<img src="img/flow_img06.png" class="w-100 mb-3" alt="システム開発、連携テスト">
+									</picture>
+									<p class="mb-0">システム開発、連携テスト</p>
+								</div>
+							</div>
+							<div class="col-md-15 col-12 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 3</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img07.webp" width="125" height="125">
+										<img src="img/flow_img07.png" class="w-100 mb-3" alt="環境構築">
+									</picture>
+									<p class="mb-0">環境構築</p>
+								</div>
+							</div>
+							<div class="col-md-15 col-12 mb-4">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 4</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img08.webp" width="125" height="125">
+										<img src="img/flow_img08.png" class="w-100 mb-3" alt="納品">
+									</picture>
+									<p class="mb-0">納品</p>
+								</div>
+							</div>
+							<div class="col-md-15 col-12 mb-sm-4 mb-0">
+								<div class="contents_box text-center p-4 h-100">
+									<p class="flow_step">Step 5</p>
+									<picture>
+										<source type="image/webp" srcset="img/flow_img09.webp" width="125" height="125">
+										<img src="img/flow_img09.png" class="w-100 mb-3" alt="運用、保守">
+									</picture>
+									<p class="mb-0">運用、保守</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--よくあるご質問-->
+<!--よくあるご質問-->
+	<section id="faq" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-lg-4 col-md-6 col-sm-8 col-12 text-center mx-auto">
+					<h2>よくあるご質問</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 mx-auto">
+					<dl class="qa-box">
+						<div class="qa">
+							<dt>
+								<p>AIエージェントは開発できますか？</p>
+							</dt>
+							<dd>
+								<p>はい。AI エージェントの開発が可能です。具体的には、環境情報（センサや外部データベース連携）を自律的に取得・認識し、ユーザーの目標に応じてタスクの切り分けとプランニングを行います。その後、必要に応じて複数のエージェント同士で連携しながら業務を遂行し、結果の評価とフィードバック学習を繰り返すことで、システム全体の最適化を続けます。これらの機能を統合した AI エージェントや部分的な機能の開発実績も多数ございますので、ぜひご相談ください。</p>
+							</dd>
+						</div>
+						<div class="qa">
+							<dt>
+								<p>お見積りは出せますか？</p>
+							</dt>
+							<dd>
+								<p>はい。開発仕様についてヒアリングした上で、工数（期間、費用）をお見積りします。</p>
+							</dd>
+						</div>
+						<div class="qa">
+							<dt>
+								<p>アイデアだけでも相談できますか？</p>
+							</dt>
+							<dd>
+								<p>はい。企画、設計のサポートから、まるごと請け負うこともできます。</p>
+							</dd>
+						</div>
+						<div class="qa">
+							<dt>
+								<p>ChatGPTや生成AI関連のサービス開発実績はありますか？</p>
+							</dt>
+							<dd>
+								<p>はい、2022年12月から開発を開始しており、官公庁、ITサービス、製造業、エンタメ企業などの各分野で多数の受託開発実績がございます。サイトにて実名公開可能な顧客事例は多くありませんが、お打ち合わせにて、一部内容をご紹介できます。ChatGPT連携の自社サービス（BtoB、BtoC）開発と運用の実績もございます。</p>
+							</dd>
+						</div>
+						<div class="qa">
+							<dt>
+								<p>PoC（概念検証、実証実験）のプロジェクトもお願いできますか？</p>
+							</dt>
+							<dd>
+								<p>はい。ゼロベースでの生成AI活用システム設計、テストプロンプトの作成とチューニングなどを、非常に得意としています。テスト後の本番開発や保守運用までシームレスに対応できます。PoCのご発注は、<a href="https://chatgpt-api-developper.argyle.jp/poc/" target="_blank">こちらから。</a></p>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--よくあるご質問-->
+	<section id="contact" data-aos="fade-up" data-aos-once="true" data-aos-duration="800">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-lg-4 col-md-6 col-sm-8 col-12 text-center mx-auto p-0">
+					<h2>お問い合わせ</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 mb-5 text-center mx-auto">
+					<p class="mb-0">下記のフォームに必要事項を入力し、「送信」ボタンを押してください。<br />
+					または、<a href="mailto:info@argyle.jp?subject=タグライブのお問い合わせ">info@argyle.jp</a>宛にメールでご連絡ください。<br />
+					確認後、弊社担当より折り返しご連絡いたします。
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-8 mx-auto">
+					<script id='formScript4558338000079267003' src='https://crm.zoho.com/crm/WebFormServeServlet?rid=3f020f1191a984e8e96861db8d42cc6f76ceaea6b5a9748921e7582faaeeb330a6b46e0725d6e03bcc8460dc12a4bea7gid475bb62e9fa60987c9a6b9fcf4a35e39e49a4c08a60b3d45d436858aa4edd059&script=$sYG'></script>
+					<p class="privacy">※個人情報等の取り扱いについては<a href="https://argyle.jp/privacy.html" target="_blank">「プライバシー・ポリシー」</a>をご覧ください。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+	<footer>
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+					<h3><a href="https://ai-assistant.jp/">AIアシスタント</a></h3>
+					<ul>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/" target="_blank">法人のAI導入は「AIアシスタント」- ChatGPT / Gemini / Claudeの最新モデル、画像・動画生成、RAG対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/gyousei/" target="_blank">行政組織のAI導入は「AIアシスタント」- ChatGPT / Gemini / Claudeの最新モデル、画像・動画生成、RAG対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/school/" target="_blank">教育機関のAI導入は「AIアシスタント」- ChatGPT / Gemini / Claudeの最新モデル、画像・動画生成、RAG対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/lab/" target="_blank">研究機関のAI導入は「AIアシスタント」- ChatGPT / Gemini / Claudeの最新モデル、画像・動画生成、RAG対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/organization/" target="_blank">法人・会社組織のAI導入は「AIアシスタント」- ChatGPT / Gemini / Claudeの最新モデル、画像・動画生成、RAG対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/commercial_images/" target="_blank">画像生成特化プラン『AIアシスタント』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/commercial_video/" target="_blank">動画生成特化プラン『AIアシスタント』 </a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-assistant.jp/unlimited/" target="_blank">定額でChatGPT、Gemini、Claude使い放題「AIアシスタント」</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://blog.ai-assistant.jp/" target="_blank">Chat GPTで使えるプロンプト文例集 - AIアシスタント with ChatGPT / Gemini / Claude 活用ブログ</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+					<h3>生成AI活用システム開発</h3>
+					<ul class="mb-3">
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/" target="_blank">生成AIシステム受託開発（AIエージェント・チャットボット・画像生成、ChatGPT、Geminiなどの連携）ならアーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-agent-developer.argyle.jp/" target="_blank">AIエージェント開発会社（生成AI活用システム・LLMで業務自動化・各種データベースのAPI連携、PoC）ならアーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/gemini/" target="_blank">Gemini APIの受託開発（GPT活用チャットボット・連携システム構築・商用プラグイン）なら、アーガイル株式会社</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/claude/" target="_blank">Claude APIの受託開発（GPT活用チャットボット・連携システム構築）なら、アーガイル株式会社社</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/chatbot/" target="_blank">ChatGPT活用
+						チャットボット、レコメンドツールの開発なら、アーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/poc/" target="_blank">ChatGPTなど生成AI活用のPoC（概念実証、実証実験）なら、アーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://copyrobot.jp/" target="_blank">コピーロボット® - キャラクターAIモデル生成ラボ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://chatgpt-api-developper.argyle.jp/for_organization/" target="_blank">ChatGPTを定額で法人導入（企業、自治体、官公庁） - 業務利用AIパッケージならアーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://ai-uranai.jp/" target="_blank">AI占い by チャットGPT - 日本初の本格AI占い（占術師SAIKI × ChatGPT）</a></li>
+					</ul>
+					<h3>AI組織導入コンサルティング</h3>
+					<ul>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/ifctmethod/" target="_blank">IFCTメソッド™ 活用コンサルティング</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/aiconsulting/" target="_blank">AI活用コンサルティング、AIシステム開発ならアーガイル</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/aikenshu/" target="_blank">法人向けAI研修ならアーガイル</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+					<h3><a href="https://taglive.jp/pr/">タグライブ</a></h3>
+					<ul>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/pr/" target="_blank">Instagram・X=Twitterクチコミ掲載　タグライブ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/campaign/" target="_blank">写真投稿キャンペーン運営ツール　タグライブ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/taglive_for_tw/" target="_blank">ツイート表示ウィジェット型　タグライブ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage/" target="_blank">SNSサイネージ - デジタルサイネージ表示対応型 タグライブ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_dx/" target="_blank">商業施設のDX施策に　タグライブ SNSサイネージ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/taglive_board/" target="_blank">キャンペーン用フォーム投稿型取集ツール TagLive Board</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/aikenetsu/" target="_blank">アーガイルのAI自動検閲｜SNS・テキスト投稿の内容チェックを自動化</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_tourism/" target="_blank">観光 × SNS × デジタルサイネージ — UGCで地域の魅力を可視化する『タグライブ SNSサイネージ』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_museum/" target="_blank">美術館・博物館に『タグライブ SNSサイネージ』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_stadium" target="_blank">イベント × スタジアム × SNS — 来場者UGCで“熱狂”を可視化する『タグライブ SNSサイネージ』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_office/" target="_blank">オフィス設置サイネージでブランドの今を伝える『タグライブ』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_signage_apparel/" target="_blank">アパレル・コスメ × SNS × デジタルサイネージ - UGCで店頭を魅せるディスプレイ『タグライブ SNSサイネージ』</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/minto/" target="_blank">みん投 - みんなの投票（投稿）サイネージ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/minto_vote/" target="_blank">みん投 人気投票サイネージ</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/snscampaign/" target="_blank">SNSキャンペーンツールならタグライブ｜フォトコンテスト・投稿収集・自動抽選・AI検閲</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/snsvideo/" target="_blank">TagLive SNS動画サイネージ｜Instagram・X・TikTok・YouTubeの動画対応</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/for_hotel/" target="_blank">ホテル・宿泊施設に、SNSサイネージ「タグライブ」</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+					<h3><a href="https://argyle.jp/service.html" target="_blank">SNS活用支援</a></h3>
+					<ul class="mb-3">
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/campaign.html" target="_blank">SNSキャンペーン活用施策／PR戦略</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/report.html" target="_blank">リサーチ＆コンサルティング</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/sns_ad/" target="_blank">SNS広告代理（X=Twitter/Instagram/Facebook）</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/snsdata.html" target="_blank">SNSデータ提供ソリューション</a></li>
+					</ul>
+					<h3>SNSデータ活用ツール</h3>
+					<ul class="mb-3">
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/arc/" target="_blank">X=Twitterクチコミ分析ツール　Arc</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/arc-campaign/" target="_blank">ハッシュタグ・RTキャンペーン集計　Arc</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/enjou/" target="_blank">炎上検知アラートシステム　Powered by Arc</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://taglive.jp/pr/loglive/" target="_blank">Instagram投稿データ 収集提供　ログライブ</a></li>
+					</ul>
+					<h3>SNSキャンペーン</h3>
+					<ul>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/twitter_campaign/" target="_blank">X=Twitterキャンペーン　企画・制作</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/wantcp/" target="_blank">売り上げに直結　ほしいキャンペーン</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/vote_cp/" target="_blank">『バズる』X=Twitter施策の大定番！　X=Twitter投票型キャンペーン</a></li>
+						<li><i class="fas fa-angle-right"></i> <a href="https://argyle.jp/instagram_photocontest/" target="_blank">Instagramフォトコンテスト　企画・制作</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-12 text-left">
+					<h3>お問い合わせ</h3>
+					<ul>
+						<li class="pr-lg-2"><a href="mailto:info@argyle.jp"><i class="fas fa-envelope fa-fw"></i>info@argyle.jp</a></li>
+						<li class="pr-lg-2 pl-lg-2"><a href="tel:0364575789"><i class="fas fa-phone fa-fw"></i>03-6457-5789</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row align-items-center flex-lg-row flex-md-column-reverse flex-sm-column-reverse">
+				<div class="col-lg-6 text-left">
+					<p class="text-white"><a href="https://argyle.jp/" target="_blank">アーガイル株式会社 Copyright(c)2009-<script language="JavaScript" type="text/javascript">  year();  </script> argyle Inc. All Rights Reserved.</a></p>
+				</div>
+				<div class="col-lg-6 text-left">
+					<ul>
+						<li class="pr-2"><a href="https://taglive.jp/info/terms.html" target="_blank">利用規約</a></li>
+						<li class="pr-2 pl-2"><a href="https://argyle.jp/privacy.html" target="_blank">プライバシーポリシー</a></li>
+						<li class="pr-2 pl-2"><a href="https://argyle.jp/corporate/securitypolicy.html" target="_blank">セキュリティポリシー</a></li>
+						<li class="pl-2"><a href="https://argyle.jp/" target="_blank">運営会社</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+	<!-- slick.js -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+	<script type="text/javascript" src="js/coustom.js"></script>
+	<!-- slick.js -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/vegas.js"></script>
+	<script type="text/javascript">
+	'use strict';
+	jQuery(function($){
+	$('#mainvisual').vegas({
+		slides:[
+			{src:'img/zoom01.png',
+				video: {
+					src: [
+						'img/video/movie.mp4',
+						],
+					loop: true,
+					mute: true
+				}
+			},
+		],
+	overlay: 'img/overlays.png', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
+	transition: 'fade2',
+	transitionDuration: 2000,
+	delay: 5000,
+	cover:true,
+	animation: 'kenburns',
+	animationDuration: 8000,
+	timer: false
+  });
+});
+	</script>
+</body>
+</html>

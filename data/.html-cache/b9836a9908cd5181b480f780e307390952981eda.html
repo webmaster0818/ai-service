@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】 – Webマーケティングのインハウス化、内製化支援専門バクリ株式会社</title>
+
+		<!-- All in One SEO 4.5.7.3 - aioseo.com -->
+		<meta name="description" content="「Perplexityで自社名を検索しても、出てくるのは競合ばかり」 AI検索の担当を任された方から、いま最も" />
+		<meta name="robots" content="max-image-preview:large" />
+		<link rel="canonical" href="https://www.bakuri.co.jp/aio-lab/perplexity/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 4.5.7.3" />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:site_name" content="Webマーケティングのインハウス化、内製化支援専門バクリ株式会社 –" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】 – Webマーケティングのインハウス化、内製化支援専門バクリ株式会社" />
+		<meta property="og:description" content="「Perplexityで自社名を検索しても、出てくるのは競合ばかり」 AI検索の担当を任された方から、いま最も" />
+		<meta property="og:url" content="https://www.bakuri.co.jp/aio-lab/perplexity/" />
+		<meta property="article:published_time" content="2026-09-03T06:18:45+00:00" />
+		<meta property="article:modified_time" content="2026-09-03T06:18:45+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】 – Webマーケティングのインハウス化、内製化支援専門バクリ株式会社" />
+		<meta name="twitter:description" content="「Perplexityで自社名を検索しても、出てくるのは競合ばかり」 AI検索の担当を任された方から、いま最も" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.bakuri.co.jp\/#listItem","position":1,"name":"\u5bb6","item":"https:\/\/www.bakuri.co.jp\/","nextItem":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#listItem","position":2,"name":"Perplexity\u306b\u8868\u793a\u3055\u308c\u308b\u306b\u306f\uff1f\u5f15\u7528\u3055\u308c\u308b\u6761\u4ef6\u3068\u5b9f\u88c5\u624b\u9806\u3092\u516c\u5f0f\u4ed5\u69d8\u30d9\u30fc\u30b9\u3067\u89e3\u8aac\u30102026\u5e74\u7248\u3011","previousItem":"https:\/\/www.bakuri.co.jp\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.bakuri.co.jp\/#organization","name":"\u30d0\u30af\u30ea\u682a\u5f0f\u4f1a\u793e","url":"https:\/\/www.bakuri.co.jp\/"},{"@type":"WebPage","@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#webpage","url":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/","name":"Perplexity\u306b\u8868\u793a\u3055\u308c\u308b\u306b\u306f\uff1f\u5f15\u7528\u3055\u308c\u308b\u6761\u4ef6\u3068\u5b9f\u88c5\u624b\u9806\u3092\u516c\u5f0f\u4ed5\u69d8\u30d9\u30fc\u30b9\u3067\u89e3\u8aac\u30102026\u5e74\u7248\u3011 \u2013 Web\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u306e\u30a4\u30f3\u30cf\u30a6\u30b9\u5316\u3001\u5185\u88fd\u5316\u652f\u63f4\u5c02\u9580\u30d0\u30af\u30ea\u682a\u5f0f\u4f1a\u793e","description":"\u300cPerplexity\u3067\u81ea\u793e\u540d\u3092\u691c\u7d22\u3057\u3066\u3082\u3001\u51fa\u3066\u304f\u308b\u306e\u306f\u7af6\u5408\u3070\u304b\u308a\u300d AI\u691c\u7d22\u306e\u62c5\u5f53\u3092\u4efb\u3055\u308c\u305f\u65b9\u304b\u3089\u3001\u3044\u307e\u6700\u3082","inLanguage":"ja","isPartOf":{"@id":"https:\/\/www.bakuri.co.jp\/#website"},"breadcrumb":{"@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#breadcrumblist"},"image":{"@type":"ImageObject","url":"https:\/\/www.bakuri.co.jp\/devbkr\/wp-content\/uploads\/2026\/09\/image5.jpg","@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#mainImage","width":1672,"height":941},"primaryImageOfPage":{"@id":"https:\/\/www.bakuri.co.jp\/aio-lab\/perplexity\/#mainImage"},"datePublished":"2026-09-03T15:18:45+09:00","dateModified":"2026-09-03T15:18:45+09:00"},{"@type":"WebSite","@id":"https:\/\/www.bakuri.co.jp\/#website","url":"https:\/\/www.bakuri.co.jp\/","name":"\u30a4\u30f3\u30cf\u30a6\u30b9\u5316\u3001\u5185\u88fd\u5316\u652f\u63f4\u306e\u30d0\u30af\u30ea\u682a\u5f0f\u4f1a\u793e","inLanguage":"ja","publisher":{"@id":"https:\/\/www.bakuri.co.jp\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.googleapis.com' crossorigin='' rel='preconnect' />
+<link href='https://fonts.gstatic.com' crossorigin='anonymous' rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Webマーケティングのインハウス化、内製化支援専門バクリ株式会社 &raquo; フィード" href="https://www.bakuri.co.jp/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Webマーケティングのインハウス化、内製化支援専門バクリ株式会社 &raquo; コメントフィード" href="https://www.bakuri.co.jp/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.bakuri.co.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bakuri.co.jp%2Faio-lab%2Fperplexity%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.bakuri.co.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bakuri.co.jp%2Faio-lab%2Fperplexity%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='bakuri2026-google-fonts-css' href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&#038;family=Poppins:wght@200;400;500;600;700&#038;family=Shippori+Antique+B1:wght@400;700&#038;family=Shippori+Mincho:wght@400;500;800&#038;display=swap' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-button-inline-css">
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1% - var(--wp--style--block-gap, .5em)*(1 - var(--wp--block-button--width)/100))}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1%)}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:transparent;background-image:none}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/button/style.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:rgba(90,90,90,.25);border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto rgba(90,90,90,.25);outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:rgba(90,90,90,.25);border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-buttons-inline-css">
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:transparent;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:transparent}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:currentColor}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:currentColor}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/blocks/table/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 12px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 16px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 14px;--wp--preset--font-size--xlarge: 18px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-xlarge-font-size{font-size: var(--wp--preset--font-size--xlarge) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.bakuri.co.jp/devbkr/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.5' media='all' />
+<link rel='stylesheet' id='toc-screen-css' href='https://www.bakuri.co.jp/devbkr/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://www.bakuri.co.jp/devbkr/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.4.1' media='all' />
+<link rel='stylesheet' id='bakuri2026-ress-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/foundation/ress.css?ver=1787234260' media='all' />
+<link rel='stylesheet' id='bakuri2026-variables-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/foundation/variables.css?ver=1787234260' media='all' />
+<link rel='stylesheet' id='bakuri2026-foundation-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/foundation/base.css?ver=1787234260' media='all' />
+<link rel='stylesheet' id='bakuri2026-layout-site-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/layout/site.css?ver=1787234261' media='all' />
+<link rel='stylesheet' id='bakuri2026-layout-header-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/layout/header.css?ver=1787234261' media='all' />
+<link rel='stylesheet' id='bakuri2026-layout-footer-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/layout/footer.css?ver=1788108867' media='all' />
+<link rel='stylesheet' id='bakuri2026-layout-breadcrumb-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/layout/breadcrumb.css?ver=1787234261' media='all' />
+<link rel='stylesheet' id='bakuri2026-object-utility-sr-only-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/sr-only.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-object-utility-list-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/list.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-object-utility-link-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/link.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-object-utility-spacing-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/spacing.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-component-button-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/component/button.css?ver=1787234262' media='all' />
+<link rel='stylesheet' id='bakuri2026-component-tag-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/component/tag.css?ver=1787234262' media='all' />
+<link rel='stylesheet' id='bakuri2026-component-child-hero-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/component/child-hero.css?ver=1787234262' media='all' />
+<link rel='stylesheet' id='bakuri2026-component-cta-actions-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/component/cta-actions.css?ver=1787234262' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-frontpage-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/frontpage.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-achievement-logos-slider-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/achievement-logos-slider.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-post-card-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/post-card.css?ver=1787553211' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-media-slider-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/media-slider.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-service-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/service.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-service-child-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/service-child.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-post-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/post.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-component-content-parts-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/component/content-parts.css?ver=1787234262' media='all' />
+<link rel='stylesheet' id='bkr2026-editor-box-front-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/editor-box.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bkr2026-editor-cta-button-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/editor-cta-button.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-company-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/company.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-contact-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/contact.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-faq-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/faq.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bakuri2026-project-popup-banner-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/popup-banner.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='choices-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/vendor/choices.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bkr2026-choices-custom-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/utility/choices-custom.css?ver=1787234263' media='all' />
+<link rel='stylesheet' id='bkr2026-cf7-step-form-css' href='https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/css/object/project/cf7-step-form.css?ver=1788109028' media='all' />
+<link rel='stylesheet' id='scroll-hint-css' href='https://cdn.jsdelivr.net/npm/scroll-hint@1.2.8/css/scroll-hint.min.css?ver=1.2.8' media='all' />
+<link rel='stylesheet' id='splide-core-css' href='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css?ver=4.1.4' media='all' />
+<script id="jquery-core-js" src="https://www.bakuri.co.jp/devbkr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.bakuri.co.jp/devbkr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="wpp-json" type="application/json">
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/www.bakuri.co.jp\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/www.bakuri.co.jp\/wp-json\/wordpress-popular-posts","ID":2617,"token":"f53c6ef9a9","lang":0,"debug":0}
+//# sourceURL=wpp-json
+</script>
+<script id="wpp-js-js" src="https://www.bakuri.co.jp/devbkr/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.4.1"></script>
+
+<!-- Site Kit によって追加された Google タグ（gtag.js）スニペット -->
+<!-- Google アナリティクス スニペット (Site Kit が追加) -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-TX966K57" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.bakuri.co.jp"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TX966K57");
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.bakuri.co.jp/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.bakuri.co.jp/wp-json/wp/v2/aio-lab/2617" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bakuri.co.jp/devbkr/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.2" />
+<link rel='shortlink' href='https://www.bakuri.co.jp/?p=2617' />
+<meta name="generator" content="Site Kit by Google 1.188.0" />
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to off -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pagePostType":"aio-lab","pagePostType2":"single-aio-lab","pagePostAuthor":"荒川 大史"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script>
+	console.warn && console.warn("[GTM4WP] Google Tag Manager container code placement set to OFF !!!");
+	console.warn && console.warn("[GTM4WP] Data layer codes are active but GTM container must be loaded using custom coding !!!");
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            
+<!-- Google タグ マネージャー スニペット (Site Kit が追加) -->
+<script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-WPHPS6VX' );
+			
+</script>
+
+<!-- (ここまで) Google タグ マネージャー スニペット (Site Kit が追加) -->
+<link rel="icon" href="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/cropped-4495bed8051fcc9fd4ac4bababda36e3-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/cropped-4495bed8051fcc9fd4ac4bababda36e3-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/cropped-4495bed8051fcc9fd4ac4bababda36e3-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/cropped-4495bed8051fcc9fd4ac4bababda36e3-1-270x270.png" />
+<style id="core-block-supports-inline-css">
+.wp-container-core-buttons-is-layout-fe48e5de{justify-content:center;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+<body class="wp-singular aio-lab-template-default single single-aio-lab postid-2617 wp-embed-responsive wp-theme-bkr2026v2_light">
+		<!-- Google タグ マネージャー (noscript) スニペット (Site Kit が追加) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPHPS6VX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- (ここまで) Google タグ マネージャー (noscript) スニペット (Site Kit が追加) -->
+		
+<div class="l-site">
+  <div class="l-headerOverlay js-headerOverlay" aria-hidden="true"></div>
+
+  <header class="l-header is-inner" role="banner">
+    <div class="l-headerContainer">
+                    <p>
+          <a href="https://www.bakuri.co.jp/" rel="home">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/logo_black.svg" alt="Webマーケティングのインハウス化、内製化支援専門バクリ株式会社" decoding="async">
+          </a>
+        </p>
+      
+      <button class="l-headerMenuButton js-headerMenuButton" type="button">
+        <span class="l-headerMenuButtonLine">
+          <span class="u-visuallyHidden">メニューを開閉</span>
+        </span>
+      </button>
+
+      <div class="l-headerNavWrapper js-headerMenu">
+        <nav class="l-headerNav">
+<ul class="l-headerMenu">
+
+  <li class="l-headerMenuItem --dropdown">
+    <a href="https://www.bakuri.co.jp/company/">会社情報</a>
+    <button class="l-headerDropdownToggle js-dropdownToggle" type="button" aria-expanded="false">会社情報</button>
+
+    <ul class="l-headerDropdown">
+      <li>
+        <a href="https://www.bakuri.co.jp/company/about/">会社概要</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/company/">バクリの特徴</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/member/">メンバー紹介</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/news/">ニュース</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="l-headerMenuItem --dropdown">
+    <a href="https://www.bakuri.co.jp/service/">サービス</a>
+    <button class="l-headerDropdownToggle js-dropdownToggle" type="button" aria-expanded="false">サービス</button>
+
+    <ul class="l-headerDropdown">
+      <li>
+        <a href="https://www.bakuri.co.jp/service/in-house_marketing-support/">マーケティング内製化支援</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/">AIO対策 / LLMOコンサルティング</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/service/cmo-services_rental-cmo/">CMOコンサルティング支援</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/service/web-growth-consulting/">Webグロース支援・改善コンサルティング</a>
+      </li>
+      <li>
+        <a href="/gptlp/chatgpt-ad-lp.html">chatGPT広告支援</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="l-headerMenuItem">
+    <a href="https://www.bakuri.co.jp/case/">実績</a>
+  </li>
+
+  <li class="l-headerMenuItem --dropdown">
+    <a href="https://www.bakuri.co.jp/blog/">メディア</a>
+    <button class="l-headerDropdownToggle js-dropdownToggle" type="button" aria-expanded="false">メディア</button>
+
+    <ul class="l-headerDropdown">
+      <li>
+        <a href="https://www.bakuri.co.jp/blog/">Column</a>
+      </li>
+      <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/">AIO Lab</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="l-headerMenuItem">
+    <a href="https://www.bakuri.co.jp/seminar/">セミナー</a>
+  </li>
+
+  <li class="l-headerMenuDownload">
+    <a href="https://www.bakuri.co.jp/download/">資料ダウンロード</a>
+  </li>
+
+  <li class="l-headerMenuCta">
+    <a href="https://www.bakuri.co.jp/contact/">お問い合わせ</a>
+  </li>
+
+</ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main id="main" class="l-main --child p-aioLabSingle" role="main">
+  <nav class="l-breadcrumb" aria-label="パンくず">
+  <ol class="l-breadcrumbList">
+    <li class="l-breadcrumbItem">
+      <a class="l-breadcrumbItemLink --home" href="https://www.bakuri.co.jp/">
+        <img class="l-breadcrumbHomeIcon" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_home.svg" alt="" width="16" height="16" decoding="async">
+        <span>AI活用・内製化支援のバクリ株式会社TOP</span>
+      </a>
+    </li>
+    <li class="l-breadcrumbItem"><a href="https://www.bakuri.co.jp/aio-lab/">AIO Lab</a></li><li class="l-breadcrumbItem" aria-current="page">Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】</li>  </ol>
+</nav>
+
+  
+  <div class="p-postColumn">
+    <div class="p-postMainContents">
+
+      <div class="p-postHeader">
+        <div class="p-postHeaderMeta">
+                    <p class="p-postHeaderDate">
+            <time datetime="2026-09-03T15:18:45+09:00">
+              2026/09/03 15:18            </time>
+          </p>
+          
+                    <ul class="c-tagList">
+                        <li class="c-tag --yellow">AIO実践・コンテンツ改善</li>
+                      </ul>
+                  </div>
+
+        <h1 class="p-postHeaderTitle">Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】</h1>
+
+                <figure class="p-postHeaderThumbnail">
+          <img width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5-1024x576.jpg" class="p-postHeaderThumbnailImage wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5-1024x576.jpg 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5-300x169.jpg 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5-768x432.jpg 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5-1536x864.jpg 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image5.jpg 1672w" sizes="(max-width: 1024px) 100vw, 1024px" />        </figure>
+              </div>
+
+      <div class="p-postContent entry-content">
+        
+<p class="wp-block-paragraph">「Perplexityで自社名を検索しても、出てくるのは競合ばかり」</p>
+
+
+
+<p class="wp-block-paragraph">AI検索の担当を任された方から、いま最も多く聞く相談です。Perplexityに表示されるには、記事の書き方を変える前に確認すべきことがあります。それは、<strong>そもそも自社サイトがPerplexityのクローラーに読まれているか</strong>という点です。</p>
+
+
+
+<p class="wp-block-paragraph">この記事では、Perplexityの公式ドキュメントで確認できる仕様と、第三者調査による推測とを明確に分けたうえで、企業が今日から着手できる手順を解説します。読み終えたときには、自社の現状を診断し、優先順位をつけた実行計画を立てられる状態になります。</p>
+
+
+
+<p class="has-text-align-center wp-block-paragraph"><strong>まずは自社のAI検索対策状況を無料で診断しませんか？</strong></p>
+
+
+
+<p class="wp-block-paragraph">バクリ株式会社の「無料AIOアセスメント」では、ChatGPT・Gemini・Perplexityにおける自社の引用状況と改善ポイントを10分で可視化します。</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-fe48e5de wp-block-buttons-is-layout-flex">
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-background wp-element-button" href="https://www.bakuri.co.jp/contact/" style="background-color:#004b76">無料AIOアセスメントを受け取る</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">【お知らせ】4月17日（金）に弊社代表荒川が書籍を発売しました！</mark></strong><br>AI時代を勝ち抜く最先端のノウハウをまとめた書籍『海外の先行事例に学ぶ AI検索最適化（AIO/AISEO/LLMO）実践ガイド』（著者：弊社代表取締役 荒川 大史）が、4月17日（金）よりKindleストアにて配信開始しました。</p>
+
+
+
+<p class="wp-block-paragraph">これからのビジネス戦略にぜひお役立てください！</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://www.amazon.co.jp/%E3%80%8E%E6%B5%B7%E5%A4%96%E3%81%AE%E5%85%88%E8%A1%8C%E4%BA%8B%E4%BE%8B%E3%81%AB%E5%AD%A6%E3%81%B6-AI%E6%A4%9C%E7%B4%A2%E6%9C%80%E9%81%A9%E5%8C%96%EF%BC%88AIO-AISEO-LLMO%EF%BC%89%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%E3%80%8F-%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-ebook/dp/B0GXCD9CLB/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;crid=2QC3B0MFUIE2W&amp;dib=eyJ2IjoiMSJ9.bkrviROvfSxWKFoe_dTmfQ.Y5OC3e1v4HnTPPYtqal1gK8KgGDQUcbDJguWWqN5qTA&amp;dib_tag=se&amp;keywords=%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE&amp;qid=1784788528&amp;sprefix=%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%2Caps%2C399&amp;sr=8-1"><img decoding="async" width="1024" height="537" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1024x537.png" alt="" class="wp-image-2139" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1024x537.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-300x157.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-768x403.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1536x806.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1.png 1999w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<div id="toc_container" class="no_bullets"><p class="toc_title">目次</p><ul class="toc_list"><li><a href="#1_Perplexity"><span class="toc_number toc_depth_1">1</span> 1. Perplexityに表示されるには｜結論は「到達性→適合性→信頼性」の順</a></li><li><a href="#2_PerplexityGoogleChatGPT"><span class="toc_number toc_depth_1">2</span> 2. そもそもPerplexityとは｜Google検索・ChatGPTとの引用ロジックの違い</a></li><li><a href="#3_Perplexity"><span class="toc_number toc_depth_1">3</span> 3. Perplexityに引用されるサイトの条件｜一次データで分かっていること</a></li><li><a href="#4_PerplexityBot"><span class="toc_number toc_depth_1">4</span> 4. 【技術編】まずPerplexityBotに読まれる状態をつくる</a></li><li><a href="#5_7"><span class="toc_number toc_depth_1">5</span> 5. 【コンテンツ編】引用に耐える書き方7原則</a></li><li><a href="#6"><span class="toc_number toc_depth_1">6</span> 6. 【サイト外編】自社サイトだけでは届かない理由</a></li><li><a href="#7"><span class="toc_number toc_depth_1">7</span> 7. 表示されているかを確認する方法と計測設計</a></li><li><a href="#8"><span class="toc_number toc_depth_1">8</span> 8. やってはいけない・効果が薄い施策</a></li><li><a href="#PerplexityFAQ"><span class="toc_number toc_depth_1">9</span> Perplexityで表示させることに関するよくある質問（FAQ）</a></li><li><a href="#PerplexityAIO"><span class="toc_number toc_depth_1">10</span> まとめ｜Perplexity対策はAIO全体の入口</a></li></ul></div>
+<h2 class="wp-block-heading"><span id="1_Perplexity">1. Perplexityに表示されるには｜結論は「到達性→適合性→信頼性」の順</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93-1024x576.png" alt="" class="wp-image-2618" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-93.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">Perplexityに表示されるには、施策を3つの層に分けて、上から順に潰していくのが効率的です。順番を間違えると、労力の大半が無駄になります。</p>
+
+
+
+<h3 class="wp-block-heading">1-1. 最初にやるべき3つのこと</h3>
+
+
+
+<p class="wp-block-paragraph">まず取り組むべきは、次の3つです。いずれも半日から数日で着手できます。</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>robots.txtで</strong> <strong>PerplexityBot</strong> <strong>を許可しているか確認する</strong></li>
+
+
+
+<li><strong>CloudflareなどのWAF・CDNでクローラーを遮断していないか確認する</strong></li>
+
+
+
+<li><strong>自社が答えるべき質問をPerplexityに実際に投げて、引用元に自社ドメインが出るか記録する</strong></li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">3つ目は現状把握です。Perplexityはすべての回答に番号付きの出典リンクを表示するため、他のAI検索と比べて「拾われたかどうか」を目視で確認しやすいという特性があります。この確認しやすさは、施策の効果検証において大きな利点です。</p>
+
+
+
+<h3 class="wp-block-heading">1-2. 「表示される」には2つの意味がある</h3>
+
+
+
+<p class="wp-block-paragraph">社内で議論するときは、次の2つを分けて話すと認識のズレが減ります。</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>表示のされ方</strong></th><th><strong>内容</strong></th><th><strong>ビジネス上の意味</strong></th></tr></thead><tbody><tr><td><strong>回答本文中の引用</strong></td><td>文章中に付く番号付きの脚注として引用される</td><td>回答の根拠として扱われる。信頼性の獲得につながる</td></tr><tr><td><strong>Sources（情報源）一覧への掲載</strong></td><td>回答の下部・横に並ぶ参照元リストに載る</td><td>クリック流入の獲得機会。露出量の指標になる</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">さらに、自社サイトが引用されていなくても、<strong>回答文の中で自社名やサービス名が言及される</strong>ケースがあります。これは第三者メディアの記事や比較サイトが引用元になっている場合で、後述する「サイト外の施策」が効いている状態です。</p>
+
+
+
+<h3 class="wp-block-heading">1-3. 効果が出るまでの目安と、正直に言っておくべき限界</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityはユーザーの質問ごとにリアルタイムでWebを取得するため、公開したばかりのページでも比較的短期間で引用対象になり得ます。一方で、<strong>どのページを引用するかの選定ロジックは公開されていません</strong>。したがって「この施策をすれば必ず引用される」と断言できる方法は、2026年8月時点では存在しません。</p>
+
+
+
+<p class="wp-block-paragraph">この記事で紹介するのは、公式仕様として確認できる技術要件と、複数の調査で共通して観測されている傾向です。効果は保証ではなく確率の問題として捉え、定点観測で検証しながら進めてください。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="2_PerplexityGoogleChatGPT">2. そもそもPerplexityとは｜Google検索・ChatGPTとの引用ロジックの違い</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95-1024x576.png" alt="" class="wp-image-2619" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-95.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">Perplexity対策を設計するうえで、Perplexityが「検索エンジン寄りのAI」であるという性質の理解は欠かせません。ここが分かると、なぜ出典の明示や情報の鮮度が効くのかが腹落ちします。</p>
+
+
+
+<h3 class="wp-block-heading">2-1. Perplexityの仕組み｜リアルタイム取得と出典提示</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityとは、ユーザーの質問に対してWeb上の情報をリアルタイムで取得し、要約した回答と<strong>その根拠となる出典リンクをセットで返す対話型のAI検索サービス</strong>です。回答には元の情報源へリンクする番号付きの引用が含まれ、ユーザーはその場で内容を検証できます。</p>
+
+
+
+<p class="wp-block-paragraph">この「必ず出典を出す」という設計思想が、企業にとっての意味を決めています。出典として選ばれることが、そのまま露出と信頼の獲得になるからです。</p>
+
+
+
+<h3 class="wp-block-heading">2-2. ChatGPT・AI Overviewとの引用ロジックの違い</h3>
+
+
+
+<p class="wp-block-paragraph">AI検索は一括りにされがちですが、引用の振る舞いはサービスごとに異なります。2026年4月にarXivで公開された生成エンジン最適化の計測研究（arXiv:2604.25707）では、<strong>PerplexityとGoogleは1回答あたりに引用する情報源の数が多い一方、ChatGPTは引用元が少ない代わりに1件あたりの回答への寄与度が高い</strong>という差が報告されています。</p>
+
+
+
+<p class="wp-block-paragraph">この違いは実務上、次のように読み替えられます。</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th></th><th><strong>Perplexity</strong></th><th><strong>ChatGPT</strong></th><th><strong>Google AI Overview</strong></th></tr></thead><tbody><tr><td>引用元の数</td><td>多い（広く拾う）</td><td>少ない（絞る）</td><td>多い</td></tr><tr><td>1件あたりの影響度</td><td>相対的に低い</td><td>相対的に高い</td><td>中程度</td></tr><tr><td>情報取得のタイミング</td><td>質問ごとにリアルタイム取得</td><td>検索連携時に取得</td><td>検索インデックス由来</td></tr><tr><td>実務上の示唆</td><td><strong>載る機会は多い。まず候補に入ることを狙う</strong></td><td>少数精鋭。決定的な1本を作る</td><td>検索インデックス整備が前提</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">つまりPerplexityは、<strong>「1位を取る」より「候補に入り続ける」設計が向いている</strong>プラットフォームです。中小規模のサイトでも土俵に上がりやすい反面、1回引用されただけでは流入インパクトが限定的になりやすい点も理解しておく必要があります。</p>
+
+
+
+<h3 class="wp-block-heading">2-3. 日本での位置づけと、押さえておくべき動向</h3>
+
+
+
+<p class="wp-block-paragraph">日本国内では、ソフトバンクがPerplexityと提携し、契約者向けにサービスを提供しています。日常的にAI検索へ触れる層が通信キャリア経由で広がっている状況です。</p>
+
+
+
+<p class="wp-block-paragraph">同時に、権利面での動きも進んでいます。2025年8月7日、読売新聞グループ本社がPerplexity AI, Inc.を著作権侵害で東京地裁に提訴し、約21億6,800万円の損害賠償などを求めました。その後、朝日新聞社と日本経済新聞社も同社を提訴しています。AI検索をめぐって日本の報道機関が訴訟を起こすのは初めてとみられ、この論点は特にニュース性の高いコンテンツを扱うメディアにとって無視できません（詳細は第6章で扱います）。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="3_Perplexity">3. Perplexityに引用されるサイトの条件｜一次データで分かっていること</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94-1024x576.png" alt="" class="wp-image-2620" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-94.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">ここでは、推測ではなく検証可能なデータをもとに、引用されるサイトの傾向を整理します。</p>
+
+
+
+<h3 class="wp-block-heading">3-1. 引用元は「広く薄く」分散している</h3>
+
+
+
+<p class="wp-block-paragraph">2025年7月に公開された学術研究（arXiv:2507.05301、Binghamton大学 Kai-Cheng Yang氏）では、AI検索の評価プラットフォーム上で得られたOpenAI・Perplexity・Googleの回答から、<strong>366,087件の引用を分析</strong>しています。この引用は<strong>83,533の異なるドメイン</strong>に紐づいており、うちニュース媒体と判定されたのは1,795ドメイン（2.1%）、引用件数では32,865件（9.0%）でした。</p>
+
+
+
+<p class="wp-block-paragraph">同研究では、<strong>提供元ごとに引用するニュースソースは異なるものの、引用は少数の媒体に集中する傾向があり、信頼性の低いソースはほとんど引用されない</strong>ことも報告されています。</p>
+
+
+
+<p class="wp-block-paragraph">ここから読み取れる実務上の示唆は2つです。1つは、<strong>引用先は8万を超えるドメインに広く分散しており、大手だけで占有されているわけではない</strong>こと。もう1つは、<strong>低品質と判定されるサイトは土俵にすら上がれない</strong>ことです。</p>
+
+
+
+<h3 class="wp-block-heading">3-2. 第三者ドメインの比重をどう見るか</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityは掲示板型コミュニティやレビューサイトなど、第三者による言及を多く引用する傾向が繰り返し指摘されています。ただし、その比率は調査によって大きく振れます。2026年に公開された複数の集計では、Perplexityの引用に占めるRedditの割合が<strong>およそ20%台から40%台後半まで</strong>と報告が分かれており、単一の数値を鵜呑みにするのは危険です。</p>
+
+
+
+<p class="wp-block-paragraph">確からしいのは比率そのものではなく、<strong>「自社サイト以外の場所での言及が、引用の入口になっている」という構造</strong>です。ここは第6章で具体策を扱います。</p>
+
+
+
+<h3 class="wp-block-heading">3-3. 検索順位が高ければ自動的に引用される、わけではない</h3>
+
+
+
+<p class="wp-block-paragraph">「Google検索で上位なら、Perplexityにも出るのでは」という質問をよく受けますが、両者は別の仕組みです。Perplexityは質問ごとにWebを取得して回答を組み立てるため、<strong>検索順位よりも「その質問に直接答えているか」が効きやすい</strong>構造になっています。</p>
+
+
+
+<p class="wp-block-paragraph">一方で、検索インデックスに載っていないページは、そもそも発見される機会が減ります。SEOとPerplexity対策は対立するものではなく、SEOで整えた土台の上にAI検索向けの記述形式を重ねるのが現実的な進め方です。</p>
+
+
+
+<h3 class="wp-block-heading">3-4. Perplexity対策は「AIO」の一部として設計する</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexity単体の施策として切り出すと、ChatGPTやAI Overviewへの対応と重複や矛盾が生じます。バクリでは、これらをまとめてAIOという枠組みで扱っています。</p>
+
+
+
+<p class="wp-block-paragraph"><strong>【AIOの定義】</strong> 主な対象：AI Overview＋各種生成AI（AI検索全般）／目的：AI Overview対策とLLM対策（その他AI対策）を合わせた総称。AI検索全体で引用・紹介される状態をつくる</p>
+
+
+
+<p class="wp-block-paragraph">Perplexity対策で行う施策（結論ファーストの記述、構造化データの実装、一次情報の発信、更新管理）は、そのまま他のAI検索への対策としても機能します。<strong>Perplexity対策はAIOの入口</strong>と位置づけると、投資判断がしやすくなります。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="4_PerplexityBot">4. 【技術編】まずPerplexityBotに読まれる状態をつくる</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96-1024x576.png" alt="" class="wp-image-2622" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-96.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">この章が、本記事で最も優先度の高いパートです。ここで詰まっていると、以降のコンテンツ施策はすべて空振りになります。</p>
+
+
+
+<h3 class="wp-block-heading">4-1. PerplexityBotとPerplexity-Userは役割が違う</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityは公式ドキュメントで、2種類のユーザーエージェントを公開しています。役割がまったく異なるため、混同しないでください。</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>ユーザーエージェント</strong></th><th><strong>役割</strong></th><th><strong>robots.txtの扱い</strong></th></tr></thead><tbody><tr><td><strong>PerplexityBot</strong></td><td>Perplexityの検索結果にサイトを表示・リンクさせるためのクローラー。<strong>AI基盤モデルの学習用には使われない</strong></td><td>従う。<strong>検索結果に表示させたい場合は許可を推奨</strong></td></tr><tr><td><strong>Perplexity-User</strong></td><td>ユーザーがPerplexityに質問した際、正確な回答のためにページを訪問する。回答内にリンクを含める場合がある。学習用には使われない</td><td><strong>ユーザーの要求起点のため、原則としてrobots.txtのルールを無視する</strong></td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">ここで重要なのは、<strong>PerplexityBotの許可がそのまま「検索結果への掲載可否」を左右する</strong>という点です。公式ドキュメントは、サイトを検索結果に表示させるために、robots.txtでPerplexityBotを許可し、公開されているIPレンジからのリクエストを通すことを推奨しています。</p>
+
+
+
+<p class="wp-block-paragraph">なお、robots.txtでブロックしている場合でも、Perplexityのヘルプセンターによれば、<strong>ページ本文は索引されないもののドメイン・見出し・簡潔な事実要約は索引される場合がある</strong>とされています。「ブロックすれば完全に消える」わけではない点も、社内説明の際に押さえておくと正確です。</p>
+
+
+
+<h3 class="wp-block-heading">4-2. robots.txtの書き方</h3>
+
+
+
+<p class="wp-block-paragraph">検索結果に表示させたい場合、robots.txtには次のように明示的な許可を書きます。</p>
+
+
+
+<p class="wp-block-paragraph">User-agent: PerplexityBot</p>
+
+
+
+<p class="wp-block-paragraph">Allow: /</p>
+
+
+
+<p class="wp-block-paragraph">User-agent: Perplexity-User</p>
+
+
+
+<p class="wp-block-paragraph">Allow: /</p>
+
+
+
+<p class="wp-block-paragraph">注意すべきは、User-agent: * に対する Disallow が広く効いているケースです。個別に許可を書いていても、記述の順序やパスの指定によっては意図せず遮断されていることがあります。公開前に必ずテストツールで実際の挙動を確認してください。</p>
+
+
+
+<p class="wp-block-paragraph">また、公式ドキュメントには<strong>各設定は独立して機能し、変更がPerplexity側のシステムに反映されるまで最大24時間かかる</strong>と明記されています。修正した直後に結果が変わらなくても、翌日まで待ってから再確認しましょう。</p>
+
+
+
+<h3 class="wp-block-heading">4-3. 見落とされがちな最大の落とし穴｜WAF・CDNによる遮断</h3>
+
+
+
+<p class="wp-block-paragraph">実務で最も多い事故が、<strong>robots.txtは正しいのにWAF（Web Application Firewall）やCDNの側でブロックされている</strong>というケースです。セキュリティ対策として導入したbot遮断ルールが、AI検索のクローラーまで一律に弾いてしまっている状態です。</p>
+
+
+
+<p class="wp-block-paragraph">Perplexityは公式ドキュメントで、主要なWAFにおける許可設定の手順を公開しています。要点は次のとおりです。</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Cloudflareの場合</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li>ダッシュボードで Security → WAF を開く</li>
+
+
+
+<li>Custom rules から新規ルールを作成する</li>
+
+
+
+<li>条件を組み合わせる：User Agent が PerplexityBot または Perplexity-User を含む <strong>かつ</strong> 送信元IPが公開IPレンジに含まれる</li>
+
+
+
+<li>アクションを <strong>Allow</strong> に設定し、他のセキュリティルールより優先させる</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph"><strong>AWS WAFの場合</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li>公開IPアドレスをもとに、PerplexityBot用・Perplexity-User用のIPセットを作成する</li>
+
+
+
+<li>User-Agentヘッダーに対する文字列マッチ条件を作成する</li>
+
+
+
+<li>IPセットとUser-Agent条件を組み合わせた許可ルールを作成する</li>
+
+
+
+<li>Web ACLに関連付け、ブロックルールより高い優先度を設定する</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">公式は、<strong>ユーザーエージェント名の一致だけでなくIPアドレスの検証も併用する</strong>ことを推奨しています。ユーザーエージェントは詐称できるため、名前だけで通すとなりすましを許すリスクがあるためです。IPレンジはPerplexity側で随時更新されるため、公開されているJSONエンドポイントを定期取得してルールを自動更新する運用が推奨されています。</p>
+
+
+
+<p class="wp-block-paragraph">この「IPレンジの自動更新」まで実装している日本企業はまだ多くありません。逆に言えば、<strong>ここは差がつきやすい領域</strong>です。</p>
+
+
+
+<h3 class="wp-block-heading">4-4. 到達しているかを確認する方法</h3>
+
+
+
+<p class="wp-block-paragraph">設定変更後、実際に読まれているかはサーバーログで確認するのが確実です。アクセスログをユーザーエージェント文字列で絞り込み、PerplexityBot と Perplexity-User それぞれのアクセスが記録されているかを見ます。</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>PerplexityBotのアクセスがある</strong>：インデックス目的の巡回が届いている</li>
+
+
+
+<li><strong>Perplexity-Userのアクセスがある</strong>：実際のユーザーの質問に応じてページが読まれている</li>
+
+
+
+<li><strong>どちらも0件</strong>：技術的な遮断か、そもそも発見されていない可能性が高い</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">特に3つ目の状態で「コンテンツを増やしても引用されない」と悩んでいるケースが少なくありません。ログを見れば10分で切り分けられます。</p>
+
+
+
+<h3 class="wp-block-heading">4-5. あわせて確認したい技術要件</h3>
+
+
+
+<p class="wp-block-paragraph">到達性を確保したうえで、次の点も点検してください。</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>JavaScript依存の描画になっていないか</strong>：本文がクライアントサイドでしか生成されない場合、取得できる情報が乏しくなります。主要な本文はHTMLに含めるのが安全です。</li>
+
+
+
+<li><strong>表示速度とレスポンスコード</strong>：タイムアウトやエラーが頻発するページは取得の機会を失います。</li>
+
+
+
+<li><strong>canonical・重複コンテンツの整理</strong>：どのURLを正とするかが曖昧だと、評価が分散します。</li>
+
+
+
+<li><strong>サイトマップの提供と更新</strong>：発見性を高める基本的な施策として引き続き有効です。</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><span id="5_7">5. 【コンテンツ編】引用に耐える書き方7原則</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97-1024x576.png" alt="" class="wp-image-2621" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-97.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">到達性を確保したら、次は「引用しやすい形」に整えます。ポイントは、<strong>回答を組み立てるAIが、そのページの一部分を切り出して使えるかどうか</strong>です。</p>
+
+
+
+<h3 class="wp-block-heading">5-1. 結論を先に書く</h3>
+
+
+
+<p class="wp-block-paragraph">質問に対する答えを、そのセクションの冒頭1〜2文で言い切ります。背景説明から入る書き出しは、切り出したときに答えとして成立しません。</p>
+
+
+
+<p class="wp-block-paragraph"><strong>改善前</strong>：近年、AI検索の普及にともない、多くの企業が対応を迫られています。そうしたなかで注目されているのが… <strong>改善後</strong>：Perplexityに表示されるには、robots.txtでPerplexityBotを許可することが前提条件です。そのうえで…</p>
+
+
+
+<h3 class="wp-block-heading">5-2. 1見出し1論点にする</h3>
+
+
+
+<p class="wp-block-paragraph">1つの見出しに複数のテーマを詰め込むと、どの質問に対応する塊なのかが曖昧になります。「この見出しは、どんな質問への答えか」を1つに定めてから書き始めてください。</p>
+
+
+
+<h3 class="wp-block-heading">5-3. 段落単体で意味が通るように書く</h3>
+
+
+
+<p class="wp-block-paragraph">前の段落を読んでいないと成立しない指示語（「これ」「その」「上記の」）を減らします。段落を1つコピーして誰かに見せたとき、それだけで意味が伝わるかを基準にすると判断しやすくなります。</p>
+
+
+
+<h3 class="wp-block-heading">5-4. 数値には必ず「出典」と「時点」を添える</h3>
+
+
+
+<p class="wp-block-paragraph">AI検索は根拠のある記述を選びます。数値を書くときは、調査主体・調査時期・サンプル数をセットにしてください。</p>
+
+
+
+<p class="wp-block-paragraph"><strong>改善前</strong>：AI検索経由の流入は急増しています。 <strong>改善後</strong>：2025年7月公開の分析（arXiv:2507.05301）では、AI検索の回答に含まれる366,087件の引用のうち、ニュース媒体由来は9.0%でした。</p>
+
+
+
+<p class="wp-block-paragraph">出典を書けない数値は、書かないほうが安全です。根拠のない数値は信頼性の低下要因になるうえ、後述する景品表示法の観点でもリスクになります。</p>
+
+
+
+<h3 class="wp-block-heading">5-5. FAQ形式と構造化データを併用する</h3>
+
+
+
+<p class="wp-block-paragraph">想定される質問と回答を、そのままの形でページに置きます。回答は100字程度で言い切り、詳細は本文へ誘導する構成が扱いやすい形です。</p>
+
+
+
+<p class="wp-block-paragraph">あわせて、次の構造化データを実装します。</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>FAQPage</strong>：よくある質問セクションに付与</li>
+
+
+
+<li><strong>Article</strong>：記事に付与。datePublished と dateModified を必ず両方設定</li>
+
+
+
+<li><strong>Organization</strong>：運営者情報を明示。社名・所在地・公式サイト・SNSアカウントを揃える</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">構造化データはAI検索に対する魔法の呪文ではありませんが、<strong>ページの意味を機械可読な形で明示するコスト対効果の高い施策</strong>です。</p>
+
+
+
+<h3 class="wp-block-heading">5-6. 一次情報と独自データを持つ</h3>
+
+
+
+<p class="wp-block-paragraph">他社記事の要約だけで構成されたページは、引用する理由がありません。自社にしかない情報を1つでも入れてください。</p>
+
+
+
+<ul class="wp-block-list">
+<li>自社で実施した調査・アンケートの結果</li>
+
+
+
+<li>支援実績から算出した数値（公開可否の確認は必須）</li>
+
+
+
+<li>導入事例の具体的な経緯</li>
+
+
+
+<li>現場で得た手順や失敗パターン</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">5-7. 誰が書いたか・いつ更新したかを明示する</h3>
+
+
+
+<p class="wp-block-paragraph">著者名、肩書き、経歴、監修者、運営会社情報をページ内に明示します。プロフィールページへのリンクも用意してください。</p>
+
+
+
+<p class="wp-block-paragraph">更新日は表示するだけでなく、実際に内容を見直すことが前提です。日付だけ書き換える運用は、information の信頼性を損ないます。仕様変更の多い領域では、<strong>四半期に一度の棚卸し</strong>を運用に組み込むことをおすすめします。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="6">6. 【サイト外編】自社サイトだけでは届かない理由</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98-1024x576.png" alt="" class="wp-image-2623" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-98.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">Perplexityは、企業自身が発信する情報よりも、第三者による言及を重く扱う傾向が繰り返し観測されています。自社サイトの改善だけで頭打ちになるのは、この構造が理由です。</p>
+
+
+
+<h3 class="wp-block-heading">6-1. 第三者メディア・比較サイトでの言及を増やす</h3>
+
+
+
+<p class="wp-block-paragraph">自社サイト以外で自社名が語られている場所を増やします。具体的には、業界メディアへの寄稿や取材対応、比較・ランキング記事への掲載、導入事例のプレスリリース配信などです。</p>
+
+
+
+<p class="wp-block-paragraph">ここで重要なのは、<strong>「良いことが書いてある」より「事実が正確に書かれている」ことを優先する</strong>視点です。AIは記述を根拠として扱うため、誤った情報が第三者サイトに残っていると、それがそのまま回答に反映されます。定期的に自社名で検索し、誤記があれば媒体側へ訂正を依頼してください。</p>
+
+
+
+<h3 class="wp-block-heading">6-2. エンティティの一貫性を保つ</h3>
+
+
+
+<p class="wp-block-paragraph">社名・サービス名・所在地・代表者名の表記が媒体ごとにバラバラだと、同一の企業として認識されにくくなります。次の項目について、社内で表記ルールを定めて統一してください。</p>
+
+
+
+<ul class="wp-block-list">
+<li>正式社名（法人格の位置、英語表記）</li>
+
+
+
+<li>サービス名（大文字小文字、スペースの有無、略称）</li>
+
+
+
+<li>所在地の表記形式</li>
+
+
+
+<li>公式サイトのURL（wwwの有無、httpsへの統一）</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">これは地味な作業ですが、<strong>コストがほぼゼロで効く数少ない施策</strong>です。</p>
+
+
+
+<h3 class="wp-block-heading">6-3. コミュニティ上の言及との向き合い方</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityがコミュニティサイトを多く引用する傾向を踏まえ、「自作自演で書き込めばよいのでは」と考える方がいますが、これは推奨できません。ステルスマーケティング規制（2023年10月施行）により、事業者が自らの表示であることを隠して第三者を装う行為は景品表示法上の不当表示にあたります。</p>
+
+
+
+<p class="wp-block-paragraph">行うべきは、<strong>ユーザーが自発的に語りたくなる状態をつくること</strong>と、<strong>誤情報があれば事業者として明示したうえで訂正すること</strong>です。</p>
+
+
+
+<h3 class="wp-block-heading">6-4. ニュース性の高いコンテンツを扱う場合の論点</h3>
+
+
+
+<p class="wp-block-paragraph">報道コンテンツを扱うメディアの場合、Perplexityとの関係は「引用されたい」だけでは整理できません。第2章で触れたとおり、日本では読売新聞・朝日新聞・日本経済新聞が同社を提訴しています。</p>
+
+
+
+<p class="wp-block-paragraph">一方でPerplexityは、パブリッシャーへの収益還元の枠組みも設けています。2025年8月に発表されたComet Plusは月額5ドルのサブスクリプションで、<strong>収益の80%をパブリッシャーへ配分し、残り20%をコンピューティングコストに充てる</strong>と説明されました。初期原資として4,250万ドルのプールが用意されるとされています（いずれも発表時点の情報のため、参加を検討する場合は最新の条件を公式に確認してください）。</p>
+
+
+
+<p class="wp-block-paragraph">自社が報道系のコンテンツを持つ場合は、<strong>露出の獲得と権利保護のどちらを優先するかを経営レベルで決めたうえで</strong>、技術的な許可設定を判断する必要があります。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="7">7. 表示されているかを確認する方法と計測設計</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100-1024x576.png" alt="" class="wp-image-2624" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-100.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">施策は測れなければ改善できません。Perplexityは出典が可視化されるため、他のAI検索より計測しやすいのが利点です。</p>
+
+
+
+<h3 class="wp-block-heading">7-1. 定点観測｜Perplexityに直接質問する</h3>
+
+
+
+<p class="wp-block-paragraph">自社が答えるべき質問を10〜30件リスト化し、月に1度、同じ質問をPerplexityに投げて結果を記録します。記録する項目は次のとおりです。</p>
+
+
+
+<ul class="wp-block-list">
+<li>自社が引用元に含まれたか（含まれた場合は何番目か）</li>
+
+
+
+<li>引用されたURL</li>
+
+
+
+<li>回答本文に自社名が登場したか</li>
+
+
+
+<li>競合はどこが引用されているか</li>
+
+
+
+<li>引用元となっているドメインの種別（自社／第三者メディア／コミュニティ）</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">ログイン状態やパーソナライズの影響を避けるため、シークレットモードで実施し、実施日時を必ず残してください。</p>
+
+
+
+<h3 class="wp-block-heading">7-2. GA4でPerplexity経由の流入を見る</h3>
+
+
+
+<p class="wp-block-paragraph">Perplexityの引用リンク経由のアクセスは、GA4の「参照元/メディア」レポートで perplexity.ai として確認できます。探索レポートでランディングページ別に分解すると、どのページが引用されているかの推測材料になります。</p>
+
+
+
+<p class="wp-block-paragraph">ただし、AI検索経由の流入は現時点で規模が小さいのが実情です。国内サイトではGoogleオーガニックの数%程度にとどまるケースが多く、<strong>流入量そのものを主要KPIに置くと、施策が続きません</strong>。</p>
+
+
+
+<h3 class="wp-block-heading">7-3. サーバーログでBot別の到達性を見る</h3>
+
+
+
+<p class="wp-block-paragraph">第4章で触れたログ分析は、月次の定点観測に組み込む価値があります。</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>見る指標</strong></th><th><strong>意味</strong></th></tr></thead><tbody><tr><td>PerplexityBotのアクセス数・巡回ページ数</td><td>インデックス目的の到達性。技術対応の効果検証に使う</td></tr><tr><td>Perplexity-Userのアクセス数</td><td>実際の質問に応じて読まれた回数。需要の存在を示す</td></tr><tr><td>上記のアクセスが集中しているURL</td><td>Perplexityが「答えになりそう」と判断しているページ</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph"><strong>Perplexity-Userのアクセスがあるのに引用されていない</strong>場合は、到達性ではなく記述形式に課題があると切り分けられます。逆に<strong>両方とも0件</strong>なら、技術要件から見直しが必要です。この切り分けができると、施策の当てずっぽうがなくなります。</p>
+
+
+
+<h3 class="wp-block-heading">7-4. 月次モニタリングの設計例</h3>
+
+
+
+<p class="wp-block-paragraph">3層をまとめて、次のようなKPI設計をおすすめします。</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>層</strong></th><th><strong>KPI</strong></th><th><strong>頻度</strong></th><th><strong>判断</strong></th></tr></thead><tbody><tr><td>到達性</td><td>PerplexityBot/Perplexity-Userのアクセス数</td><td>月次</td><td>0なら技術対応へ差し戻し</td></tr><tr><td>露出</td><td>定点観測クエリでの引用率（引用された件数÷実施件数）</td><td>月次</td><td>前月比で推移を見る</td></tr><tr><td>成果</td><td>perplexity.ai経由のセッション・CV</td><td>月次</td><td>母数が小さい前提で参考値として扱う</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">露出のKPIは、<strong>絶対値より前月比の推移</strong>で見てください。仕様変更の影響を受けやすいため、単月の数値で一喜一憂しない設計が現実的です。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="8">8. やってはいけない・効果が薄い施策</span></h2>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="576" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99-1024x576.png" alt="" class="wp-image-2625" style="aspect-ratio:1.7777777777777777;width:624px;height:auto" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99-1024x576.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99-300x169.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99-768x432.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99-1536x864.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image-99.png 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p class="wp-block-paragraph">最後に、費用対効果が低い、あるいはリスクのある施策を整理します。</p>
+
+
+
+<h3 class="wp-block-heading">8-1. llms.txtの設置だけで満足する</h3>
+
+
+
+<p class="wp-block-paragraph">llms.txtは、サイトの構造をAI向けに要約して提示する提案仕様です。設置自体に害はありませんが、<strong>主要なAI検索がこれを参照して引用先を決めていることを示す公式な情報は、2026年8月時点で確認できていません</strong>。設置を最優先の施策として位置づけるのは、優先順位の誤りです。まずrobots.txtとWAFを見直してください。</p>
+
+
+
+<h3 class="wp-block-heading">8-2. AI向けの隠しテキスト・不自然なチャンク化</h3>
+
+
+
+<p class="wp-block-paragraph">「AIに読ませるため」として画面に表示されないテキストを埋め込む、意味の切れ目を無視して文章を細切れにする、といった手法は推奨できません。検索エンジンのスパムポリシーに抵触するリスクがあるうえ、人間にとって読みにくいページは結果的に評価を落とします。</p>
+
+
+
+<h3 class="wp-block-heading">8-3. 根拠のない最上級表現</h3>
+
+
+
+<p class="wp-block-paragraph">「業界No.1」「日本初」といった表現は、合理的な根拠を示す資料がなければ景品表示法上の優良誤認表示にあたるおそれがあります。AI検索対策として自社の強みを打ち出す際も、<strong>調査主体・調査時期・調査対象を明示できる範囲</strong>にとどめてください。</p>
+
+
+
+<h3 class="wp-block-heading">8-4. ブロックしたまま「表示されない」と悩む</h3>
+
+
+
+<p class="wp-block-paragraph">繰り返しになりますが、最も多い失敗です。セキュリティ部門とマーケティング部門で管理主体が分かれている企業では、マーケティング側が遮断の事実を把握していないケースが珍しくありません。着手時に必ず両部門で確認してください。</p>
+
+
+
+<h3 class="wp-block-heading">8-5. 効果を過大に見積もった社内説明</h3>
+
+
+
+<p class="wp-block-paragraph">AI検索経由の流入は、現時点では多くのサイトで小さな比率です。「すぐに流入が倍増する」といった説明で予算を取ると、半年後に説明がつかなくなります。<strong>現在の主眼は流入量ではなく、AIが自社をどう説明するかのコントロール</strong>にあります。この前提を最初に共有しておくことが、施策を継続させる鍵です。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="PerplexityFAQ">Perplexityで表示させることに関するよくある質問（FAQ）</span></h2>
+
+
+
+<h3 class="wp-block-heading"><strong>Q1. Perplexityに表示されるまで、どのくらいの期間がかかりますか？</strong>&nbsp;</h3>
+
+
+
+<p class="wp-block-paragraph">A. 一律の目安はありません。Perplexityは質問ごとにリアルタイムでWebを取得するため、公開直後のページが引用される場合もあります。ただしrobots.txtやWAFの設定変更については、公式ドキュメントで反映まで最大24時間かかると明記されています。</p>
+
+
+
+<h3 class="wp-block-heading">Q2. PerplexityBotを許可すると、自社コンテンツがAIの学習に使われますか？</h3>
+
+
+
+<p class="wp-block-paragraph">&nbsp;A. 公式ドキュメントでは、PerplexityBotは検索結果への表示とリンクのためのものであり、AI基盤モデルの学習用には使用しないと説明されています。Perplexity-Userについても学習目的ではないとされています。</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Q3. Google検索で上位なら、Perplexityにも自動的に引用されますか？</strong>&nbsp;</h3>
+
+
+
+<p class="wp-block-paragraph">A. いいえ。両者は別の仕組みで動いており、検索順位が高いことは引用を保証しません。Perplexityでは「その質問に直接答えているか」が効きやすいため、順位よりも記述形式と根拠の明示が重要になります。</p>
+
+
+
+<h3 class="wp-block-heading">Q4. llms.txtは設置すべきですか？</h3>
+
+
+
+<p class="wp-block-paragraph">&nbsp;A. 設置しても害はありませんが、優先度は高くありません。主要なAI検索がllms.txtを参照して引用先を決めているという公式情報は確認できていないためです。まずrobots.txtとWAFの設定を優先してください。</p>
+
+
+
+<h3 class="wp-block-heading">Q5. 自社が引用されているか、無料で確認する方法はありますか？</h3>
+
+
+
+<p class="wp-block-paragraph">&nbsp;A. あります。Perplexityで自社が答えるべき質問をシークレットモードで検索し、出典一覧に自社ドメインが出るかを記録してください。あわせてGA4の「参照元/メディア」で perplexity.ai からの流入を確認すると、実際のクリックまで把握できます。</p>
+
+
+
+<h2 class="wp-block-heading"><span id="PerplexityAIO">まとめ｜Perplexity対策はAIO全体の入口</span></h2>
+
+
+
+<p class="wp-block-paragraph">Perplexityに表示されるには、到達性・適合性・信頼性の3層を順に整えることが最短ルートです。技術面ではPerplexityBotの許可とWAFでの通過設定が前提条件であり、ここを飛ばしたコンテンツ改善は成果につながりません。そして選定ロジックが非公開である以上、施策は保証ではなく確率として捉え、定点観測とログ分析で検証しながら回していく必要があります。</p>
+
+
+
+<p class="wp-block-paragraph">まず、自社のrobots.txtを開いてください。次にサーバーログでPerplexityBotのアクセス有無を確認してください。この2つで、自社が「土俵に上がれているか」が分かります。土俵に上がれていれば第5章の記述改善へ、上がれていなければ第4章の技術対応へ進むのが正しい順序です。</p>
+
+
+
+<p class="has-text-align-center wp-block-paragraph"><strong>まずは自社のAI検索対策状況を無料で診断しませんか？</strong></p>
+
+
+
+<p class="wp-block-paragraph">バクリ株式会社の「無料AIOアセスメント」では、ChatGPT・Gemini・Perplexityにおける自社の引用状況と改善ポイントを10分で可視化します。</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-fe48e5de wp-block-buttons-is-layout-flex">
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-background wp-element-button" href="https://www.bakuri.co.jp/contact/" style="background-color:#004b76">無料AIOアセスメントを受け取る</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">【お知らせ】4月17日（金）に弊社代表荒川が書籍を発売しました！</mark></strong><br>AI時代を勝ち抜く最先端のノウハウをまとめた書籍『海外の先行事例に学ぶ AI検索最適化（AIO/AISEO/LLMO）実践ガイド』（著者：弊社代表取締役 荒川 大史）が、4月17日（金）よりKindleストアにて配信開始しました。</p>
+
+
+
+<p class="wp-block-paragraph">これからのビジネス戦略にぜひお役立てください！</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://www.amazon.co.jp/%E3%80%8E%E6%B5%B7%E5%A4%96%E3%81%AE%E5%85%88%E8%A1%8C%E4%BA%8B%E4%BE%8B%E3%81%AB%E5%AD%A6%E3%81%B6-AI%E6%A4%9C%E7%B4%A2%E6%9C%80%E9%81%A9%E5%8C%96%EF%BC%88AIO-AISEO-LLMO%EF%BC%89%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%E3%80%8F-%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-ebook/dp/B0GXCD9CLB/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;crid=2QC3B0MFUIE2W&amp;dib=eyJ2IjoiMSJ9.bkrviROvfSxWKFoe_dTmfQ.Y5OC3e1v4HnTPPYtqal1gK8KgGDQUcbDJguWWqN5qTA&amp;dib_tag=se&amp;keywords=%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE&amp;qid=1784788528&amp;sprefix=%E3%83%90%E3%82%AF%E3%83%AA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%2Caps%2C399&amp;sr=8-1"><img decoding="async" width="1024" height="537" src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1024x537.png" alt="" class="wp-image-2139" srcset="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1024x537.png 1024w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-300x157.png 300w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-768x403.png 768w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1-1536x806.png 1536w, https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/image-1.png 1999w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+        <div class="p-postPageBack">
+          <a class="p-postCtaButton p-postCtaButton--yellow" href="/contact/">
+            <span>インハウスについて相談する</span>
+          </a>
+          <a class="c-buttonPrimary --outline" href="https://www.bakuri.co.jp/aio-lab/">
+            AIO Lab TOPへ戻る
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="p-postSidebar">
+  <div class="p-postSidebarContainer">
+
+    
+    <div>
+      <h2 class="p-postSidebarHeader">ピックアップ記事</h2>
+      <ul class="p-postSidebarCardList p-postSidebarCardList--spHorizontal">
+                <li>
+          <a href="https://www.bakuri.co.jp/aio-lab/zero-click-search-aio-strategy/" class="p-cardListLink p-postSidebarCard">
+            <figure class="p-postSidebarCard__figure">
+              <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/02/99e2a072c1b25ddb4fa733b7f29f3839-300x157.png" alt="AI OverviewとAI Modeの違いとAISEO対策" decoding="async">
+            </figure>
+
+            <div class="p-postSidebarCard__body">
+              <div class="p-postSidebarCard__meta">
+                <p class="p-cardListDate">
+                  <time datetime="2026-04-07T10:37:55+09:00">
+                    2026/04/07                  </time>
+                </p>
+
+                                                    <ul class="p-cardListTags">
+                    <li class="c-tag --yellow">note</li>
+                  </ul>
+                              </div>
+
+              <p class="p-cardListTitle">AI OverviewとAI Modeの違いとAISEO対策</p>
+            </div>
+          </a>
+        </li>
+                <li>
+          <a href="https://www.bakuri.co.jp/aio-lab/ai-search-optimization-trends/" class="p-cardListLink p-postSidebarCard">
+            <figure class="p-postSidebarCard__figure">
+              <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/04/2894b42a1e9707693eff2d6115bc3aff-300x157.png" alt="AI検索引用300%増のAISEO戦略5大トレンド" decoding="async">
+            </figure>
+
+            <div class="p-postSidebarCard__body">
+              <div class="p-postSidebarCard__meta">
+                <p class="p-cardListDate">
+                  <time datetime="2026-04-07T10:14:32+09:00">
+                    2026/04/07                  </time>
+                </p>
+
+                                                    <ul class="p-cardListTags">
+                    <li class="c-tag --yellow">note</li>
+                  </ul>
+                              </div>
+
+              <p class="p-cardListTitle">AI検索引用300%増のAISEO戦略5大トレンド</p>
+            </div>
+          </a>
+        </li>
+                <li>
+          <a href="https://www.bakuri.co.jp/aio-lab/ai-site-structure/" class="p-cardListLink p-postSidebarCard">
+            <figure class="p-postSidebarCard__figure">
+              <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/02/9edb89d04d1648916497c8517e15ac34-300x157.png" alt="【シリーズ02】AI対応サイト構造とパフォーマンス最適化｜トピッククラスター設計とCore Web Vitals改善の実践" decoding="async">
+            </figure>
+
+            <div class="p-postSidebarCard__body">
+              <div class="p-postSidebarCard__meta">
+                <p class="p-cardListDate">
+                  <time datetime="2026-02-17T15:38:00+09:00">
+                    2026/02/17                  </time>
+                </p>
+
+                                                    <ul class="p-cardListTags">
+                    <li class="c-tag --yellow">note</li>
+                  </ul>
+                              </div>
+
+              <p class="p-cardListTitle">【シリーズ02】AI対応サイト構造とパフォーマンス最適化｜トピッククラスター設計とCore Web Vitals改善の実践</p>
+            </div>
+          </a>
+        </li>
+              </ul>
+    </div>
+    
+    
+    <div>
+      <h2 class="p-postSidebarHeader">カテゴリー</h2>
+            <ul class="c-categories">
+        <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-lab/">すべて</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/aio%e3%83%bbllmo%e5%85%a5%e9%96%80/">AIO・LLMO入門</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/aio%e5%ae%9f%e8%b7%b5%e3%83%bb%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e6%94%b9%e5%96%84/">AIO実践・コンテンツ改善</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/chatgpt%e5%ba%83%e5%91%8a/">ChatGPT広告</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/note/">note</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/%e8%a8%88%e6%b8%ac%e3%83%bb%e5%88%86%e6%9e%90%e3%83%bb%e3%83%84%e3%83%bc%e3%83%ab/">計測・分析・ツール</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/%e8%aa%bf%e6%9f%bb%e3%83%bb%e4%ba%8b%e4%be%8b%e3%83%bb%e6%b5%b7%e5%a4%96%e5%8b%95%e5%90%91/">調査・事例・海外動向</a></li>
+                <li><a class="c-categoryLink" href="https://www.bakuri.co.jp/aio-category/%e8%b2%bb%e7%94%a8%e3%83%bb%e4%bc%9a%e7%a4%be%e6%af%94%e8%bc%83%e3%83%bb%e5%86%85%e8%a3%bd%e5%8c%96/">費用・会社比較・内製化</a></li>
+              </ul>
+          </div>
+
+    <div class="p-postSidebarBottom">
+      <h2 class="p-postSidebarBottomTitle">経営目線で内製化を御手伝いします！</h2>
+      <p class="p-postSidebarBottomText">AI時代のマーケティングを実践したいならお問い合わせください。</p>
+      <ul class="p-sidebarCtaList">
+        <li>
+          <div class="p-sidebarCta --black">
+            <p class="p-sidebarCtaText">サービス資料</p>
+            <a class="p-sidebarCtaLink" href="https://www.bakuri.co.jp/download/">ダウンロードはこちら</a>
+          </div>
+        </li>
+        <li>
+          <div class="p-sidebarCta --yellow">
+            <p class="p-sidebarCtaText">インハウス支援無料相談会</p>
+            <a class="p-sidebarCtaLink" href="https://www.bakuri.co.jp/contact/">お問い合わせはこちら</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  <!-- form -->
+  <div class="p-requestFormBox p-requestFormBox--sidebar js-sidebar-sticky-form">
+    <div class="p-requestFormBox__badge">
+      <img src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/img_form_badge.png" alt="BAKURI" decoding="async">
+    </div>
+
+          <h2 class="p-requestFormBox__title">
+        AIO資料請求フォーム      </h2>
+    
+    <div class="p-requestFormBox__inner">
+      
+<div class="wpcf7 no-js" id="wpcf7-f1604-p2617-o1" lang="ja" dir="ltr" data-wpcf7-id="1604">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/aio-lab/perplexity/#wpcf7-f1604-p2617-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="1604" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ja" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1604-p2617-o1" /><input type="hidden" name="_wpcf7_container_post" value="2617" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" /><input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</fieldset>
+<!-- AIO -->
+<div class="cf7-step-form"
+  data-submit-text="資料を無料で受け取る（無料）"
+  data-sending-text="送信中..."
+  data-thanks-url="/thanks-aio/">
+
+  <div class="cf7-step is-active" data-step="1">
+
+    <div class="cf7-field js-confirm-wrap" data-label="メールアドレス" data-required="true">
+      <label>メールアドレス <span class="required">必須</span></label>
+
+      <div class="cf7-note">
+        <p>メールにて資料をお送りいたします。正確にアドレスをご入力くださいませ。<br>
+        フリーアドレスでのご登録の場合、資料の送付をお断りさせていただく場合がございます。</p>
+      </div>
+
+      <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email" /></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="役職" data-required="true">
+      <label>役職 <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="job-role"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required js-choices" aria-required="true" aria-invalid="false" name="job-role"><option value="">役職を選択してください</option><option value="代表取締役">代表取締役</option><option value="取締役">取締役</option><option value="部長">部長</option><option value="課長">課長</option><option value="人事担当">人事担当</option><option value="採用担当">採用担当</option><option value="営業担当">営業担当</option><option value="その他">その他</option></select></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="サービス検討状況" data-required="true">
+      <label>サービス検討状況 <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="radio-service"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="radio-service" value="話を聞きたい" /><span class="wpcf7-list-item-label">話を聞きたい</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-service" value="比較検討中でサービス詳細が知りたい" /><span class="wpcf7-list-item-label">比較検討中でサービス詳細が知りたい</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-service" value="将来的に利用を検討中のため" /><span class="wpcf7-list-item-label">将来的に利用を検討中のため</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="radio-service" value="情報収集" /><span class="wpcf7-list-item-label">情報収集</span></label></span></span></span>
+    </div>
+
+    <div class="cf7-progress-bar">
+      <div class="cf7-progress-status">
+        <span class="cf7-progress-text">1/3</span>
+      </div>
+      <div class="cf7-progress-track">
+        <div class="cf7-progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="cf7-buttons">
+      <button type="button" class="cf7-next"><span>次へ</span></button>
+    </div>
+
+  </div>
+
+  <div class="cf7-step" data-step="2">
+
+    <div class="cf7-field js-confirm-wrap" data-label="姓" data-required="true">
+      <label>姓 <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="last-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="last-name" /></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="名" data-required="true">
+      <label>名 <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="first-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="first-name" /></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="会社名" data-required="true">
+      <label>会社名 <span class="required">必須</span></label>
+      <div class="cf7-note">
+        <p>同業他社様および競合サービスを運営されている企業様からの資料ダウンロードはご遠慮いただいております。</p>
+      </div>
+      <span class="wpcf7-form-control-wrap" data-name="company"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="company" /></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="電話番号">
+      <label>電話番号</label>
+      <span class="cf7-note">日中に連絡が取れる番号をご記入ください</span>
+      <span class="wpcf7-form-control-wrap" data-name="tel"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-text wpcf7-validates-as-tel" aria-invalid="false" placeholder="050-1234-5678" value="" type="tel" name="tel" /></span>
+    </div>
+
+    <div class="cf7-progress-bar">
+      <div class="cf7-progress-status">
+        <span class="cf7-progress-text">2/3</span>
+      </div>
+      <div class="cf7-progress-track">
+        <div class="cf7-progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="cf7-buttons">
+      <button type="button" class="cf7-next"><span>次へ</span></button>
+      <button type="button" class="cf7-prev">戻る</button>
+    </div>
+
+  </div>
+
+  <div class="cf7-step" data-step="3">
+
+    <div class="cf7-field js-confirm-wrap" data-label="相談対象URL" data-required="true">
+      <label>相談対象URL <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="your-url"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="your-url" /></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="お問い合わせ内容">
+      <label>現在のお困りごとや、課題に感じていることがあればご記入ください</label>
+      <span class="wpcf7-form-control-wrap" data-name="message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="例:SEOに漠然とした課題があり話を聞いてみたい。自社に最適なプランを相談したい。" name="message"></textarea></span>
+    </div>
+
+    <div class="cf7-field js-confirm-wrap" data-label="当社を知った経緯" data-required="true">
+      <label>当社をどちらでお知りになりましたか？ <span class="required">必須</span></label>
+      <span class="wpcf7-form-control-wrap" data-name="inquiry-type"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required js-choices" aria-required="true" aria-invalid="false" name="inquiry-type"><option value="">―選択してください―</option><option value="Google検索">Google検索</option><option value="AI（ChatGTPなど）">AI（ChatGTPなど）</option><option value="SNS（Instagram/Facebook/等）">SNS（Instagram/Facebook/等）</option><option value="荒川大史のX">荒川大史のX</option><option value="YouTube">YouTube</option><option value="note（海外AISEO最新情報note）">note（海外AISEO最新情報note）</option><option value="メディアレーダー">メディアレーダー</option><option value="バクリの記事（AIO Lab/Column）">バクリの記事（AIO Lab/Column）</option><option value="知人・取引先からの紹介">知人・取引先からの紹介</option><option value="セミナー">セミナー</option><option value="ニュースサイト・メディア掲載">ニュースサイト・メディア掲載</option><option value="広告（Web広告・リスティング等）">広告（Web広告・リスティング等）</option><option value="既存の取引先">既存の取引先</option><option value="その他（自由記述欄）">その他（自由記述欄）</option></select></span>
+    </div>
+
+    <div class="cf7-privacy">
+      <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer" class="default-link">プライバシーポリシー</a>に同意します
+    </div>
+
+    <div class="cf7-progress-bar">
+      <div class="cf7-progress-status">
+        <span class="cf7-progress-text">3/3</span>
+      </div>
+      <div class="cf7-progress-track">
+        <div class="cf7-progress-fill"></div>
+      </div>
+    </div>
+<p class="recaptcha-text">
+  ※このサイトは reCAPTCHA によって保護されており、Google の
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a> と
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener">利用規約</a> が適用されます。
+</p>
+    <div class="cf7-buttons">
+      <span class="cf7-submit-wrap">
+        <input class="wpcf7-form-control wpcf7-submit has-spinner cf7-submit" type="submit" value="資料を無料で受け取る（無料）" />
+      </span>
+      <button type="button" class="cf7-prev">戻る</button>
+    </div>
+
+  </div>
+
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+    </div>
+  </div>
+  <!-- / form -->
+  </div>
+</aside>
+  </div>
+
+  
+<section class="l-sectionPrimary --hasBorder p-postDocsSection">
+  <div class="l-container">
+    <div class="p-caseHeadingWrapper">
+      <h2 class="p-postListHeading">お役立ち資料</h2>
+    </div>
+
+    <ul class="p-postBottomCardList p-postBottomCardList--vertical">
+            <li>
+        <a href="https://www.bakuri.co.jp/download/aio-llmo%e5%9f%ba%e6%9c%ac%e5%af%be%e7%ad%96%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%83%aa%e3%82%b9%e3%83%8810%e9%81%b8/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/56dbe4bbed123583d68cdc34b2184fa6-300x169.jpg" alt="AIO/LLMO基本対策チェックリスト10選" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <p class="p-cardListDate">
+              <time datetime="2026-08-28T11:04:13+09:00">
+                2026/08/28              </time>
+            </p>
+
+            <p class="p-cardListTitle">AIO/LLMO基本対策チェックリスト10選</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/download/aiseo-%e5%ae%9f%e8%a3%85%e3%83%95%e3%83%ac%e3%83%bc%e3%83%a0%e3%83%af%e3%83%bc%e3%82%af/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/46d8fb8cd5713034587aae4949d16f4f-300x169.jpg" alt="AISEO 実装フレームワーク" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <p class="p-cardListDate">
+              <time datetime="2026-08-28T10:58:39+09:00">
+                2026/08/28              </time>
+            </p>
+
+            <p class="p-cardListTitle">AISEO 実装フレームワーク</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/download/web%e3%82%b0%e3%83%ad%e3%83%bc%e3%82%b9%e6%94%af%e6%8f%b4%e3%83%bb%e6%94%b9%e5%96%84%e3%82%b3%e3%83%b3%e3%82%b5%e3%83%ab%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/21f7c6b21d4dcbf807dfe2f34f8a7375-2-300x169.jpeg" alt="Webグロース支援・改善コンサルティング" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <p class="p-cardListDate">
+              <time datetime="2026-08-22T12:40:35+09:00">
+                2026/08/22              </time>
+            </p>
+
+            <p class="p-cardListTitle">Webグロース支援・改善コンサルティング</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/download/cmo%e3%82%b3%e3%83%b3%e3%82%b5%e3%83%ab%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e6%94%af%e6%8f%b4/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/21f7c6b21d4dcbf807dfe2f34f8a7375-1-300x169.jpeg" alt="CMOコンサルティング支援" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <p class="p-cardListDate">
+              <time datetime="2026-08-22T12:35:53+09:00">
+                2026/08/22              </time>
+            </p>
+
+            <p class="p-cardListTitle">CMOコンサルティング支援</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/download/%e3%83%9e%e3%83%bc%e3%82%b1%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e5%86%85%e8%a3%bd%e5%8c%96%e6%94%af%e6%8f%b4/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/c912bde58901c6bae13fcc9e8872d5e7-0-300x169.jpeg" alt="マーケティング内製化支援" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <p class="p-cardListDate">
+              <time datetime="2026-08-22T12:05:06+09:00">
+                2026/08/22              </time>
+            </p>
+
+            <p class="p-cardListTitle">マーケティング内製化支援</p>
+          </div>
+        </a>
+      </li>
+          </ul>
+  </div>
+</section>
+
+<section class="l-sectionPrimary --hasBorder p-postRelatedSection">
+  <div class="l-container">
+    <div class="p-caseHeadingWrapper">
+      <h2 class="p-postListHeading">関連記事</h2>
+    </div>
+
+    <ul class="p-postBottomCardList p-postBottomCardList--horizontal">
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/ec-llmo/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image4-1-300x169.jpg" alt="ECサイトのLLMO対策とは？AIに推奨される商品ページの作り方を解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T14:11:02+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">AIO実践・コンテンツ改善</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">ECサイトのLLMO対策とは？AIに推奨される商品ページの作り方を解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/aiseo%e5%8a%b9%e6%9e%9c%e6%b8%ac%e5%ae%9a%e3%81%ae%e5%ae%8c%e5%85%a8%e7%89%88%ef%bd%9cga4%e3%81%a7%e8%bf%bd%e3%81%8615%e3%81%aekpi%e3%81%a8%e8%a8%ad%e5%ae%9a%e6%89%8b%e9%a0%86%e3%82%92%e3%82%8f/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/07/965bee11bf98cf18d2f53d1493c70215-300x157.png" alt="AISEO効果測定の完全版｜GA4で追う15のKPIと設定手順をわかりやすく解説" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-07-21T14:21:11+09:00">
+                  2026/07/21                </time>
+              </p>
+
+                          </div>
+
+            <p class="p-cardListTitle">AISEO効果測定の完全版｜GA4で追う15のKPIと設定手順をわかりやすく解説</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/ai-site-structure/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/02/9edb89d04d1648916497c8517e15ac34-300x157.png" alt="【シリーズ02】AI対応サイト構造とパフォーマンス最適化｜トピッククラスター設計とCore Web Vitals改善の実践" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-02-17T15:38:00+09:00">
+                  2026/02/17                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">note</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">【シリーズ02】AI対応サイト構造とパフォーマンス最適化｜トピッククラスター設計とCore Web Vitals改善の実践</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/zero-click-search-aio-strategy/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/02/99e2a072c1b25ddb4fa733b7f29f3839-300x157.png" alt="AI OverviewとAI Modeの違いとAISEO対策" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-04-07T10:37:55+09:00">
+                  2026/04/07                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">note</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">AI OverviewとAI Modeの違いとAISEO対策</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/aiollmogeoseo/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/08/image4-300x169.jpg" alt="AIO・LLMO・GEO・SEOの違いとは？意味・比較表・使い分けを徹底解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-08-18T10:25:42+09:00">
+                  2026/08/18                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">AIO・LLMO入門</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">AIO・LLMO・GEO・SEOの違いとは？意味・比較表・使い分けを徹底解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+          </ul>
+  </div>
+</section>
+
+<section class="l-sectionPrimary --hasBorder p-postRecentSection">
+  <div class="l-container">
+    <div class="p-caseHeadingWrapper">
+      <h2 class="p-postListHeading">新着記事</h2>
+    </div>
+
+    <ul class="p-postBottomCardList p-postBottomCardList--horizontal">
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/gemini-seo/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image8-1-300x169.jpg" alt="Gemini検索対策とは？AIに推奨・引用される7つの実践手順【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T15:39:55+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                          </div>
+
+            <p class="p-cardListTitle">Gemini検索対策とは？AIに推奨・引用される7つの実践手順【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/llmo-for-healthcare/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image4-2-300x169.jpg" alt="医療機関のLLMO対策とは？医療広告ガイドラインを踏まえた安全な進め方を解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T15:10:30+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">AIO実践・コンテンツ改善</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">医療機関のLLMO対策とは？医療広告ガイドラインを踏まえた安全な進め方を解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/ec-llmo/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image4-1-300x169.jpg" alt="ECサイトのLLMO対策とは？AIに推奨される商品ページの作り方を解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T14:11:02+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">AIO実践・コンテンツ改善</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">ECサイトのLLMO対策とは？AIに推奨される商品ページの作り方を解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/btob-llmo/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image3-1-300x169.jpg" alt="BtoB企業のLLMO対策とは？AI検索時代の勝ち筋を一次調査データで解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T14:06:23+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                          </div>
+
+            <p class="p-cardListTitle">BtoB企業のLLMO対策とは？AI検索時代の勝ち筋を一次調査データで解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+            <li>
+        <a href="https://www.bakuri.co.jp/aio-lab/llmo-e-e-a-t/" class="p-cardListLink p-postBottomCard">
+          <figure class="p-postBottomCard__figure">
+            <img src="https://www.bakuri.co.jp/devbkr/wp-content/uploads/2026/09/image3-300x169.jpg" alt="LLMOにおけるE-E-A-T対策とは？AIに引用される4要素の実装法を解説【2026年最新】" decoding="async">
+          </figure>
+
+          <div class="p-postBottomCard__body">
+            <div class="p-postBottomCard__meta">
+              <p class="p-cardListDate">
+                <time datetime="2026-09-03T14:01:39+09:00">
+                  2026/09/03                </time>
+              </p>
+
+                                          <ul class="p-cardListTags">
+                <li class="c-tag --yellow">AIO実践・コンテンツ改善</li>
+              </ul>
+                          </div>
+
+            <p class="p-cardListTitle">LLMOにおけるE-E-A-T対策とは？AIに引用される4要素の実装法を解説【2026年最新】</p>
+          </div>
+        </a>
+      </li>
+          </ul>
+  </div>
+</section>
+
+
+  <div class="p-serviceCta p-serviceCta--post">
+    <div class="c-ctaActions">
+
+  <div class="c-ctaDark">
+    <p class="c-ctaDarkText">サービス資料</p>
+    <p>
+      <a class="c-ctaActionButton --white" href="https://www.bakuri.co.jp/download/">ダウンロードはこちら</a>
+    </p>
+  </div>
+  <div class="c-ctaLight">
+    <p class="c-ctaLightText">インハウス支援無料相談会</p>
+    <p>
+      <a class="c-ctaActionButton --yellow" href="https://www.bakuri.co.jp/contact/">お申し込みはこちら</a>
+    </p>
+  </div>
+</div>
+  </div>
+</main>
+
+
+  <footer class="l-footer --hasBreadcrumb" role="contentinfo">
+
+    <p class="l-footerPageTop">
+      <a class="l-footerPageTopLink" href="#">page top</a>
+    </p>
+
+    <div class="l-container">
+
+              <div class="l-footerBreadcrumbWrapper">
+          <nav class="l-breadcrumb" aria-label="パンくず">
+  <ol class="l-breadcrumbList">
+    <li class="l-breadcrumbItem">
+      <a class="l-breadcrumbItemLink --home" href="https://www.bakuri.co.jp/">
+        <img class="l-breadcrumbHomeIcon" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_home.svg" alt="" width="16" height="16" decoding="async">
+        <span>AI活用・内製化支援のバクリ株式会社TOP</span>
+      </a>
+    </li>
+    <li class="l-breadcrumbItem"><a href="https://www.bakuri.co.jp/aio-lab/">AIO Lab</a></li><li class="l-breadcrumbItem" aria-current="page">Perplexityに表示されるには？引用される条件と実装手順を公式仕様ベースで解説【2026年版】</li>  </ol>
+</nav>
+        </div>
+      
+
+      <!-- CTA -->
+      <section class="l-footerContact">
+
+        <h2 class="u-visuallyHidden">お問い合わせ・資料請求</h2>
+
+        <ul class="l-footerContactActions">
+
+          <!-- サービス資料 -->
+          <li class="l-footerContactCard --document">
+
+            <p class="l-footerContactHeading">
+              サービス資料
+            </p>
+
+            <p class="l-footerContactCardText">
+              会社概要やサービス資料は、<br>
+              お役立ち資料などをダウンロードいただけます。
+            </p>
+
+            <a class="l-footerContactCardLink" href="https://www.bakuri.co.jp/download/">
+              ダウンロードはこちら
+            </a>
+
+          </li>
+
+
+          <!-- お問い合わせ -->
+          <li class="l-footerContactCard --yellow">
+
+            <p class="l-footerContactHeading">
+              お問い合わせ
+            </p>
+
+            <p class="l-footerContactCardText">
+              テーマがぼんやりした段階でもお気軽にご相談ください。<br>
+              課題をお伺いしつつ貴社に合った支援の方向性をご提案いたします。
+            </p>
+
+            <a
+              class="l-footerContactCardLink"
+              href="https://www.bakuri.co.jp/contact/"
+            >
+              お問い合わせはこちら
+            </a>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- Footer Main -->
+      <div class="l-footerBlock">
+
+        <div class="l-footerUpper">
+
+          <!-- Sitemap -->
+          <section class="p-footerSitemap">
+
+            <h2 class="u-visuallyHidden">
+              サイトマップ
+            </h2>
+
+            <div class="p-footerSitemapColumn">
+
+
+              <!-- =========================
+                   1列目
+              ========================== -->
+              <div>
+
+                <!-- 会社概要 -->
+                <div class="p-footerSitemapItem">
+
+                  <p class="p-footerSitemapMainLink">
+                    会社概要
+                  </p>
+
+                  <ul class="p-footerSitemapChildLink">
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/company/about/">
+                        会社概要
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/company/">
+                        バクリの特徴
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/member/">
+                        メンバー紹介
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/news/">
+                        ニュース
+                      </a>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+
+                <!-- サービス -->
+                <div class="p-footerSitemapItem">
+
+                  <p class="p-footerSitemapMainLink">
+                    <a href="https://www.bakuri.co.jp/service/">
+                    サービス
+                    </a>
+                  </p>
+
+                  <ul class="p-footerSitemapChildLink">
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/service/in-house_marketing-support/">
+                        マーケティング内製化支援
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/">
+                        AIO対策 / LLMOコンサルティング
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/service/cmo-services_rental-cmo/">
+                        CMOコンサルティング支援
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/service/web-growth-consulting/">
+                        Webグロース支援・改善コンサルティング
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/gptlp/chatgpt-ad-lp.html">
+                        chatGPT広告支援
+                      </a>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+
+              <!-- =========================
+                   2列目
+              ========================== -->
+              <div>
+
+                <div class="p-footerSitemapItem">
+
+                <!-- 実績 -->
+                  <p class="p-footerSitemapMainLink">
+                    <a href="https://www.bakuri.co.jp/case/">
+                      実績
+                    </a>
+                  </p>
+
+                <!-- FAQ -->
+                  <p class="p-footerSitemapMainLink">
+                    <a href="https://www.bakuri.co.jp/faq/">
+                      FAQ
+                    </a>
+                  </p>
+
+                <!-- プライバシーポリシー -->
+                  <p class="p-footerSitemapMainLink">
+                    <a href="https://www.bakuri.co.jp/privacy/">
+                      プライバシーポリシー
+                    </a>
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <!-- =========================
+                   3列目
+              ========================== -->
+              <div>
+
+                <!-- メディア -->
+                <div class="p-footerSitemapItem">
+
+                  <p class="p-footerSitemapMainLink">
+                    メディア
+                  </p>
+
+                  <ul class="p-footerSitemapChildLink">
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/blog/">
+                        Column
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://www.bakuri.co.jp/aio-lab/">
+                        AIO Lab
+                      </a>
+                    </li>
+
+                  </ul>
+
+                </div>
+                
+
+                <!-- セミナー -->
+                  <p class="p-footerSitemapMainLink">
+                    <a href="https://www.bakuri.co.jp/seminar/">
+                      セミナー
+                    </a>
+                  </p>
+
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- Company -->
+          <div class="l-footerCompany">
+
+            
+            <p class="l-footerCompanyLogo">
+
+              <a
+                href="https://www.bakuri.co.jp/"
+                rel="home"
+              >
+
+                <img
+                  src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/logo_white.svg"
+                  alt="Webマーケティングのインハウス化、内製化支援専門バクリ株式会社"
+                  decoding="async"
+                >
+
+              </a>
+
+            </p>
+
+
+            <div class="l-footerCompanyAddress">
+
+              <p>
+                150-0001 東京都渋谷区神宮前 1-5-8
+                神宮前タワービルディング 14 階
+              </p>
+
+              <p lang="en">
+                14F, Jingumae Tower Building,<br>
+                1-5-8 Jingumae, Shibuya-ku, Tokyo, Japan
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="l-footerBottom">
+
+
+          <!-- SNS -->
+          <ul class="l-footerSns">
+
+            <li>
+
+              <a
+                href="https://note.com/bakuri"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="note"
+              >
+
+                <img
+                  src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_note_white.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  decoding="async"
+                >
+
+              </a>
+
+            </li>
+
+
+            <li>
+
+              <a
+                href="https://www.facebook.com/taishi.arakawa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+
+                <img
+                  src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_facebook_white.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  decoding="async"
+                >
+
+              </a>
+
+            </li>
+
+
+            <li>
+
+              <a
+                href="https://x.com/webmarketer_tai"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+              >
+
+                <img
+                  src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_x_white.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  decoding="async"
+                >
+
+              </a>
+
+            </li>
+
+
+            <li>
+
+              <a
+                href="https://youtube.com/channel/UCKjWI02_TFnBM-esKxA0YLQ?si=MXU2zjtWBV4q_Ccm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+
+                <img
+                  src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/images/icon_youtube_white.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  decoding="async"
+                >
+
+              </a>
+
+            </li>
+
+          </ul>
+
+
+          <!-- Copyright -->
+          <p class="p-footerCopyright">
+            <small>© BAKURI</small>
+          </p>
+
+
+        </div>
+
+      </div>
+
+      <!-- Footer fixed cta btn -->
+      <ul class="l-cta-footer__sp">
+        <li class="l-footerCtaBtn --download">
+          <a href="https://www.bakuri.co.jp/download/">資料ダウンロード</a>
+        </li>
+
+        <li class="l-footerCtaBtn --contact">
+          <a href="https://www.bakuri.co.jp/contact/">お問い合わせ</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+</div><!-- .l-site -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/devbkr/wp-*.php","/devbkr/wp-admin/*","/devbkr/wp-content/uploads/*","/devbkr/wp-content/*","/devbkr/wp-content/plugins/*","/devbkr/wp-content/themes/bkr2026v2_light/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://www.bakuri.co.jp/devbkr/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.bakuri.co.jp/devbkr/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://www.bakuri.co.jp/devbkr/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.5"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-11-30 08:12:23+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.bakuri.co.jp\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://www.bakuri.co.jp/devbkr/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.5"></script>
+<script id="toc-front-js-extra">
+var tocplus = {"smooth_scroll":"1","visibility_show":"show","visibility_hide":"hide","width":"Auto"};
+//# sourceURL=toc-front-js-extra
+</script>
+<script id="toc-front-js" src="https://www.bakuri.co.jp/devbkr/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1"></script>
+<script id="scroll-hint-js" src="https://cdn.jsdelivr.net/npm/scroll-hint@1.2.8/js/scroll-hint.min.js?ver=1.2.8"></script>
+<script id="splide-js" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js?ver=4.1.4"></script>
+<script id="bakuri2026-main-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/main.js?ver=1787234254"></script>
+<script id="bakuri2026-popup-banner-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/popup-banner.js?ver=1787234254"></script>
+<script id="bkr2026v2-post-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/post.js?ver=1787234254"></script>
+<script id="choices-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/vendor/choices.min.js?ver=1787234262"></script>
+<script id="bkr2026-choices-init-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/choices-init.js?ver=1787234254"></script>
+<script id="bkr2026-cf7-step-form-js" src="https://www.bakuri.co.jp/devbkr/wp-content/themes/bkr2026v2_light/assets/js/cf7-step-form.js?ver=1787234254"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LcKNJksAAAAAAj0n1h4eUZQ45RlSSRICzJl6Wnu&#038;ver=3.0"></script>
+<script id="wp-polyfill-js" src="https://www.bakuri.co.jp/devbkr/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6LcKNJksAAAAAAj0n1h4eUZQ45RlSSRICzJl6Wnu",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script id="wpcf7-recaptcha-js" src="https://www.bakuri.co.jp/devbkr/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.5"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.bakuri.co.jp/devbkr/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.bakuri.co.jp/devbkr/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</body>
+</html>

@@ -38,10 +38,19 @@ export type CompanyProfile = {
   checkedAt?: string
 }
 
+// 並びは「作る → 使えるようにする → 広げる」。社数順にしない（数が動くたびに並びが変わるため）。
 export const CATEGORIES: { slug: string; label: string; blurb: string }[] = [
   { slug: 'ai-kaihatsu', label: 'AI開発', blurb: 'AIモデル・システムの受託開発を掲げている会社' },
+  { slug: 'ai-agent', label: 'AIエージェント開発', blurb: '自律的に作業するAIエージェントの開発・導入を掲げている会社' },
+  { slug: 'rag', label: 'RAG・社内データ活用', blurb: '社内の文書やデータを検索して答えるAIの構築を掲げている会社' },
+  { slug: 'chatbot', label: 'チャットボット開発', blurb: 'チャットボットの開発・導入を掲げている会社' },
+  { slug: 'gazo-onsei', label: '画像・音声認識AI', blurb: '画像認識・音声認識を使うAIを掲げている会社' },
+  { slug: 'gyomu-jidoka', label: '業務自動化・AI-OCR', blurb: '業務の自動化やAI-OCRによる紙・帳票の処理を掲げている会社' },
+  { slug: 'data-kiban', label: 'データ基盤・データ分析', blurb: 'データ基盤の構築や分析の支援を掲げている会社' },
+  { slug: 'ai-governance', label: 'AIガバナンス・セキュリティ', blurb: 'AIの利用ルール整備やセキュリティ対策を掲げている会社' },
   { slug: 'dx-consul', label: 'DXコンサル', blurb: '業務のデジタル化・変革の支援を掲げている会社' },
   { slug: 'naisei-shien', label: '内製化支援', blurb: '発注側が自分たちで作れるようにする支援を掲げている会社' },
+  { slug: 'ai-kenshu', label: '生成AI研修', blurb: '生成AIの研修・講座を掲げている会社' },
   { slug: 'llmo', label: 'LLMO対策', blurb: '生成AIに引用されるための最適化を掲げている会社' },
   { slug: 'aeo', label: 'AEO対策', blurb: '回答エンジン向けの最適化を掲げている会社' },
   { slug: 'web-seisaku', label: 'Web制作', blurb: 'サイト制作を掲げている会社' },
@@ -105,6 +114,30 @@ export function disclosure(field: 'priceDisclosed' | 'casesDisclosed') {
 /** 単一カテゴリだけを掲げている会社＝その領域の専業。 */
 export function specialists(cat: string) {
   return inCategory(cat).filter((c) => (c.categories || []).length === 1)
+}
+
+/**
+ * その領域を含めて FOCUS_MAX 個以内に絞っている会社。
+ *
+ * ⚠️ 2026-09-23に領域を6→14に増やしたら、専業（=1領域だけ）が**全領域で0社**になった。
+ *    14個も並べれば大半の会社はどれかに引っかかるので、「1つだけ」はもう成立しない。
+ *    ただし「掲げている数が少ないほど本業が読める」という見立て自体は変わらないので、
+ *    区切りを1個から3個以内に移す。専業の数字自体は /data/ でそのまま公開し続ける。
+ */
+export const FOCUS_MAX = 3
+
+export function focused(cat: string) {
+  return inCategory(cat).filter((c) => (c.categories || []).length <= FOCUS_MAX)
+}
+
+/** 掲げている領域の数の分布。「広く掲げる会社／絞る会社」の実態をそのまま出すため。 */
+export function breadthHistogram() {
+  const m = new Map<number, number>()
+  for (const c of companies()) {
+    const n = (c.categories || []).length
+    m.set(n, (m.get(n) ?? 0) + 1)
+  }
+  return [...m.entries()].sort((a, b) => a[0] - b[0])
 }
 
 export const SITE = {

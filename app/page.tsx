@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { companies, disclosure, CATEGORIES, inCategory, specialists, slugOf, SITE } from '@/lib/data'
+import { companies, disclosure, CATEGORIES, inCategory, focused, FOCUS_MAX, breadthHistogram, slugOf, SITE } from '@/lib/data'
 import { JsonLd, websiteLd, itemListLd } from '@/lib/seo'
 
 // ⚠️ トップにも自己canonicalを置く。無いと pages.dev 側のURLが正規と判断されうる。
@@ -54,34 +54,52 @@ export default function Home() {
       <div className="grid">
         {CATEGORIES.map((c) => {
           const n = inCategory(c.slug).length
-          const sp = specialists(c.slug).length
+          const sp = focused(c.slug).length
           return (
             <a className="card" key={c.slug} href={`/category/${c.slug}/`}>
               <p className="t">{c.label}　<span className="num">{n}</span>社</p>
               <p className="k">{c.blurb}</p>
               <p className="k" style={{ marginTop: 8 }}>
-                このうち<strong className="num">{sp}</strong>社は、これ1つだけを掲げています
+                このうち<strong className="num">{sp}</strong>社は、掲げている領域を{FOCUS_MAX}つ以内に絞っています
               </p>
             </a>
           )
         })}
       </div>
 
-      <h2>「専業かどうか」を見てほしい理由</h2>
+      <h2>「いくつ掲げているか」を見てほしい理由</h2>
       <p>
-        複数の領域を掲げている会社は、AI開発もWeb制作もDXコンサルも受けます。
+        複数の領域を掲げている会社は、AI開発もチャットボットもDXコンサルも受けます。
         それ自体は悪いことではありませんが、<strong>その会社の本業がどれなのかは、掲げている数からしか読めません</strong>。
-        当サイトは各社が公式サイトで何を掲げているかをそのまま数え、1つだけを掲げている会社を「専業」として区別しています。
+        当サイトは各社が公式サイトで何を掲げているかをそのまま数えています。
+      </p>
+      <p>
+        実際に数えると、{CATEGORIES.length}領域のうち<strong>1つだけ</strong>を掲げている会社は
+        調査した{all.length}社中ほとんどいませんでした。そこで、
+        <strong>{FOCUS_MAX}領域以内に絞っている会社</strong>を「絞っている側」として区別しています。
       </p>
       <div className="scroll-x">
         <table className="data">
-          <thead><tr><th style={{ width: '34%' }}>領域</th><th>掲げている会社</th><th>うち専業</th></tr></thead>
+          <thead><tr><th style={{ width: '34%' }}>掲げている領域の数</th><th>会社数</th></tr></thead>
+          <tbody>
+            {breadthHistogram().map(([n, v]) => (
+              <tr key={n}>
+                <td>{n === 0 ? '判定できず' : `${n}領域`}</td>
+                <td className="num">{v}社</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="scroll-x">
+        <table className="data">
+          <thead><tr><th style={{ width: '34%' }}>領域</th><th>掲げている会社</th><th>うち{FOCUS_MAX}領域以内</th></tr></thead>
           <tbody>
             {CATEGORIES.map((c) => (
               <tr key={c.slug}>
                 <td><a href={`/category/${c.slug}/`}>{c.label}</a></td>
                 <td className="num">{inCategory(c.slug).length}社</td>
-                <td className="num">{specialists(c.slug).length}社</td>
+                <td className="num">{focused(c.slug).length}社</td>
               </tr>
             ))}
           </tbody>

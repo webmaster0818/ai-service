@@ -1,0 +1,1452 @@
+
+
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	
+					
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K44ZW9XT');</script>
+<!-- End Google Tag Manager -->
+<!-- Ptengine Tag -->
+<script src="https://js.ptengine.jp/59my9656.js"></script>
+<!-- End Ptengine Tag -->
+		
+		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>業務AIの実装支援プラットフォーム「SAT」｜ストックマーク株式会社</title>
+	<meta name="keywords" content="SAT,ストックマーク,RAG,データ構造化">
+	<meta name="description" content="SATはストックマーク株式会社が提供する業務AIの実装支援プラットフォームです。RAGシステムの設計・構築に必要な知識の構造化からエージェント生成までを一貫して支援します。">
+	<meta property="og:title" content="業務AIの実装支援プラットフォーム「SAT」｜ストックマーク株式会社" />
+	<meta property="og:site_name" content="業務AIの実装支援プラットフォーム「SAT」｜ストックマーク株式会社" />
+	<meta property="og:url" content="https://sat.stockmark.co.jp/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="SATはストックマーク株式会社が提供する業務AIの実装支援プラットフォームです。RAGシステムの設計・構築に必要な知識の構造化からエージェント生成までを一貫して支援します。" />
+	<meta property="og:image" content="http://sat.stockmark.co.jp/files/co/site/ogp-sat.png" />
+	<meta name="twitter:title" content="業務AIの実装支援プラットフォーム「SAT」｜ストックマーク株式会社">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Stockmark_japan">
+	<meta name="twitter:creator" content="@Stockmark_japan">
+	<meta name="twitter:description" content="SATはストックマーク株式会社が提供する業務AIの実装支援プラットフォームです。RAGシステムの設計・構築に必要な知識の構造化からエージェント生成までを一貫して支援します。">
+	<meta name="twitter:url" content="https://sat.stockmark.co.jp/">
+	<meta name="twitter:image" content="http://sat.stockmark.co.jp/files/co/site/ogp-sat.png">
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="canonical" href="https://sat.stockmark.co.jp/">
+	<link rel="apple-touch-icon" sizes="180x180" href="/files/co/logo/sat_favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="/files/co/logo/sat_favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="/files/co/logo/sat_favicon.ico">
+	<link rel="shortcut icon" href="/files/co/logo/sat_favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/assets/styles/styles.css?d=625b853044c44f04a48a7a5139742c2c">
+
+	<script type="importmap">
+		{
+			"imports": {
+				"@/": "/assets/js/",
+				"@m/": "/assets/js/modules/",
+				"@u/": "/assets/js/utils/",
+				"@p/": "/assets/js/plugins/"
+			}
+		}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+	<script type="module" src="/assets/js/common.js?d=625b853044c44f04a48a7a5139742c2c"></script>
+
+			
+	<script type="application/ld+json">[{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップページ","item":"http://sat.stockmark.co.jp/"}]}]</script>
+	
+
+	
+<script type="module" src="/assets/js/modules/logoSlider.js"></script>
+<script type="module">
+	import {
+		acc
+	} from '/assets/js/modules/Acc.js'
+
+	acc();
+
+	// トップはヘッダーのロゴが白色のため変更
+	$('.gHeader_logo img').attr('src', '/files/co/logo/sat-logo-white.png');
+</script>
+
+
+</head>
+
+
+<body class="pageID-top">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K44ZW9XT" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 	<div class="wrapper">
+
+		<header class="gHeader"><h1 class="gHeader_logo"><a href="/" data-mce-href="/"> <img src="/assets/images/global/logo.png" alt="SAT Stockmark A Technology" data-mce-src="/assets/images/global/logo.png"> </a></h1><div class="gHeader_nav"><ul class="gHeader_menu"><li><a href="/features" data-mce-href="/features">SATの機能</a></li><li><a href="/cases" data-mce-href="/cases">導入事例</a></li><li><a href="/price" data-mce-href="/price">料金</a></li><li><a href="/seminar" data-mce-href="/seminar">セミナー</a></li><li><a href="/resources" data-mce-href="/resources">お役立ち資料</a></li></ul><div class="gHeader_buttons"><a href="/resources/sat" class="gHeader_button gHeader_button-blue" target="_blank" rel="noopener" data-mce-href="/resources/sat"> <span class="gHeader_buttonInner"> <span>資料ダウンロード</span> <span>資料ダウンロード</span> </span> </a> <a href="/resources/sat_contact/" class="gHeader_button gHeader_button-white" target="_blank" rel="noopener" data-mce-href="/resources/sat_contact/"> <span class="gHeader_buttonInner"> <span>お問い合わせ</span> <span>お問い合わせ</span> </span> </a></div></div><div class="gHeader_ham"><div class="gHeader_hamLine"><br></div><div class="gHeader_hamLine"><br></div><div class="gHeader_hamText">MENU</div></div></header>
+		<div class="hero">
+			<div class="hero_inner">
+				
+				<div class="hero_content"><h2 class="hero_title">高精度なAIが<br>事業の数字を変える</h2><p><span style="font-size: 20px;" data-mce-style="font-size: 20px;"><b>複雑な社内データや暗黙知をAIが使える形に構造化し<br>貴社の業務に合わせて現場で使い続けられるAIを構築。</b></span></p><div class="hero_image"><img src="/files/co/sat/top/img_pcmock_SATACP.png" alt="SATの画面イメージ" data-mce-src="/files/co/sat/top/img_pcmock_SATACP.png"></div><!-- /.hero_image --></div><!-- /.hero_content -->
+
+				<div class="documentDownload">
+					<div class="documentDownload_inner">
+						<p class="documentDownload_title">サービス資料ダウンロード</p>
+						<script src="//lp.stockmark.co.jp/js/forms2/js/forms2.min.js"></script>
+						<form id="mktoForm_2680"></form>
+						<script>
+							MktoForms2.loadForm("//lp.stockmark.co.jp", "942-ARR-504", 2680);
+						</script>
+					</div><!-- /.documentDownload_inner -->
+				</div><!-- /.documentDownload -->
+			</div><!-- /.hero_inner -->
+		</div><!-- /.hero -->
+
+		<div class="logoSlider">
+			<div class="logoSlider_inner">
+				<div class="logoSlider_content">
+					<div class="logoSlider_list logoSlider_list-1">
+						<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/aisin400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/artience400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/itochu400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/ctc400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/jatoco400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/jtect400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/dexerials400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/tepco400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/tepco_rp400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/teijin400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/ngk400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/yanmar400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/lion400x160.png" alt="" class="logoSlider_image">
+    </div>
+<div class="logoSlider_item">
+        <img src="/files/co/sat/customer_logo/m-chemical400x160.png" alt="" class="logoSlider_image">
+    </div>
+					</div><!-- /.logoSlider_list -->
+					<div class="logoSlider_list logoSlider_list-2">
+											</div><!-- /.logoSlider_list -->
+				</div><!-- /.logoSlider_content -->
+			</div><!-- /.logoSlider_inner -->
+		</div><!-- /.logoSlider -->
+
+		<p><style>
+    .sat__v2 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sat__v2_inner {
+        width: min(1240px, calc(100% - 48px));
+        margin: 0 auto;
+    }
+
+    .sat__v2_intro {
+        padding: 50px 0;
+        background: #fff;
+    }
+
+    .sat__v2_introInner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.55fr) minmax(0, 0.45fr);
+        align-items: center;
+        gap: 16px;
+    }
+
+    .sat__v2_introContent {
+        min-width: 0;
+    }
+
+    .sat__v2_introTitle {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 28px;
+        padding-left: 22px;
+        color: #000;
+        font-size: 34px;
+        line-height: 1.35;
+        font-weight: 800;
+    }
+
+    .sat__v2_introTitle::before {
+        position: absolute;
+        top: .12em;
+        bottom: .12em;
+        left: 0;
+        width: 6px;
+        border-radius: 999px;
+        background: #196cba;
+        content: "";
+    }
+
+    .sat__v2_introTitle img {
+        width: auto;
+        max-height: 52px;
+        margin: 0;
+    }
+
+    .sat__v2_introText {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: .01em;
+    }
+
+    .sat__v2_introVisual {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sat__v2_introImage {
+        box-shadow: 0 18px 36px rgba(0, 0, 0, .12);
+    }
+
+    @media (max-width: 900px) {
+        .sat__v2_introInner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .sat__v2_introContent {
+            display: contents;
+        }
+
+        .sat__v2_introVisual {
+            grid-row: 2;
+            order: initial;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .sat__v2_inner {
+            width: min(100% - 32px, 560px);
+        }
+
+        .sat__v2_intro {
+            padding: 52px 0 58px;
+        }
+
+        .sat__v2_introInner {
+            gap: 28px;
+        }
+
+        .sat__v2_introTitle {
+            grid-row: 1;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding-left: 17px;
+            font-size: clamp(24px, 7vw, 27px);
+        }
+
+        .sat__v2_introTitle::before {
+            width: 5px;
+        }
+
+        .sat__v2_introTitle img {
+            width: auto;
+            max-width: calc(100% - 52px);
+            max-height: 30px;
+        }
+
+        .sat__v2_introText {
+            grid-row: 3;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sat__v2_inner {
+            width: min(100% - 24px, 440px);
+        }
+
+        .sat__v2_introTitle {
+            padding-left: 14px;
+        }
+    }
+</style></p><section class="sat__v2_intro"><div class="sat__v2_inner sat__v2_introInner"><div class="sat__v2_introContent"><h2 class="sat__v2_introTitle"><img src="/files/co/sat/top/AgentCockpit_logo_b.png" alt="SAT AgentCockpit" data-mce-src="/files/co/sat/top/AgentCockpit_logo_b.png">とは？</h2><p class="sat__v2_introText">熟練者の知見と判断をデータとしてAIに継承。<br>既存AIエージェントをそのままに精度を飛躍的に向上させる。<br><br>現場の業務プロセスに深く入り込むAIエージェントを、誰でも設計・運用できるプラットフォームです。</p></div><div class="sat__v2_introVisual"><img class="sat__v2_introImage" src="/assets/images/top/about_cockpit.png" alt="SAT Agent Cockpitの操作画面" data-mce-src="/assets/images/top/about_cockpit.png"></div></div></section>
+
+		<p><style>
+    .sat__v2_problem img,
+    .sat__v2_solution img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sat__v2_inner {
+        width: min(1240px, calc(100% - 48px));
+        margin: 0 auto;
+    }
+
+    .sat__v2_sectionTitle {
+        position: relative;
+        margin: 0 0 58px;
+        padding-bottom: 22px;
+        color: #000;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1.35;
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+
+    .sat__v2_sectionTitle img {
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+        max-height: 36px;
+        padding: 0 12px;
+        vertical-align: -0.18em;
+    }
+
+    .sat__v2_sectionTitle::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 124px;
+        height: 5px;
+        border-radius: 999px;
+        background: #196cba;
+        content: "";
+        transform: translateX(-50%);
+    }
+
+    .sat__v2_problem {
+        overflow: hidden;
+        padding: 50px 0;
+        background: #fff;
+    }
+
+    .sat__v2_problemGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 60px;
+        padding: 28px 40px 0;
+    }
+
+    .sat__v2_problemCard {
+        position: relative;
+        display: flex;
+        min-height: 264px;
+        padding: 54px 40px 42px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #196cba;
+        border-radius: 18px;
+        color: #000;
+        background: #fff;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .sat__v2_problemCard img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .sat__v2_problemNumber {
+        position: absolute;
+        z-index: 2;
+        top: -34px;
+        left: -34px;
+        display: grid;
+        width: 80px;
+        height: 80px;
+        place-items: center;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        outline: 3px solid #196cba;
+        color: #fff;
+        background: #000;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 38px;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -0.04em;
+    }
+
+    .sat__v2_problemTitle {
+        margin: 0 0 22px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.45;
+        letter-spacing: 0.01em;
+    }
+
+    .sat__v2_problemText {
+        max-width: 500px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.9;
+        letter-spacing: 0.015em;
+    }
+
+    .sat__v2_problemArrow {
+        position: relative;
+        width: 72px;
+        height: 48px;
+        margin: 30px auto 0;
+    }
+
+    .sat__v2_problemArrow::before,
+    .sat__v2_problemArrow::after {
+        position: absolute;
+        left: 50%;
+        width: 140px;
+        height: 30px;
+        background: #196cba;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        content: "";
+        transform: translateX(-50%);
+    }
+
+    .sat__v2_problemArrow::before {
+        top: 0;
+        opacity: 0.55;
+    }
+
+    .sat__v2_problemArrow::after {
+        top: 38px;
+    }
+
+    .sat__v2_solution {
+        padding: 50px 0;
+        background: #fff;
+    }
+
+    .sat__v2_solutionList {
+        display: grid;
+        gap: 12px;
+        padding: 24px 28px 0;
+    }
+
+    .sat__v2_solutionBlock {
+        position: relative;
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        align-items: center;
+        min-height: 260px;
+        border-radius: 12px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .sat__v2_solutionNumber {
+        position: absolute;
+        z-index: 0;
+        top: 12px;
+        right: 40px;
+        display: block;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        color: rgba(25, 108, 186, 0.1);
+        background: none;
+        font-size: clamp(88px, 10vw, 170px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        pointer-events: none;
+    }
+
+    .sat__v2_solutionContent,
+    .sat__v2_solutionVisual {
+        position: relative;
+        z-index: 1;
+    }
+
+    .sat__v2_solutionContent {
+        min-width: 0;
+        padding: 40px 30px;
+    }
+
+    .sat__v2_solutionTitle {
+        position: relative;
+        margin: 0 0 28px;
+        padding-left: 18px;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
+    .sat__v2_solutionPoints {
+        display: grid;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sat__v2_solutionPoint {
+        position: relative;
+        padding-left: 1.35em;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .sat__v2_solutionPoint span {
+        color: #196cba;
+        font-weight: 800;
+    }
+
+    .sat__v2_solutionVisual {
+        display: flex;
+        min-width: 0;
+        min-height: 286px;
+        padding: 40px 30px 40px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sat__v2_solutionImage {
+        width: 100%;
+        margin: auto;
+    }
+
+    .sat__v2_solutionCaption {
+        margin: 16px 0 0;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    /* ========================================
+       タブレット表示
+    ======================================== */
+    @media (max-width: 900px) {
+        .sat__v2_solutionBlock {
+            grid-template-columns: 1fr;
+            row-gap: 22px;
+            padding: 44px 22px 28px;
+        }
+
+        .sat__v2_solutionVisual {
+            min-height: auto;
+        }
+    }
+
+    /* ========================================
+       スマートフォン表示
+    ======================================== */
+    @media (max-width: 768px) {
+        .sat__v2_inner {
+            width: min(calc(100% - 32px), 560px);
+        }
+
+        .sat__v2_sectionTitle {
+            margin-bottom: 40px;
+            padding-bottom: 16px;
+            font-size: clamp(24px, 7vw, 30px);
+            line-height: 1.45;
+        }
+
+        .sat__v2_sectionTitle img {
+            display: inline-block;
+            width: auto;
+            max-width: min(210px, 56vw);
+            max-height: 31px;
+            padding: 0 6px;
+            vertical-align: -0.18em;
+        }
+
+        .sat__v2_sectionTitle::after {
+            width: 88px;
+            height: 4px;
+        }
+
+        .sat__v2_problem {
+            padding: 20px 0 54px;
+        }
+
+        .sat__v2_problemGrid {
+            grid-template-columns: 1fr;
+            gap: 52px;
+            padding: 22px 8px 0 22px;
+        }
+
+        .sat__v2_problemCard {
+            min-height: 0;
+            padding: 48px 22px 30px;
+        }
+
+        .sat__v2_problemNumber {
+            top: -24px;
+            left: -18px;
+            width: 70px;
+            height: 70px;
+            border-width: 3px;
+            outline-width: 2px;
+            font-size: 30px;
+        }
+
+        .sat__v2_problemTitle {
+            margin-bottom: 16px;
+            font-size: 21px;
+        }
+
+        .sat__v2_problemText {
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .sat__v2_problemArrow {
+            width: 104px;
+            height: 56px;
+            margin-top: 28px;
+        }
+
+        .sat__v2_problemArrow::before,
+        .sat__v2_problemArrow::after {
+            width: 104px;
+            height: 22px;
+        }
+
+        .sat__v2_problemArrow::after {
+            top: 30px;
+        }
+
+        .sat__v2_solution {
+            padding: 20px 0;
+        }
+
+        .sat__v2_solutionList {
+            gap: 28px;
+            padding: 16px 0 0;
+        }
+
+        .sat__v2_solutionBlock {
+            padding: 44px 22px 28px;
+        }
+
+        .sat__v2_solutionContent,
+        .sat__v2_solutionVisual {
+            display: contents;
+        }
+
+        .sat__v2_solutionNumber {
+            top: 10px;
+            right: 14px;
+            left: auto;
+            width: auto;
+            height: auto;
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            color: rgba(25, 108, 186, 0.08);
+            background: none;
+            box-shadow: none;
+            font-size: clamp(82px, 24vw, 110px);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.05em;
+        }
+
+        .sat__v2_solutionTitle {
+            position: relative;
+            z-index: 1;
+            order: 1;
+            margin: 0;
+            padding: 0;
+            font-size: 21px;
+            line-height: 1.55;
+        }
+
+        .sat__v2_solutionImage {
+            position: relative;
+            z-index: 1;
+            order: 2;
+            width: min(100%, 280px);
+            margin: 0 auto;
+        }
+
+        .sat__v2_solutionPoints {
+            position: relative;
+            z-index: 1;
+            order: 3;
+            margin: 0;
+        }
+
+        .sat__v2_solutionPoint {
+            padding-left: 0;
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .sat__v2_solutionCaption {
+            display: none;
+        }
+    }
+
+    /* ========================================
+       小型スマートフォン表示
+    ======================================== */
+    @media (max-width: 480px) {
+        .sat__v2_inner {
+            width: min(calc(100% - 24px), 440px);
+        }
+
+        .sat__v2_sectionTitle {
+            font-size: clamp(22px, 7.2vw, 27px);
+        }
+
+        .sat__v2_sectionTitle img {
+            display: block;
+            max-width: min(220px, 74vw);
+            max-height: 30px;
+            margin: 8px auto;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        .sat__v2_problemGrid {
+            padding-right: 2px;
+            padding-left: 17px;
+        }
+
+        .sat__v2_problemCard {
+            padding-inline: 18px;
+        }
+
+        .sat__v2_problemNumber {
+            left: -14px;
+            width: 64px;
+            height: 64px;
+            font-size: 27px;
+        }
+
+        .sat__v2_problemTitle {
+            font-size: 19px;
+        }
+
+        .sat__v2_solutionBlock {
+            padding-inline: 18px;
+        }
+
+        .sat__v2_solutionTitle {
+            font-size: 19px;
+        }
+
+        .sat__v2_solutionNumber {
+            right: 10px;
+            font-size: clamp(76px, 27vw, 100px);
+        }
+    }
+</style></p><section class="sat__v2_problem"><div class="sat__v2_inner"><h2 class="sat__v2_sectionTitle">AIエージェント導入・運用でよくあるお悩み</h2><div class="sat__v2_problemGrid"><article class="sat__v2_problemCard"><div class="sat__v2_problemNumber">01</div><h3 class="sat__v2_problemTitle">複雑なデータを検索できない</h3><img src="/files/co/sat/top/thum_problem01.png" alt="" data-mce-src="/files/co/sat/top/thum_problem01.png"><p class="sat__v2_problemText">複雑なExcel・設計図などのドキュメントが散在し、現場の暗黙知が形式知化されず、重要なナレッジをAIが検索・活用できない。</p></article><article class="sat__v2_problemCard"><div class="sat__v2_problemNumber">02</div><h3 class="sat__v2_problemTitle">精度不足で現場で使われない</h3><img src="/files/co/sat/top/thum_problem02.png" alt="" data-mce-src="/files/co/sat/top/thum_problem02.png"><p class="sat__v2_problemText">導入したAIエージェントが専門的な質問に応えられず、現場で使われていない。精度を検証する手段もない。</p></article><article class="sat__v2_problemCard"><div class="sat__v2_problemNumber">03</div><h3 class="sat__v2_problemTitle">刷新コスト・リスクが高い</h3><img src="/files/co/sat/top/thum_problem03.png" alt="" data-mce-src="/files/co/sat/top/thum_problem03.png"><p class="sat__v2_problemText">AIエージェントやLLMを刷新すると移行リスクが大きくなり、リプレイスに踏み切れない。</p></article><article class="sat__v2_problemCard"><div class="sat__v2_problemNumber">04</div><h3 class="sat__v2_problemTitle">自社データの限界</h3><img src="/files/co/sat/top/thum_problem04.png" alt="" data-mce-src="/files/co/sat/top/thum_problem04.png"><p class="sat__v2_problemText">自社データだけでは限界があり、特許・論文・規制情報の調査に時間がかかる。</p></article></div><div class="sat__v2_problemArrow" aria-hidden="true"><br></div></div></section><section class="sat__v2_solution"><div class="sat__v2_inner"><h2 class="sat__v2_sectionTitle">こんなお悩み<img src="/files/co/sat/top/AgentCockpit_logo_b.png" alt="SAT AgentCockpit" data-mce-src="/files/co/sat/top/AgentCockpit_logo_b.png">が解決します</h2><div class="sat__v2_solutionList"><article class="sat__v2_solutionBlock"><div class="sat__v2_solutionContent"><div class="sat__v2_solutionNumber" aria-hidden="true">01</div><h3 class="sat__v2_solutionTitle">検索できないあらゆるデータの「構造化」</h3><ul class="sat__v2_solutionPoints"><li class="sat__v2_solutionPoint"><span>非構造データへの対応</span><br>Excel、設計図、フローチャートなどの複雑なデータや、社内の暗黙知を構造化。メタデータを付与することで、データの検索性を高めます。</li><li class="sat__v2_solutionPoint"><span>最適なモデルの「ルーティング」</span><br>単一のAIモデルに依存せず、データの種類や状況に応じて複数のAIモデルを適切に使い分けることで、より精度の高いデータ検索を実現します。</li></ul></div><div class="sat__v2_solutionVisual"><img class="sat__v2_solutionImage" src="/files/co/sat/top/satacp_img_04.png" alt="RAG構造化のイメージ" loading="lazy" data-mce-src="/files/co/sat/top/satacp_img_04.png"><p class="sat__v2_solutionCaption">複雑なデータや暗黙知を<br>AIが理解できるナレッジへと変換</p></div></article><article class="sat__v2_solutionBlock"><div class="sat__v2_solutionContent"><div class="sat__v2_solutionNumber" aria-hidden="true">02</div><h3 class="sat__v2_solutionTitle">複雑な問いに答えるエージェンティック検索</h3><ul class="sat__v2_solutionPoints"><li class="sat__v2_solutionPoint"><span>3つの保存・検索形式の組み合わせ</span><br>「ベクトル検索」「ナレッジグラフ」「RDB検索（SQL RAG）」を組み合わせることで、多角的なデータ検索を可能にします。</li><li class="sat__v2_solutionPoint"><span>自律的な複数DB横断と比較</span><br>次に何を検索すべきかをAI自身が考え、複数のデータベースを横断して比較・分析しながら回答を生成します。</li></ul></div><div class="sat__v2_solutionVisual"><img class="sat__v2_solutionImage" src="/files/co/sat/features/yototansaku-img04.png" alt="エージェンティック検索のイメージ" loading="lazy" data-mce-src="/files/co/sat/features/yototansaku-img04.png"><p class="sat__v2_solutionCaption">複雑な質問に対し、AI自身が考えて<br>最適な検索・分析方法で高度な検索を実施</p></div></article><article class="sat__v2_solutionBlock"><div class="sat__v2_solutionContent"><div class="sat__v2_solutionNumber" aria-hidden="true">03</div><h3 class="sat__v2_solutionTitle">既存環境を崩さない「API／MCP連携」</h3><ul class="sat__v2_solutionPoints"><li class="sat__v2_solutionPoint"><span>環境を変えずに精度向上</span><br>普段使用しているAIエージェントのUIやシステム環境を変更することなく、裏側のデータ検索・処理部分をSAT Agent Cockpitが担います。</li><li class="sat__v2_solutionPoint"><span>API／MCPによる接続</span><br>SAT Agent Cockpitで取得した高精度なデータは、APIやMCP（Model Context Protocol）を通じて既存のエージェントと連携できます。</li></ul></div><div class="sat__v2_solutionVisual"><img class="sat__v2_solutionImage" src="/files/co/sat/features/satacp_img_22.png" alt="API・MCP連携のイメージ" loading="lazy" data-mce-src="/files/co/sat/features/satacp_img_22.png"><p class="sat__v2_solutionCaption">既に導入されているCopilotなどの<br>AIエージェントをそのまま活用</p></div></article><article class="sat__v2_solutionBlock"><div class="sat__v2_solutionContent"><div class="sat__v2_solutionNumber" aria-hidden="true">04</div><h3 class="sat__v2_solutionTitle">「独自ビジネスデータ基盤」の標準搭載</h3><ul class="sat__v2_solutionPoints"><li class="sat__v2_solutionPoint"><span>専門データの保有</span><br>特許、論文、官公庁データなど、膨大なビジネス特化データベースを標準で保有。自社データと社外の専門知識を掛け合わせた、より高度な回答生成が可能になります。</li></ul></div><div class="sat__v2_solutionVisual"><img class="sat__v2_solutionImage" src="/files/co/sat/features/yototansaku-img01.png" alt="独自ビジネスデータ基盤のイメージ" loading="lazy" data-mce-src="/files/co/sat/features/yototansaku-img01.png"><p class="sat__v2_solutionCaption">社内データだけでなく、<br>専門的なデータも活用できる基盤を提供</p></div></article></div></div></section>
+
+				<div class="case section pickup">
+			<div class="case_inner section_inner">
+				<h3 class="title01">導入事例</h3>
+				<div class="caseSlider" id="caseSwiper">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+														<div class="swiper-slide">
+								<a href="/cases/m-chemical/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/m-chemical_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#開発・設計</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">熟練者の暗黙知を、AIで次世代へ。三菱ケミカルが挑む製造現場の技術伝承</span></h3>
+        <p class="caseCard_name">三菱ケミカル株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/jtekt/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/jtekt_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#開発・設計</span>
+                                                                                        <span class="caseCard_category">#自動車・輸送機</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">長年培ってきた技術ナレッジを、AIで誰でも使える資産に。ジェイテクトが挑むベテランの知見継承</span></h3>
+        <p class="caseCard_name">株式会社ジェイテクト</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/teijin/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/teijin_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">判断を支える“質の高い申請”をAIで実現。帝人が挑む輸出審査DXと法令遵守の両立</span></h3>
+        <p class="caseCard_name">帝人株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/ngk/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/ngk_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">日本の“すり合わせ”プロセスをデジタル上で融合する、暗黙知継承プラットフォーム</span></h3>
+        <p class="caseCard_name">NGK株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/itochu-electricity/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/itochu_chemical_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#商社・卸売</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">市況予測を高度化し、リスクを勝機に。伊藤忠商事が挑む次世代電力AIプラットフォーム</span></h3>
+        <p class="caseCard_name">伊藤忠商事株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/itochu-aluminum/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/itochu_metal_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#商社・卸売</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">膨大な市場変化パターンをAIで解析。伊藤忠商事が目指す「根拠の見える」アルミ市況の分析</span></h3>
+        <p class="caseCard_name">伊藤忠商事株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/suzuki/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/suzuki_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#自動車・輸送機</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">AIで一気通貫の品質保証へ。スズキが目指す次世代品質保証プラットフォーム</span></h3>
+        <p class="caseCard_name">スズキ株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/yuden/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/yuden_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#研究開発</span>
+                                                                                        <span class="caseCard_category">#電気・精密</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">過去の知見をAIで繋ぎ、「車輪の再発明」を防ぐ。「探索型R&amp;D」を実現するプラットフォーム構築</span></h3>
+        <p class="caseCard_name">太陽誘電株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/tepco/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/tepco_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#電気・ガス</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">「夜、安心して眠れるように」豪雨から地域を守る、生成AIによるダム運用の最前線</span></h3>
+        <p class="caseCard_name">東京電力リニューアブルパワー株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/jgc/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/jgc_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#開発・設計</span>
+                                                                                        <span class="caseCard_category">#建設・資材</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">「あの人に聞け」を終わらせる。日揮グローバルが挑む、巨大プラントの「設計プロセス」のデジタル化</span></h3>
+        <p class="caseCard_name">日揮ホールディングス株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+													</div><!-- /.swiper-wrapper -->
+
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+					</div><!-- /.swiper -->
+				</div><!-- /.caseSlider -->
+				<div class="swiper-pagination"></div>
+
+				<div class="btns mt0">
+					<ul class="btns_list mt0">
+						<li class="btns_item">
+							<a href="/cases/" class="btn btn-blue">導入事例一覧へ</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /.case_inner -->
+		</div><!-- /.case -->
+		
+		<div class="cta"><div class="cta_inner"><p class="cta_subTitle">RAG・生成AIの実用化を<br class="only-sp">もっと簡単・素早く・高精度に！</p><p class="cta_title">SAT Agent Cockpit<span id="_mce_caret" data-mce-bogus="1" data-mce-type="format-caret"><strong style="color: rgb(255, 255, 255);"></strong></span>をいまスグ知る！</p><div class="cta_buttons"><div class="cta_buttonWrapper"><p class="cta_buttonText">3分でわかるサービス資料</p><a href="/resources/sat/" class="cta_button cta_button-document" data-mce-href="/resources/sat/"> <span class="cta_buttonInner"> <span>資料ダウンロード</span> <span>資料ダウンロード</span> </span> </a></div><!-- /.cta_buttonWrapper --><div class="cta_buttonWrapper"><p class="cta_buttonText">ご質問やご相談はこちら</p><a href="/resources/sat_contact/" class="cta_button cta_button-trial" data-mce-href="/resources/sat_contact/"> <span class="cta_buttonInner"> <span>お問い合わせ</span> <span>お問い合せ</span> </span> </a></div><!-- /.cta_buttonWrapper --></div><!-- /.cta_buttons --></div><!-- /.cta_inner --></div><!-- /.cta -->
+
+		<p><style>
+    .sat__v2 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sat__v2_inner {
+        width: min(1240px, calc(100% - 48px));
+        margin: 0 auto;
+    }
+
+    .sat__v2_sectionTitle {
+        position: relative;
+        margin: 0 0 58px;
+        padding-bottom: 22px;
+        color: #000;
+        font-size: 34px;
+        line-height: 1.35;
+        font-weight: 800;
+        letter-spacing: .02em;
+        text-align: center;
+    }
+
+    .sat__v2_sectionTitle img {
+        max-height: 36px;
+        padding: 0 12px;
+    }
+
+    .sat__v2_sectionTitle::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 124px;
+        height: 5px;
+        border-radius: 999px;
+        background: #196cba;
+        content: "";
+        transform: translateX(-50%);
+    }
+
+    .sat__v2_support {
+        padding: 50px 0 0;
+        background: #fff;
+    }
+
+    .sat__v2_supportInner {
+        max-width: 1040px;
+    }
+
+    .sat__v2_supportContent {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+        align-items: center;
+        gap: 40px;
+    }
+
+    .sat__v2_supportImage {
+        width: 100%;
+    }
+
+    .sat__v2_supportText {
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .sat__v2_supportText p {
+        margin: 0;
+    }
+
+    .sat__v2_supportText p+p {
+        margin-top: 24px;
+    }
+
+        .rsecurity{
+        background-color: #f5f5f5;
+        margin-bottom: 80px;
+        padding: 45px 20px 50px;
+        border-radius: 8px;
+    }
+
+    .rsecurity_content{
+        align-items: center;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 900px;
+        line-height: 0.6;
+    }
+
+    .rsecurity_text{
+        flex: 1;
+        margin: 0;
+    }
+
+    .reason_link{
+        color: #196cba;
+        transition: all .3s ease;
+    }
+
+    .rsecurity_isms{
+        flex-shrink: 0;
+        max-width: 220px;
+    }
+
+    @media (max-width: 768px) {
+        .sat__v2_inner {
+            width: min(100% - 32px, 560px);
+        }
+
+        .sat__v2_sectionTitle {
+            margin-bottom: 40px;
+            padding-bottom: 16px;
+            font-size: clamp(24px, 7vw, 30px);
+            line-height: 1.45;
+        }
+
+        .sat__v2_sectionTitle img {
+            display: inline-block;
+            width: auto;
+            max-width: min(210px, 56vw);
+            max-height: 31px;
+            padding: 0 6px;
+            vertical-align: -0.18em;
+        }
+
+        .sat__v2_sectionTitle::after {
+            width: 88px;
+            height: 4px;
+        }
+
+        .sat__v2_support {
+            padding: 56px 0 72px;
+        }
+
+        .sat__v2_supportContent {
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .sat__v2_supportImage {
+            width: min(220px, 68%);
+            margin: 0 auto;
+        }
+
+        .sat__v2_supportText {
+            font-size: 15px;
+            line-height: 1.85;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sat__v2_inner {
+            width: min(100% - 24px, 440px);
+        }
+
+        .sat__v2_sectionTitle {
+            font-size: clamp(22px, 7.2vw, 27px);
+        }
+
+        .sat__v2_sectionTitle img {
+            display: block;
+            max-width: min(220px, 74vw);
+            max-height: 30px;
+            margin: 8px auto;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        .sat__v2_supportText p+p {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .rsecurity{
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .rsecurity_content{
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 10px;
+            line-height: 1.3;
+        }
+    }
+</style></p><section class="sat__v2_support"><div class="sat__v2_inner sat__v2_supportInner"><h2 class="sat__v2_sectionTitle">ツール導入だけでは導入が進まないという方へ</h2><div class="sat__v2_supportContent"><img class="sat__v2_supportImage" src="/files/co/sat/top/sat-icon05.png" alt="AI導入を伴走支援するイメージ" loading="lazy" data-mce-src="/files/co/sat/top/sat-icon05.png"><div class="sat__v2_supportText"><p>SAT Agent Cockpitの技術基盤に加え、専任のAIコンサルタント・エンジニアが二人三脚で伴走する「伴走支援プログラム」や、AIを業務に実装するプロセスをご支援する「AI BPRワークショップ」等もご用意しています。</p><p>「PoCで止まってしまう」「自社に実装ノウハウがない」といった課題をお持ちの方も、ぜひお気軽にご相談ください。</p></div></div></div></section><div class="faq"><div class="faq_inner"><div class="rsecurity"><h2 class="title01">安全とセキュリティ</h2><div class="rsecurity_content"><div class="rsecurity_text"><p>当社は、情報セキュリティマネジメントシステム（ISMS）の認証を取得しています。</p><p>さらに詳しいセキュリティ情報をご確認いただく場合は、<a class="reason_link" href="https://stockmark.notion.site/SAT-Agent-Cockpit-29ce3679a1b88085a794fe068294e0e0" target="_blank" rel="noopener" data-mce-href="https://stockmark.notion.site/SAT-Agent-Cockpit-29ce3679a1b88085a794fe068294e0e0">こちら</a>からご確認ください。</p></div><div class="rsecurity_isms"><img src="/files/co/sat/top/isms.png" alt="IS 726625 / ISO 27001" loading="lazy" data-mce-src="/files/co/sat/top/isms.png"></div></div></div><h3 class="title01">よくあるご質問</h3><div class="faq_list"><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">社内にある古いPDFやパワポ資料もAIに使えますか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>はい、可能です。SATはレイアウトや図表を含む非構造な社内文書を自動で解析・構造化し、AIが扱える“知識”へ変換します。過去の提案書や設計資料なども有効活用できます。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">導入にはエンジニアやプロンプトの専門知識が必要ですか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>不要です。SATは業務別のテンプレートを提供しており、ユースケースを選んで自社データを登録するだけでプロフェッショナルエージェントを簡単に生成できます。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">自社のナレッジはどのように取り込まれますか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>PDF・PPT・Word・Excelなどのドキュメントをアップロードするだけで、SATが自動で構造化・知識化します。特許文書や業務メモなど、バラバラな形式でも対応可能です。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">トライアルではどこまでの機能が試せますか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>構造化・ナレッジグラフ生成といった主要機能をお試しいただけます。また、自社データを用いた検証や社内評価も可能です。エージェント作成機能については別途ご相談ください。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">社内情報のセキュリティが心配です。大丈夫でしょうか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>はい、ご安心ください。データは個社ごとに分離管理され、機密情報の外部流出は一切ありません。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --><div class="faqItem" data-acc=""><div class="faqItem_question" data-acc-btn=""><span class="faqItem_questionLabel">Q.</span><p class="faqItem_questionText">ユースケースとしてはどのような業務に向いていますか？</p><span class="faqItem_toggle"></span></div><!-- /.faqItem_question --><div class="faqItem_answer" data-acc-content=""><div class="faqItem_answerInner"><span class="faqItem_answerLabel">A.</span><div class="faqItem_answerContent"><p>化学・製造業のR&amp;D、用途探索、規制確認、顧客提案業務など“知識集約型”の業務に強みを発揮します。属人性の高い業務を再現可能なAIに置き換えることが可能です。</p></div><!-- /.faqItem_answerContent --></div><!-- /.faqItem_answerInner --></div><!-- /.faqItem_answer --></div><!-- /.faqItem --></div><!-- /.faq_list --></div><!-- /.faq_inner --></div><!-- /.faq --><p><br></p>
+
+		
+
+		
+
+		
+
+				<div class="case section pickup">
+			<div class="case_inner section_inner">
+				<h3 class="title01">導入事例</h3>
+				<div class="caseSlider" id="caseSwiper">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+														<div class="swiper-slide">
+								<a href="/cases/m-chemical/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/m-chemical_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#開発・設計</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">熟練者の暗黙知を、AIで次世代へ。三菱ケミカルが挑む製造現場の技術伝承</span></h3>
+        <p class="caseCard_name">三菱ケミカル株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/jtekt/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/jtekt_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#開発・設計</span>
+                                                                                        <span class="caseCard_category">#自動車・輸送機</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">長年培ってきた技術ナレッジを、AIで誰でも使える資産に。ジェイテクトが挑むベテランの知見継承</span></h3>
+        <p class="caseCard_name">株式会社ジェイテクト</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/teijin/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/teijin_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">判断を支える“質の高い申請”をAIで実現。帝人が挑む輸出審査DXと法令遵守の両立</span></h3>
+        <p class="caseCard_name">帝人株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/ngk/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/ngk_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#素材・化学</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">日本の“すり合わせ”プロセスをデジタル上で融合する、暗黙知継承プラットフォーム</span></h3>
+        <p class="caseCard_name">NGK株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/itochu-electricity/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/itochu_chemical_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#商社・卸売</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">市況予測を高度化し、リスクを勝機に。伊藤忠商事が挑む次世代電力AIプラットフォーム</span></h3>
+        <p class="caseCard_name">伊藤忠商事株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/itochu-aluminum/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/itochu_metal_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#商社・卸売</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">膨大な市場変化パターンをAIで解析。伊藤忠商事が目指す「根拠の見える」アルミ市況の分析</span></h3>
+        <p class="caseCard_name">伊藤忠商事株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/suzuki/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/suzuki_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#自動車・輸送機</span>
+                                                                                        <span class="caseCard_category">#事業部</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">AIで一気通貫の品質保証へ。スズキが目指す次世代品質保証プラットフォーム</span></h3>
+        <p class="caseCard_name">スズキ株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/yuden/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/yuden_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#研究開発</span>
+                                                                                        <span class="caseCard_category">#電気・精密</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">過去の知見をAIで繋ぎ、「車輪の再発明」を防ぐ。「探索型R&amp;D」を実現するプラットフォーム構築</span></h3>
+        <p class="caseCard_name">太陽誘電株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/tepco/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/tepco_0.jpg/500.jpg" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#電気・ガス</span>
+                                                                                        <span class="caseCard_category">#DX推進・デジタル企画</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">「夜、安心して眠れるように」豪雨から地域を守る、生成AIによるダム運用の最前線</span></h3>
+        <p class="caseCard_name">東京電力リニューアブルパワー株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+														<div class="swiper-slide">
+								<a href="/cases/jgc/" class="caseCard">
+    <div class="caseCard_image">
+        <img src="/files_thumbnail/co/sat/cases/jgc_0.png/500.png" alt="">
+    </div><!-- /.caseCard_image -->
+    <div class="caseCard_content">
+        <div class="caseCard_categories">
+                                                            <span class="caseCard_category">#開発・設計</span>
+                                                                                        <span class="caseCard_category">#建設・資材</span>
+                                                </div>
+        <h3 class="caseCard_title"><span class="caseCard_titleBody">「あの人に聞け」を終わらせる。日揮グローバルが挑む、巨大プラントの「設計プロセス」のデジタル化</span></h3>
+        <p class="caseCard_name">日揮ホールディングス株式会社</p>
+    </div><!-- /.caseCard_content -->
+</a><!-- /.caseCard -->							</div><!-- /.swiper-slide -->
+													</div><!-- /.swiper-wrapper -->
+
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+					</div><!-- /.swiper -->
+				</div><!-- /.caseSlider -->
+				<div class="swiper-pagination"></div>
+
+				<div class="btns mt0">
+					<ul class="btns_list mt0">
+						<li class="btns_item">
+							<a href="/cases/" class="btn btn-blue">導入事例一覧へ</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /.case_inner -->
+		</div><!-- /.case -->
+		
+		
+		
+				<div class="sectionWrapper">
+			<div class="sectionWrapper_inner">
+								<div class="seminar">
+					<div class="seminar_inner">
+						<h3 class="title01">セミナー</h3>
+						<div class="seminar_content">
+							<div class="seminar_grid">
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/seminar/082626archive/ class="docCard">
+				<div class='docCard_label'>受付中</div>
+		<div class="docCard_image docCard_image-seminar">
+		<img src="/files_thumbnail/co/seminar/20260826_archive%20.png/500.png" alt="アーカイブ【フィジカルAI最前線】製造業が知るべき最新動向と現場実装の鍵">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+																																		<span class="docCard_category">#アーカイブ動画</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">アーカイブ【フィジカルAI最前線】製造業が知るべき最新動向と現場実装の鍵</span></h3>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div><!-- /.seminar_card -->
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/seminar/20260728archive/ class="docCard">
+				<div class='docCard_label'>受付中</div>
+		<div class="docCard_image docCard_image-seminar">
+		<img src="/files_thumbnail/co/seminar/20260728_archive.png/500.png" alt="【アーカイブ】なぜAIは現場で&quot;使えない&quot;のか 大手企業のAI活用事例に学ぶ、成果を生み出すAI-Readyの実践法 ー重工・社会インフラ編">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+																																		<span class="docCard_category">#アーカイブ動画</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">【アーカイブ】なぜAIは現場で&quot;使えない&quot;のか 大手企業のAI活用事例に学ぶ、成果を生み出すAI-Readyの実践法 ー重工・社会インフラ編</span></h3>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div><!-- /.seminar_card -->
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/seminar/20260724archive/ class="docCard">
+				<div class='docCard_label'>受付中</div>
+		<div class="docCard_image docCard_image-seminar">
+		<img src="/files_thumbnail/co/seminar/20260724_archive.png/500.png" alt="【アーカイブ】AIの精度を左右する&quot;データの整え方&quot;とは？ SAT Agent Cockpitで実現するAI-Readyなデータ構築">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+																																		<span class="docCard_category">#アーカイブ動画</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">【アーカイブ】AIの精度を左右する&quot;データの整え方&quot;とは？ SAT Agent Cockpitで実現するAI-Readyなデータ構築</span></h3>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div><!-- /.seminar_card -->
+															</div><!-- /.seminar_grid -->
+
+							<div class="seminar_more">
+								<a href="/seminar/" class="btn btn-blue">セミナー一覧へ</a>
+							</div><!-- /.seminar_more -->
+						</div><!-- /.seminar_content -->
+					</div><!-- /.seminar_inner -->
+				</div><!-- /.seminar -->
+				
+								<div class="seminar section mt90">
+					<div class="seminar_inner section_inner">
+						<h3 class="title01">お役立ち資料</h3>
+						<div class="seminar_content">
+							<div class="seminar_grid">
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/resources/ai-work-report/ class="docCard" target="_blank">
+		<div class="docCard_image">
+		<img src="/files_thumbnail/co/resources/ai-work-report.png/500.png" alt="AI時代の働き方調査 2026 ーAIへの期待値と業務変革への展望ー">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+									<span class="docCard_category">#ホワイトペーパー</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">AI時代の働き方調査 2026 ーAIへの期待値と業務変革への展望ー</span>
+		</h3>
+		<p class="docCard_text">本レポートは、ストックマーク株式会社にて実施したウェブアンケートの結果をもとに、AIの活用状況や期待値を分析・整理したものです。</p>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div>
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/resources/sat/ class="docCard" target="_blank">
+		<div class="docCard_image">
+		<img src="/files_thumbnail/co/sat/resources/document_sat_service.png/500.png" alt="">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+									<span class="docCard_category">#サービス資料</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">SATサービス紹介資料</span>
+		</h3>
+		<p class="docCard_text">SAT（Stockmark A Technology）のサービス概要資料です。サービス概要や機能、SATで解決できる課題、よくある質問をまとめた資料です。</p>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div>
+																<div class="seminar_card">
+									<!-- ページの場合 -->
+
+<!-- リンクの場合 -->
+<a href=/resources/rag-verification/ class="docCard" target="_blank">
+		<div class="docCard_image">
+		<img src="/files_thumbnail/co/uploads/2024/12/RAG%EF%BC%88%E8%A9%95%E4%BE%A1%E6%A4%9C%E8%A8%BC%EF%BC%89.jpg/500.jpg" alt="RAGの精度を向上させる評価検証のポイント">
+	</div><!-- /.docCard_image -->
+	<div class="docCard_content">
+		<div class="docCard_categories">
+									<span class="docCard_category">#ホワイトペーパー</span>
+								</div>
+		<h3 class="docCard_title"><span class="docCard_titleBody">「RAGの精度を向上させる&quot;評価検証&quot;のポイント」</span>
+		</h3>
+		<p class="docCard_text">本資料では、複雑化しているRAGにおける評価検証について解説いたします。</p>
+	</div><!-- /.docCard_content -->
+</a><!-- /.docCard -->								</div>
+															</div><!-- /.seminar_grid -->
+
+							<div class="seminar_more">
+								<a href="/resources/" class="btn btn-blue">お役立ち資料一覧へ</a>
+							</div><!-- /.seminar_more -->
+						</div><!-- /.seminar_content -->
+					</div><!-- /.seminar_inner -->
+				</div><!-- /.seminar -->
+							</div><!-- /.sectionWrapper_inner -->
+		</div><!-- /.sectionWrapper -->
+		
+		
+		<div class="contact"><div class="contact_inner"><div class="contact_content"><p class="contact_title">ご不明点やご相談がございましたら<br>お気軽にお問い合わせください</p><p class="contact_text">SAT導入に関するご相談、無料トライアルを受け付けています。<br>お気軽にご連絡ください。</p><div class="contact_buttons"><a href="/resources/sat/" class="contact_button contact_button-document" data-mce-href="/resources/sat/"> <span class="cta_buttonInner"> <span>資料ダウンロード</span> <span>資料ダウンロード</span> </span> </a> <a href="/resources/sat_contact/" class="contact_button contact_button-trial" data-mce-href="/resources/sat_contact/"> <span class="cta_buttonInner"> <span>お問い合わせ</span> <span>お問い合わせ</span> </span> </a> <a href="/resources/sat_trial/" class="contact_button contact_button-contact" data-mce-href="/resources/sat_trial/"><span class="cta_buttonInner"> <span>無料トライアル</span> <span>無料トライアル</span> </span> </a></div><!-- /.contact_buttons --></div><!-- /.contact_content --></div><!-- /.contact_inner --></div><!-- /.contact -->
+
+		<footer class="gFooter"><div class="gFooter_inner"><div class="gFooter_main"><div class="gFooter_logo"><a href="/" data-mce-href="/"> <img src="/assets/images/global/logo-footer.png" alt="SAT Stockmark A Technology" width="200" data-mce-src="/assets/images/global/logo-footer.png"> </a></div><!-- /.gFooter_logo --><div class="gFooter_nav"><ul class="gFooter_navList"><li class="gFooter_navItem"><a href="/" data-mce-href="/">トップ</a></li><li class="gFooter_navItem"><a href="/seminar/" data-mce-href="/seminar/">セミナー</a></li><li class="gFooter_navItem"><a href="/features/" data-mce-href="/features/">SATの機能</a></li><li class="gFooter_navItem"><a href="/resources/" data-mce-href="/resources/">お役立ち資料</a></li><li class="gFooter_navItem"><a href="/cases/" data-mce-href="/cases/">導入事例</a></li><li class="gFooter_navItem"><a href="https://aconnect.stockmark.co.jp/coevo/" target="_blank" rel="noopener" data-mce-href="https://aconnect.stockmark.co.jp/coevo/">コラム</a></li><li class="gFooter_navItem"><a href="/price/" data-mce-href="/price/">料金</a></li><li class="gFooter_navItem"><a href="/resources/sat_trial/" data-mce-href="/resources/sat_trial/">無料トライアル</a></li></ul></div><!-- /.gFooter_nav --><div class="gFooter_buttons"><a href="/resources/sat/" class="gFooter_button gFooter_button-blue" data-mce-href="/resources/sat/"> <span class="gHeader_buttonInner"> <span>資料ダウンロード</span> <span>資料ダウンロード</span> </span> </a> <a href="/resources/sat_contact/" class="gFooter_button gFooter_button-white" data-mce-href="/resources/sat_contact/"> <span class="gHeader_buttonInner"> <span>お問い合わせ</span> <span>お問い合わせ</span> </span> </a></div><!-- /.gFooter_buttons --></div><!-- /.gFooter_main --><div class="gFooter_bottom"><div class="gFooter_social"><a class="gFooter_socialLink gFooter_socialLink-x" href="https://x.com/Stockmark_japan" target="_blank" rel="noopener" data-mce-href="https://x.com/Stockmark_japan"></a> <a class="gFooter_socialLink gFooter_socialLink-facebook" href="https://www.facebook.com/AI.StockMark/" target="_blank" rel="noopener" data-mce-href="https://www.facebook.com/AI.StockMark/"></a><br></div><!-- /.gFooter_social --><div class="gFooter_links"><ul class="gFooter_linkList"><li class="gFooter_linkItem"><a href="https://stockmark.co.jp/terms" target="_blank" rel="noopener" data-mce-href="https://stockmark.co.jp/terms">サービス利用規約</a></li><li class="gFooter_linkItem"><a href="https://stockmark.co.jp/security" target="_blank" rel="noopener" data-mce-href="https://stockmark.co.jp/security">情報セキュリティ方針</a></li><li class="gFooter_linkItem"><a href="https://stockmark.co.jp/privacy" target="_blank" rel="noopener" data-mce-href="https://stockmark.co.jp/privacy">プライバシーポリシー</a></li><li class="gFooter_linkItem"><a href="https://stockmark.co.jp/stakeholder" target="_blank" rel="noopener" data-mce-href="https://stockmark.co.jp/stakeholder">マルチステークホルダー方針</a></li><li class="gFooter_linkItem"><a href="https://stockmark.co.jp/" target="_blank" rel="noopener" data-mce-href="https://stockmark.co.jp/">運営会社(Stockmark株式会社)</a></li></ul></div><!-- /.gFooter_links --><p class="gFooter_copyright">Copyright©Stockmark inc.</p><a href="#" class="gFooter_pageTop" data-mce-href="#"> <span>PAGE TOP</span> </a></div><!-- /.gFooter_bottom --></div><!-- /.gFooter_inner --></footer>
+		<a href="#" class="pageTop">
+			<span class="pageTop_text">PAGE TOP</span>
+		</a>
+	</div><!-- /.wrapper -->
+	<button type="button" class="overlay"></button>
+</body>
+
+
+</html>

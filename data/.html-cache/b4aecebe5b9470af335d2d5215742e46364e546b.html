@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sakana Marlin — Your Virtual CSO</title>
+  <meta name="description" content="Sakana Marlin — Ultra Deep Research。リサーチはAIへ。人間は「意思決定」に集中する。">
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Sakana Marlin — Your Virtual CSO.">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="リサーチはAIへ。人間は「意思決定」に集中する。">
+  <meta property="og:image" content="https://sakana.ai/assets/marlin/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://sakana.ai/assets/marlin/ogp.png">
+  <meta property="og:url" content="https://sakana.ai/marlin/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SakanaAILabs">
+
+  <meta name="robots" content="max-image-preview:none">
+
+  <link rel="canonical" href="/marlin/">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Fonts: Poppins (EN/numerals) + PT Sans (FAQ numbers); JP via system Hiragino / Noto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/marlin/lp.css?v=17">
+
+  <!-- Default language: JA for Japanese browsers, EN for everyone else.
+       Runs before paint to avoid a JA→EN flash. A previous explicit choice wins. -->
+  <script>
+    (function(){
+      var root = document.documentElement, lang;
+      try { lang = localStorage.getItem('marlin-lang'); } catch(e){}
+      if (lang !== 'en' && lang !== 'ja') {
+        var primary = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var prefersJa = String(primary).toLowerCase().split('-')[0] === 'ja';
+        lang = prefersJa ? 'ja' : 'en';
+      }
+      if (lang === 'en') { root.classList.add('lang-en'); root.setAttribute('lang', 'en'); }
+    })();
+  </script>
+
+  <!-- Google Analytics (consistent with the rest of the site) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W770C6CJ1J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W770C6CJ1J');
+  </script>
+</head>
+<body>
+<div class="sp">
+
+  <!-- ===================== Header (nav) ===================== -->
+  <header class="site-header">
+    <a class="hd-logo" href="/marlin/" aria-label="Sakana Marlin"><img class="logo" src="/assets/marlin/logo-marlin.svg" alt="Sakana Marlin"></a>
+    <button class="burger" id="burger" type="button" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <div class="menu-overlay" id="menuOverlay">
+    <nav class="menu-scroll">
+      <div class="menu-group">
+        <a class="menu-link" href="#about"><span class="t-ja">Sakana Marlinとは</span><span class="t-en">What is Sakana Marlin</span></a>
+        <a class="menu-link" href="#howto"><span class="t-ja">使い方</span><span class="t-en">How to use</span></a>
+        <a class="menu-link" href="#usecase"><span class="t-ja">ユースケース</span><span class="t-en">Use Cases</span></a>
+        <a class="menu-link" href="#features"><span class="t-ja">特徴</span><span class="t-en">Features</span></a>
+        <a class="menu-link" href="#voice"><span class="t-ja">利用者の声</span><span class="t-en">User Voices</span></a>
+        <a class="menu-link" href="#pricing"><span class="t-ja">料金プラン</span><span class="t-en">Pricing</span></a>
+        <a class="menu-link" href="#faq">FAQ</a>
+        <a class="btn btn--black menu-login" href="https://marlin.sakana.ai/login" data-href-ja="https://marlin.sakana.ai/login" data-href-en="https://marlin.sakana.ai/auth/login?ui_locales=en&amp;returnTo=/" target="_blank"><span class="t-ja">ログイン</span><span class="t-en">Log in</span></a>
+      </div>
+      <div class="menu-group">
+        <p class="menu-label">Other Products</p>
+        <a class="menu-link menu-link--plain" href="https://sakana.ai/fugu/">Sakana Fugu</a>
+        <a class="menu-link menu-link--plain" href="https://chat.sakana.ai/" target="_blank">Sakana Chat</a>
+      </div>
+      <div class="menu-group">
+        <p class="menu-label">Official SNS</p>
+        <div class="menu-social">
+          <a href="https://x.com/SakanaAILabs" aria-label="X" target="_blank">
+            <svg viewBox="0 0 24 24"><path fill="#000" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+          </a>
+          <a href="https://jp.linkedin.com/company/sakana-ai" aria-label="LinkedIn" target="_blank">
+            <svg viewBox="0 0 24 24"><path fill="#000" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="menu-lang">
+        <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language"><span class="t-ja">Japanese</span><span class="t-en">English</span></button>
+        <div class="lang-options" role="listbox">
+          <a class="active" data-lang="ja" role="option">Japanese</a><span class="sep">/</span><a data-lang="en" role="option">English</a>
+        </div>
+      </div>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <button class="menu-close" id="menuClose" type="button" aria-label="メニューを閉じる"></button>
+  </div>
+
+  <!-- PC burger drawer: a separate full menu so the in-bar nav above stays visible while this is open -->
+  <aside class="pc-drawer" id="pcDrawer" aria-hidden="true">
+    <nav class="menu-scroll">
+      <div class="menu-group">
+        <a class="menu-link" href="#about"><span class="t-ja">Sakana Marlinとは</span><span class="t-en">What is Sakana Marlin</span></a>
+        <a class="menu-link" href="#howto"><span class="t-ja">使い方</span><span class="t-en">How to use</span></a>
+        <a class="menu-link" href="#usecase"><span class="t-ja">ユースケース</span><span class="t-en">Use Cases</span></a>
+        <a class="menu-link" href="#features"><span class="t-ja">特徴</span><span class="t-en">Features</span></a>
+        <a class="menu-link" href="#voice"><span class="t-ja">利用者の声</span><span class="t-en">User Voices</span></a>
+        <a class="menu-link" href="#pricing"><span class="t-ja">料金プラン</span><span class="t-en">Pricing</span></a>
+        <a class="menu-link" href="#faq">FAQ</a>
+        <a class="btn btn--black menu-login" href="https://marlin.sakana.ai/login" data-href-ja="https://marlin.sakana.ai/login" data-href-en="https://marlin.sakana.ai/auth/login?ui_locales=en&amp;returnTo=/" target="_blank"><span class="t-ja">ログイン</span><span class="t-en">Log in</span></a>
+      </div>
+      <div class="menu-group">
+        <p class="menu-label">Other Products</p>
+        <a class="menu-link menu-link--plain" href="https://sakana.ai/fugu/">Sakana Fugu</a>
+        <a class="menu-link menu-link--plain" href="https://chat.sakana.ai/" target="_blank">Sakana Chat</a>
+      </div>
+      <div class="menu-group">
+        <p class="menu-label">Official SNS</p>
+        <div class="menu-social">
+          <a href="https://x.com/SakanaAILabs" aria-label="X" target="_blank">
+            <svg viewBox="0 0 24 24"><path fill="#000" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+          </a>
+          <a href="https://jp.linkedin.com/company/sakana-ai" aria-label="LinkedIn" target="_blank">
+            <svg viewBox="0 0 24 24"><path fill="#000" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="menu-lang">
+        <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language"><span class="t-ja">Japanese</span><span class="t-en">English</span></button>
+        <div class="lang-options" role="listbox">
+          <a class="active" data-lang="ja" role="option">Japanese</a><span class="sep">/</span><a data-lang="en" role="option">English</a>
+        </div>
+      </div>
+    </nav>
+    <button class="menu-close" type="button" aria-label="メニューを閉じる"></button>
+  </aside>
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero">
+    <!-- <div class="flock-bg" data-flock-bg aria-hidden="true"></div> -->
+    <div class="hero-copy">
+      <h1 class="reveal-chars"><span>Sakana Marlin,</span> <span>Your</span> <span>Virtual CSO.</span></h1>
+    </div>
+    <p class="hero-lead reveal-chars" data-reveal-delay="800"><span class="t-ja">リサーチはAIへ。<br>人間は「意思決定」に集中する。</span><span class="t-en">Deeper insight. Faster action.</span></p>
+    <div class="hero-mock-wrap">
+      <div class="hero-mock-frame">
+        <video class="hero-mock" src="/assets/marlin/LP_movie_H.mp4" width="1350" height="1080" autoplay muted loop playsinline aria-label="Sakana Marlin のイメージアニメーション"></video>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+      <a class="btn btn--white cta-enterprise" href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-ja="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-en="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform" target="_blank"><span class="t-ja">法人お問い合わせ</span><span class="t-en">Contact Us</span></a>
+    </div>
+    <div class="scroll-hint">
+      <span class="sd-sp">Scroll down</span><span class="sd-pc">scroll</span>
+      <div class="scroll-track">
+        <i class="scroll-line"></i>
+        <img class="scroll-fish" src="/assets/marlin/scroll-fish.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== About ===================== -->
+  <section class="about" id="about">
+    <div class="about-concept">
+      <div class="sec-title">
+        <span class="eyebrow"><span class="t-ja">Sakana Marlinとは</span><span class="t-en">What is Sakana Marlin</span></span>
+        <h2 class="reveal-chars"><span class="t-ja">Ultra Deep Researchを担う、<br>あなたのVirtual CSO。</span><span class="t-en">Your Virtual CSO for Ultra Deep Research.</span></h2>
+      </div>
+      <div class="about-lead">
+        <p class="lead t-ja">Sakana Marlinは、単なるディープリサーチアシスタントではありません。本来であればCSO（最高戦略責任者）とそのチームが数週間を費やすような、本格的な戦略リサーチを引き受ける<span class="hl">自律型エージェント</span>です。Sakana AI独自の技術を基盤に、推論時の計算リソースをスケールさせ、最大8時間に及ぶ連続的かつ自律的な推論を実行。一度テーマを設定すれば、人手を介さずに、仮説の立案・情報収集・Web探索・矛盾の解消を自ら繰り返します。</p>
+        <p class="lead t-ja"><br>Sakana Marlinは、要約にとどまりません。<br>複雑なビジネス環境に潜む因果関係を読み解き、構造化された戦略の選択肢へと整理します。網羅的なリサーチという重い負担と徹底した戦略レポートの作成を引き受けることで、人間は最も価値の高い仕事——「意思決定」そのもの——に集中できます。</p>
+        <p class="lead t-en">Sakana Marlin isn't just another deep research assistant. It is an autonomous agent designed to take on the kind of substantial strategy research that a Chief Strategy Officer and a small team might otherwise spend weeks on.</p>
+        <p class="lead t-en"><br>Instead of generating text in seconds, our focus is on long-horizon, sample-efficient reasoning. Powered by Sakana AI's core reasoning architecture, Sakana Marlin scales up inference-time compute to execute up to eight hours of continuous, autonomous reasoning. Once you set a research topic, it works without further human input: repeatedly forming hypotheses, gathering information, navigating the web, and resolving contradictions on its own.</p>
+        <p class="lead t-en"><br>It does more than summarize. Sakana Marlin maps the causal relationships at work in complex business environments and organizes them into structured strategic options. By taking on the heavy lifting of comprehensive research and delivering exhaustive strategy reports, Sakana Marlin frees you to concentrate on the highest-value work of all: the decisions themselves.</p>
+      </div>
+    </div>
+
+    <div class="product-band">
+      <img class="t-ja" src="/assets/marlin/about-product.png" alt="Sakana Marlin — Ultra Deep Research" width="393" height="295">
+      <img class="t-en" src="/assets/marlin/about-product_en.png" alt="Sakana Marlin — Ultra Deep Research" width="393" height="295">
+    </div>
+
+    <div class="point-list">
+      <div class="point-card">
+        <div class="ptag"><span>Point</span><span>01</span></div>
+        <div class="ptxt">
+          <h3><span class="t-ja">数週間のリサーチが、数時間で。</span><span class="t-en">High-Quality Autonomous Reasoning, Delivered in Hours</span></h3>
+          <p><span class="t-ja">仮説の立案・情報収集・検証を自律的に実行。自律的に仮説検証とブラウジングを繰り返し、膨大な情報の海から本質を掘り下げます。</span><span class="t-en">Unlike conventional AI chat tools, Sakana Marlin runs extended reasoning processes over several hours — autonomously cycling through hypothesis testing and web research to extract what truly matters from vast amounts of information.</span></p>
+        </div>
+      </div>
+      <div class="point-card">
+        <div class="ptag"><span>Point</span><span>02</span></div>
+        <div class="ptxt">
+          <h3><span class="t-ja">届くのは要約ではなく、<br class="sp-br">戦略の選択肢。</span><span class="t-en">Structured Strategic Options</span></h3>
+          <p><span class="t-ja">複雑なビジネス環境の因果関係を読み解き、経営層が即議論できるレベルの戦略オプションを構造化。<br>「どうすればいいか」に答えるアウトプットを提供します。</span><span class="t-en">Beyond summarizing information, Sakana Marlin maps the causal dynamics of complex business environments and delivers structured strategic options ready for executive review.</span></p>
+        </div>
+      </div>
+      <div class="point-card">
+        <div class="ptag"><span>Point</span><span>03</span></div>
+        <div class="ptxt">
+          <h3><span class="t-ja">AIが考え、<br class="sp-br">あなたが決める。</span><span class="t-en">Separating Thinking from Deciding</span></h3>
+          <p><span class="t-ja">もう膨大な情報の海に潜る必要はありません。網羅的な調査や構造化の役割をSakana Marlinが担うことで、人間は最も付加価値の高い「意思決定」そのものに集中できます。</span><span class="t-en">Free your team from the burden of exhaustive research. With Sakana Marlin handling investigation and synthesis, decision-makers can focus entirely on what matters most: the decision itself.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== How to use ===================== -->
+  <section class="howto" id="howto">
+    <div class="howto-head">
+      <div class="sec-title">
+        <span class="eyebrow"><span class="t-ja">使い方</span><span class="t-en">How to use</span></span>
+        <h2 class="reveal-chars"><span class="t-ja">テーマを指定し、あとは待つだけ。</span><span class="t-en">Just specify a topic, then sit back and wait.</span></h2>
+      </div>
+    </div>
+    <div class="howto-steps">
+      <svg class="howto-sep howto-sep--top" viewBox="0 0 393 40" preserveAspectRatio="none"><path d="M393 0L196.5 40L0 0Z"/></svg>
+      <div class="howto-step">
+        <span class="num">01</span>
+        <div class="fn">Plan</div>
+        <img class="step-img" src="/assets/marlin/howto-01.png" alt="" width="345" height="194">
+        <p class="desc"><span class="t-ja">依頼を受けたテーマの調査計画を立てる。</span><span class="t-en">Create a research plan based on the requested topic.</span></p>
+      </div>
+      <svg class="howto-sep" viewBox="0 0 393 40" preserveAspectRatio="none"><path d="M393 0L196.5 40L0 0Z"/></svg>
+      <div class="howto-step">
+        <span class="num">02</span>
+        <div class="fn">Deep &amp; Multi Research</div>
+        <img class="step-img" src="/assets/marlin/howto-02.png" alt="" width="345" height="194">
+        <p class="desc"><span class="t-ja">鮮度の高い情報を、<br>複数の戦略軸で同時に分析。</span><span class="t-en">Fresh, up-to-date information analyzed simultaneously across multiple strategic dimensions.</span></p>
+      </div>
+      <svg class="howto-sep" viewBox="0 0 393 40" preserveAspectRatio="none"><path d="M393 0L196.5 40L0 0Z"/></svg>
+      <div class="howto-step">
+        <span class="num">03</span>
+        <div class="fn">AI Report</div>
+        <img class="step-img" src="/assets/marlin/howto-03.png" alt="" width="345" height="194">
+        <p class="desc"><span class="t-ja">数時間の自律推論で、<br>専門家レベルの成果物をアウトプット。</span><span class="t-en">Hours of autonomous reasoning delivering expert-level research quality output.</span></p>
+      </div>
+      <svg class="howto-sep" viewBox="0 0 393 40" preserveAspectRatio="none"><path d="M393 0L196.5 40L0 0Z"/></svg>
+    </div>
+  </section>
+
+  <!-- ===================== Inline CTA ===================== -->
+  <section class="cta-band">
+    <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+    <a class="btn btn--white cta-enterprise" href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-ja="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-en="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform" target="_blank"><span class="t-ja">法人お問い合わせ</span><span class="t-en">Contact Us</span></a>
+  </section>
+
+  <!-- ===================== Use case ===================== -->
+  <section class="usecase" id="usecase">
+    <div class="usecase-concept">
+      <div class="sec-title">
+        <span class="eyebrow"><span class="t-ja">ユースケース</span><span class="t-en">Use Cases</span></span>
+        <h2 class="reveal-chars"><span class="t-ja">鋭いインサイトを導き出す、<br class="sp-br">プレミアムなレポート。</span><span class="t-en">Beyond the surface. Every time.</span></h2>
+      </div>
+      <div class="usecase-lead">
+        <p class="lead t-ja usecase-body">Sakana Marlinが1回の調査で仕上げるのは、確かな分析と的を射た洞察に裏打ちされた、実用性の高いアウトプットです。参考文献を備えたレポートに加え、PowerPointスライドまで、プロのリサーチャー水準で自動生成。</p>
+        <p class="lead t-ja usecase-sample-note">以下は実際のユースケースサンプルです。</p>
+        <p class="lead t-en usecase-body">In a single research run, Sakana Marlin produces highly practical deliverables grounded in solid analysis and sharp, well-aimed insights. From a fully referenced report to PowerPoint slides, everything is automatically generated — at a quality that stands alongside professional researchers. Below are sample real-world use cases.</p>
+      </div>
+      <div class="query-card">
+        <p class="q"><span class="t-ja">調査テーマ：ステーブルコイン・トークン化決済の制度改正と日本の金融市場への影響</span><span class="t-en">Research topic: Strait of Hormuz Blockade, Resolution Scenarios</span></p>
+        <div class="query-tags">
+          <span class="tag tag--udr"><img src="/assets/marlin/udr-fish.svg" alt="">Ultra Deep Research</span>
+          <span class="tag tag--cat"><span class="t-ja">調査</span><span class="t-en">Research</span></span>
+        </div>
+      </div>
+      <div class="uc-connector"><img src="/assets/marlin/uc-arrow.svg" alt="" aria-hidden="true"></div>
+    </div>
+
+    <div class="uc-scroll">
+      <article class="uc-card">
+        <div class="head"><div class="head-row"><span class="case">Case 01</span><div class="uc-badges"><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PDF</span><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PPTX</span></div></div><h3><span class="t-ja">ステーブルコイン・トークン化決済の最前線 | 制度改正と日本の金融市場への影響</span><span class="t-en">Strait of Hormuz Blockade: Resolution Scenarios</span></h3></div>
+        <div class="body">
+          <div class="uc-zone">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">レポート</span><span class="t-en">Report</span><span class="tag">PDF</span></span></div>
+            <div class="uc-sample">
+              <img src="/assets/marlin/usecase-03.png" data-src-ja="/assets/marlin/usecase-03.png" data-src-en="/assets/marlin/usecase-03-en.png" alt="サンプルレポート Case 01：ステーブルコイン・トークン化決済の最前線">
+              <a class="preview-btn" href="/assets/marlin/%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B3%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E5%8C%96%E6%B1%BA%E6%B8%88%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A.pdf" data-href-ja="/assets/marlin/%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B3%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E5%8C%96%E6%B1%BA%E6%B8%88%E3%81%AE%E6%9C%80%E5%89%8D%E7%B7%9A.pdf" data-href-en="/assets/marlin/Strait%20of%20Hormuz%20Blockade_%20Resolution%20Scenarios.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <div class="uc-deck">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">スライド</span><span class="t-en">Slides</span><span class="tag">PPTX</span></span></div>
+            <div class="uc-deck-sample">
+              <img src="/assets/marlin/slides/stablecoin-payments-ja.jpg" data-src-ja="/assets/marlin/slides/stablecoin-payments-ja.jpg" data-src-en="/assets/marlin/slides/strait-of-hormuz-en.jpg" alt="サンプルスライド Case 01：ステーブルコイン・トークン化決済の最前線" width="960" height="540" loading="lazy">
+              <a class="preview-btn" href="/assets/marlin/slides/stablecoin-payments-ja.pdf" data-href-ja="/assets/marlin/slides/stablecoin-payments-ja.pdf" data-href-en="/assets/marlin/slides/strait-of-hormuz-en.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <a class="btn btn--black" href="/assets/marlin/slides/stablecoin-payments-ja.zip" download="Sakana_Marlin_ステーブルコイン・トークン化決済の最前線.zip" data-href-ja="/assets/marlin/slides/stablecoin-payments-ja.zip" data-href-en="/assets/marlin/slides/strait-of-hormuz-en.zip" data-download-ja="Sakana_Marlin_ステーブルコイン・トークン化決済の最前線.zip" data-download-en="Sakana_Marlin_Strait_of_Hormuz_Blockade.zip"><span class="t-ja">サンプルをダウンロード</span><span class="t-en">Download sample</span></a>
+        </div>
+      </article>
+      <article class="uc-card">
+        <div class="head"><div class="head-row"><span class="case">Case 02</span><div class="uc-badges"><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PDF</span><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PPTX</span></div></div><h3><span class="t-ja">エンタープライズAIエージェント市場マップ | 導入の課題、支援プレイヤー、機会領域</span><span class="t-en">The Global AI Regulation Patchwork</span></h3></div>
+        <div class="body">
+          <div class="uc-zone">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">レポート</span><span class="t-en">Report</span><span class="tag">PDF</span></span></div>
+            <div class="uc-sample">
+              <img src="/assets/marlin/usecase-01.png" data-src-ja="/assets/marlin/usecase-01.png" data-src-en="/assets/marlin/usecase-01-en.png" alt="サンプルレポート Case 02：エンタープライズAIエージェント市場マップ">
+              <a class="preview-btn" href="/assets/marlin/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BAAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%B8%82%E5%A0%B4%E3%83%9E%E3%83%83%E3%83%97%20%E2%80%95%20%E5%B0%8E%E5%85%A5%E3%81%AE%E8%AA%B2%E9%A1%8C%E3%80%81%E6%94%AF%E6%8F%B4%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%80%81%E6%A9%9F%E4%BC%9A%E9%A0%98%E5%9F%9F.pdf" data-href-ja="/assets/marlin/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BAAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%B8%82%E5%A0%B4%E3%83%9E%E3%83%83%E3%83%97%20%E2%80%95%20%E5%B0%8E%E5%85%A5%E3%81%AE%E8%AA%B2%E9%A1%8C%E3%80%81%E6%94%AF%E6%8F%B4%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%80%81%E6%A9%9F%E4%BC%9A%E9%A0%98%E5%9F%9F.pdf" data-href-en="/assets/marlin/The%20Global%20AI%20Regulation%20Patchwork.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <div class="uc-deck">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">スライド</span><span class="t-en">Slides</span><span class="tag">PPTX</span></span></div>
+            <div class="uc-deck-sample">
+              <img src="/assets/marlin/slides/enterprise-ai-agents-ja.jpg" data-src-ja="/assets/marlin/slides/enterprise-ai-agents-ja.jpg" data-src-en="/assets/marlin/slides/ai-regulation-patchwork-en.jpg" alt="サンプルスライド Case 02：エンタープライズAIエージェント市場マップ" width="960" height="540" loading="lazy">
+              <a class="preview-btn" href="/assets/marlin/slides/enterprise-ai-agents-ja.pdf" data-href-ja="/assets/marlin/slides/enterprise-ai-agents-ja.pdf" data-href-en="/assets/marlin/slides/ai-regulation-patchwork-en.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <a class="btn btn--black" href="/assets/marlin/slides/enterprise-ai-agents-ja.zip" download="Sakana_Marlin_エンタープライズAIエージェント市場マップ.zip" data-href-ja="/assets/marlin/slides/enterprise-ai-agents-ja.zip" data-href-en="/assets/marlin/slides/ai-regulation-patchwork-en.zip" data-download-ja="Sakana_Marlin_エンタープライズAIエージェント市場マップ.zip" data-download-en="Sakana_Marlin_The_Global_AI_Regulation_Patchwork.zip"><span class="t-ja">サンプルをダウンロード</span><span class="t-en">Download sample</span></a>
+        </div>
+      </article>
+      <article class="uc-card">
+        <div class="head"><div class="head-row"><span class="case">Case 03</span><div class="uc-badges"><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PDF</span><span class="uc-badge"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6B7280" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6B7280" stroke-width="1.4" stroke-linecap="round"/></svg>PPTX</span></div></div><h3><span class="t-ja">クマはなぜ人里に出てくるようになったのか | 異常出没の構造と、これから日本で起きること</span><span class="t-en">The Return of the Bond Vigilantes</span></h3></div>
+        <div class="body">
+          <div class="uc-zone">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="1.5" width="9" height="11" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M5 4.5H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 7H9" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M5 9.5H7" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">レポート</span><span class="t-en">Report</span><span class="tag">PDF</span></span></div>
+            <div class="uc-sample">
+              <img src="/assets/marlin/usecase-02.png" data-src-ja="/assets/marlin/usecase-02.png" data-src-en="/assets/marlin/usecase-02-en.png" alt="サンプルレポート Case 03：クマはなぜ人里に出てくるようになったのか">
+              <a class="preview-btn" href="/assets/marlin/%E3%82%AF%E3%83%9E%E3%81%AF%E3%81%AA%E3%81%9C%E4%BA%BA%E9%87%8C%E3%81%AB%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%8B%20%E2%80%94%20%E7%95%B0%E5%B8%B8%E5%87%BA%E6%B2%A1%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E3%80%81%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E6%97%A5%E6%9C%AC%E3%81%A7%E8%B5%B7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8.pdf" data-href-ja="/assets/marlin/%E3%82%AF%E3%83%9E%E3%81%AF%E3%81%AA%E3%81%9C%E4%BA%BA%E9%87%8C%E3%81%AB%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%8B%20%E2%80%94%20%E7%95%B0%E5%B8%B8%E5%87%BA%E6%B2%A1%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E3%80%81%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E6%97%A5%E6%9C%AC%E3%81%A7%E8%B5%B7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8.pdf" data-href-en="/assets/marlin/The%20Return%20of%20the%20Bond%20Vigilantes.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <div class="uc-deck">
+            <div class="uc-deck-head"><span class="uc-deck-label"><svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="#6EA4F3" stroke-width="1.4"/><path d="M4 5.5H10" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/><path d="M4 8H7.5" stroke="#6EA4F3" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t-ja">スライド</span><span class="t-en">Slides</span><span class="tag">PPTX</span></span></div>
+            <div class="uc-deck-sample">
+              <img src="/assets/marlin/slides/bear-encounters-ja.jpg" data-src-ja="/assets/marlin/slides/bear-encounters-ja.jpg" data-src-en="/assets/marlin/slides/bond-vigilantes-en.jpg" alt="サンプルスライド Case 03：クマはなぜ人里に出てくるようになったのか" width="960" height="540" loading="lazy">
+              <a class="preview-btn" href="/assets/marlin/slides/bear-encounters-ja.pdf" data-href-ja="/assets/marlin/slides/bear-encounters-ja.pdf" data-href-en="/assets/marlin/slides/bond-vigilantes-en.pdf" target="_blank"><svg viewBox="0 0 20 20" fill="none"><path d="M8.66536 16H6.66536C5.92898 16 5.33203 15.403 5.33203 14.6667V5.33333C5.33203 4.59695 5.92898 4 6.66536 4H13.332C14.0684 4 14.6654 4.59695 14.6654 5.33333V10" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.025" cy="13.9429" r="1.66667" transform="rotate(-45 13.025 13.9429)" stroke="#6EA4F3" stroke-width="1.5"/><path d="M14.2031 15.1211L15.6173 16.5353" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7.3335H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10H8" stroke="#6EA4F3" stroke-width="1.5" stroke-linecap="round"/></svg><span class="t-ja">プレビュー</span><span class="t-en">Preview</span></a>
+            </div>
+          </div>
+          <a class="btn btn--black" href="/assets/marlin/slides/bear-encounters-ja.zip" download="Sakana_Marlin_クマはなぜ人里に出てくるようになったのか.zip" data-href-ja="/assets/marlin/slides/bear-encounters-ja.zip" data-href-en="/assets/marlin/slides/bond-vigilantes-en.zip" data-download-ja="Sakana_Marlin_クマはなぜ人里に出てくるようになったのか.zip" data-download-en="Sakana_Marlin_The_Return_of_the_Bond_Vigilantes.zip"><span class="t-ja">サンプルをダウンロード</span><span class="t-en">Download sample</span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="pad" style="padding-top:14px;padding-bottom:60px;">
+      <a class="btn btn--white" id="bulkDownload" href="/assets/marlin/Sakana_Marlin_%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E8%B3%87%E6%96%99.zip" download="Sakana_Marlin_サンプル資料.zip" data-href-ja="/assets/marlin/Sakana_Marlin_%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E8%B3%87%E6%96%99.zip" data-href-en="/assets/marlin/Sakana_Marlin_Samples.zip" data-download-ja="Sakana_Marlin_サンプル資料.zip" data-download-en="Sakana_Marlin_Samples.zip"><span class="t-ja">サンプル資料をまとめてダウンロードする</span><span class="t-en">Download all samples</span></a>
+    </div>
+
+    <!-- Marlin Insights — entry point into the report series (Figma "Section Marlin Insight").
+         Copy and banner sit side by side on PC; on SP the banner slides between the lead and
+         the button (see .mi-copy{display:contents} in the SP block). -->
+    <div class="mi-band">
+      <div class="mi-copy">
+        <h3 class="mi-title">Marlin Insights</h3>
+        <div class="mi-lead">
+          <p><span class="t-ja">「Sakana Marlin」を活用したリサーチプロジェクト「Marlin Insights」。</span><span class="t-en">Marlin Insights is a research project powered by Sakana Marlin.</span></p>
+          <p><span class="t-ja">変わりゆく複雑な世界をリアルタイムで捕捉し、複数のシナリオを想定しながら迅速で合理的な意思決定につなげるためのリサーチを実施し、その結果をレポートとして公開していきます。</span><span class="t-en">We capture a complex, fast-changing world in real time and map out multiple scenarios — publishing our research as reports for faster, better decisions.</span></p>
+        </div>
+        <a class="btn btn--white mi-btn" href="/marlin/insights/001/"><span class="t-ja">Marlin Insightsを見る</span><span class="t-en">See Marlin Insights</span></a>
+      </div>
+      <a class="mi-banner" href="/marlin/insights/001/">
+        <img src="/assets/marlin/insights/001/banner-ja.jpg" data-src-ja="/assets/marlin/insights/001/banner-ja.jpg" data-src-en="/assets/marlin/insights/001/banner-en.jpg" alt="Marlin Insights: The Future of Hormuz" width="1696" height="954">
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== Features / reasons ===================== -->
+  <section class="features" id="features">
+    <div class="features-head">
+      <div class="sec-title">
+        <span class="eyebrow"><span class="t-ja">特徴</span><span class="t-en">Features</span></span>
+        <h2 class="reveal-chars"><span class="t-ja">課題を解決する、確かな強み。</span><span class="t-en">Why Sakana Marlin</span></h2>
+      </div>
+      <div class="features-row">
+        <div class="features-copy">
+          <p class="lead">
+            <span class="t-ja">Sakana Marlinは、Sakana AIがこれまで培ってきた研究の知見と、<br class="pc-br">その実装・運用の経験を結集したプロダクトです。<br>数週間を要する徹底的なリサーチと、数十ページに及ぶ戦略レポートの執筆。<br>Sakana Marlinは、これらプロの思考プロセスをわずか8時間で実行し、意思決定に直結する具体的なアクションプランを提示します。</span>
+            <span class="t-en">Sakana Marlin brings together the research insight and the deployment experience that Sakana AI has accumulated over the years.<br>Weeks of exhaustive research and dozens of pages of strategic reports. Sakana Marlin executes this professional-grade thinking process in just 8 hours, delivering concrete, decision-ready action plans.</span></p>
+        </div>
+        <a class="btn btn--white" href="https://sakana.ai/marlin-beta/"><span class="t-ja">Sakana AI Blogで詳細を見る</span><span class="t-en">More details</span></a>
+      </div>
+    </div>
+
+    <div class="features-list">
+      <article class="feature-card">
+        <div class="f-head">
+          <span class="f-num">01</span>
+          <h3><span class="t-ja">AB-MCTS -<br>広く深い探索エンジン</span><span class="t-en">AB-MCTS — Wide and Deep Exploration Engine</span></h3>
+          <a class="badge" href="https://sakana.ai/ab-mcts-jp/" data-href-ja="https://sakana.ai/ab-mcts-jp/" data-href-en="https://sakana.ai/ab-mcts/" target="_blank">NeurIPS 2025 spotlight</a>
+        </div>
+        <img class="feature-img" src="/assets/marlin/feature-01.png" alt="" width="297" height="167">
+        <div>
+          <h4><span class="t-ja">「勝ち筋」を読む</span><span class="t-en">Identifying the Winning Formula</span></h4>
+          <p><span class="t-ja">数百〜数千回の仮説検証を自動で繰り返しながら、深掘りすべき論点と切り捨てるべき仮説をAI自身が判断。無駄な調査時間を省き、質の高い洞察を積み上げます。</span><span class="t-en">Through thousands of automated cycles, the AI dynamically selects key arguments and cuts the noise. Expect zero wasted effort, just pure, compounding high-value insights.</span></p>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="f-head">
+          <span class="f-num">02</span>
+          <h3><span class="t-ja">AIサイエンティスト -<br>自律ワークフロー</span><span class="t-en">The AI Scientist — Autonomous Workflow</span></h3>
+          <a class="badge" href="https://sakana.ai/ai-scientist-nature-jp/" data-href-ja="https://sakana.ai/ai-scientist-nature-jp/" data-href-en="https://sakana.ai/ai-scientist-nature/" target="_blank"><span class="t-ja">Nature誌掲載</span><span class="t-en">Featured in Nature</span></a>
+        </div>
+        <img class="feature-img" src="/assets/marlin/feature-02.png" alt="" width="297" height="167">
+        <div>
+          <h4><span class="t-ja">テーマを渡したら、あとは待つだけ。</span><span class="t-en">Just input the topic, and let Sakana Marlin do the rest</span></h4>
+          <p><span class="t-ja">アイデアの立案から情報収集、矛盾の解消、レポートの構造化まで、研究プロセス全体をAIが自律的に完遂。途中で人間が手を貸す必要はありません。</span><span class="t-en">From ideation and data gathering to resolving contradictions and structuring the report, the AI autonomously executes the entire research process. Leaving your hands completely free.</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== User voice ===================== -->
+  <section class="voice" id="voice">
+    <div class="sec-title">
+      <span class="eyebrow"><span class="t-ja">βテスト利⽤者の声</span><span class="t-en">User Voices</span></span>
+      <h2 class="reveal-chars"><span class="t-ja">プロフェッショナルが認めた、<br class="sp-br">確かな成果と価値。</span><span class="t-en">Solid Results Confirmed by Frontline Professionals</span></h2>
+    </div>
+    <div class="voice-list">
+      <article class="voice-card">
+        <div class="voice-top">
+          <span class="voice-num">01</span>
+          <img class="voice-photo" src="/assets/marlin/voice01.png" alt="">
+        </div>
+        <h3><span class="t-ja">想像していなかった切り口まで見つけてくれて、期待を大きく上回りました。</span><span class="t-en">"Exceeded expectations by discovering angles we hadn't even imagined."</span></h3>
+        <p><span class="t-ja">新規調査では、自分たちでは思いつかなかった視点や情報源まで提示され、人のバイアスを取り除くうえでも有効でした。既存調査の再現でも、人間が行った調査と同等以上の網羅性があり、さらに粒度の細かさやクライアントへの提言の深さにおいても、想定を超える成果が得られました。</span><span class="t-en">"It provided unbiased perspectives and unique sources for new research, while matching human comprehensiveness in existing reviews. The granularity of details and deep client recommendations far surpassed our expectations."</span></p>
+        <hr>
+        <div class="voice-info"><span class="t-ja">大手コンサルティングファーム<br>事業開発支援・シニアコンサルタント</span><span class="t-en">Major Consulting Firm in Tokyo 🇯🇵<br>Business Development Support | Senior Consultant</span></div>
+      </article>
+      <article class="voice-card">
+        <div class="voice-top">
+          <span class="voice-num">02</span>
+          <img class="voice-photo" src="/assets/marlin/voice02.png" alt="">
+        </div>
+        <h3><span class="t-ja">一次情報に基づいた質の高い調査で、納得感のあるレポートになっていました。</span><span class="t-en">"A highly convincing report driven by high-quality, primary research."</span></h3>
+        <p><span class="t-ja">他の生成AIと比較して、引用される情報の量と質が高く、二次情報ではなく一次情報を参照できている点に優位性を感じました。表やグラフも効果的に活用されており、内容を直感的に理解しやすいレポートになっていました。さらに、追加の調査観点が自動で提案されることで、新たな発見にもつながりました。</span><span class="t-en">"The research was of extremely high quality, grounded strictly in primary sources, resulting in a highly convincing and reliable final report."</span></p>
+        <hr>
+        <div class="voice-info"><span class="t-ja">大手SIer<br>サイバーセキュリティ部門</span><span class="t-en">Major IT System Integrator in Japan 🇯🇵<br>Cybersecurity Division</span></div>
+      </article>
+      <article class="voice-card">
+        <div class="voice-top">
+          <span class="voice-num">03</span>
+          <img class="voice-photo" src="/assets/marlin/voice03.png" alt="">
+        </div>
+        <h3><span class="t-ja">レビュー論文レベルの深さと網羅性があり、期待を上回りました。</span><span class="t-en">"Review-paper level depth and comprehensiveness; it exceeded expectations."</span></h3>
+        <p><span class="t-ja">各章で論点が幅広く整理されており、背景情報から技術動向、実務上の観点まで深く調査されている点が印象的でした。普段利用しているAIの機能と比較しても、情報量と調査の粒度が高く、単なる概要整理にとどまらないレポートになっていました。</span><span class="t-en">"The issues in each chapter were extensively organized. I was particularly impressed by how deeply it investigated everything—ranging from general background information to specific technological trends and practical, on-the-ground perspectives."</span></p>
+        <hr>
+        <div class="voice-info"><span class="t-ja">SIer<br>コンサル部門</span><span class="t-en">System Integration Firm in Tokyo 🇯🇵<br>Consulting Division</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== Pricing ===================== -->
+  <section class="pricing" id="pricing">
+    <div class="sec-title">
+      <span class="eyebrow"><span class="t-ja">料金プラン</span><span class="t-en">Pricing</span></span>
+      <h2 class="reveal-chars"><span class="t-ja">カード登録で即日利用可。</span><span class="t-en">Add your card. Start right away.</span></h2>
+    </div>
+
+    <div class="plan-list">
+      <article class="plan-card">
+        <div class="plan-head">
+          <h3 class="fw-600"><span class="t-ja">従量課金</span><span class="t-en">Pay as you go</span></h3>
+        </div>
+        <div class="plan-price"><span class="t-ja"><span class="amt">都度払い</span></span><span class="t-en"><span class="amt">Per-use</span></span></div>
+        <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+        <hr>
+        <div class="check-list">
+          <div class="check-item"><span class="t-ja">都度クレジット購入</span><span class="t-en">Buy credits on demand</span></div>
+          <div class="check-item"><span class="t-ja">追加クレジット購入可 （¥98 / 1クレジット）</span><span class="t-en">Add-on credits available (¥98 / credit)</span></div>
+          <div class="check-item"><span class="t-ja">1実行100クレジット</span><span class="t-en">100 credits per run</span></div>
+        </div>
+      </article>
+      <article class="plan-card">
+        <div class="plan-head">
+          <h3>Pro</h3>
+        </div>
+        <div class="plan-price"><span class="t-ja"><span class="yen">¥</span><span class="amt">150,000</span><span class="unit">/月</span></span><span class="t-en"><span class="yen">¥</span><span class="amt">150,000</span><span class="unit">/month</span></span></div>
+        <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+        <hr>
+        <div class="check-list">
+          <div class="check-item"><span class="t-ja">毎月2,000クレジット付与</span><span class="t-en">2,000 credits / mo</span></div>
+          <div class="check-item"><span class="t-ja">お得な追加クレジット購入可 （¥90 / 1クレジット）</span><span class="t-en">Discounted add-on credits (¥90 / credit)</span></div>
+          <div class="check-item"><span class="t-ja">1実行100クレジット</span><span class="t-en">100 credits per run</span></div>
+        </div>
+      </article>
+      <article class="plan-card">
+        <div class="plan-head">
+          <h3>Team</h3>
+        </div>
+        <div class="plan-price"><span class="t-ja"><span class="yen">¥</span><span class="amt">400,000</span><span class="unit">/月</span></span><span class="t-en"><span class="yen">¥</span><span class="amt">400,000</span><span class="unit">/month</span></span></div>
+        <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+        <hr>
+        <div class="check-list">
+          <div class="check-item"><span class="t-ja">毎月6,000クレジット付与</span><span class="t-en">6,000 credits / mo</span></div>
+          <div class="check-item"><span class="t-ja">お得な追加クレジット購入可 （¥85 / 1クレジット）</span><span class="t-en">Discounted add-on credits (¥85 / credit)</span></div>
+          <div class="check-item"><span class="t-ja">1実行100クレジット</span><span class="t-en">100 credits per run</span></div>
+        </div>
+      </article>
+      <article class="plan-card">
+        <div class="plan-head">
+          <h3>Enterprise</h3>
+        </div>
+        <div class="plan-price"><span class="t-ja"><span class="amt">個別お見積もり</span></span><span class="t-en"><span class="amt">Custom quote</span></span></div>
+        <a class="btn btn--black cta-enterprise" href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-ja="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-en="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform" target="_blank"><span class="t-ja">お問い合わせ</span><span class="t-en">Contact us</span><svg class="ext-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <hr>
+        <div class="check-list">
+          <div class="check-item"><span class="t-ja">カスタマイズされたクレジット提供</span><span class="t-en">Customized credit allocation</span></div>
+          <div class="check-item"><span class="t-ja">お得な追加クレジット購入可</span><span class="t-en">Discounted add-on credits</span></div>
+          <div class="check-item"><span class="t-ja">1実行100クレジット</span><span class="t-en">100 credits per run</span></div>
+          <div class="check-item"><span class="t-ja">専任サポート</span><span class="t-en">Dedicated support</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <span class="eyebrow"><span class="t-ja">セキュリティ・FAQ</span><span class="t-en">FAQ</span></span>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary><span class="faq-q">Q1</span><span class="faq-title"><span class="t-ja">他のリサーチ系AIと何が違うのですか？</span><span class="t-en">How does Sakana Marlin differ from other research AI tools?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer">
+          <span class="t-ja">Sakana MarlinはAB-MCTSにより仮説立案 → 探索 → 検証を自律的に繰り返す点が異なり、単なる情報集約ではなく、複数の仮説を比較検討した上での示唆を返します。意思決定の手前にある「論点設計」までAIに任せたい用途を想定しています。</span>
+          <span class="t-en">Sakana Marlin is distinct in its use of AB-MCTS to autonomously iterate through hypothesis formulation → exploration → verification. Rather than merely aggregating information, it compares and evaluates multiple hypotheses to provide deep insights. It is designed for use cases where you want to delegate everything up to "issue framing (agenda setting)" prior to decision-making to the AI.</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q2</span><span class="faq-title"><span class="t-ja">1回の調査にどのくらい時間がかかりますか？</span><span class="t-en">How long does a single research task take?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">調査テーマの複雑さや探索の深さに応じて変動しますが、目安は約8時間です。Sakana Marlinは即時応答型のリサーチツールではなく、AB-MCTSによって仮説立案・探索・検証を時間をかけて深く行うことで、意思決定に耐える品質のアウトプットを生成します。実行中はいつでもキャンセル可能ですが、クレジットは消費されますのでご注意ください。</span><span class="t-en">While it varies depending on the complexity of the research topic and the depth of the exploration, the general guideline is approximately 8 hours. Sakana Marlin is not a real-time, instant-response conversational AI; it is designed to take the time necessary to conduct deep, rigorous hypothesis formulation, exploration, and verification via AB-MCTS to generate high-quality outputs suitable for strategic decision-making. You can cancel at any time during execution, but please note that credits will still be consumed.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q3</span><span class="faq-title"><span class="t-ja">どのような調査テーマに向いていますか？逆に、苦手なテーマは？</span><span class="t-en">What types of research topics are ideal for Sakana Marlin, and which are not recommended?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">公開情報を統合して仮説検証を行う調査に強みがあります（戦略立案、市場・競合分析、技術トレンド評価、規制動向など）。一方、(a) 公開情報がほぼ存在しないニッチ領域、(b) 秒単位のリアルタイム性が求められる用途、(c) 社内非公開データのみで完結する調査、には現状適していません。</span><span class="t-en">Sakana Marlin excels at hypothesis validation using aggregated public data, such as strategic planning, market and competitor analysis, tech trend evaluations, and regulatory shifts. Conversely, it is currently not suited for (a) niche sectors with minimal public data, (b) use cases requiring split-second real-time tracking, or (c) research that relies entirely on internal, private data.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q4</span><span class="faq-title"><span class="t-ja">どのような人を対象にしたサービスですか？</span><span class="t-en">Who is the target audience for this service?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">本サービスは、法人・団体・個人事業主その他の事業者の方が、自己の事業・業務のために利用することを目的とした事業者向けサービスです。本サービスは専門的な業務上の用途のために設計されており、一般消費者としての利用は想定しておりません。</span><span class="t-en">This is a B2B service intended for corporations, organizations, sole proprietors, and other business entities to use for their business operations. Please note that it designed for professional business use cases, and not intended for general consumer use.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q5</span><span class="faq-title"><span class="t-ja">料金プランはどのような構成ですか？</span><span class="t-en">What are the available pricing plans?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">4つのプランをご用意しています。各プランの機能・利用上限の違いについては、料金セクションをご確認ください。</span><span class="t-en">We offer four distinct plans. Please refer to the Pricing section for details on the features and usage limits of each plan.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q6</span><span class="faq-title"><span class="t-ja">支払い方法は何に対応していますか？インボイスには対応していますか？</span><span class="t-en">What payment methods are supported? Do you support the Japanese invoice system?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">クレジットカード払い（Stripe決済）に対応しています。日本のインボイス制度（適格請求書）にも対応しています。</span><span class="t-en">We accept credit card payments processed securely through Stripe. We fully support the Japanese Qualified Invoice System.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q7</span><span class="faq-title"><span class="t-ja">解約やプラン変更はどうすればよいですか？</span><span class="t-en">How can I cancel or change my plan?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">解約・プラン変更はアカウント設定からご自身でいつでも行っていただけます。</span><span class="t-en">You can cancel or modify your subscription at any time directly through your Account Settings.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q8</span><span class="faq-title"><span class="t-ja">入力した情報はAIモデルの学習に利用されますか？</span><span class="t-en">Will the information I input be used for training AI models?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">弊社および利用する外部AIサービスのいずれにおいても、お客様から明示的な同意（オプトイン）をいただいた場合を除き、入力データをモデルの学習・再学習に利用することはありません。なお、ご同意いただいた場合においても、サービスの品質改善等に利用する際は、個人情報を削除する等の適切な処理を行います。</span><span class="t-en">No. Neither Sakana AI nor our external AI providers utilize your input data for model training or fine-tuning unless you explicitly provide opt-in consent. Even with consent, any data utilized for quality improvement will be properly processed, including the removal of personally identifiable information (PII).</span></div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Q9</span><span class="faq-title"><span class="t-ja">海外からも利用できますか？</span><span class="t-en">Can I use Sakana Marlin from outside Japan?</span></span><span class="faq-toggle"></span></summary>
+        <div class="faq-answer"><span class="t-ja">はい、日本国外からもご利用いただけます。ただし、EU（欧州連合）およびEEA（欧州経済領域）加盟国へのサービス提供は行っておりません（詳細は利用規約をご確認ください）。また、それ以外の地域におきましても、通信環境や現地の各種規制等によってご利用いただけない場合がございます。</span><span class="t-en">Yes, Marlin is available from outside Japan. However, we do not provide services to users in EU (European Union) or EEA (European Economic Area) member states (please refer to our Terms of Service for details). Additionally, in other regions, access may not be available due to network conditions or local regulations.</span></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== Big CTA ===================== -->
+  <section class="cta">
+    <div class="flock-bg" data-flock-bg aria-hidden="true"></div>
+    <h2><span class="t-ja">リサーチはAIへ。<br>人間は「意思決定」に集中する。</span><span class="t-en">Deeper insight. Faster action.</span></h2>
+    <div class="cta-btns">
+      <a class="btn btn--black" href="https://marlin.sakana.ai/signup" target="_blank"><span class="t-ja">今すぐはじめる</span><span class="t-en">Try Sakana Marlin</span></a>
+      <a class="btn btn--white cta-enterprise" href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-ja="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-en="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform" target="_blank"><span class="t-ja">法人お問い合わせ</span><span class="t-en">Contact Us</span></a>
+    </div>
+    <p class="cta-inquiry">
+      <span class="t-ja">お問い合わせは<a href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" target="_blank">こちら</a>から</span>
+      <span class="t-en"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform" target="_blank">Contact us</a></span>
+    </p>
+    <div class="cta-ghost" aria-hidden="true">
+      <span>Sakana Marlin, Your Virtual CSO.</span>
+      <span>Sakana Marlin, Your Virtual CSO.</span>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="footer-logo"><img src="/assets/marlin/logo-marlin.svg" alt="Sakana Marlin"></div>
+    <nav class="footer-links">
+      <a class="foot-link" href="https://sakana.ai/"><span class="t-ja">Sakana AI 公式サイト</span><span class="t-en">Sakana AI official site</span></a>
+      <a class="foot-link" href="https://sakana.ai/company-info/"><span class="t-ja">会社情報</span><span class="t-en">About us</span></a>
+      <a class="foot-link" href="https://sakana.ai/careers/"><span class="t-ja">採用情報</span><span class="t-en">Careers</span></a>
+      <a class="foot-link foot-privacy" href="https://marlin.sakana.ai/privacy-policy?lang=ja" target="_blank"><span class="t-ja">プライバシーポリシー</span><span class="t-en">Privacy Policy</span></a>
+      <a class="foot-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" target="_blank" data-href-ja="https://docs.google.com/forms/d/e/1FAIpQLSfraPiQyCo4L1AE_hvYoLsJqMtobvcGyqs0szD72wA2YtxBpg/viewform" data-href-en="https://docs.google.com/forms/d/e/1FAIpQLSfAo23KwxQElCxxo8I7O3y0NxFaAzx6oPA1M4HeZkxPRJpaig/viewform"><span class="t-ja">お問い合わせ</span><span class="t-en">Contact us</span></a>
+    </nav>
+    <div class="copyright">© 2026 Sakana AI 株式会社</div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+<script src="/js/marlin/lp-init.js"></script>
+</body>
+</html>

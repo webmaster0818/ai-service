@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W770C6CJ1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W770C6CJ1J');
+</script>
+<!-- Google Analytics -->
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Mobile / PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="format-detection" content="telephone=no">
+
+<title>Sakana AI — Building Frontier AI in Japan</title>
+
+<!-- Open Graph (Facebook, Slack, etc.) -->
+<meta property="og:title" content="Sakana AI" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="We are creating a new kind of foundation model based on nature-inspired intelligence." />
+<meta property="og:image" content="https://sakana.ai/assets/home/sakana_ogp.png" />
+<meta property="og:url" content="https://sakana.ai/" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SakanaAILabs">
+<meta name="twitter:title" content="Sakana AI">
+<meta name="twitter:description" content="We are building a world class AI research lab in Tokyo, Japan. We are creating a new kind of foundation model based on nature-inspired intelligence.">
+<meta name="twitter:image" content="https://sakana.ai/assets/home/sakana_ogp.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --text:#0D0D0D;
+    --muted:#5a5a5a;
+    --light:#9a9a9a;
+    --accent:#CC2B2B;
+    --border:#E0E0E0;
+  }
+  *{box-sizing:border-box}
+
+  /* Match current sakana.ai: full lock to viewport, no scroll */
+  html,body{
+    overflow:hidden;
+    margin:0;padding:0;
+    width:100%;
+    background:transparent;
+  }
+  html{height:100%}
+  body{
+    position:relative;
+    height:100vh;height:100dvh;
+    color:var(--text);
+    font-family:"Noto Sans JP","Poppins","Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"palt";
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* p5 canvas: sits at z-index:-1 (set by sketch.js). All page content is in
+     normal flow above it. */
+
+  .page{
+    position:relative;
+    height:100vh;height:100dvh;
+    display:flex;flex-direction:column;
+    pointer-events:none;        /* let the p5 canvas receive mouseDragged for boid spawning */
+  }
+  /* Re-enable pointer events on interactive elements */
+  .topnav, .hero .logo, .hero .tagline, .hero .sub, .utility, .fugu-cta{
+    pointer-events:auto;
+  }
+
+  /* ===== Top nav ===== */
+  .topnav{
+    flex:0 0 auto;
+    display:flex;justify-content:center;align-items:center;gap:48px;
+    padding:28px 24px 0;font-size:15px;font-weight:500;
+    position:relative;z-index:50;
+    background:transparent;
+  }
+  .nav-item{position:relative;padding:8px 4px}
+  .nav-item > a.label{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 4px;cursor:pointer;color:var(--text);
+    transition:color .15s;
+    font-family:"Noto Sans JP","Poppins",sans-serif;
+    font-weight:500;
+  }
+  .nav-item > a.label .chev{
+    width:10px;height:10px;transition:transform .2s;color:var(--light);
+  }
+  .nav-item:hover > a.label{color:var(--accent)}
+  .nav-item:hover > a.label .chev{transform:rotate(180deg);color:var(--accent)}
+
+  .dropdown{
+    position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);
+    min-width:300px;padding:18px 22px;
+    background:#FFFFFF;
+    border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 12px 32px rgba(13,13,13,0.08);
+    opacity:0;visibility:hidden;
+    transition:opacity .18s,transform .18s,visibility .18s;
+    z-index:60;
+  }
+  .nav-item:hover .dropdown,
+  .nav-item:focus-within .dropdown{
+    opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px);
+  }
+  .dropdown::before{
+    content:"";position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);
+    width:10px;height:10px;background:#FFFFFF;
+    border-left:1px solid var(--border);border-top:1px solid var(--border);
+  }
+  .dropdown h5{
+    margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--accent);
+  }
+  .dropdown ul{list-style:none;padding:0;margin:0}
+  .dropdown li a{
+    display:flex;flex-direction:column;gap:2px;
+    padding:8px 8px;margin:0 -8px;border-radius:5px;
+    font-size:14px;font-weight:500;color:var(--text);
+    transition:background .15s,color .15s;
+  }
+  .dropdown li a:hover{background:#FAFAFA;color:var(--accent)}
+  .dropdown li a .sub{
+    font-size:11px;color:var(--muted);font-weight:400;
+  }
+  .dropdown.dropdown-wide{min-width:380px}
+  .dropdown .group + .group{
+    margin-top:14px;padding-top:14px;border-top:1px solid var(--border);
+  }
+  .tag-tentative{
+    display:inline-block;font-size:9px;border:1px solid var(--border);
+    border-radius:3px;padding:1px 5px;margin-left:6px;color:var(--muted);
+    letter-spacing:0.04em;text-transform:uppercase;vertical-align:middle;
+    font-weight:600;
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    flex:1 1 auto;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:24px;
+    position:relative;z-index:10;
+  }
+  .hero .logo{
+    display:inline-block;
+    margin:0 0 28px;
+    user-select:none;
+  }
+  .hero .logo img{
+    width:clamp(280px,38vw,560px);
+    height:auto;display:block;
+  }
+  .tagline{
+    font-family:"Poppins","Noto Sans JP",sans-serif;
+    font-weight:200;
+    font-size:clamp(22px,2.6vw,32px);
+    margin:0 0 14px;letter-spacing:0;
+    color:var(--text);
+  }
+  .sub{
+    font-family:"Poppins","Noto Sans JP",sans-serif;
+    font-weight:200;
+    font-size:clamp(14px,1.2vw,18px);
+    color:var(--muted);margin:0;
+  }
+
+  /* ===== Fugu CTA (floating bottom-right link to /applied-careers/) ===== */
+  .fugu-cta{
+    position:absolute;
+    right:40px;bottom:40px;
+    display:block;
+    width:180px;
+    z-index:30;
+    text-decoration:none;
+    line-height:0;
+    filter:drop-shadow(0 4px 12px rgba(225,6,0,0.18));
+    transition:filter .25s ease;
+  }
+  .fugu-cta img{
+    width:100%;height:auto;display:block;
+    animation:fugu-breathe 3.2s ease-in-out infinite;
+    transform-origin:center center;
+  }
+  .fugu-cta:hover{
+    filter:drop-shadow(0 6px 16px rgba(225,6,0,0.32));
+  }
+  .fugu-cta:hover img{
+    animation-duration:1.4s;
+  }
+  .fugu-cta:focus-visible{
+    outline:2px solid #E10600;
+    outline-offset:6px;
+    border-radius:6px;
+  }
+  @keyframes fugu-breathe{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.10)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .fugu-cta img{animation:none}
+  }
+
+  /* ===== Utility bar ===== */
+  .utility{
+    flex:0 0 auto;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 32px;font-size:11px;color:var(--light);
+    position:relative;z-index:10;
+  }
+  .utility .left{display:flex;gap:18px;align-items:center}
+  .utility a{color:var(--light);display:inline-flex;align-items:center;gap:4px}
+  .utility a:hover{color:var(--text)}
+  .utility .right{display:flex;gap:18px;align-items:center}
+  .utility .icon-x{width:13px;height:13px;display:inline-block;vertical-align:middle}
+
+  /* ===== Mobile menu toggle (hidden on desktop) ===== */
+  .menu-toggle{
+    display:none;
+    position:absolute;top:18px;right:16px;
+    width:40px;height:40px;
+    background:transparent;border:0;padding:0;cursor:pointer;
+    z-index:80;
+  }
+  .menu-toggle span{
+    display:block;width:22px;height:2px;
+    background:var(--text);margin:5px auto;border-radius:2px;
+    transition:transform .22s ease, opacity .15s ease;
+  }
+  .topnav.is-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .topnav.is-open .menu-toggle span:nth-child(2){opacity:0}
+  .topnav.is-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Responsive */
+  @media (max-width:900px){
+    .menu-toggle{display:block}
+    .topnav{
+      justify-content:flex-start;align-items:flex-start;
+      padding:18px 16px 0;gap:0;
+      min-height:56px;
+    }
+    .nav-item{display:none;width:100%;padding:0}
+    .topnav.is-open{
+      position:fixed;inset:0;
+      background:#FFFFFF;
+      flex-direction:column;align-items:stretch;
+      padding:68px 20px 24px;
+      overflow-y:auto;
+      z-index:100;
+    }
+    .topnav.is-open .nav-item{
+      display:block;
+      border-bottom:1px solid var(--border);
+    }
+    .topnav.is-open .nav-item > a.label{
+      display:flex;justify-content:space-between;align-items:center;
+      width:100%;padding:18px 4px;
+      font-size:17px;font-weight:700;color:var(--text);
+    }
+    .topnav.is-open .nav-item > a.label .chev{display:none}
+    .topnav.is-open .nav-item:hover > a.label{color:var(--text)}
+    .topnav.is-open .dropdown{
+      position:static;transform:none !important;
+      opacity:1;visibility:visible;
+      background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;
+      border:0;box-shadow:none;
+      padding:0 0 14px;min-width:0;
+    }
+    .topnav.is-open .dropdown::before{display:none}
+    .topnav.is-open .dropdown h5{display:none}
+    .topnav.is-open .dropdown .group + .group{
+      margin-top:8px;padding-top:8px;border-top:0;
+    }
+    .topnav.is-open .dropdown li a{
+      padding:10px 8px;font-size:15px;font-weight:400;color:var(--muted);
+    }
+    .topnav.is-open .dropdown li a:hover{background:transparent;color:var(--accent)}
+    .utility{padding:14px 16px;font-size:10px}
+    .utility .right{gap:12px}
+    .fugu-cta{
+      right:24px;bottom:32px;
+      width:120px;
+    }
+  }
+  @media (max-height:620px){
+    .hero .logo img{width:clamp(220px,32vw,440px)}
+    .tagline{font-size:20px;margin-bottom:8px}
+    .sub{font-size:13px}
+    .fugu-cta{width:140px;bottom:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- p5 boids background (canvas auto-inserted by p5 / sketch.js, positioned absolute z-index:-1) -->
+<script type="text/javascript" src="js/p5.min.js"></script>
+<script type="text/javascript" src="sketch.js"></script>
+
+<div class="page">
+
+  <!-- ===== NAV: Research / Solution / Product / Career / About ===== -->
+  <nav class="topnav" aria-label="primary">
+
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-item">
+      <a class="label" href="/blog/?label=research">
+        Research
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown" role="menu">
+        <div class="group">
+          <h5>Research</h5>
+          <ul>
+            <li><a href="/blog/?label=research">Read our latest research</a></li>
+            <li><a href="/rsi-lab/">Recursive Self-Improvement Lab</a></li>
+            <li><a href="/frontier-intelligence-group/">Frontier Intelligence Group</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="label" href="#">
+        Solutions
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown" role="menu">
+        <div class="group">
+          <h5>Solutions</h5>
+          <ul>
+            <li><a href="/blog/?label=finance">Finance</a></li>
+            <li><a href="/blog/?label=defense-intel">Defense/Intelligence</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="label" href="/blog/?label=product">
+        Products
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown dropdown-wide" role="menu">
+        <div class="group">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="/fugu/">Sakana Fugu<span class="sub">LLM orchestrating frontier models for complex tasks</span></a></li>
+            <li><a href="/namazu/">Sakana Namazu<span class="sub">LLM specialized in Japanese</span></a></li>
+            <li><a href="/marlin/">Sakana Marlin<span class="sub">Analyst research reports, on demand</span></a></li>
+            <li><a href="https://translate.sakana.ai/">Sakana Translate<span class="sub">Translate and proofread with Namazu</span></a></li>
+            <li><a href="https://chat.sakana.ai/">Sakana Chat<span class="sub">AI chat featuring Fugu and Namazu</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="label" href="/careers/">
+        Careers
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown" role="menu">
+        <div class="group">
+          <h5>Careers</h5>
+          <ul>
+            <li><a href="/careers/">Research / Product / Corporate</a></li>
+            <li><a href="/applied-careers/">Applied Team 特設採用ページ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="label" href="/blog/">
+        About Sakana AI
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown" role="menu">
+        <div class="group">
+          <h5>About Sakana AI</h5>
+          <ul>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/company-info/">Corporate Info</a></li>
+            <li><a href="https://forms.gle/j3sL42T3gdT54KpJA">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <main class="hero">
+    <div class="logo" aria-label="Sakana AI">
+      <a href="https://chat.sakana.ai"><img src="sakana-logo-hero.png" alt="Sakana Chat" /></a>
+    </div>
+    <p class="tagline">Building Frontier AI in Japan</p>
+  </main>
+
+  <!-- ===== Utility bar ===== -->
+  <div class="utility">
+    <div class="left">
+      <span>Tokyo, Japan</span>
+      <span>© 2026 Sakana AI 株式会社</span>
+    </div>
+    <div class="right">
+      <a href="https://x.com/SakanaAILabs" aria-label="Twitter">
+        <svg class="icon-x" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.58-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 01-1.93.07 4.28 4.28 0 004 2.98 8.521 8.521 0 01-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/company/sakana-ai/" aria-label="LinkedIn">
+        <svg class="icon-x" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.001-4.122 2.06 2.06 0 01-.001 4.122zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== Floating Fugu CTA → /applied-careers/ ===== -->
+  <a href="/applied-careers/" class="fugu-cta" aria-label="Applied Team 採用情報">
+    <img src="applied-team-fugu.svg" alt="Applied Team 採用情報" />
+  </a>
+
+</div>
+
+<script>
+  (function(){
+    var nav = document.querySelector('.topnav');
+    var btn = document.querySelector('.menu-toggle');
+    if(!nav || !btn) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close menu when a real link is tapped
+    nav.addEventListener('click', function(e){
+      var a = e.target.closest('a[href]');
+      if(!a) return;
+      var href = a.getAttribute('href');
+      if(href && href !== '#'){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

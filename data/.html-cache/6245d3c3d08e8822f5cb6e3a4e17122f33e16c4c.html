@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Corporate Info — Sakana AI</title>
+
+<meta property="og:title" content="Corporate Info — Sakana AI" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Corporate information about Sakana AI K.K." />
+<meta property="og:image" content="https://sakana.ai/assets/home/sakana_ogp.png" />
+<meta property="og:url" content="https://sakana.ai/company-info/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --text:#0D0D0D;
+    --muted:#5a5a5a;
+    --light:#9a9a9a;
+    --accent:#CC2B2B;
+    --border:#E0E0E0;
+    --section-bg:#FAFAFA;
+  }
+  *{box-sizing:border-box}
+
+  html,body{
+    margin:0;padding:0;
+    width:100%;
+    background:var(--bg);
+    scroll-behavior:smooth;
+  }
+  body{
+    color:var(--text);
+    font-family:"Noto Sans JP","Poppins","Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"palt";
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* ===== Top nav ===== */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    display:flex;justify-content:center;align-items:center;gap:48px;
+    padding:20px 24px;font-size:15px;font-weight:500;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .topnav .logo-mark{
+    position:absolute;left:32px;top:50%;transform:translateY(-50%);
+  }
+  .topnav .logo-mark img{height:28px;width:auto;display:block}
+
+  /* Language toggle */
+  .lang-toggle{
+    position:absolute;right:32px;top:24px;z-index:100;
+    display:flex;border:1px solid var(--border);border-radius:5px;overflow:hidden;
+  }
+  .lang-toggle button{
+    padding:5px 11px;background:transparent;border:0;cursor:pointer;
+    font-size:11px;font-weight:700;letter-spacing:0.06em;color:var(--light);
+    font-family:"Poppins",sans-serif;transition:background .15s,color .15s;
+  }
+  .lang-toggle button.active{background:var(--text);color:#fff}
+  .lang-toggle button:not(.active):hover{color:var(--text)}
+
+  .nav-item{position:relative;padding:8px 4px}
+  .nav-item > a.label{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 4px;cursor:pointer;color:var(--text);
+    transition:color .15s;
+    font-family:"Noto Sans JP","Poppins",sans-serif;
+    font-weight:500;
+  }
+  .nav-item > a.label .chev{
+    width:10px;height:10px;transition:transform .2s;color:var(--light);
+  }
+  .nav-item:hover > a.label{color:var(--accent)}
+  .nav-item:hover > a.label .chev{transform:rotate(180deg);color:var(--accent)}
+
+  .dropdown{
+    position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);
+    min-width:300px;padding:18px 22px;
+    background:#FFFFFF;
+    border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 12px 32px rgba(13,13,13,0.08);
+    opacity:0;visibility:hidden;
+    transition:opacity .18s,transform .18s,visibility .18s;
+    z-index:60;
+  }
+  .nav-item:hover .dropdown,
+  .nav-item:focus-within .dropdown{
+    opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px);
+  }
+  .dropdown::before{
+    content:"";position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);
+    width:10px;height:10px;background:#FFFFFF;
+    border-left:1px solid var(--border);border-top:1px solid var(--border);
+  }
+  .dropdown h5{
+    margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--accent);
+  }
+  .dropdown ul{list-style:none;padding:0;margin:0}
+  .dropdown li a{
+    display:flex;flex-direction:column;gap:2px;
+    padding:8px 8px;margin:0 -8px;border-radius:5px;
+    font-size:14px;font-weight:500;color:var(--text);
+    transition:background .15s,color .15s;
+  }
+  .dropdown li a:hover{background:#FAFAFA;color:var(--accent)}
+  .dropdown li a .sub{font-size:11px;color:var(--muted);font-weight:400}
+  .dropdown .group + .group{
+    margin-top:14px;padding-top:14px;border-top:1px solid var(--border);
+  }
+
+  /* ===== Mobile menu toggle ===== */
+  .menu-toggle{
+    display:none;
+    position:absolute;top:50%;right:16px;transform:translateY(-50%);
+    width:40px;height:40px;
+    background:transparent;border:0;padding:0;cursor:pointer;z-index:80;
+  }
+  .menu-toggle span{
+    display:block;width:22px;height:2px;
+    background:var(--text);margin:5px auto;border-radius:2px;
+    transition:transform .22s ease,opacity .15s ease;
+  }
+  .topnav.is-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .topnav.is-open .menu-toggle span:nth-child(2){opacity:0}
+  .topnav.is-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ===== Page header ===== */
+  .page-header{
+    padding:72px 24px 56px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+  }
+  .page-header .eyebrow{
+    font-size:11px;font-weight:700;letter-spacing:0.14em;
+    color:var(--accent);
+    margin:0 0 16px;
+  }
+  .page-header h1{
+    font-family:"Poppins",sans-serif;
+    font-weight:200;
+    font-size:clamp(32px,4vw,52px);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  /* ===== Main content layout ===== */
+  .content{
+    max-width:960px;
+    margin:0 auto;
+    padding:64px 24px 96px;
+  }
+
+  /* ===== Section ===== */
+  .section{margin-bottom:64px}
+  .section-label{
+    font-size:16px;font-weight:700;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--accent);
+    margin:0 0 24px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--border);
+  }
+
+  /* ===== Info table ===== */
+  .info-table{width:100%;border-collapse:collapse}
+  .info-table tr{border-bottom:1px solid var(--border)}
+  .info-table tr:last-child{border-bottom:0}
+  .info-table th{
+    width:220px;
+    padding:18px 0;
+    font-size:13px;font-weight:500;color:var(--muted);
+    text-align:left;vertical-align:top;
+  }
+  .info-table td{
+    padding:18px 0;
+    font-size:14px;line-height:1.75;color:var(--text);
+    vertical-align:top;
+  }
+
+  /* ===== Team cards ===== */
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:24px;
+  }
+  .team-card{
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:28px 24px;
+    transition:box-shadow .18s;
+  }
+  .team-card:hover{box-shadow:0 8px 24px rgba(13,13,13,0.07)}
+  .team-card .avatar{
+    width:56px;height:56px;border-radius:50%;
+    background:var(--section-bg);
+    border:1px solid var(--border);
+    margin-bottom:16px;
+    overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .team-card .name{font-size:15px;font-weight:700;margin:0 0 4px}
+  .team-card .title{font-size:12px;color:var(--muted);margin:0 0 12px;font-weight:400}
+  .team-card .bio{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
+  .team-card .links{margin-top:14px;display:flex;gap:10px}
+  .team-card .links a{
+    font-size:11px;font-weight:600;letter-spacing:0.06em;
+    color:var(--accent);transition:opacity .15s;
+  }
+  .team-card .links a:hover{opacity:0.7}
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:1px solid var(--border);
+    padding:22px 32px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:11px;color:var(--light);
+  }
+  footer .left{display:flex;gap:18px;align-items:center}
+  footer a{color:var(--light)}
+  footer a:hover{color:var(--text)}
+  footer .right{display:flex;gap:18px;align-items:center}
+  .icon-social{width:13px;height:13px;display:inline-block;vertical-align:middle}
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .topnav .logo-mark{left:16px}
+    .lang-toggle{right:60px}
+    .menu-toggle{display:block}
+    .topnav{
+      justify-content:flex-start;align-items:flex-start;
+      padding:18px 16px;gap:0;min-height:56px;
+    }
+    .nav-item{display:none;width:100%;padding:0}
+    .topnav.is-open{
+      position:fixed;inset:0;background:#FFFFFF;
+      flex-direction:column;align-items:stretch;
+      padding:68px 20px 24px;overflow-y:auto;z-index:100;
+    }
+    .topnav.is-open .nav-item{display:block;border-bottom:1px solid var(--border)}
+    .topnav.is-open .nav-item > a.label{
+      display:flex;justify-content:space-between;align-items:center;
+      width:100%;padding:18px 4px;font-size:17px;font-weight:700;
+    }
+    .topnav.is-open .nav-item > a.label .chev{display:none}
+    .topnav.is-open .nav-item:hover > a.label{color:var(--text)}
+    .topnav.is-open .dropdown{
+      position:static;transform:none !important;
+      opacity:1;visibility:visible;
+      background:transparent;border:0;box-shadow:none;
+      padding:0 0 14px;min-width:0;
+    }
+    .topnav.is-open .dropdown::before{display:none}
+    .topnav.is-open .dropdown h5{display:none}
+    .topnav.is-open .dropdown li a{padding:10px 8px;font-size:15px;color:var(--muted)}
+    .topnav.is-open .dropdown li a:hover{background:transparent;color:var(--accent)}
+    .topnav.is-open .logo-mark{display:none}
+    .topnav.is-open .lang-toggle{top:18px;transform:none}
+    .info-table th{width:140px;font-size:12px}
+    footer{flex-direction:column;gap:12px;text-align:center}
+  }
+  @media (max-width:600px){
+    .info-table,
+    .info-table tbody,
+    .info-table tr,
+    .info-table th,
+    .info-table td{display:block;width:100%}
+    .info-table th{padding-bottom:4px;padding-top:18px}
+    .info-table td{padding-top:4px;padding-bottom:18px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="lang-toggle" role="group" aria-label="Language">
+  <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+  <button id="btn-ja" onclick="setLang('ja')">JA</button>
+</div>
+
+
+<!-- ===== Page header ===== -->
+<header class="page-header">
+  <p class="eyebrow" data-i18n="page-eyebrow">About Sakana AI</p>
+  <h1 data-i18n="page-h1">Corporate Information</h1>
+</header>
+
+<!-- ===== Main ===== -->
+<main class="content">
+
+  <!-- About -->
+  <section class="section" aria-labelledby="lbl-about">
+    <p class="section-label" id="lbl-about" data-i18n="lbl-about">About</p>
+    <p style="font-size:15px;line-height:1.85;color:var(--text);margin:0" data-i18n="about-body">Sakana AI is a Tokyo-based Frontier AI R&amp;D company founded by David Ha (CEO), Ren Ito (Chairman), and Llion Jones (CTO) in 2023. Our team, behind technologies such as The AI Scientist, Multi-Agent Orchestration Foundation Models, our Namazu LLMs for Japan, and the Darwin Gödel Machine, is constantly pushing the frontier of AI research. Our company is also working with the largest enterprises and with the public sector in Japan, to develop AI solutions for Japan's needs, and democratize AI in Japan.</p>
+  </section>
+
+  <!-- Leadership -->
+  <section class="section" aria-labelledby="lbl-leadership">
+    <p class="section-label" id="lbl-leadership" data-i18n="lbl-leadership">Leadership</p>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="avatar"><img src="david.jpg" alt="David Ha" style="width:100%;height:100%;object-fit:cover" /></div>
+        <p class="name">David Ha</p>
+        <p class="title" data-i18n="david-title">Co-Founder &amp; CEO</p>
+        <p class="bio" data-i18n="david-bio">Former Research Scientist at Google, where he led the Japan Research Team at Google Brain. His primary research areas include complex self-organizing systems and the self-evolution of artificial intelligence.</p>
+        <div class="links">
+          <a href="https://x.com/hardmaru" target="_blank" rel="noopener">Twitter →</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar"><img src="ren.jpeg" alt="Ren Ito" style="width:100%;height:100%;object-fit:cover" /></div>
+        <p class="name" data-i18n="ren-name">Ren Ito</p>
+        <p class="title" data-i18n="ren-title">Co-Founder &amp; Chairman</p>
+        <p class="bio" data-i18n="ren-bio">Graduated from the University of Tokyo Faculty of Law, then joined Japan's Ministry of Foreign Affairs. Holds a New York State bar license. After executive roles at Mercari and Stability AI, he co-founded Sakana AI in 2023.</p>
+        <div class="links"></div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar"><img src="Llion.jpg" alt="Llion Jones" style="width:100%;height:100%;object-fit:cover" /></div>
+        <p class="name">Llion Jones</p>
+        <p class="title" data-i18n="llion-title">Co-Founder &amp; CTO</p>
+        <p class="bio" data-i18n="llion-bio">Co-author of the landmark "Attention Is All You Need" paper, which introduced the Transformer architecture underlying modern LLMs.</p>
+        <div class="links"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" aria-labelledby="lbl-team">
+    <p class="section-label" id="lbl-team" data-i18n="lbl-team">Team</p>
+    <div class="team-grid" style="grid-template-columns:repeat(2,1fr)">
+
+      <div class="team-card">
+        <p class="name" data-i18n="team-research-name">Research</p>
+        <p class="bio" data-i18n="team-research-bio">We share unique, cutting-edge research inspired by the collective intelligence of nature — including The AI Scientist, Darwin Gödel Machine, ShinkaEvolve, and AB-MCTS.</p>
+      </div>
+
+      <div class="team-card">
+        <p class="name" data-i18n="team-applied-name">Applied</p>
+        <p class="bio" data-i18n="team-applied-bio">At the frontier of finance, defense, and intelligence, we draw out tacit knowledge into AI, combine multiple models, and design and implement solutions that reach directly into Japan's social infrastructure.</p>
+      </div>
+
+      <div class="team-card">
+        <p class="name" data-i18n="team-product-name">Product</p>
+        <p class="bio" data-i18n="team-product-bio">We develop and deliver user-facing AI products — including Sakana Chat, Sakana Marlin, and Sakana Fugu — translating cutting-edge research into accessible tools.</p>
+      </div>
+
+      <div class="team-card">
+        <p class="name" data-i18n="team-corporate-name">Corporate</p>
+        <p class="bio" data-i18n="team-corporate-bio">We support Sakana AI's mission through finance, legal, HR, and operations, building the foundation to keep running at the frontier of AI research.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Logo -->
+  <section class="section" aria-labelledby="lbl-logo">
+    <p class="section-label" id="lbl-logo" data-i18n="lbl-logo">Logo</p>
+    <div style="padding:40px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;background:#fff">
+      <img src="sakana_logo.png" alt="Sakana AI logo" style="max-width:360px;width:100%;height:auto;display:block" />
+    </div>
+    <p style="font-size:14px;line-height:1.85;color:var(--muted);margin:20px 0 0" data-i18n="logo-desc">Sakana AI logo is inspired by creatures in nature, such as schools of fish. Just as fish move together and adapt fluidly to their environment, Sakana AI incorporates this concept of "collective intelligence" into its AI development, pursuing a new type of generative AI model that can adapt and respond to its surroundings.</p>
+  </section>
+
+  <!-- Company overview -->
+  <section class="section" aria-labelledby="lbl-overview">
+    <p class="section-label" id="lbl-overview" data-i18n="lbl-overview">Company Overview</p>
+    <table class="info-table">
+      <tbody>
+        <tr>
+          <th scope="row" data-i18n="th-company-name">Company Name</th>
+          <td data-i18n="td-company-name">Sakana AI K.K.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="th-founded">Founded</th>
+          <td data-i18n="td-founded">July 2023</td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="th-headquarters">Headquarters</th>
+          <td data-i18n="td-headquarters">Azabudai Hills Mori JP Tower 22F,<br>1-3-1 Azabudai, Minato-ku, Tokyo, 106-0041 JAPAN</td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="th-representative">Representative</th>
+          <td data-i18n="td-representative">
+            David Ha, CEO &amp; Co-Founder<br>
+            Ren Ito, Chairman &amp; Co-Founder
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+<!-- Funding -->
+  <section class="section" aria-labelledby="lbl-funding">
+    <p class="section-label" id="lbl-funding" data-i18n="lbl-funding">Funding</p>
+    <table class="info-table">
+      <tbody>
+        <tr>
+          <th scope="row">
+            <span data-i18n="th-seriesb">Latest Round</span>
+          </th>
+          <td>
+            <span data-i18n="td-seriesb-amount">Series B</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="th-investors-japan">Investors (Japan)</th>
+          <td style="font-size:14px;line-height:1.85;color:var(--muted)" data-i18n="td-investors-japan">ITOCHU Group, ANA Holdings, MPower Partners, SBI Group, STNet (Shikoku Electric Power Group), Global Brain, KDDI, CCI Group, JAFCO, Dai-ichi Life Insurance, Tokio Marine &amp; Nichido Fire Insurance, NEC, Nippon Life Insurance, Nomura Holdings, Fujitsu, Sumitomo Mitsui Banking Corporation, Mitsubishi UFJ Financial Group (MUFG), Mitsubishi Electric, Mizuho Financial Group, Miyako Capital, Meiji Yasuda Life Insurance, and others.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-i18n="th-investors-overseas">Investors (Overseas)</th>
+          <td style="font-size:14px;line-height:1.85;color:var(--muted)" data-i18n="td-investors-overseas">500 Global, Basis Set Ventures, Citi Group, Datadog, Factorial Funds, Fundomo, Geodesic Capital, Google, In-Q-Tel (IQT), July Fund, Khosla Ventures, Learn Capital, Lux Capital, Macquarie Capital, Mouro Capital (via Santander Group), New Enterprise Associates (NEA), NVIDIA, Ora Global, Salesforce Ventures, Translink Capital, and others.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Policies -->
+  <section class="section" aria-labelledby="lbl-policies">
+    <p class="section-label" id="lbl-policies" data-i18n="lbl-policies">Policies</p>
+    <ul style="list-style:none;padding:0;margin:0;border-top:1px solid var(--border)">
+      <li style="border-bottom:1px solid var(--border)">
+        <a href="defense-policy.html" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px;font-weight:500;color:var(--text);transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+          <span data-i18n="policy-defence">Defense Policy</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:var(--light)"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </li>
+      <li class="ja-only" style="border-bottom:1px solid var(--border)">
+        <a href="financial-data-policy.html" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px;font-weight:500;color:var(--text);transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+          <span data-i18n="policy-finance">金融個人データ保護指針</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:var(--light)"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </li>
+      <li class="ja-only">
+        <a href="tokusho-law.html" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px;font-weight:500;color:var(--text);transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+          <span data-i18n="policy-tokusho">特定商取引法に基づく表記</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:var(--light)"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="left">
+    <span>Tokyo, Japan</span>
+    <span>© 2026 Sakana AI 株式会社</span>
+  </div>
+  <div class="right">
+    <a href="https://x.com/SakanaAILabs" aria-label="Twitter">
+      <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.58-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 01-1.93.07 4.28 4.28 0 004 2.98 8.521 8.521 0 01-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/company/sakana-ai/" aria-label="LinkedIn">
+      <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.001-4.122 2.06 2.06 0 01-.001 4.122zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  /* ===== Translations ===== */
+  var translations = {
+    en: {
+      'page-eyebrow': 'About Sakana AI',
+      'page-h1': 'Corporate Information',
+      'lbl-about': 'About',
+      'about-body': 'Sakana AI is a Tokyo-based frontier R&D company founded by David Ha (CEO), Ren Ito (Chairman), and Llion Jones (CTO) in 2023. Our team, behind technologies such as The AI Scientist, Multi-Agent Orchestration Foundation Models, our Namazu LLMs for Japan, and the Darwin Gödel Machine, is constantly pushing the frontier of AI research. Our company is also working with the largest enterprises and with the public sector in Japan, to develop AI solutions for Japan\'s needs, and democratize AI in Japan.',
+      'lbl-leadership': 'Leadership',
+      'david-title': 'Co-Founder & CEO',
+      'david-bio': 'Former Research Scientist at Google, where he led the Japan Research Team at Google Brain. His primary research areas include complex self-organizing systems and the self-evolution of artificial intelligence.',
+      'ren-name': 'Ren Ito',
+      'ren-title': 'Co-Founder & Chairman',
+      'ren-bio': 'Graduated from the University of Tokyo Faculty of Law, then joined Japan\'s Ministry of Foreign Affairs. Holds a New York State bar license. After executive roles at Mercari and Stability AI, he co-founded Sakana AI in 2023.',
+      'llion-title': 'Co-Founder & CTO',
+      'llion-bio': 'Co-author of the landmark "Attention Is All You Need" paper, which introduced the Transformer architecture underlying modern LLMs.',
+      'lbl-team': 'Team',
+      'team-research-name': 'Research',
+      'team-research-bio': 'We share unique, cutting-edge research inspired by the collective intelligence of nature — including The AI Scientist, Darwin Gödel Machine, ShinkaEvolve, and AB-MCTS.',
+      'team-applied-name': 'Applied',
+      'team-applied-bio': 'At the frontier of finance, defense, and intelligence, we draw out tacit knowledge into AI, combine multiple models, and design and implement solutions that reach directly into Japan\'s social infrastructure.',
+      'team-product-name': 'Product',
+      'team-product-bio': 'We develop and deliver user-facing AI products — including Sakana Chat, Sakana Marlin, and Sakana Fugu — translating cutting-edge research into accessible tools.',
+      'team-corporate-name': 'Corporate',
+      'team-corporate-bio': 'We support Sakana AI\'s mission through finance, legal, HR, and operations, building the foundation to keep running at the frontier of AI research.',
+      'lbl-logo': 'Logo',
+      'logo-desc': 'Sakana AI logo is inspired by creatures in nature, such as schools of fish. Just as fish move together and adapt fluidly to their environment, Sakana AI incorporates this concept of "collective intelligence" into its AI development, pursuing a new type of generative AI model that can adapt and respond to its surroundings.',
+      'lbl-overview': 'Company Overview',
+      'th-company-name': 'Company Name',
+      'td-company-name': 'Sakana AI K.K.',
+      'th-founded': 'Founded',
+      'td-founded': 'July 2023',
+      'th-headquarters': 'Headquarters',
+      'td-headquarters': 'Azabudai Hills Mori JP Tower 22F,<br>1-3-1 Azabudai, Minato-ku, Tokyo, 106-0041 JAPAN',
+      'th-representative': 'Representative',
+      'td-representative': 'David Ha, CEO &amp; Co-Founder<br>Ren Ito, Chairman &amp; Co-Founder',
+      'lbl-partners': 'Major Partners',
+      'td-partners': 'MUFG / SMBC / Daiwa Securities / Acquisition, Technology &amp; Logistics Agency / Ministry of Internal Affairs and Communications / NVIDIA / Google / Salesforce Ventures / Citi / Datadog, and others',
+      'lbl-funding': 'Funding',
+      'th-seriesb': 'Latest Round',
+      'th-seriesb-date': 'November 2025',
+      'td-seriesb-amount': 'Series B',
+      'th-investors-japan': 'Investors (Japan)',
+      'td-investors-japan': 'ITOCHU Group, ANA Holdings, MPower Partners, SBI Group, STNet (Shikoku Electric Power Group), Global Brain, KDDI, CCI Group, JAFCO, Dai-ichi Life Insurance, Tokio Marine &amp; Nichido Fire Insurance, NEC, Nippon Life Insurance, Nomura Holdings, Fujitsu, Sumitomo Mitsui Banking Corporation, Mitsubishi UFJ Financial Group (MUFG), Mitsubishi Electric, Mizuho Financial Group, Miyako Capital, Meiji Yasuda Life Insurance, and others.',
+      'th-investors-overseas': 'Investors (Overseas)',
+      'td-investors-overseas': '500 Global, Basis Set Ventures, Citi Group, Datadog, Factorial Funds, Fundomo, Geodesic Capital, Google, In-Q-Tel (IQT), July Fund, Khosla Ventures, Learn Capital, Lux Capital, Macquarie Capital, Mouro Capital (via Santander Group), New Enterprise Associates (NEA), NVIDIA, Ora Global, Salesforce Ventures, Translink Capital, and others.',
+      'lbl-policies': 'Policies',
+      'policy-defence': 'Defense Policy',
+      'policy-finance': '金融個人データ保護指針',
+      'policy-tokusho': '特定商取引法に基づく表記'
+    },
+    ja: {
+      'page-eyebrow': 'Sakana AIについて',
+      'page-h1': '会社情報',
+      'lbl-about': '概要',
+      'about-body': 'Sakana AIは、David Ha（CEO）、伊藤錬（社長）、Llion Jones（CTO）が2023年に設立した東京拠点のFrontier AI R&D企業です。The AI Scientist、マルチエージェント・オーケストレーション基盤モデル、日本向けNamazu LLM、Darwin Gödel Machineなどの技術を持つチームが、AIリサーチの最前線を走り続けています。日本の大手企業や公共セクターと連携し、日本のニーズに応じたAIソリューションの開発と、AIの民主化にも取り組んでいます。',
+      'lbl-leadership': 'リーダーシップ',
+      'david-title': '共同創業者・CEO',
+      'david-bio': '元・Googleのリサーチ・サイエンティストで、Google Brainの日本リサーチチームを率いた。研究分野は複雑な自己組織化システム、人工知能の自己進化。',
+      'ren-name': '伊藤錬',
+      'ren-title': '共同創業者・社長',
+      'ren-bio': '東京大学法学部卒業後、外務省に入省。米ニューヨーク州の弁護士資格を持つ。メルカリ、英スタビリティーAIの役員を経て、2023年にSakana AIを共同創業。',
+      'llion-title': '共同創業者・CTO',
+      'llion-bio': '現代LLMの基盤となるTransformerアーキテクチャを導入した論文「Attention Is All You Need」の共著者。',
+      'lbl-team': 'チーム',
+      'team-research-name': 'Research',
+      'team-research-bio': 'AI Scientist、Darwin Gödel Machine、ShinkaEvolve、AB-MCTSなど、自然界の集合的知性にヒントを得たユニークかつ最先端の研究を世界に発信。',
+      'team-applied-name': 'Applied',
+      'team-applied-bio': '金融・防衛・インテリジェンスの最前線で、暗黙知をAIに引き出し、複数モデルを組み合わせて、日本の社会基盤に直接届くソリューションを設計・実装する。',
+      'team-product-name': 'Product',
+      'team-product-bio': 'Sakana Chat、Sakana Marlin、Sakana Fuguなどのユーザー向けAIプロダクトを開発・提供し、最先端の研究を使いやすいツールへと変換する。',
+      'team-corporate-name': 'Corporate',
+      'team-corporate-bio': '財務・法務・HR・オペレーションを通じてSakana AIのミッションを支え、AIリサーチの最前線を走る基盤を整える。',
+      'lbl-logo': 'ロゴ',
+      'logo-desc': 'Sakana AIという社名・ロゴは、魚の群れなど自然界の生物から着想を得ています。魚の群れが環境に柔軟に順応するように、Sakana AIではこうした「群知能」のコンセプトをAI開発に取り入れ、環境に順応する新しいタイプの生成AIモデルの実現を目指しています。',
+      'lbl-overview': '会社概要',
+      'th-company-name': '社名',
+      'td-company-name': 'Sakana AI株式会社（英語表記：Sakana AI K.K.）',
+      'th-founded': '設立',
+      'td-founded': '2023年7月',
+      'th-headquarters': '所在地',
+      'td-headquarters': '〒106-0041 東京都港区麻布台1-3-1<br>麻布台ヒルズ森JPタワー22F',
+      'th-representative': '代表者',
+      'td-representative': 'David Ha、CEO・共同創業者<br>伊藤錬、社長・共同創業者',
+      'lbl-partners': '主要パートナー',
+      'td-partners': 'MUFG / SMBC / 大和証券 / 防衛装備庁 / 総務省 / NVIDIA / Google / Salesforce Ventures / Citi / Datadog ほか',
+      'lbl-funding': '資金調達',
+      'th-seriesb': '直近ラウンド',
+      'th-seriesb-date': '2025年11月',
+      'td-seriesb-amount': 'シリーズB',
+      'th-investors-japan': '投資家（日本）',
+      'td-investors-japan': '伊藤忠グループ、ANAホールディングス、MPower Partners、SBIグループ、STNet（四国電力グループ）、グローバル・ブレイン、KDDI、CCIグループ、JAFCO、第一生命、東京海上日動火災保険、日本電気（NEC）、日本生命、野村ホールディングス、富士通、三井住友銀行、三菱UFJフィナンシャル・グループ、三菱電機、みずほフィナンシャルグループ、みやこキャピタル、明治安田生命、その他',
+      'th-investors-overseas': '投資家（海外）',
+      'td-investors-overseas': '500 Global, Basis Set Ventures, Citi Group, Datadog, Factorial Funds, Fundomo, Geodesic Capital, Google, In-Q-Tel (IQT), July Fund, Khosla Ventures, Learn Capital, Lux Capital, Macquarie Capital, Mouro Capital (via Santander Group), New Enterprise Associates (NEA), NVIDIA, Ora Global, Salesforce Ventures, Translink Capital、その他',
+      'lbl-policies': 'ポリシー',
+      'policy-defence': '防衛事業に対する基本方針',
+      'policy-finance': '金融個人データ保護指針',
+      'policy-tokusho': '特定商取引法に基づく表記'
+    }
+  };
+
+  var currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+    var t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.querySelectorAll('.ja-only').forEach(function(el) {
+      el.style.display = lang === 'ja' ? '' : 'none';
+    });
+    applyLangToLinks();
+  }
+
+  function applyLangToLinks() {
+    document.querySelectorAll('a[href]').forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      if (/^(https?:|mailto:|tel:|#)/i.test(href)) return;
+      if (!/\.html(\?|#|$)/.test(href)) return;
+      var base = href.split('?')[0].split('#')[0];
+      a.setAttribute('href', base + '?lang=' + currentLang);
+    });
+    try { history.replaceState(null, '', location.pathname + '?lang=' + currentLang + location.hash); } catch (e) {}
+  }
+  function initLang() {
+    var p = new URLSearchParams(location.search).get('lang');
+    setLang(p === 'ja' ? 'ja' : (p === 'en' ? 'en' : currentLang));
+  }
+
+
+  /* ===== Mobile nav ===== */
+  (function(){
+    var nav = document.querySelector('.topnav');
+    var btn = document.querySelector('.menu-toggle');
+    if(!nav || !btn) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      var a = e.target.closest('a[href]');
+      if(!a) return;
+      var href = a.getAttribute('href');
+      if(href && href !== '#'){
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+  initLang();
+</script>
+</body>
+</html>
