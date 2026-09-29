@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { companies, findBySlug, slugOf, profileOf, CATEGORIES, labelOf, inCategory, SITE } from '@/lib/data'
+import Link from 'next/link'
 import { JsonLd, breadcrumb, companyLd } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -37,6 +38,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const p = profileOf(c.name)
   const cats = c.categories || []
   const isSpecialist = cats.length === 1
+
+  // ⚠️ 領域を1つも判定できなかった会社（アムール）は、どの領域ページにも出ないため
+  //    トップからの1本しか張られず孤立していた。名前順で前後の会社を相互に張って繋ぐ。
+  const all = [...companies()].sort((a, b) => a.name.localeCompare(b.name, 'ja'))
+  const i = all.findIndex((x) => slugOf(x) === slug)
+  const nearby = all.slice(Math.max(0, i - 3), i + 4).filter((x) => slugOf(x) !== slug)
 
   const ld = [
     companyLd(c),
@@ -145,6 +152,20 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <p className="note" style={{ marginTop: 36 }}>
         当サイトは各社から掲載料を受け取っておらず、順位づけもしていません。掲載しているのは公式サイトで確認できた事実だけです。
       </p>
+      <h2>ほかの会社</h2>
+      <div className="grid">
+        {nearby.map((x) => (
+          <Link className="card" key={x.officialUrl} href={`/company/${slugOf(x)}/`}>
+            <p className="t">{x.name}</p>
+            <p className="k">
+              {(x.categories || []).length > 0
+                ? (x.categories || []).slice(0, 2).map(labelOf).join('・')
+                : '領域は公式サイトから判定できず'}
+            </p>
+          </Link>
+        ))}
+      </div>
+
     </article>
   )
 }
