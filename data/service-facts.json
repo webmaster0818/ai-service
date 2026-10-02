@@ -1310,5 +1310,287 @@
   "casesSource": null,
   "pagesChecked": 15,
   "checkedAt": "2026-09-23"
+ },
+ {
+  "name": "株式会社Citadel AI",
+  "officialUrl": "https://citadel-ai.com/ja/",
+  "categories": [
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://citadel-ai.com/ja/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社ChillStack",
+  "officialUrl": "https://chillstack.com/",
+  "categories": [
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://chillstack.com/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社キカガク",
+  "officialUrl": "https://www.kikagaku.co.jp/",
+  "categories": [
+   "naisei-shien",
+   "ai-kenshu",
+   "ai-kaihatsu",
+   "ai-agent"
+  ],
+  "categorySource": {
+   "naisei-shien": "https://www.kikagaku.co.jp/",
+   "ai-kenshu": "https://www.kikagaku.co.jp/",
+   "ai-kaihatsu": "https://www.kikagaku.co.jp/business/ax",
+   "ai-agent": "https://www.kikagaku.co.jp/business/ax"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "導入企業数1,000社",
+  "casesSource": "https://www.kikagaku.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社Beyont",
+  "officialUrl": "https://www.skillupai.com/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "ai-agent",
+   "ai-kenshu",
+   "gyomu-jidoka",
+   "gazo-onsei"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.skillupai.com/",
+   "dx-consul": "https://www.skillupai.com/",
+   "ai-agent": "https://www.skillupai.com/",
+   "ai-kenshu": "https://www.skillupai.com/",
+   "gyomu-jidoka": "https://www.skillupai.com/",
+   "gazo-onsei": "https://www.skillupai.com/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "月額料金 （税抜） 50万円",
+  "priceSource": "https://www.skillupai.com/private-training/consulting/",
+  "casesDisclosed": true,
+  "casesCount": "導入実績約1,000 社",
+  "casesSource": "https://www.skillupai.com/private-training/copilot/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社SHIFT AI",
+  "officialUrl": "https://shift-ai.co.jp/",
+  "categories": [
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "ai-kenshu": "https://shift-ai.co.jp/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "導入社数：2,500社",
+  "casesSource": "https://shift-ai.co.jp/corp/tob-lp01/",
+  "pagesChecked": 14,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社primeNumber",
+  "officialUrl": "https://primenumber.com/",
+  "categories": [
+   "data-kiban",
+   "ai-kaihatsu",
+   "naisei-shien",
+   "ai-agent",
+   "rag"
+  ],
+  "categorySource": {
+   "data-kiban": "https://primenumber.com/",
+   "ai-kaihatsu": "https://primenumber.com/services/ps-services/",
+   "naisei-shien": "https://primenumber.com/services/ps-services/",
+   "ai-agent": "https://primenumber.com/services/ps-services/",
+   "rag": "https://primenumber.com/services/ps-services/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": "導入2,500社",
+  "casesSource": "https://primenumber.com/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "DATUM STUDIO株式会社",
+  "officialUrl": "https://datumstudio.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "ai-agent",
+   "data-kiban",
+   "rag",
+   "chatbot",
+   "gazo-onsei"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://datumstudio.jp/generative-ai/",
+   "dx-consul": "https://datumstudio.jp/",
+   "ai-agent": "https://datumstudio.jp/",
+   "data-kiban": "https://datumstudio.jp/",
+   "rag": "https://datumstudio.jp/generative-ai/",
+   "chatbot": "https://datumstudio.jp/generative-ai/",
+   "gazo-onsei": "https://datumstudio.jp/generative-ai/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社ARISE analytics",
+  "officialUrl": "https://www.ariseanalytics.com/",
+  "categories": [
+   "dx-consul",
+   "ai-kaihatsu",
+   "ai-agent",
+   "gazo-onsei"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.ariseanalytics.com/",
+   "ai-kaihatsu": "https://www.ariseanalytics.com/service/generative-ai/",
+   "ai-agent": "https://www.ariseanalytics.com/service/generative-ai/",
+   "gazo-onsei": "https://www.ariseanalytics.com/service/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.ariseanalytics.com/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "モビルス株式会社",
+  "officialUrl": "https://mobilus.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "rag",
+   "gazo-onsei",
+   "chatbot"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://mobilus.co.jp/service/mooa",
+   "rag": "https://mobilus.co.jp/service/mooa",
+   "gazo-onsei": "https://mobilus.co.jp/service/mooa",
+   "chatbot": "https://mobilus.co.jp/service/cast"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金について、詳しくはお問い合わせ",
+  "priceSource": "https://mobilus.co.jp/service/mooa",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://mobilus.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社ユーザーローカル",
+  "officialUrl": "https://www.userlocal.jp/",
+  "categories": [
+   "llmo",
+   "chatbot"
+  ],
+  "categorySource": {
+   "llmo": "https://www.userlocal.jp/",
+   "chatbot": "https://www.userlocal.jp/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.userlocal.jp/",
+  "pagesChecked": 13,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社デジライズ",
+  "officialUrl": "https://digirise.ai/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "ai-agent",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://digirise.ai/",
+   "dx-consul": "https://digirise.ai/",
+   "ai-agent": "https://digirise.ai/",
+   "ai-kenshu": "https://digirise.ai/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "月額約2.3万円 × 6ヶ月（実質14万円",
+  "priceSource": "https://digirise.ai/business/reskilling/",
+  "casesDisclosed": true,
+  "casesCount": "導入企業数600社",
+  "casesSource": "https://digirise.ai/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "株式会社Algomatic",
+  "officialUrl": "https://algomatic.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "ai-agent",
+   "ai-kenshu",
+   "data-kiban",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://algomatic.jp/",
+   "dx-consul": "https://algomatic.jp/",
+   "ai-agent": "https://algomatic.jp/",
+   "ai-kenshu": "https://algomatic.jp/",
+   "data-kiban": "https://algomatic.jp/",
+   "ai-governance": "https://algomatic.jp/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 11,
+  "checkedAt": "2026-10-02"
  }
 ]

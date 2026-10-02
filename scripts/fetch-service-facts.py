@@ -289,6 +289,24 @@ def survey(name, base):
     }
 
 
+def apply_rejects(r):
+    """自動判定が拾った領域のうち、根拠文を読んで外すと決めたものを落とす（data/category-reject.json）。
+
+    ⚠️ パターン一致は「その語がページにある」ことしか保証しない。顧客事例の一節・講座の説明・
+       プレスリリースを「その会社のサービス」と数えてしまう（2026-10-02、17社中12社で発生）。
+       会社を足したら根拠文を1件ずつ読み、外すものは理由つきでこのファイルに書く。
+       ここに書いておかないと、--rescore で元に戻る。
+    """
+    fp = ROOT / "data" / "category-reject.json"
+    if "error" in r or not fp.exists():
+        return r
+    rej = json.loads(fp.read_text(encoding="utf-8")).get("reject", {}).get(r["name"], {})
+    if rej:
+        r["categories"] = [c for c in r["categories"] if c not in rej]
+        r["categorySource"] = {k: v for k, v in r["categorySource"].items() if k not in rej}
+    return r
+
+
 def rescore():
     """巡回し直さず、キャッシュ済みHTMLだけで領域を判定し直す。
     判定条件を調整するたびに49社を巡回するのは重く、相手のサーバーにも無駄に当たる。"""
@@ -301,16 +319,54 @@ def rescore():
             r2 = survey(c["name"], c["officialUrl"])
             if r2.get("pagesChecked", 0) > r.get("pagesChecked", 0):
                 r = r2
-        out.append(r)
+        out.append(apply_rejects(r))
         print(f"{c['name']:26} ({r.get('pagesChecked')}p) cats={','.join(r.get('categories') or []) or '—'}")
     (ROOT / "data" / "service-facts.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n再判定: {len(out)}社（キャッシュから）")
 
 
+def add_new():
+    """candidates.json にあって service-facts.json にまだ無い会社だけを巡回して追記する。
+
+    ⚠️ 会社を足すときに main() を回すと、既存の全社の checkedAt が今日の日付に書き換わる
+       （既存分はキャッシュ済みHTMLを読むだけなのに「今日確認した」ことになる）。
+       確認日は画面に出している値なので、巡回していない会社の日付は動かさない。
+    """
+    cands = json.loads((ROOT / "data" / "candidates.json").read_text(encoding="utf-8"))
+    p = ROOT / "data" / "service-facts.json"
+    out = json.loads(p.read_text(encoding="utf-8"))
+    have = {r["officialUrl"] for r in out} | {r["name"] for r in out}
+    added = 0
+    for c in cands:
+        if c["officialUrl"] in have or c["name"] in have:
+            continue
+        r = survey(c["name"], c["officialUrl"])
+        if "error" in r or r.get("pagesChecked", 0) < 5:
+            time.sleep(2)
+            r2 = survey(c["name"], c["officialUrl"])
+            if r2.get("pagesChecked", 0) > r.get("pagesChecked", 0):
+                r = r2
+        if "error" in r:
+            print(f"{c['name']:26} ❌ {r['error']}（追記しない）")
+            continue
+        out.append(apply_rejects(r))
+        added += 1
+        # 1社ごとに保存する。JS描画のサイトは1社に数分かかることがあり、
+        # 最後にまとめて書く作りだと途中で止まったときに全部やり直しになる。
+        p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+        pd = {True: "公開", False: "要問合せ", None: "未確認"}[r["priceDisclosed"]]
+        cd = {True: "あり", False: "なし", None: "未確認"}[r["casesDisclosed"]]
+        print(f"{c['name']:26} cats={','.join(r['categories']) or '—':28} 料金={pd:6} 実績={cd:5} ({r['pagesChecked']}p)", flush=True)
+        time.sleep(0.6)
+    print(f"\n追記: {added}社（合計 {len(out)}社）")
+
+
 def main():
     if "--rescore" in sys.argv:
         return rescore()
+    if "--new" in sys.argv:
+        return add_new()
     cpath = ROOT / "data" / "candidates.json"
     cands = json.loads(cpath.read_text(encoding="utf-8"))
     out = []
@@ -324,7 +380,7 @@ def main():
             r2 = survey(c["name"], c["officialUrl"])
             if r2.get("pagesChecked", 0) > r.get("pagesChecked", 0):
                 r = r2
-        out.append(r)
+        out.append(apply_rejects(r))
         if "error" in r:
             print(f"{c['name']:26} ❌ {r['error']}")
         else:

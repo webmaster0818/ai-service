@@ -2,10 +2,14 @@ import type { Metadata } from 'next'
 import { companies, disclosure, CATEGORIES, inCategory, specialists, focused, FOCUS_MAX, SITE } from '@/lib/data'
 import { JsonLd, breadcrumb } from '@/lib/seo'
 
+// ⚠️ 社数を文字で書かない。会社を足すと title・description・構造化データだけ古い数字が残る
+//    （2026-10-02、49社のまま66社になるところだった）。必ず companies().length から出す。
+const N = companies().length
+
 export const metadata: Metadata = {
-  title: 'AI関連企業49社の開示状況調査（データ公開）',
+  title: `AI関連企業${N}社の開示状況調査（データ公開）`,
   description:
-    'AI開発・DXコンサル・LLMO対策などを掲げる49社の公式サイトを1社ずつ確認し、料金と実績の開示状況を集計しました。集計方法と限界を明記のうえ、JSONで公開しています。',
+    `AI開発・DXコンサル・LLMO対策などを掲げる${N}社の公式サイトを1社ずつ確認し、料金と実績の開示状況を集計しました。集計方法と限界を明記のうえ、JSONで公開しています。`,
   alternates: { canonical: `${SITE.origin}/data/` },
 }
 
@@ -20,7 +24,7 @@ export default function Page() {
     '@type': 'Dataset',
     name: 'AI関連企業の料金・実績 開示状況調査',
     description:
-      'AI開発・DXコンサル・内製化支援・LLMO/AEO対策・Web制作を公式サイトで掲げる企業49社について、料金と実績の開示状況を個別確認した調査データ。',
+      `AI開発・DXコンサル・内製化支援・LLMO/AEO対策・Web制作を公式サイトで掲げる企業${all.length}社について、料金と実績の開示状況を個別確認した調査データ。`,
     creator: { '@type': 'Organization', name: SITE.name },
     url: `${SITE.origin}/data/`,
     dateModified: checked[checked.length - 1],

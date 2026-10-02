@@ -1,0 +1,60 @@
+{
+ "_note": "自動判定が拾ったが、根拠文を読んで「その会社が売っているもの」ではなかった領域。fetch-service-facts.py が判定結果から外す。理由を必ず書く。",
+ "reject": {
+  "株式会社Citadel AI": {
+   "dx-consul": "根拠がプレスリリース（顧客の取り組みの説明）",
+   "ai-kaihatsu": "「AI development と AI governance をつなぐ」という製品説明で、受託開発ではない",
+   "gazo-onsei": "検証対象のモデル種別（Computer Vision）の表記で、画像認識サービスではない"
+  },
+  "株式会社ChillStack": {
+   "ai-kaihatsu": "「生成AIの開発者に向けて教育・検査・防御を提供」という文で、開発サービスではない",
+   "dx-consul": "セキュリティ製品の説明文"
+  },
+  "株式会社キカガク": {
+   "dx-consul": "人材育成（研修）の説明文。コンサルティングの記載ではない"
+  },
+  "株式会社Beyont": {
+   "naisei-shien": "根拠が顧客事例の一節",
+   "rag": "社内コンペの題材としての記載",
+   "chatbot": "根拠ページを再確認できなかった",
+   "data-kiban": "根拠ページを再確認できなかった"
+  },
+  "株式会社SHIFT AI": {
+   "dx-consul": "人物の肩書き",
+   "ai-agent": "講座の内容説明",
+   "chatbot": "講座の対象者の説明",
+   "gyomu-jidoka": "講座の内容説明",
+   "naisei-shien": "講座の対象者の説明",
+   "rag": "講座の対象者の説明",
+   "gazo-onsei": "講座の内容説明",
+   "ai-kaihatsu": "講座名（開発リスキリングコース）"
+  },
+  "株式会社primeNumber": {
+   "dx-consul": "自社の移行手法の説明",
+   "chatbot": "根拠がお知らせ記事",
+   "gyomu-jidoka": "根拠がブログ記事（URLも壊れている）"
+  },
+  "DATUM STUDIO株式会社": {
+   "ai-governance": "自社の「責任あるAIへの取り組み」方針で、サービスではない"
+  },
+  "株式会社ARISE analytics": {
+   "data-kiban": "「KDDIのデータ基盤を活用し」という自社紹介で、基盤構築サービスではない"
+  },
+  "モビルス株式会社": {
+   "dx-consul": "資料ダウンロードの案内文"
+  },
+  "株式会社ユーザーローカル": {
+   "dx-consul": "ツールの機能説明",
+   "web-seisaku": "「サイト制作者」という読者の呼びかけ",
+   "ai-kaihatsu": "根拠がプレスリリース"
+  },
+  "株式会社デジライズ": {
+   "naisei-shien": "根拠が顧客事例の見出し",
+   "chatbot": "根拠が顧客事例の見出し",
+   "gyomu-jidoka": "他社製品（Claude Code）の説明文"
+  },
+  "株式会社Algomatic": {
+   "rag": "根拠が社員の経歴紹介"
+  }
+ }
+}
