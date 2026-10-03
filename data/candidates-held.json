@@ -20,11 +20,6 @@
    "name": "株式会社ELYZA",
    "reason": "根拠がプレスリリースの見出しだけ",
    "checkedAt": "2026-10-02"
-  },
-  {
-   "name": "カラクリ株式会社",
-   "reason": "公式URLが about.karakuri.ai のため会社ページのURLが /company/about/ になる。URLの決め方を直してから追加する",
-   "checkedAt": "2026-10-02"
   }
  ]
 }

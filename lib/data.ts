@@ -77,10 +77,16 @@ export function profileOf(name: string) {
 }
 
 /** URLは公式ドメインの先頭ラベルを使う。社名の表記ゆれに左右されず、読んで会社が分かる。 */
+const GENERIC_SUBDOMAIN = new Set(['www', 'about', 'corp', 'corporate', 'company', 'info', 'jp', 'hp', 'home', 'web', 'site'])
+
 export function slugOf(c: Company): string {
   try {
-    const h = new URL(c.officialUrl).hostname.replace(/^www\./, '')
-    return h.split('.')[0].toLowerCase()
+    // ⚠️ 先頭ラベルをそのまま使うと about.karakuri.ai が「about」になる（2026-10-02 に判明）。
+    //    www / about / corp などの汎用サブドメインは飛ばして、会社名にあたるラベルを使う。
+    //    既存61社の slug はこの変更で変わらない（2026-10-03 に全社で確認）。
+    const labels = new URL(c.officialUrl).hostname.toLowerCase().split('.')
+    while (labels.length > 2 && GENERIC_SUBDOMAIN.has(labels[0])) labels.shift()
+    return labels[0]
   } catch {
     return c.name.toLowerCase()
   }

@@ -1592,5 +1592,33 @@
   "casesSource": null,
   "pagesChecked": 11,
   "checkedAt": "2026-10-02"
+ },
+ {
+  "name": "カラクリ株式会社",
+  "officialUrl": "https://karakuri.ai/",
+  "categories": [
+   "ai-kaihatsu",
+   "ai-agent",
+   "chatbot",
+   "gyomu-jidoka",
+   "gazo-onsei",
+   "llmo"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://karakuri.ai/",
+   "ai-agent": "https://karakuri.ai/",
+   "chatbot": "https://karakuri.ai/",
+   "gyomu-jidoka": "https://karakuri.ai/",
+   "gazo-onsei": "https://karakuri.ai/",
+   "llmo": "https://karakuri.ai/service/cs/smartfaq"
+  },
+  "priceDisclosed": true,
+  "priceNote": "初期費用 Navigate ナビゲーション設定 50 万円〜",
+  "priceSource": "https://karakuri.ai/service/cs/gen",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://karakuri.ai/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-03"
  }
 ]

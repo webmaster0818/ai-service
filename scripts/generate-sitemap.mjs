@@ -14,7 +14,9 @@ if (CATS.length < 6) throw new Error('lib/data.ts から領域を読めません
 // 実際に会社が1社もいない領域はページが生成されないので、sitemapにも入れない
 const has = (c) => all.some((x) => (x.categories || []).includes(c))
 
-const slugOf = (c) => { try { return new URL(c.officialUrl).hostname.replace(/^www\./,'').split('.')[0].toLowerCase() } catch { return c.name } }
+// lib/data.ts の slugOf と同じ規則（汎用サブドメインを飛ばす）。ずれると sitemap から漏れる
+const GENERIC = new Set(['www', 'about', 'corp', 'corporate', 'company', 'info', 'jp', 'hp', 'home', 'web', 'site'])
+const slugOf = (c) => { try { const l = new URL(c.officialUrl).hostname.toLowerCase().split('.'); while (l.length > 2 && GENERIC.has(l[0])) l.shift(); return l[0] } catch { return c.name } }
 const urls = ['/', '/data/', ...CATS.filter(has).map(c => `/category/${c}/`), ...all.map(c => `/company/${slugOf(c)}/`)]
 const today = all.map(c => c.checkedAt).sort().pop()
 
