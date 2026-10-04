@@ -1620,5 +1620,185 @@
   "casesSource": "https://karakuri.ai/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-03"
+ },
+ {
+  "name": "株式会社風音屋",
+  "officialUrl": "https://kazaneya.com/",
+  "categories": [
+   "data-kiban"
+  ],
+  "categorySource": {
+   "data-kiban": "https://kazaneya.com/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社truestar",
+  "officialUrl": "https://www.truestar.co.jp/",
+  "categories": [
+   "data-kiban",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "data-kiban": "https://www.truestar.co.jp/",
+   "naisei-shien": "https://www.truestar.co.jp/service"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.truestar.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社DataCurrent",
+  "officialUrl": "https://www.datacurrent.co.jp/",
+  "categories": [
+   "dx-consul",
+   "ai-kenshu",
+   "data-kiban",
+   "naisei-shien",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.datacurrent.co.jp/",
+   "ai-kenshu": "https://www.datacurrent.co.jp/",
+   "data-kiban": "https://www.datacurrent.co.jp/",
+   "naisei-shien": "https://www.datacurrent.co.jp/service/",
+   "ai-kaihatsu": "https://www.datacurrent.co.jp/documents/genai-consulting_20240325/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金プラン お問い合わせ",
+  "priceSource": "https://www.datacurrent.co.jp/ownsight-agent/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.datacurrent.co.jp/feed/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社ジール",
+  "officialUrl": "https://www.zdh.co.jp/",
+  "categories": [
+   "dx-consul",
+   "naisei-shien",
+   "data-kiban",
+   "ai-agent",
+   "rag",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.zdh.co.jp/",
+   "naisei-shien": "https://www.zdh.co.jp/",
+   "data-kiban": "https://www.zdh.co.jp/",
+   "ai-agent": "https://www.zdh.co.jp/products-services/ai/",
+   "rag": "https://www.zdh.co.jp/products-services/ai/",
+   "ai-kenshu": "https://www.zdh.co.jp/products-services/dxhrevelopment/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "料金 お問い合わせ",
+  "priceSource": "https://www.zdh.co.jp/sre-devops-services/",
+  "casesDisclosed": true,
+  "casesCount": "導入事例 1000社",
+  "casesSource": "https://www.zdh.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社Faber Company",
+  "officialUrl": "https://www.fabercompany.co.jp/",
+  "categories": [
+   "llmo"
+  ],
+  "categorySource": {
+   "llmo": "https://www.fabercompany.co.jp/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.fabercompany.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社ジオコード",
+  "officialUrl": "https://www.geo-code.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "naisei-shien",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://www.geo-code.co.jp/",
+   "web-seisaku": "https://www.geo-code.co.jp/",
+   "naisei-shien": "https://www.geo-code.co.jp/",
+   "aeo": "https://www.geo-code.co.jp/organic-marketing/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "初期費用 15 万円〜 月額費用 5 万円〜（Web開発サービスのページ）",
+  "priceSource": "https://www.geo-code.co.jp/webdev-service/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.geo-code.co.jp/webdev-service/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社GIG",
+  "officialUrl": "https://giginc.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "dx-consul",
+   "chatbot",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://giginc.co.jp/",
+   "dx-consul": "https://giginc.co.jp/",
+   "chatbot": "https://giginc.co.jp/service/creative",
+   "naisei-shien": "https://giginc.co.jp/service/system"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://giginc.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社LIG",
+  "officialUrl": "https://liginc.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "dx-consul",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://liginc.co.jp/",
+   "dx-consul": "https://liginc.co.jp/",
+   "naisei-shien": "https://liginc.co.jp/solutions/studio-by-lig"
+  },
+  "priceDisclosed": null,
+  "priceNote": "記事広告（LIGブログ掲載）のみ「80万円から」と公開。Web制作・システム開発の料金は確認できていない",
+  "priceSource": "https://liginc.co.jp/solutions/digtial-marketing/sponsored-article",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://liginc.co.jp/solutions/technology",
+  "pagesChecked": 13,
+  "checkedAt": "2026-10-04"
  }
 ]

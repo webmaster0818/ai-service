@@ -67,7 +67,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </p>
         <p style={{ margin: 0 }}>
           {isSpecialist
-            ? `掲げているのはこの1領域だけです。当サイトでは、この状態を「専業」として区別しています。`
+            ? `当サイトが調べている${CATEGORIES.length}領域のうち、掲げているのはこの1領域だけです。当サイトでは、この状態を「専業」として区別しています（${CATEGORIES.length}領域の外の事業は調べていません）。`
             : `複数の領域を掲げています。どれが本業なのかは公式サイトの記載からは判断できないため、当サイトでは順位づけをしていません。`}
           　料金は<Mark v={c.priceDisclosed} />、実績は<Mark v={c.casesDisclosed} />状態です。
         </p>
