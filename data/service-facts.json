@@ -1800,5 +1800,33 @@
   "casesSource": "https://liginc.co.jp/solutions/technology",
   "pagesChecked": 13,
   "checkedAt": "2026-10-04"
+ },
+ {
+  "name": "株式会社NTTデータ",
+  "officialUrl": "https://www.nttdata.com/jp/ja/",
+  "categories": [
+   "gyomu-jidoka",
+   "ai-kaihatsu",
+   "dx-consul",
+   "ai-agent",
+   "ai-governance",
+   "data-kiban"
+  ],
+  "categorySource": {
+   "gyomu-jidoka": "https://www.nttdata.com/jp/ja/",
+   "ai-kaihatsu": "https://www.nttdata.com/jp/ja/services/generative-ai",
+   "dx-consul": "https://www.nttdata.com/jp/ja/services/generative-ai",
+   "ai-agent": "https://www.nttdata.com/jp/ja/services/generative-ai",
+   "ai-governance": "https://www.nttdata.com/jp/ja/services/security",
+   "data-kiban": "https://www.nttdata.com/jp/ja/services/data-and-intelligence"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.nttdata.com/jp/ja/services/social-innovation-consulting",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-05"
  }
 ]
