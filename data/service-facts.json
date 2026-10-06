@@ -1828,5 +1828,33 @@
   "casesSource": "https://www.nttdata.com/jp/ja/services/social-innovation-consulting",
   "pagesChecked": 15,
   "checkedAt": "2026-10-05"
+ },
+ {
+  "name": "アイディルートコンサルティング株式会社",
+  "officialUrl": "https://idealroute.jp/",
+  "categories": [
+   "dx-consul",
+   "naisei-shien",
+   "rag",
+   "gyomu-jidoka",
+   "data-kiban",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://idealroute.jp/service/security-governance/ai_governance.html",
+   "rag": "https://idealroute.jp/service/operational-excellence/dify_service.html",
+   "naisei-shien": "https://idealroute.jp/service/operational-excellence/dify_service.html",
+   "gyomu-jidoka": "https://idealroute.jp/service/operational-excellence/20240625_aiocr_paperless_consulting.html",
+   "data-kiban": "https://idealroute.jp/service/data-analytics/data_utilization_support_service.html",
+   "dx-consul": "https://idealroute.jp/service/operational-excellence/quick_assessment_service.html"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://idealroute.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-06"
  }
 ]
