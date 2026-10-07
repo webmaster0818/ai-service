@@ -1856,5 +1856,65 @@
   "casesSource": "https://idealroute.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-06"
+ },
+ {
+  "name": "ソフトバンク株式会社",
+  "officialUrl": "https://www.softbank.jp/",
+  "categories": [
+   "ai-agent",
+   "rag",
+   "gyomu-jidoka",
+   "data-kiban",
+   "ai-governance",
+   "dx-consul",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "ai-governance": "https://www.softbank.jp/business/service/ai/governance-planning/",
+   "ai-agent": "https://www.softbank.jp/business/service/ai/agentic-star/",
+   "rag": "https://www.softbank.jp/business/service/ai/tasuki-rag-data-creation/",
+   "dx-consul": "https://www.softbank.jp/business/service/ai/generative-ai-fixation-service/",
+   "ai-kenshu": "https://www.softbank.jp/business/service/cloud/axross-recipe/generative-ai",
+   "data-kiban": "https://www.softbank.jp/business/service/digital-marketing/databricks/",
+   "gyomu-jidoka": "https://www.softbank.jp/business/service/iot/rpa/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "基本料 50,000円 /月（10ID）＋ 11ID以降 5,000円/月・ID（SoftVoice 料金例・税抜）",
+  "priceSource": "https://www.softbank.jp/biz/services/ai/softvoice/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.softbank.jp/business/service/ai/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-07"
+ },
+ {
+  "name": "株式会社 インフォメーション・ディベロプメント",
+  "officialUrl": "https://www.idnet.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "ai-agent",
+   "rag",
+   "chatbot",
+   "ai-governance",
+   "dx-consul",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "ai-governance": "https://www.idnet.co.jp/service/aigovernance.html",
+   "dx-consul": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "ai-kaihatsu": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "rag": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "ai-agent": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "chatbot": "https://www.idnet.co.jp/service/ai_chat.html",
+   "ai-kenshu": "https://www.idnet.co.jp/service/ailiteracykenshu.html"
+  },
+  "priceDisclosed": true,
+  "priceNote": "初期構築費用 参考価格：80万円～／月額使用料 基本パック 参考価格：15万円～／月（AIコンシェルジュ）",
+  "priceSource": "https://www.idnet.co.jp/service/ai_chat.html",
+  "casesDisclosed": true,
+  "casesCount": "実績は1,000社以上",
+  "casesSource": "https://www.idnet.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-07"
  }
 ]
