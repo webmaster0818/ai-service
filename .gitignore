@@ -5,3 +5,4 @@ out/
 __pycache__/
 *.pyc
 data/.html-cache/
+data/service-facts.rescore-dry.json

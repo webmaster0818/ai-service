@@ -1,0 +1,54 @@
+{
+ "_note": "手で確定した領域と根拠URL。fetch-service-facts.py が自動判定の結果にこれを上書きする（--rescore でも --new でも）。category-reject.json（外す）と対。自動巡回（トップ＋14ページ）の外にあるサービスページを根拠にした領域は、ここに書かないと --rescore で消える（2026-10-07 のソフトバンク ai-kenshu／ID chatbot で実測）。根拠はサービスページに限る（トップ・コラム・事例・プレスリリースは不可）。",
+ "keep": {
+  "ソフトバンク株式会社": {
+   "ai-governance": "https://www.softbank.jp/business/service/ai/governance-planning/",
+   "ai-agent": "https://www.softbank.jp/business/service/ai/agentic-star/",
+   "rag": "https://www.softbank.jp/business/service/ai/tasuki-rag-data-creation/",
+   "dx-consul": "https://www.softbank.jp/business/service/ai/generative-ai-fixation-service/",
+   "ai-kenshu": "https://www.softbank.jp/business/service/cloud/axross-recipe/generative-ai",
+   "data-kiban": "https://www.softbank.jp/business/service/digital-marketing/databricks/",
+   "gyomu-jidoka": "https://www.softbank.jp/business/service/iot/rpa/"
+  },
+  "株式会社 インフォメーション・ディベロプメント": {
+   "ai-governance": "https://www.idnet.co.jp/service/aigovernance.html",
+   "dx-consul": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "ai-kaihatsu": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "rag": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "ai-agent": "https://www.idnet.co.jp/service/ai-service-consulting.html",
+   "chatbot": "https://www.idnet.co.jp/service/ai_chat.html",
+   "ai-kenshu": "https://www.idnet.co.jp/service/ailiteracykenshu.html"
+  },
+  "アイディルートコンサルティング株式会社": {
+   "ai-governance": "https://idealroute.jp/service/security-governance/ai_governance.html",
+   "rag": "https://idealroute.jp/service/operational-excellence/dify_service.html",
+   "naisei-shien": "https://idealroute.jp/service/operational-excellence/dify_service.html",
+   "gyomu-jidoka": "https://idealroute.jp/service/operational-excellence/20240625_aiocr_paperless_consulting.html",
+   "data-kiban": "https://idealroute.jp/service/data-analytics/data_utilization_support_service.html",
+   "dx-consul": "https://idealroute.jp/service/operational-excellence/quick_assessment_service.html"
+  },
+  "NRIセキュアテクノロジーズ株式会社": {
+   "ai-governance": "https://www.nri-secure.co.jp/service/consulting/ai-risk-governance"
+  },
+  "インキュデータ株式会社": {
+   "data-kiban": "https://www.incudata.co.jp/service/consulting/data_infrastructure.html",
+   "dx-consul": "https://www.incudata.co.jp/service/consulting/ai_utilization_promotion.html",
+   "ai-governance": "https://www.incudata.co.jp/service/consulting/data_privacy.html"
+  },
+  "JetB株式会社": {
+   "web-seisaku": "https://jetb.co.jp/service",
+   "chatbot": "https://uchino.ai/",
+   "ai-agent": "https://uchino.ai/",
+   "ai-kenshu": "https://ai-switch.net/",
+   "dx-consul": "https://ai-switch.net/"
+  },
+  "株式会社アノテテ": {
+   "chatbot": "https://anotete.co.jp/tebot/",
+   "ai-kaihatsu": "https://anotete.co.jp/service/boost-dev/",
+   "rag": "https://anotete.co.jp/sharemind/",
+   "gyomu-jidoka": "https://anotete.co.jp/service/boost-dev/",
+   "naisei-shien": "https://anotete.co.jp/service/claude-support/",
+   "dx-consul": "https://anotete.co.jp/service/claude-support/"
+  }
+ }
+}

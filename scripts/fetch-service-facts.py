@@ -307,10 +307,65 @@ def apply_rejects(r):
     return r
 
 
-def rescore():
+def apply_keeps(r):
+    """手で確定した領域と根拠URLを、自動判定の結果に上書きする（data/category-keep.json）。
+    category-reject.json（外す）と対になる（残す・差し替える）。
+
+    ⚠️ 自動判定の根拠URLはほぼトップページになるので、会社を足すたびに categorySource を
+       サービスページに差し替えている。ところが --rescore は巡回結果で丸ごと書き直すため、
+       差し替えた根拠URLは全部トップページに戻り、さらに**自動巡回の外にあるサービスページ**を
+       根拠にした領域は領域ごと消える（2026-10-07 追加のソフトバンク ai-kenshu / data-kiban /
+       gyomu-jidoka と ID の chatbot。巡回14ページに入らないページが根拠）。
+       手で確定した {領域: 根拠URL} はここに書いておく。rescore でも --new でも最後にこれを当てる。
+    ⚠️ 同じ会社・同じ領域が reject と keep の両方にあるのは矛盾なので、起動時に止める。
+    """
+    fp = ROOT / "data" / "category-keep.json"
+    if "error" in r or not fp.exists():
+        return r
+    keep = json.loads(fp.read_text(encoding="utf-8")).get("keep", {}).get(r["name"], {})
+    for cat, url in keep.items():
+        if cat not in CATEGORY_PATTERNS:
+            raise SystemExit(f"category-keep.json: {r['name']} の領域 '{cat}' は存在しない")
+        if cat not in r["categories"]:
+            r["categories"].append(cat)
+        r["categorySource"][cat] = url
+    return r
+
+
+def check_overrides_consistent():
+    """reject と keep に同じ（会社, 領域）が無いことを確かめる。"""
+    d = ROOT / "data"
+    rej = json.loads((d / "category-reject.json").read_text(encoding="utf-8")).get("reject", {}) \
+        if (d / "category-reject.json").exists() else {}
+    keep = json.loads((d / "category-keep.json").read_text(encoding="utf-8")).get("keep", {}) \
+        if (d / "category-keep.json").exists() else {}
+    both = [(n, c) for n, cats in keep.items() for c in cats if c in rej.get(n, {})]
+    if both:
+        raise SystemExit(f"category-reject.json と category-keep.json の両方にある: {both}")
+
+
+def apply_overrides(r):
+    return apply_keeps(apply_rejects(r))
+
+
+def rescore(dry=False):
     """巡回し直さず、キャッシュ済みHTMLだけで領域を判定し直す。
-    判定条件を調整するたびに49社を巡回するのは重く、相手のサーバーにも無駄に当たる。"""
+    判定条件を調整するたびに49社を巡回するのは重く、相手のサーバーにも無駄に当たる。
+
+    --dry を付けると service-facts.json を書き換えず、data/service-facts.rescore-dry.json に書いて
+    現行データとの差分（領域の増減・根拠URLの変化）だけを表示する。判定条件や keep/reject を
+    直したときは、まずこれで何が変わるかを見る。
+    """
     cands = json.loads((ROOT / "data" / "candidates.json").read_text(encoding="utf-8"))
+    # --only 社名の一部 … その会社だけ再判定する（dry と組み合わせて keep/reject の効きを確かめる用）。
+    #   ⚠️ --only で dry 無しは使えない。service-facts.json を絞った社数で上書きしてしまうため。
+    if "--only" in sys.argv:
+        key = sys.argv[sys.argv.index("--only") + 1]
+        cands = [c for c in cands if key in c["name"]]
+        if not dry:
+            raise SystemExit("--only は --dry と一緒にだけ使える（全社分のファイルを少数で上書きしないため）")
+    cur_p = ROOT / "data" / "service-facts.json"
+    cur = {r["name"]: r for r in json.loads(cur_p.read_text(encoding="utf-8"))} if cur_p.exists() else {}
     out = []
     for c in cands:
         r = survey(c["name"], c["officialUrl"])
@@ -319,10 +374,32 @@ def rescore():
             r2 = survey(c["name"], c["officialUrl"])
             if r2.get("pagesChecked", 0) > r.get("pagesChecked", 0):
                 r = r2
-        out.append(apply_rejects(r))
+        out.append(apply_overrides(r))
         print(f"{c['name']:26} ({r.get('pagesChecked')}p) cats={','.join(r.get('categories') or []) or '—'}")
-    (ROOT / "data" / "service-facts.json").write_text(
-        json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    if dry:
+        p = ROOT / "data" / "service-facts.rescore-dry.json"
+        p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"\n[dry] 書き出し先: {p}（service-facts.json は変更していない）\n--- 現行との差分 ---")
+        changed = 0
+        for r in out:
+            o = cur.get(r["name"])
+            if not o:
+                print(f"  {r['name']}: 現行に無い（新規）"); changed += 1; continue
+            if "error" in r:
+                print(f"  {r['name']}: ❌ {r['error']}"); changed += 1; continue
+            oc, nc = set(o.get("categories") or []), set(r.get("categories") or [])
+            lost, gained = sorted(oc - nc), sorted(nc - oc)
+            src_diff = [(k, o["categorySource"].get(k), r["categorySource"].get(k))
+                        for k in sorted(oc & nc) if o.get("categorySource", {}).get(k) != r["categorySource"].get(k)]
+            if lost or gained or src_diff:
+                changed += 1
+                print(f"  {r['name']}:")
+                for k in lost: print(f"    − {k}（消える）")
+                for k in gained: print(f"    ＋ {k}（増える・根拠 {r['categorySource'].get(k)}）")
+                for k, a, b in src_diff: print(f"    根拠URL {k}: {a} → {b}")
+        print(f"差分あり: {changed}社 / {len(out)}社")
+        return
+    cur_p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n再判定: {len(out)}社（キャッシュから）")
 
 
@@ -350,7 +427,7 @@ def add_new():
         if "error" in r:
             print(f"{c['name']:26} ❌ {r['error']}（追記しない）")
             continue
-        out.append(apply_rejects(r))
+        out.append(apply_overrides(r))
         added += 1
         # 1社ごとに保存する。JS描画のサイトは1社に数分かかることがあり、
         # 最後にまとめて書く作りだと途中で止まったときに全部やり直しになる。
@@ -363,8 +440,9 @@ def add_new():
 
 
 def main():
+    check_overrides_consistent()
     if "--rescore" in sys.argv:
-        return rescore()
+        return rescore(dry="--dry" in sys.argv)
     if "--new" in sys.argv:
         return add_new()
     cpath = ROOT / "data" / "candidates.json"
@@ -380,7 +458,7 @@ def main():
             r2 = survey(c["name"], c["officialUrl"])
             if r2.get("pagesChecked", 0) > r.get("pagesChecked", 0):
                 r = r2
-        out.append(apply_rejects(r))
+        out.append(apply_overrides(r))
         if "error" in r:
             print(f"{c['name']:26} ❌ {r['error']}")
         else:

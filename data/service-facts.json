@@ -1916,5 +1916,99 @@
   "casesSource": "https://www.idnet.co.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-07"
+ },
+ {
+  "name": "NRIセキュアテクノロジーズ株式会社",
+  "officialUrl": "https://www.nri-secure.co.jp/",
+  "categories": [
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://www.nri-secure.co.jp/service/consulting/ai-risk-governance"
+  },
+  "priceDisclosed": true,
+  "priceNote": "通常価格：176,000円（税込）（セキュリティ研修「セキュアEggs IT＋セキュリティ基礎」。AIリスクガバナンス構築支援は個別見積）",
+  "priceSource": "https://www.nri-secure.co.jp/service/learning",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.nri-secure.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-08"
+ },
+ {
+  "name": "インキュデータ株式会社",
+  "officialUrl": "https://www.incudata.co.jp/",
+  "categories": [
+   "dx-consul",
+   "data-kiban",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.incudata.co.jp/service/consulting/ai_utilization_promotion.html",
+   "data-kiban": "https://www.incudata.co.jp/service/consulting/data_infrastructure.html",
+   "ai-governance": "https://www.incudata.co.jp/service/consulting/data_privacy.html"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.incudata.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-08"
+ },
+ {
+  "name": "JetB株式会社",
+  "officialUrl": "https://jetb.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "chatbot",
+   "ai-kenshu",
+   "dx-consul",
+   "ai-agent"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://jetb.co.jp/service",
+   "chatbot": "https://uchino.ai/",
+   "ai-kenshu": "https://ai-switch.net/",
+   "dx-consul": "https://ai-switch.net/",
+   "ai-agent": "https://uchino.ai/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "ご希望に合うプランを担当者からご案内します（Our AI面接）。自社コラム記事内の月額表記は根拠にしない",
+  "priceSource": "https://ai-mensetsu.jp/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://jetb.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-08"
+ },
+ {
+  "name": "株式会社アノテテ",
+  "officialUrl": "https://anotete.co.jp/",
+  "categories": [
+   "dx-consul",
+   "naisei-shien",
+   "chatbot",
+   "ai-kaihatsu",
+   "rag",
+   "gyomu-jidoka"
+  ],
+  "categorySource": {
+   "dx-consul": "https://anotete.co.jp/service/claude-support/",
+   "naisei-shien": "https://anotete.co.jp/service/claude-support/",
+   "chatbot": "https://anotete.co.jp/tebot/",
+   "ai-kaihatsu": "https://anotete.co.jp/service/boost-dev/",
+   "rag": "https://anotete.co.jp/sharemind/",
+   "gyomu-jidoka": "https://anotete.co.jp/service/boost-dev/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "Tebot シナリオプラン 月額費用 9,800円・初期費用無料（Q&Aプラン 45,000円／生成AIプラン 80,000円）",
+  "priceSource": "https://anotete.co.jp/tebot/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://anotete.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-08"
  }
 ]
