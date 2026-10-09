@@ -2010,5 +2010,29 @@
   "casesSource": "https://anotete.co.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-08"
+ },
+ {
+  "name": "株式会社Advanced AI Partners",
+  "officialUrl": "https://www.aaip.co.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku",
+   "dx-consul",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "aeo": "https://www.aaip.co.jp/ai-solutions",
+   "web-seisaku": "https://www.aaip.co.jp/ai-solutions",
+   "dx-consul": "https://www.aaip.co.jp/coe-consulting",
+   "ai-kenshu": "https://www.aaip.co.jp/ambassador-program"
+  },
+  "priceDisclosed": false,
+  "priceNote": "支援内容・企業規模によって大きく異なり、無料ヒアリング後に最適なプランと概算を提示（FAQ）。AIソリューションズは「固定価格パッケージ」と記載するが金額の公開は確認できず",
+  "priceSource": "https://www.aaip.co.jp/faq",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.aaip.co.jp/case-studies",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-09"
  }
 ]

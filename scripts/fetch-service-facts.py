@@ -318,18 +318,38 @@ def apply_keeps(r):
        gyomu-jidoka と ID の chatbot。巡回14ページに入らないページが根拠）。
        手で確定した {領域: 根拠URL} はここに書いておく。rescore でも --new でも最後にこれを当てる。
     ⚠️ 同じ会社・同じ領域が reject と keep の両方にあるのは矛盾なので、起動時に止める。
+
+    料金欄・実績欄（"facts"）も同じ（2026-10-09 追加）:
+       survey() の priceNote は正規表現の一致箇所 60 字を切り出すだけなので、会社を足すたびに
+       公式のサービスページを読んで priceNote / priceSource / priceDisclosed（と casesCount 等）を
+       手で書き直している。ところが --rescore はこれも巡回結果で丸ごと書き直すため、手で直した
+       料金欄は全部自動抽出の値に戻る（2026-10-08 のアノテテで判明。10-09 の dry-run で 9社 17
+       フィールドが戻ることを実測。アムール・Beyont の差分は手修正でなく巡回の揺れなので登録せず）。手で確定した値は category-keep.json の "facts" に
+       {社名: {フィールド: 値}} で書く。書けるフィールドは FACT_KEEP_FIELDS だけ。
     """
     fp = ROOT / "data" / "category-keep.json"
     if "error" in r or not fp.exists():
         return r
-    keep = json.loads(fp.read_text(encoding="utf-8")).get("keep", {}).get(r["name"], {})
+    doc = json.loads(fp.read_text(encoding="utf-8"))
+    keep = doc.get("keep", {}).get(r["name"], {})
     for cat, url in keep.items():
         if cat not in CATEGORY_PATTERNS:
             raise SystemExit(f"category-keep.json: {r['name']} の領域 '{cat}' は存在しない")
         if cat not in r["categories"]:
             r["categories"].append(cat)
         r["categorySource"][cat] = url
+    facts = doc.get("facts", {}).get(r["name"], {})
+    for k, v in facts.items():
+        if k not in FACT_KEEP_FIELDS:
+            raise SystemExit(f"category-keep.json facts: {r['name']} の '{k}' は keep できないフィールド（可: {sorted(FACT_KEEP_FIELDS)}）")
+        r[k] = v
     return r
+
+
+# 手修正を --rescore から守れるフィールド（画面に出る料金欄・実績欄）。
+# 領域は "keep"、これらは "facts" に書く。checkedAt / pagesChecked は巡回の事実なので対象外。
+FACT_KEEP_FIELDS = {"priceDisclosed", "priceNote", "priceSource",
+                    "casesDisclosed", "casesCount", "casesSource"}
 
 
 def check_overrides_consistent():
@@ -391,12 +411,15 @@ def rescore(dry=False):
             lost, gained = sorted(oc - nc), sorted(nc - oc)
             src_diff = [(k, o["categorySource"].get(k), r["categorySource"].get(k))
                         for k in sorted(oc & nc) if o.get("categorySource", {}).get(k) != r["categorySource"].get(k)]
-            if lost or gained or src_diff:
+            # 料金欄・実績欄も見る（keep の "facts" が効いているかの確認用。2026-10-09）
+            fact_diff = [(k, o.get(k), r.get(k)) for k in sorted(FACT_KEEP_FIELDS) if o.get(k) != r.get(k)]
+            if lost or gained or src_diff or fact_diff:
                 changed += 1
                 print(f"  {r['name']}:")
                 for k in lost: print(f"    − {k}（消える）")
                 for k in gained: print(f"    ＋ {k}（増える・根拠 {r['categorySource'].get(k)}）")
                 for k, a, b in src_diff: print(f"    根拠URL {k}: {a} → {b}")
+                for k, a, b in fact_diff: print(f"    {k}: {a!r} → {b!r}")
         print(f"差分あり: {changed}社 / {len(out)}社")
         return
     cur_p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

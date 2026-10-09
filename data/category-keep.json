@@ -49,6 +49,56 @@
    "gyomu-jidoka": "https://anotete.co.jp/service/boost-dev/",
    "naisei-shien": "https://anotete.co.jp/service/claude-support/",
    "dx-consul": "https://anotete.co.jp/service/claude-support/"
+  },
+  "株式会社Advanced AI Partners": {
+   "aeo": "https://www.aaip.co.jp/ai-solutions",
+   "web-seisaku": "https://www.aaip.co.jp/ai-solutions",
+   "dx-consul": "https://www.aaip.co.jp/coe-consulting",
+   "ai-kenshu": "https://www.aaip.co.jp/ambassador-program"
   }
- }
+ },
+ "facts": {
+  "株式会社Advanced AI Partners": {
+   "priceDisclosed": false,
+   "priceNote": "支援内容・企業規模によって大きく異なり、無料ヒアリング後に最適なプランと概算を提示（FAQ）。AIソリューションズは「固定価格パッケージ」と記載するが金額の公開は確認できず",
+   "priceSource": "https://www.aaip.co.jp/faq",
+   "casesSource": "https://www.aaip.co.jp/case-studies"
+  },
+  "株式会社デジライズ": {
+   "casesCount": "導入企業数600社"
+  },
+  "カラクリ株式会社": {
+   "priceNote": "初期費用 Navigate ナビゲーション設定 50 万円〜"
+  },
+  "株式会社ジオコード": {
+   "priceNote": "初期費用 15 万円〜 月額費用 5 万円〜（Web開発サービスのページ）"
+  },
+  "株式会社LIG": {
+   "priceDisclosed": null,
+   "priceNote": "記事広告（LIGブログ掲載）のみ「80万円から」と公開。Web制作・システム開発の料金は確認できていない"
+  },
+  "ソフトバンク株式会社": {
+   "casesSource": "https://www.softbank.jp/business/service/ai/",
+   "priceNote": "基本料 50,000円 /月（10ID）＋ 11ID以降 5,000円/月・ID（SoftVoice 料金例・税抜）",
+   "priceSource": "https://www.softbank.jp/biz/services/ai/softvoice/"
+  },
+  "株式会社 インフォメーション・ディベロプメント": {
+   "casesCount": "実績は1,000社以上",
+   "priceNote": "初期構築費用 参考価格：80万円～／月額使用料 基本パック 参考価格：15万円～／月（AIコンシェルジュ）",
+   "priceSource": "https://www.idnet.co.jp/service/ai_chat.html"
+  },
+  "NRIセキュアテクノロジーズ株式会社": {
+   "priceNote": "通常価格：176,000円（税込）（セキュリティ研修「セキュアEggs IT＋セキュリティ基礎」。AIリスクガバナンス構築支援は個別見積）"
+  },
+  "JetB株式会社": {
+   "priceDisclosed": false,
+   "priceNote": "ご希望に合うプランを担当者からご案内します（Our AI面接）。自社コラム記事内の月額表記は根拠にしない",
+   "priceSource": "https://ai-mensetsu.jp/"
+  },
+  "株式会社アノテテ": {
+   "priceNote": "Tebot シナリオプラン 月額費用 9,800円・初期費用無料（Q&Aプラン 45,000円／生成AIプラン 80,000円）",
+   "priceSource": "https://anotete.co.jp/tebot/"
+  }
+ },
+ "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"
 }
