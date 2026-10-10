@@ -24,3 +24,4 @@
   - MBSD: 根拠 `/solutions/ai/`（AIセキュリティ教育・AIシステムに対するセキュリティ診断・アドバイザリ・AI TRiSM）。ai-kaihatsu（導入文「AI開発におけるセキュリティ」）／rag（AI TRiSM の項目⑨「RAGなどを活用しセキュリティ業務を支援」）は reject。料金は公開を確認できず未確認。実績は「公共・政府機関実績 70件以上（過去5年間の累計）」。社名・設立 2001年3月23日は `/company/profile/`。`/solutions/ai/ai_education/`（eラーニング＋ハンズオン研修）は自動判定に掛からず、AIセキュリティの研修で「生成AI研修」に当たるか判断が要るので今回は付けていない
   - `--only` dry で 2社とも差分0。全社一括 dry は実施せず（LionAI 停止のため）
 - 見送り: サクラサクマーケティング（`/services/llmo/` は LLMO のみ。ウィルゲートと同じ理由で対象外）、ラック（`/service/` に AI のサービスページ導線なし。AI関連はコラム・プレスのみ）
+- precheck ✅ 全項目OK → source `742838b` → deploy `35672a8`（ai-service-deploy）→ 本番 sitemap 97 URL・`/company/gmo-cybersecurity/` `/company/mbsd/` 200・AIガバナンス「企業18社」を確認。GSC sitemap 送信（00:23Z・pending。前回取得分は 95）
