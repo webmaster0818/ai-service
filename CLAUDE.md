@@ -17,3 +17,10 @@
 - **Advanced AI Partners を追加（78→79社・95ページ・AEO 16→17・Web制作 19→20）**: 根拠は `/ai-solutions`（「AIサイト制作・AEO対策」「コーポレートサイト・LP制作」）・`/coe-consulting`・`/ambassador-program`（AI戦略研修）。llmo / ai-kaihatsu / gyomu-jidoka / data-kiban / rag は理由つきで reject（AI検索最適化は AEO の見出しラベル・PoC は事例と研修・業務自動化は講座名・データ基盤はコンサル提供項目の一節・RAG は xAI の保有ノウハウ）。料金は FAQ「無料ヒアリング後に概算を提示」で要問合せ扱い。社名は `/company` の「株式会社Advanced AI Partners」（設立 2025年4月8日・港区）
 - 見送り: ウィルゲート（`/promonista/servicelist/llmo/`。LLMO・45万円〜/月の料金公開あり。薄い領域の AEO/Web制作には当たらないので今回は見送り＝次の候補）、プエンテ（PUENTE AEO Booster は SaaS で、会社の公式サイト・サービスページを特定できず）、オロ・フルスピード（公式トップに AIO/LLMO のサービスページ導線なし）
 - precheck ✅ 全項目OK → deploy `612b352`（ai-service-deploy）→ 本番 sitemap 95 URL・`/company/aaip/` 200・AEO「企業17社」・Web制作「企業20社」を確認。GSC sitemap 送信 2回（1回目は CF 反映前で 94 を取得。2回目 00:30Z は pending）
+
+### 2026-10-10
+- **GMOサイバーセキュリティ byイエラエ・三井物産セキュアディレクション（MBSD）を追加（79→81社・97ページ・AIガバナンス 16→18）**。薄い領域（AIガバナンス）狙い
+  - GMO: 根拠 `/service/ai/`（AIセキュリティ対策＝AIアプリケーション診断・AIエージェントペネトレーションテスト）。naisei-shien（JC-STAR評価内製化支援コース・脆弱性診断の内製化）／dx-consul（対象者「DX推進担当者様」）／gyomu-jidoka（診断対象のAIエージェントの説明）は reject。料金は Webアプリ診断の「16,500円〜/月・30万円・60万円〜（税抜）」を出典つきで記載し、AIセキュリティ対策はお見積もりと明記（NRIセキュアと同じ扱い）。実績「診断件数16,000件」は脆弱性診断全体と明記。社名・設立 2013年2月22日は `/company/`
+  - MBSD: 根拠 `/solutions/ai/`（AIセキュリティ教育・AIシステムに対するセキュリティ診断・アドバイザリ・AI TRiSM）。ai-kaihatsu（導入文「AI開発におけるセキュリティ」）／rag（AI TRiSM の項目⑨「RAGなどを活用しセキュリティ業務を支援」）は reject。料金は公開を確認できず未確認。実績は「公共・政府機関実績 70件以上（過去5年間の累計）」。社名・設立 2001年3月23日は `/company/profile/`。`/solutions/ai/ai_education/`（eラーニング＋ハンズオン研修）は自動判定に掛からず、AIセキュリティの研修で「生成AI研修」に当たるか判断が要るので今回は付けていない
+  - `--only` dry で 2社とも差分0。全社一括 dry は実施せず（LionAI 停止のため）
+- 見送り: サクラサクマーケティング（`/services/llmo/` は LLMO のみ。ウィルゲートと同じ理由で対象外）、ラック（`/service/` に AI のサービスページ導線なし。AI関連はコラム・プレスのみ）

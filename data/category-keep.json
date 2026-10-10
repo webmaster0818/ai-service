@@ -55,6 +55,12 @@
    "web-seisaku": "https://www.aaip.co.jp/ai-solutions",
    "dx-consul": "https://www.aaip.co.jp/coe-consulting",
    "ai-kenshu": "https://www.aaip.co.jp/ambassador-program"
+  },
+  "GMOサイバーセキュリティ byイエラエ株式会社": {
+   "ai-governance": "https://gmo-cybersecurity.com/service/ai/"
+  },
+  "三井物産セキュアディレクション株式会社": {
+   "ai-governance": "https://www.mbsd.jp/solutions/ai/"
   }
  },
  "facts": {
@@ -98,6 +104,17 @@
   "株式会社アノテテ": {
    "priceNote": "Tebot シナリオプラン 月額費用 9,800円・初期費用無料（Q&Aプラン 45,000円／生成AIプラン 80,000円）",
    "priceSource": "https://anotete.co.jp/tebot/"
+  },
+  "GMOサイバーセキュリティ byイエラエ株式会社": {
+   "priceDisclosed": true,
+   "priceNote": "価格 16,500円〜/月・30万円・60万円〜（税抜。Webアプリケーション診断のプラン）。AIセキュリティ対策（AIアプリケーション診断・AIエージェントペネトレーションテスト）はお見積もり",
+   "priceSource": "https://gmo-cybersecurity.com/service/assessment/web-app/",
+   "casesCount": "診断件数 16,000 件（脆弱性診断全体の実績。AIセキュリティ対策に限った件数ではない）",
+   "casesSource": "https://gmo-cybersecurity.com/"
+  },
+  "三井物産セキュアディレクション株式会社": {
+   "casesCount": "公共・政府機関実績 70件以上（過去5年間の累計）",
+   "casesSource": "https://www.mbsd.jp/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"
