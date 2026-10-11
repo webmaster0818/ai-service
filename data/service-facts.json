@@ -2070,5 +2070,75 @@
   "casesSource": "https://www.mbsd.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-10"
+ },
+ {
+  "name": "有限会社バンブーハウス",
+  "officialUrl": "https://www.bamboo-h.com/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku",
+   "chatbot"
+  ],
+  "categorySource": {
+   "aeo": "https://www.bamboo-h.com/ai-ready/",
+   "llmo": "https://www.bamboo-h.com/ai-ready/",
+   "web-seisaku": "https://www.bamboo-h.com/price/",
+   "chatbot": "https://www.bamboo-h.com/business/ai/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "LP（店舗・小規模）18万円〜／小規模サイト 30〜50万円／一般・中規模サイト 50〜100万円／大規模サイト 100万円〜（費用の目安）。AI検索対応（AEO/GEO）は全プラン標準搭載",
+  "priceSource": "https://www.bamboo-h.com/price/",
+  "casesDisclosed": true,
+  "casesCount": "累計制作実績 600+（約80%が都内。ホームページ制作全体の実績で、AEO対策に限った件数ではない）",
+  "casesSource": "https://www.bamboo-h.com/ai-ready/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-11"
+ },
+ {
+  "name": "株式会社CREVIA",
+  "officialUrl": "https://crevia-ts.com/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://crevia-ts.com/services",
+   "llmo": "https://crevia-ts.com/services",
+   "web-seisaku": "https://crevia-ts.com/homepage"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対応サービス（GEO・AEO・LLMO）月額33,000円〜。ホームページ制作は制作費30万円から（/homepage）",
+  "priceSource": "https://crevia-ts.com/services",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://crevia-ts.com/archives/works",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-11"
+ },
+ {
+  "name": "株式会社仁頼",
+  "officialUrl": "https://jinrai.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "dx-consul",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "llmo": "https://jinrai.co.jp/geo-hack/",
+   "web-seisaku": "https://jinrai.co.jp/web-development/",
+   "dx-consul": "https://jinrai.co.jp/ai-fit/",
+   "ai-kenshu": "https://jinrai.co.jp/ai-fit/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "GEO Hack: DIAGNOSIS 198,000円／スポット、START 128,000円／月（初期費用198,000円）、GROWTH 328,000円／月（初期費用298,000円）。Webサイト制作は LP制作 10万円〜30万円・コーポレートサイト 10万円〜200万円・HP＋GEO対策 15万円〜（税別・参考価格帯）",
+  "priceSource": "https://jinrai.co.jp/geo-hack/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://jinrai.co.jp/blog/case/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-11"
  }
 ]

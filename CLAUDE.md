@@ -25,3 +25,11 @@
   - `--only` dry で 2社とも差分0。全社一括 dry は実施せず（LionAI 停止のため）
 - 見送り: サクラサクマーケティング（`/services/llmo/` は LLMO のみ。ウィルゲートと同じ理由で対象外）、ラック（`/service/` に AI のサービスページ導線なし。AI関連はコラム・プレスのみ）
 - precheck ✅ 全項目OK → source `742838b` → deploy `35672a8`（ai-service-deploy）→ 本番 sitemap 97 URL・`/company/gmo-cybersecurity/` `/company/mbsd/` 200・AIガバナンス「企業18社」を確認。GSC sitemap 送信（00:23Z・pending。前回取得分は 95）
+
+### 2026-10-11
+- **有限会社バンブーハウス・株式会社CREVIA・株式会社仁頼を追加（81→84社・100ページ・AEO 17→19・Web制作 20→23）**。薄い領域（AEO/Web制作）狙い
+  - バンブーハウス: 根拠 `/ai-ready/`（AEO対策の無料相談「AI検索対策（AEO/GEO/LLMO）」）＝aeo・llmo／`/price/`（AI検索対応のホームページ制作費用）＝web-seisaku／`/business/ai/`（AI活用型Webシステム開発のAIチャットボット）＝chatbot。ai-agent（料金ページのメニュー内コラム見出し）／gazo-onsei（AI搭載CMSのFAQ「画像解析はGemini」）／rag（チャットボット費用の「RAG連携ありなら上がります」）は reject。料金は `/price/` の LP18万円〜ほか4段階（AEO/GEO 全プラン標準搭載）。実績「累計制作実績 600+」はHP制作全体と明記。社名・設立 1999年10月1日・世田谷区・6名は `/company/`
+  - CREVIA: 根拠 `/services`（「AI検索対応サービス（GEO・AEO・LLMO）」月額33,000円〜）＝aeo・llmo／`/homepage`（AI完全自動運用ホームページ制作・制作費30万円から）＝web-seisaku。専用ページ `/seo-geo` には AEO の語がないので一覧ページを根拠にした。社名・設立 2025年1月27日・熊本市は `/about`
+  - 仁頼: 根拠 `/geo-hack/`（GEO/AIO/LLMO）＝llmo／`/web-development/`（SEO/GEO対策のHP制作・参考価格帯）＝web-seisaku／`/ai-fit/`（生成AI導入支援 AI FIT・月1回のAI活用研修つき）＝dx-consul・ai-kenshu。aeo（トップのメニュー内コラムカテゴリのみ。サービスページに AEO 表記なし）／naisei-shien（ツールの「低コストで内製化」訴求）／gyomu-jidoka（Claude Code導入支援の一覧紹介文のみ）は reject。料金は GEO Hack の3プランを転記。社名・設立 2022年9月・横浜市は `/about/`
+  - `--only` dry で 3社とも差分0。全社一括 dry は実施せず（LionAI 停止のため）
+- 見送り: 一創（issoh.co.jp。AEO解説コラムはあるが、curl で 403「セキュリティ確認中」になり巡回できない）、ぞろ屋（トップ・サービス導線は SEO・AIO まで。AEO はコラム記事のみ）、コネクティッドワン（サイト作成ツール（ファネルビルダー）のSaaSで、制作会社のサービスページではない）、Coadex（検索結果では AIO 対策つきHP制作だが公式サイトに到達できず未確認）
