@@ -2140,5 +2140,63 @@
   "casesSource": "https://jinrai.co.jp/blog/case/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-11"
+ },
+ {
+  "name": "株式会社サイシード",
+  "officialUrl": "https://sciseed.jp/",
+  "categories": [
+   "chatbot"
+  ],
+  "categorySource": {
+   "chatbot": "https://saichat.jp/saichat/"
+  },
+  "priceDisclosed": false,
+  "priceNote": "初期費用＋月額費用。Starter／Standard／DXプランの3種で、金額は無料お見積り（sAI Chat）",
+  "priceSource": "https://saichat.jp/saichat-price/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://saichat.jp/case/",
+  "pagesChecked": 13,
+  "checkedAt": "2026-10-12"
+ },
+ {
+  "name": "AIセキュリティ株式会社",
+  "officialUrl": "https://aisecurity.co.jp/",
+  "categories": [
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://aisecurity.co.jp/sixservice/quickairiskassessment"
+  },
+  "priceDisclosed": true,
+  "priceNote": "クイックAIリスクアセスメント支援 基本料金 無料（先着10社限定）。より詳細なアセスメントや対策方針の策定支援は別料金",
+  "priceSource": "https://aisecurity.co.jp/sixservice/quickairiskassessment",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://aisecurity.co.jp/sixservice/quickairiskassessment",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-12"
+ },
+ {
+  "name": "株式会社ギックス",
+  "officialUrl": "https://www.gixo.jp/",
+  "categories": [
+   "dx-consul",
+   "data-kiban",
+   "naisei-shien"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.gixo.jp/service/",
+   "data-kiban": "https://www.gixo.jp/service/",
+   "naisei-shien": "https://www.gixo.jp/service/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-12"
  }
 ]

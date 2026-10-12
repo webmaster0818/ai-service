@@ -34,3 +34,11 @@
   - `--only` dry で 3社とも差分0。全社一括 dry は実施せず（LionAI 停止のため）
 - 見送り: 一創（issoh.co.jp。AEO解説コラムはあるが、curl で 403「セキュリティ確認中」になり巡回できない）、ぞろ屋（トップ・サービス導線は SEO・AIO まで。AEO はコラム記事のみ）、コネクティッドワン（サイト作成ツール（ファネルビルダー）のSaaSで、制作会社のサービスページではない）、Coadex（検索結果では AIO 対策つきHP制作だが公式サイトに到達できず未確認）
 - precheck ✅ 全項目OK → source `a3997e9` → deploy `0d6a4af`（ai-service-deploy）→ 本番 sitemap 100 URL・`/company/bamboo-h/` `/company/crevia-ts/` `/company/jinrai/` 200・AEO「企業19社」・Web制作「企業23社」を確認。GSC sitemap 送信（00:28Z・pending。前回取得分は 97）
+
+### 2026-10-12
+- GSC: 10/11 送信分の sitemap は 10/11 00:28Z に取得済み（submitted 100・errors 0・warnings 0）
+- **株式会社サイシード・AIセキュリティ株式会社・株式会社ギックスを追加（84→87社・103ページ・AIガバナンス 18→19・データ基盤 22→23・チャットボット 24→25）**。薄い領域順（AIガバナンス18／AEO19／データ基盤22／Web制作23／チャットボット24）で選定
+  - サイシード（candidates-held から再検討）: 見送り理由「根拠がフィードとお知らせだけ」は、製品サイト `saichat.jp/saichat/`（AIチャットボット sAI Chat）を根拠にして解消 → chatbot。ai-kaihatsu（RSSフィード）／gazo-onsei（フィード・技術ブログのインターン記事）／rag（お知らせ「人材事業の譲渡」。sAI Search は FAQ 検索）は reject。料金は `/saichat-price/` の3プランが「無料お見積り」で priceDisclosed=false。⚠️自動抽出の実績「支援実績 累計2,000社」は `services.sciseed.jp`＝新卒採用（人材）事業の数字（10/1 に譲渡済み）なので不採用、実績は `saichat.jp/case/`。社名・創業 2015年4月・中央区は `sciseed.jp/company/`
+  - AIセキュリティ: 根拠 `/sixservice/quickairiskassessment`（社内で利用しているAIのリスクアセスメント）→ ai-governance。ai-kaihatsu（戦略コンサルの「PoCを通じたアライアンス」）／naisei-shien（セキュリティ・採用の内製化）／dx-consul（タレントプールの「AIコンサルタント」人材紹介）は reject。料金「基本料金 無料（先着10社限定）・詳細は別料金」、実績は同ページの CASE 01〜03。社名・設立 2021年9月・新宿区は `/company_n/overview`
+  - ギックス: 根拠 `/service/`（System Innovation「分析基盤・データ基盤を整備・構築」＝data-kiban、AI wrapping の生成AI導入＝dx-consul、DIGITAL BOOST の「AI・デジタル組織の内製化」＝naisei-shien）。料金・実績はサービスページで確認できず未確認（顧客事例タグはプレスリリース一覧なので根拠にしない）。社名・設立 2012年12月12日・港区・東証グロースは `/company/`
+  - `--only` dry で 3社とも差分0。全社一括 dry は実施せず
