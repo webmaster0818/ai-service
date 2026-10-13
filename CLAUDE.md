@@ -42,3 +42,14 @@
   - AIセキュリティ: 根拠 `/sixservice/quickairiskassessment`（社内で利用しているAIのリスクアセスメント）→ ai-governance。ai-kaihatsu（戦略コンサルの「PoCを通じたアライアンス」）／naisei-shien（セキュリティ・採用の内製化）／dx-consul（タレントプールの「AIコンサルタント」人材紹介）は reject。料金「基本料金 無料（先着10社限定）・詳細は別料金」、実績は同ページの CASE 01〜03。社名・設立 2021年9月・新宿区は `/company_n/overview`
   - ギックス: 根拠 `/service/`（System Innovation「分析基盤・データ基盤を整備・構築」＝data-kiban、AI wrapping の生成AI導入＝dx-consul、DIGITAL BOOST の「AI・デジタル組織の内製化」＝naisei-shien）。料金・実績はサービスページで確認できず未確認（顧客事例タグはプレスリリース一覧なので根拠にしない）。社名・設立 2012年12月12日・港区・東証グロースは `/company/`
   - `--only` dry で 3社とも差分0。全社一括 dry は実施せず
+- precheck ✅ 全項目OK → source `3c09c4f` → deploy `36c5862`（ai-service-deploy）→ 本番 sitemap 103 URL（10/13 に記録を補記）
+
+### 2026-10-13
+- GSC: 10/12 送信分の sitemap は 10/12 00:52Z に取得済み（submitted 103・errors 0・warnings 0）
+- **株式会社イーストクリエイティブ・secondz digital株式会社・株式会社bonを追加（87→90社・106ページ・AEO 19→22・LLMO 26→29・Web制作 23→25）**。薄い領域（AEO）狙い
+  - イーストクリエイティブ: 根拠 `/llmo/`（「LLMO対策 / AEO対策」・Agent Server AI CMS）＝aeo・llmo／`/webdesign/`＝web-seisaku／`/training/`（生成AI利活用研修）＝ai-kenshu。dx-consul（研修対象者「DX推進担当者」）／gyomu-jidoka（研修の受講メリット「業務効率化」）は reject。料金はサービスページに記載なしで未確認、実績は `/production-record/`。社名・設立 昭和47年10月18日・中央区銀座は `/company/`
+  - secondz digital: 根拠 `/agentsense`（「エンタープライズAEO・GEO・LLMO」の計測SaaS＋改善提案エージェント＋コンサル）＝aeo・llmo／`/service`（AI RevOps Consulting「戦略立案、AI開発、社内展開…一気通貫」「AIエージェントの実装・定着まで伴走支援」）＝dx-consul・ai-kaihatsu・ai-agent。gazo-onsei（メンバー紹介の前職経歴）は reject。料金は無料簡易診断＋有償診断（金額の掲載なし）で priceDisclosed=false。実績は `/service` の導入事例。社名・横浜市神奈川区は `/company`（設立日は掲載なし）
+  - bon: 根拠 `aeolabo.boninc.co.jp/llmo-aeo-service`（「LLMO/AEO対策サービス」）＝aeo・llmo／`/service/`（公式サイト構築・採用サイト・LP制作）＝web-seisaku。dx-consul・naisei-shien（/service/ の「DX支援」はWeb広告・SNS・解析ツールの操作指導と、マーケ施策の内製化。AI・DXの導入支援ではない）は reject。料金は未確認、実績は `/work/`。社名・創業 2013年3月・大阪市中央区は `/company/`
+  - `--only` dry で 3社とも差分0。全社一括 dry は実施せず
+- 見送り: Onono Corporation（AEOコンサルはプレスリリース `/report/2026-05-08/` のみ。`/business` は日本製品の輸出事業でサービスページなし）、Uravation（`/aieo-daiko/` は LLMO/AIO/GEO 表記で AEO の明示なし。Web制作もなし）
+- precheck ✅ 全項目OK → source `c98bc76` → deploy `3abf8af`（ai-service-deploy）→ 本番 sitemap 106 URL・`/company/east/` `/company/secondz/` `/company/boninc/` 200・AEO「企業22社」・Web制作「企業25社」を確認。GSC sitemap 送信（00:28Z・pending。前回取得分は 103）
