@@ -89,6 +89,24 @@
    "data-kiban": "https://www.gixo.jp/service/",
    "dx-consul": "https://www.gixo.jp/service/",
    "naisei-shien": "https://www.gixo.jp/service/"
+  },
+  "株式会社イーストクリエイティブ": {
+   "aeo": "https://www.east.co.jp/llmo/",
+   "llmo": "https://www.east.co.jp/llmo/",
+   "web-seisaku": "https://www.east.co.jp/webdesign/",
+   "ai-kenshu": "https://www.east.co.jp/training/"
+  },
+  "secondz digital株式会社": {
+   "aeo": "https://secondz.digital/agentsense",
+   "llmo": "https://secondz.digital/agentsense",
+   "dx-consul": "https://secondz.digital/service",
+   "ai-agent": "https://secondz.digital/service",
+   "ai-kaihatsu": "https://secondz.digital/service"
+  },
+  "株式会社bon": {
+   "aeo": "https://aeolabo.boninc.co.jp/llmo-aeo-service",
+   "llmo": "https://aeolabo.boninc.co.jp/llmo-aeo-service",
+   "web-seisaku": "https://boninc.co.jp/service/"
   }
  },
  "facts": {
@@ -191,6 +209,30 @@
    "casesDisclosed": null,
    "casesCount": null,
    "casesSource": null
+  },
+  "株式会社イーストクリエイティブ": {
+   "priceDisclosed": null,
+   "priceNote": null,
+   "priceSource": null,
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://www.east.co.jp/production-record/"
+  },
+  "secondz digital株式会社": {
+   "priceDisclosed": false,
+   "priceNote": "secondz Agentsense は無料簡易診断あり。詳細な競合分析・ロードマップは有償診断で提案（金額の掲載なし）",
+   "priceSource": "https://secondz.digital/agentsense",
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://secondz.digital/service"
+  },
+  "株式会社bon": {
+   "priceDisclosed": null,
+   "priceNote": null,
+   "priceSource": null,
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://boninc.co.jp/work/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"

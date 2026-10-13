@@ -2198,5 +2198,77 @@
   "casesSource": null,
   "pagesChecked": 15,
   "checkedAt": "2026-10-12"
+ },
+ {
+  "name": "株式会社イーストクリエイティブ",
+  "officialUrl": "https://www.east.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "aeo": "https://www.east.co.jp/llmo/",
+   "llmo": "https://www.east.co.jp/llmo/",
+   "web-seisaku": "https://www.east.co.jp/webdesign/",
+   "ai-kenshu": "https://www.east.co.jp/training/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.east.co.jp/production-record/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-13"
+ },
+ {
+  "name": "secondz digital株式会社",
+  "officialUrl": "https://secondz.digital/",
+  "categories": [
+   "aeo",
+   "dx-consul",
+   "ai-agent",
+   "llmo",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "aeo": "https://secondz.digital/agentsense",
+   "dx-consul": "https://secondz.digital/service",
+   "ai-agent": "https://secondz.digital/service",
+   "llmo": "https://secondz.digital/agentsense",
+   "ai-kaihatsu": "https://secondz.digital/service"
+  },
+  "priceDisclosed": false,
+  "priceNote": "secondz Agentsense は無料簡易診断あり。詳細な競合分析・ロードマップは有償診断で提案（金額の掲載なし）",
+  "priceSource": "https://secondz.digital/agentsense",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://secondz.digital/service",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-13"
+ },
+ {
+  "name": "株式会社bon",
+  "officialUrl": "https://boninc.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "aeo"
+  ],
+  "categorySource": {
+   "llmo": "https://aeolabo.boninc.co.jp/llmo-aeo-service",
+   "web-seisaku": "https://boninc.co.jp/service/",
+   "aeo": "https://aeolabo.boninc.co.jp/llmo-aeo-service"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://boninc.co.jp/work/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-13"
  }
 ]
