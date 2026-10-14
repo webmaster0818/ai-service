@@ -2270,5 +2270,79 @@
   "casesSource": "https://boninc.co.jp/work/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-13"
+ },
+ {
+  "name": "Ridgelinez株式会社",
+  "officialUrl": "https://www.ridgelinez.com/",
+  "categories": [
+   "data-kiban",
+   "ai-governance",
+   "dx-consul",
+   "ai-agent"
+  ],
+  "categorySource": {
+   "data-kiban": "https://www.ridgelinez.com/service/theme/data/",
+   "ai-governance": "https://www.ridgelinez.com/service/theme/governance-risk-compliance/ai-governance",
+   "dx-consul": "https://www.ridgelinez.com/service/theme/ai-analytics/ai-strategy",
+   "ai-agent": "https://www.ridgelinez.com/service/theme/ai-analytics/life-science"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.ridgelinez.com/service/theme/governance-risk-compliance/ai-governance",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-14"
+ },
+ {
+  "name": "クラスメソッド株式会社",
+  "officialUrl": "https://classmethod.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "naisei-shien",
+   "data-kiban",
+   "rag",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://classmethod.jp/services/ai/",
+   "dx-consul": "https://classmethod.jp/services/ai/",
+   "naisei-shien": "https://classmethod.jp/services/insource/",
+   "data-kiban": "https://classmethod.jp/services/data-analytics/",
+   "rag": "https://classmethod.jp/services/generative-ai/ai-starter/",
+   "ai-kenshu": "https://classmethod.jp/services/ai/claude-training/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI-Starter（社内生成AI環境）月額 200,000 円〜（税別）・アプリケーション利用料＋保守運用費を含む・最低利用期間6ヶ月・初期費用は別途見積もり。データ基盤構築ほか個別サービスの料金は確認できず",
+  "priceSource": "https://classmethod.jp/services/generative-ai/ai-starter/",
+  "casesDisclosed": true,
+  "casesCount": "支援実績5,600社以上（AWS・クラウド等を含む全社の数字）",
+  "casesSource": "https://classmethod.jp/services/insource/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-14"
+ },
+ {
+  "name": "株式会社DATAFLUCT",
+  "officialUrl": "https://datafluct.com/",
+  "categories": [
+   "ai-agent",
+   "data-kiban",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "ai-agent": "https://datafluct.com/ai-service/ai-agents/",
+   "data-kiban": "https://datafluct.com/ai-service/ai-platform/",
+   "ai-kaihatsu": "https://datafluct.com/ai-service/ai-models/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://datafluct.com/ai-service/ai-platform/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-14"
  }
 ]
