@@ -53,3 +53,13 @@
   - `--only` dry で 3社とも差分0。全社一括 dry は実施せず
 - 見送り: Onono Corporation（AEOコンサルはプレスリリース `/report/2026-05-08/` のみ。`/business` は日本製品の輸出事業でサービスページなし）、Uravation（`/aieo-daiko/` は LLMO/AIO/GEO 表記で AEO の明示なし。Web制作もなし）
 - precheck ✅ 全項目OK → source `c98bc76` → deploy `3abf8af`（ai-service-deploy）→ 本番 sitemap 106 URL・`/company/east/` `/company/secondz/` `/company/boninc/` 200・AEO「企業22社」・Web制作「企業25社」を確認。GSC sitemap 送信（00:28Z・pending。前回取得分は 103）
+
+### 2026-10-14
+- GSC: 10/13 送信分の sitemap は 10/13 00:28Z に取得済み（submitted 106・errors 0・warnings 0）
+- **Ridgelinez株式会社・クラスメソッド株式会社・株式会社DATAFLUCTを追加（90→93社・109ページ・AIガバナンス 19→20・データ基盤 23→26）**。薄い領域（AIガバナンス／データ基盤）狙い
+  - Ridgelinez: 根拠 `/service/theme/governance-risk-compliance/ai-governance`（AIガバナンス/セキュリティ態勢の構築・定着支援）＝ai-governance／`/service/theme/data/`（「スケーラブルなデータ基盤の構築」構想・設計から構築まで）＝data-kiban／`/service/theme/ai-analytics/ai-strategy`（AI戦略の策定から実行・定着まで伴走）＝dx-consul／`/service/theme/ai-analytics/life-science`（「AI活用戦略の構想からAIエージェント開発・導入まで」）＝ai-agent。llmo（トップのプレス見出し）／gazo-onsei（事例見出し）／ai-kaihatsu（AI戦略のメニュー「POC実行支援」）／rag（メニュー名のみ）／gyomu-jidoka（業界ページの事例本文の RPA）は reject。料金は未確認。社名・設立 2020年1月15日は `/about/corporate/`
+  - クラスメソッド: 根拠 `/services/data-analytics/`（データ基盤構築）＝data-kiban／`/services/ai/`（生成AI総合支援「コンサルから構築、定着まで」・AI適用診断）＝dx-consul・ai-kaihatsu／`/services/insource/`（内製化支援。AI駆動開発支援を含む）＝naisei-shien／`/services/generative-ai/ai-starter/`（RAGチャット（社内文書検索））＝rag／`/services/ai/claude-training/`＝ai-kenshu。chatbot・gyomu-jidoka（AIページの事例見出し）／gazo-onsei（トップの事例見出し）は reject。料金は AI-Starter の「月額 200,000 円〜（税別）・最低6ヶ月・初期費用別途」、実績「5,600社以上」は全社（AWS 等を含む）の数字と明記
+  - DATAFLUCT: 根拠 `/ai-service/ai-platform/`（AIデータ基盤 Airlake）＝data-kiban／`/ai-service/ai-models/`（オーダーメイドのAIモデルを開発）＝ai-kaihatsu／`/ai-service/ai-agents/`＝ai-agent。gyomu-jidoka・dx-consul（ケーススタディ一覧の事例見出し）は reject。料金は未確認。社名は `/company/`
+  - `--new` の直後は keep/reject が当たっていないので、`--only` dry の結果を service-facts.json に反映 → `--only` dry で 3社とも差分0。全社一括 dry は実施せず
+- 見送り: サイバーセキュリティクラウド（「AIガバナンスアセスメントサービス」のサービスページを公式で特定できず。`/service/` の AI MONBAN はグループ会社のサービス掲載で、運営会社の確認が要る）、KPMG・PwC・デロイト（AIガバナンスのページURLが 404/403）
+- precheck ✅ 全項目OK → source `2c0999b` → deploy `8be4aff`（ai-service-deploy）→ 本番 sitemap 109 URL・`/company/ridgelinez/` `/company/classmethod/` `/company/datafluct/` 200・AIガバナンス「企業20社」・データ基盤「企業26社」を確認。GSC sitemap 送信（00:29Z・pending。前回取得分は 106）
