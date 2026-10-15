@@ -63,3 +63,12 @@
   - `--new` の直後は keep/reject が当たっていないので、`--only` dry の結果を service-facts.json に反映 → `--only` dry で 3社とも差分0。全社一括 dry は実施せず
 - 見送り: サイバーセキュリティクラウド（「AIガバナンスアセスメントサービス」のサービスページを公式で特定できず。`/service/` の AI MONBAN はグループ会社のサービス掲載で、運営会社の確認が要る）、KPMG・PwC・デロイト（AIガバナンスのページURLが 404/403）
 - precheck ✅ 全項目OK → source `2c0999b` → deploy `8be4aff`（ai-service-deploy）→ 本番 sitemap 109 URL・`/company/ridgelinez/` `/company/classmethod/` `/company/datafluct/` 200・AIガバナンス「企業20社」・データ基盤「企業26社」を確認。GSC sitemap 送信（00:29Z・pending。前回取得分は 106）
+
+### 2026-10-15
+- GSC: 10/14 送信分の sitemap は 10/14 00:29Z に取得済み（submitted 109・errors 0・warnings 0）
+- **KPMGコンサルティング株式会社・プロティビティ合同会社を追加（93→95社・111ページ・AIガバナンス 20→22・データ基盤 26→27）**。10/14 に見送った大手のAIガバナンスを再挑戦
+  - KPMGコンサルティング: officialUrl は `kpmg.com/jp/ja/about/kc.html`（KPMGジャパンのサイト内の法人ページ。社名もここで確認）。根拠 `/services/advisory/risk-consulting/digital-risk-management/ai-governance-support.html`（AIガバナンス構築・運用支援）＝ai-governance／同 `advanced-ai-datamanagement.html`（生成AIによるデータマネジメント高度化支援。DWH・分析基盤上で品質向上とメタデータ付与・カタログ化の仕組みを構築）＝data-kiban。dx-consul（法人ページの概要文と事例見出し）／ai-kaihatsu・gyomu-jidoka（事例 Case Study：UACJ）は reject。料金は未確認、実績は事例ページ `/insights/2026/08/case-uacj.html`
+  - プロティビティ: officialUrl `protiviti.com/jp-jp/`。根拠 `/jp-jp/artificial-intelligence-services`（AIコンサルティングサービス。「信頼を築くAIガバナンス」AIガバナンスとAIリスク管理プロセス）＝ai-governance・dx-consul。gyomu-jidoka（担当者紹介の経歴の RPA）／data-kiban（提供価値の一節「AI戦略、ユースケース、データ基盤」）／ai-kaihatsu（量子コンピューティングの PoC）は reject。料金は未確認、実績は同ページの事例（SOX対応コスト60%削減 等）。社名「プロティビティ合同会社」・千代田区大手町は `/jp-jp/privacy-policy`（会社概要ページで社名を確認できなかったため）
+  - `--new` 直後に `--only` dry の結果を service-facts.json に反映 → `--only` dry で 2社とも差分0。全社一括 dry は実施せず
+- 見送り（再挑戦の結果）: サイバーセキュリティクラウド（AIガバナンスアセスメントサービスは今日もプレスリリースのみで公式のサービスページなし。`/service/` の AI MONBAN はグループ会社欄の掲載で運営はデータサイン系）、PwC（AIガバナンス・Responsible AI のページは今日も curl で 403）、デロイト トーマツ（`/services/consulting/services/ai-governance.html` は 200 で内容も十分だが、提供法人が合同会社デロイト トーマツ／有限責任監査法人トーマツ／リスクアドバイザリーのどれかをページで特定できず、社名を確定できない＝次の候補）
+- precheck ✅ 全項目OK → source `9fc7688` → deploy `8c04751`（ai-service-deploy）→ 本番 sitemap 111 URL（CF 反映は push から約5分）・`/company/kpmg/` `/company/protiviti/` 200・AIガバナンス「企業22社」・データ基盤「企業27社」を確認。GSC sitemap 送信（00:35Z・pending。00:31Z に CF 反映前の 109 を取得済み）
