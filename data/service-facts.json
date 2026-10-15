@@ -2344,5 +2344,45 @@
   "casesSource": "https://datafluct.com/ai-service/ai-platform/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-14"
+ },
+ {
+  "name": "KPMGコンサルティング株式会社",
+  "officialUrl": "https://kpmg.com/jp/ja/about/kc.html",
+  "categories": [
+   "data-kiban",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "data-kiban": "https://kpmg.com/jp/ja/services/advisory/risk-consulting/digital-risk-management/advanced-ai-datamanagement.html",
+   "ai-governance": "https://kpmg.com/jp/ja/services/advisory/risk-consulting/digital-risk-management/ai-governance-support.html"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://kpmg.com/jp/ja/insights/2026/08/case-uacj.html",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-15"
+ },
+ {
+  "name": "プロティビティ合同会社",
+  "officialUrl": "https://www.protiviti.com/jp-jp/",
+  "categories": [
+   "dx-consul",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "dx-consul": "https://www.protiviti.com/jp-jp/artificial-intelligence-services",
+   "ai-governance": "https://www.protiviti.com/jp-jp/artificial-intelligence-services"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.protiviti.com/jp-jp/artificial-intelligence-services",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-15"
  }
 ]
