@@ -9,7 +9,7 @@ const N = companies().length
 export const metadata: Metadata = {
   title: `AI関連企業${N}社の開示状況調査（データ公開）`,
   description:
-    `AI開発・DXコンサル・LLMO対策などを掲げる${N}社の公式サイトを1社ずつ確認し、料金と実績の開示状況を集計しました。集計方法と限界を明記のうえ、JSONで公開しています。`,
+    `AI開発・DXコンサル・LLMO対策などを掲げる${N}社の公式サイトを個別に確認し、料金と実績の開示状況を集計しています。集計方法と調査範囲を明記し、JSON・CSV形式で公開しています。`,
   alternates: { canonical: `${SITE.origin}/data/` },
 }
 
@@ -51,8 +51,8 @@ export default function Page() {
       <div className="verdict">
         <div className="tag">調査結果</div>
         <p className="headline">
-          料金を公開しているのは判断できた<span className="num">{price.judged}</span>社中<span className="num">{price.yes}</span>社、
-          実績は<span className="num">{cases.yes}</span>社でした。
+          料金の公開有無を判断できた<span className="num">{price.judged}</span>社のうち、料金を公開している企業は<span className="num">{price.yes}</span>社、
+          実績を公開している企業は<span className="num">{cases.yes}</span>社です。
         </p>
         <p style={{ margin: 0 }}>調査期間 {checked[0]} 〜 {checked[checked.length - 1]}／対象 {all.length}社</p>
       </div>
@@ -60,7 +60,7 @@ export default function Page() {
       <h2>領域別の内訳</h2>
       <div className="scroll-x">
         <table className="data">
-          <thead><tr><th style={{ width: '30%' }}>領域</th><th>掲げている</th><th>うち3領域以内</th><th>うち専業</th><th>料金公開</th><th>実績公開</th></tr></thead>
+          <thead><tr><th style={{ width: '30%' }}>領域</th><th>掲げている企業</th><th>うち{FOCUS_MAX}領域以内</th><th>うち専業</th><th>料金公開</th><th>実績公開</th></tr></thead>
           <tbody>
             {CATEGORIES.map((c) => {
               const rows = inCategory(c.slug)
@@ -81,29 +81,29 @@ export default function Page() {
 
       <h2>集計方法</h2>
       <p>
-        各社の公式サイトを巡回し、<strong>サービス紹介ページの記載</strong>から、掲げている領域・料金の公開有無・実績の公開有無を判定しました。
+        各社の公式サイトを巡回し、<strong>サービス紹介ページの記載</strong>から、掲げている領域、料金の公開有無、実績の公開有無を判定しています。
       </p>
-      <h3>根拠に使わなかったもの</h3>
+      <h3>判定の根拠としない情報</h3>
       <p>
-        ブログ・コラム・ニュース記事は判定に使っていません。他社を比較した記事に「Web制作」と書かれていても、
-        それは<strong>他社の説明であって、その会社の事業ではない</strong>ためです。
-        同様に、他社の「おすすめ○選」記事も情報源にしていません。あれは広告であり一次情報ではありません。
+        ブログ・コラム・ニュース記事は判定に使用していません。他社を比較した記事に「Web制作」と記載されていても、
+        それは<strong>記事内の説明であり、その企業の事業内容を示すものではない</strong>ためです。
+        同様に、他社の「おすすめ○選」記事も、広告を含み一次情報ではないため、情報源としていません。
       </p>
-      <h3>分母の取り方</h3>
+      <h3>公開率の算出方法</h3>
       <p>
-        料金の公開率は、<strong>「公開している」「記載を確認できなかった」の判断がついた{price.judged}社を分母</strong>にしています。
-        確認そのものができなかった{price.unknown}社を「公開していない」側に入れると、事実と違う結論になるためです。
+        料金の公開率は、<strong>「公開している」「記載を確認できなかった」のいずれかを判断できた{price.judged}社を分母</strong>としています。
+        確認自体ができなかった{price.unknown}社を「公開していない」側に含めると、実態と異なる結果となるためです。
       </p>
-      <h3>この調査でわからないこと</h3>
+      <h3>調査の範囲について</h3>
       <p>
-        当サイトが見ているのは<strong>公式サイトに何が書かれているか</strong>だけです。
-        技術力、納品物の質、担当者との相性、実際の価格は含まれていません。
-        料金を公開していない会社が不誠実だという意味でもありません（個別見積もりが必要な業態は普通にあります）。
-        <strong>発注先を絞り込む最初のふるいとしてお使いください。</strong>
+        当サイトの調査対象は、<strong>公式サイトの記載内容</strong>に限られます。
+        技術力、納品物の品質、担当者との相性、実際の取引価格は含まれていません。
+        また、料金を公開していないことは、その企業の姿勢を評価するものではありません（個別見積もりを前提とする業態も多くあります）。
+        <strong>発注先を絞り込む際の初期段階の参考情報としてご活用ください。</strong>
       </p>
 
       <h2>データの公開</h2>
-      <p>出典を明記していただければ引用・再利用は自由です（CC BY 4.0）。</p>
+      <p>出典を明記いただくことで、引用・再利用を自由に行っていただけます（CC BY 4.0）。</p>
       <div className="chips">
         <a href="/opendata/ai-service-facts.json">JSONをダウンロード</a>
         <a href="/opendata/ai-service-facts.csv">CSVをダウンロード</a>

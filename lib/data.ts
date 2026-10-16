@@ -40,20 +40,20 @@ export type CompanyProfile = {
 
 // 並びは「作る → 使えるようにする → 広げる」。社数順にしない（数が動くたびに並びが変わるため）。
 export const CATEGORIES: { slug: string; label: string; blurb: string }[] = [
-  { slug: 'ai-kaihatsu', label: 'AI開発', blurb: 'AIモデル・システムの受託開発を掲げている会社' },
-  { slug: 'ai-agent', label: 'AIエージェント開発', blurb: '自律的に作業するAIエージェントの開発・導入を掲げている会社' },
-  { slug: 'rag', label: 'RAG・社内データ活用', blurb: '社内の文書やデータを検索して答えるAIの構築を掲げている会社' },
-  { slug: 'chatbot', label: 'チャットボット開発', blurb: 'チャットボットの開発・導入を掲げている会社' },
-  { slug: 'gazo-onsei', label: '画像・音声認識AI', blurb: '画像認識・音声認識を使うAIを掲げている会社' },
-  { slug: 'gyomu-jidoka', label: '業務自動化・AI-OCR', blurb: '業務の自動化やAI-OCRによる紙・帳票の処理を掲げている会社' },
-  { slug: 'data-kiban', label: 'データ基盤・データ分析', blurb: 'データ基盤の構築や分析の支援を掲げている会社' },
-  { slug: 'ai-governance', label: 'AIガバナンス・セキュリティ', blurb: 'AIの利用ルール整備やセキュリティ対策を掲げている会社' },
-  { slug: 'dx-consul', label: 'DXコンサル', blurb: '業務のデジタル化・変革の支援を掲げている会社' },
-  { slug: 'naisei-shien', label: '内製化支援', blurb: '発注側が自分たちで作れるようにする支援を掲げている会社' },
-  { slug: 'ai-kenshu', label: '生成AI研修', blurb: '生成AIの研修・講座を掲げている会社' },
-  { slug: 'llmo', label: 'LLMO対策', blurb: '生成AIに引用されるための最適化を掲げている会社' },
-  { slug: 'aeo', label: 'AEO対策', blurb: '回答エンジン向けの最適化を掲げている会社' },
-  { slug: 'web-seisaku', label: 'Web制作', blurb: 'サイト制作を掲げている会社' },
+  { slug: 'ai-kaihatsu', label: 'AI開発', blurb: 'AIモデル・システムの受託開発を掲げている企業' },
+  { slug: 'ai-agent', label: 'AIエージェント開発', blurb: '自律的に業務を実行するAIエージェントの開発・導入を掲げている企業' },
+  { slug: 'rag', label: 'RAG・社内データ活用', blurb: '社内の文書やデータを検索して回答するAIの構築を掲げている企業' },
+  { slug: 'chatbot', label: 'チャットボット開発', blurb: 'チャットボットの開発・導入を掲げている企業' },
+  { slug: 'gazo-onsei', label: '画像・音声認識AI', blurb: '画像認識・音声認識を活用したAIを掲げている企業' },
+  { slug: 'gyomu-jidoka', label: '業務自動化・AI-OCR', blurb: '業務の自動化やAI-OCRによる紙・帳票の処理を掲げている企業' },
+  { slug: 'data-kiban', label: 'データ基盤・データ分析', blurb: 'データ基盤の構築やデータ分析の支援を掲げている企業' },
+  { slug: 'ai-governance', label: 'AIガバナンス・セキュリティ', blurb: 'AIの利用ルール整備やセキュリティ対策を掲げている企業' },
+  { slug: 'dx-consul', label: 'DXコンサル', blurb: '業務のデジタル化・変革の支援を掲げている企業' },
+  { slug: 'naisei-shien', label: '内製化支援', blurb: '発注側の企業が自社で開発・運用できるようにする支援を掲げている企業' },
+  { slug: 'ai-kenshu', label: '生成AI研修', blurb: '生成AIの研修・講座を掲げている企業' },
+  { slug: 'llmo', label: 'LLMO対策', blurb: '生成AIの回答に引用されるための最適化を掲げている企業' },
+  { slug: 'aeo', label: 'AEO対策', blurb: '回答エンジン向けの最適化を掲げている企業' },
+  { slug: 'web-seisaku', label: 'Web制作', blurb: 'Webサイト制作を掲げている企業' },
 ]
 
 function read<T>(f: string): T {
@@ -151,5 +151,5 @@ export const SITE = {
   // ⚠️ ドメインはMediaXAI側で取得中。確定後ここだけ差し替えれば canonical と sitemap が追随する。
   origin: 'https://to-x-ai.com',
   description:
-    'AI開発・DXコンサル・LLMO対策などを手がける企業を1社ずつ公式サイトで確認し、料金と実績の開示状況を横断集計しています。他社のおすすめ記事は情報源にしていません。',
+    'AI開発・DXコンサル・LLMO対策などを手がける企業について、各社の公式サイトを個別に確認し、料金と実績の開示状況を横断的に集計しています。他社の比較記事は情報源としていません。',
 }

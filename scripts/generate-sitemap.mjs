@@ -27,7 +27,7 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitem
 
 const odir = path.join(OUT, 'opendata'); fs.mkdirSync(odir, { recursive: true })
 fs.writeFileSync(path.join(odir, 'ai-service-facts.json'),
-  JSON.stringify({ license: 'CC BY 4.0', note: '公式サイトで確認できた事実のみ。未確認はnull', companies: all }, null, 1))
+  JSON.stringify({ license: 'CC BY 4.0', note: '公式サイトで確認できた事実のみを掲載しています。未確認の項目は null です。', companies: all }, null, 1))
 const cols = ['name','officialUrl','categories','priceDisclosed','priceNote','casesDisclosed','casesCount','pagesChecked','checkedAt']
 const esc = v => v === undefined || v === null ? '' : Array.isArray(v) ? `"${v.join('|')}"`
   : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g,'""')}"` : String(v)

@@ -31,10 +31,10 @@ def main() -> None:
         d.text((xy[0] * S, xy[1] * S), s, font=ImageFont.truetype(font, size * S), fill=fill)
 
     put((86, 100), "AIサービス比較ナビ", JP_BOLD, 36, GREEN)
-    put((86, 172), "他社のおすすめ記事ではなく、", JP_BOLD, 66, INK)
-    put((86, 262), "公式サイトを1社ずつ見て比べる。", JP_BOLD, 66, INK)
+    put((86, 172), "AI開発・LLMO対策の発注先を、", JP_BOLD, 66, INK)
+    put((86, 262), "公式サイトの情報にもとづき比較", JP_BOLD, 66, INK)
     d.line([(86 * S, 381 * S), (1116 * S, 381 * S)], fill=RULE, width=2 * S)
-    put((86, 414), "料金と実績の開示状況を確認日・出典URLつきで公開", JP, 32, SUB)
+    put((86, 414), "料金と実績の開示状況を、確認日・出典URLとともに掲載", JP, 32, SUB)
     put((86, 470), "AI開発・DXコンサル・LLMO対策", JP, 32, SUB)
     put((86, 552), "to-x-ai.com", JP, 28, SUB)
 

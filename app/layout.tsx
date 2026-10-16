@@ -6,11 +6,11 @@ import { SITE, CATEGORIES } from '@/lib/data'
 // ⚠️ OG画像を差し替えたら v= を必ず上げる。/og-image.png は _headers で7日キャッシュさせており、
 //    同じURLのままだと Cloudflare のエッジに古い画像が残る（2026-10-02、差し替え後も
 //    独自ドメインだけ旧画像が返った。pages.dev は新しくなるので気づきにくい）。
-const OG_IMAGE = '/og-image.png?v=20261002'
+const OG_IMAGE = '/og-image.png?v=20261016'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.origin),
-  title: { default: `${SITE.name}｜AI開発・LLMO対策の発注先を1社ずつ確認して比較`, template: `%s｜${SITE.name}` },
+  title: { default: `${SITE.name}｜AI開発・LLMO対策の発注先を公式サイトの情報で比較`, template: `%s｜${SITE.name}` },
   description: SITE.description,
   // OGPは1枚を全ページ共通で使う。会社ごとに画像を作ると、他社のロゴや版面を
   // 当サイトの成果物のように配ることになる。
@@ -46,9 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="site">
           <div className="wrap">
             <p className="note" style={{ maxWidth: 640 }}>
-              当サイトの掲載内容は、各社の<strong>公式サイトで確認できた事実のみ</strong>です。
-              確認できなかった項目は空欄にし「未確認」と表示しています。推定値では埋めません。
-              また、他社の「おすすめ○選」記事は情報源にしていません。あれは広告であり一次情報ではないためです。
+              当サイトの掲載内容は、各社の<strong>公式サイトで確認できた事実</strong>に限っています。
+              確認できなかった項目は「未確認」と表示し、推定による値は掲載していません。
+              また、他社の「おすすめ○選」記事は広告を含み一次情報ではないため、情報源としていません。
             </p>
             <p className="note">
               各社ページに確認日と出典URLを記載しています。／ <a href="/data/">調査データを見る</a>

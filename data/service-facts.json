@@ -1793,7 +1793,7 @@
    "naisei-shien": "https://liginc.co.jp/solutions/studio-by-lig"
   },
   "priceDisclosed": null,
-  "priceNote": "記事広告（LIGブログ掲載）のみ「80万円から」と公開。Web制作・システム開発の料金は確認できていない",
+  "priceNote": "記事広告（LIGブログ掲載）のみ「80万円から」と公開。Web制作・システム開発の料金は確認できませんでした",
   "priceSource": "https://liginc.co.jp/solutions/digtial-marketing/sponsored-article",
   "casesDisclosed": true,
   "casesCount": null,
@@ -1975,7 +1975,7 @@
    "ai-agent": "https://uchino.ai/"
   },
   "priceDisclosed": false,
-  "priceNote": "ご希望に合うプランを担当者からご案内します（Our AI面接）。自社コラム記事内の月額表記は根拠にしない",
+  "priceNote": "ご希望に合うプランを担当者からご案内します（Our AI面接）。自社コラム記事内の月額表記は根拠としていません",
   "priceSource": "https://ai-mensetsu.jp/",
   "casesDisclosed": true,
   "casesCount": null,
@@ -2027,7 +2027,7 @@
    "ai-kenshu": "https://www.aaip.co.jp/ambassador-program"
   },
   "priceDisclosed": false,
-  "priceNote": "支援内容・企業規模によって大きく異なり、無料ヒアリング後に最適なプランと概算を提示（FAQ）。AIソリューションズは「固定価格パッケージ」と記載するが金額の公開は確認できず",
+  "priceNote": "支援内容・企業規模によって大きく異なり、無料ヒアリング後に最適なプランと概算を提示（FAQ）。AIソリューションズは「固定価格パッケージ」と記載していますが、金額の公開は確認できませんでした",
   "priceSource": "https://www.aaip.co.jp/faq",
   "casesDisclosed": true,
   "casesCount": null,
@@ -2243,7 +2243,7 @@
    "ai-kaihatsu": "https://secondz.digital/service"
   },
   "priceDisclosed": false,
-  "priceNote": "secondz Agentsense は無料簡易診断あり。詳細な競合分析・ロードマップは有償診断で提案（金額の掲載なし）",
+  "priceNote": "secondz Agentsense には無料簡易診断があります。詳細な競合分析・ロードマップは有償診断で提案（金額の掲載なし）",
   "priceSource": "https://secondz.digital/agentsense",
   "casesDisclosed": true,
   "casesCount": null,
@@ -2317,7 +2317,7 @@
    "ai-kenshu": "https://classmethod.jp/services/ai/claude-training/"
   },
   "priceDisclosed": true,
-  "priceNote": "AI-Starter（社内生成AI環境）月額 200,000 円〜（税別）・アプリケーション利用料＋保守運用費を含む・最低利用期間6ヶ月・初期費用は別途見積もり。データ基盤構築ほか個別サービスの料金は確認できず",
+  "priceNote": "AI-Starter（社内生成AI環境）月額 200,000 円〜（税別）・アプリケーション利用料＋保守運用費を含む・最低利用期間6ヶ月・初期費用は別途見積もり。データ基盤構築ほか個別サービスの料金は確認できませんでした",
   "priceSource": "https://classmethod.jp/services/generative-ai/ai-starter/",
   "casesDisclosed": true,
   "casesCount": "支援実績5,600社以上（AWS・クラウド等を含む全社の数字）",

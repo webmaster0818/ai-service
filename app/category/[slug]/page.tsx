@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const rows = inCategory(slug)
   return {
     title: `${c.label}を掲げている企業${rows.length}社の開示状況`,
-    description: `${c.label}を公式サイトで掲げている${rows.length}社について、料金と実績の公開状況を1社ずつ確認しました。うち${focused(slug).length}社は掲げている領域を${FOCUS_MAX}つ以内に絞っています。`,
+    description: `${c.label}を公式サイトで掲げている${rows.length}社について、料金と実績の公開状況を個別に確認し、掲載しています。このうち${focused(slug).length}社は、掲げている領域が${FOCUS_MAX}つ以内です。`,
     alternates: { canonical: `${SITE.origin}/category/${slug}/` },
   }
 }
@@ -43,25 +43,25 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <h1>{c.label}を掲げている企業{rows.length}社</h1>
 
       <div className="verdict">
-        <div className="tag">まず結論</div>
+        <div className="tag">掲載状況</div>
         <p className="headline">
-          {rows.length}社のうち、掲げている領域を<strong>{FOCUS_MAX}つ以内</strong>に絞っているのは<span className="num">{sp.length}</span>社です。
+          {rows.length}社のうち、掲げている領域が<strong>{FOCUS_MAX}つ以内</strong>の企業は<span className="num">{sp.length}</span>社です。
         </p>
         <p style={{ margin: 0 }}>
           {sp.length === 0
-            ? `${c.label}を掲げている会社は全社、他にも多くの領域を掲げていました。つまり${c.label}は単体の商売ではなく、既存事業に足したメニューとして提供されているのが実情です。`
-            : `残る${rows.length - sp.length}社は、これを含めて4つ以上の領域を掲げています。${c.label}に絞っている会社なのか、メニューの1つなのかは、発注前に確認する価値があります。`}
+            ? `${c.label}を掲げている企業は、いずれも${c.label}以外に多くの領域をあわせて掲げています。${c.label}は単独の事業としてではなく、既存事業に付加するサービスとして提供される傾向があります。`
+            : `残る${rows.length - sp.length}社は、${c.label}を含めて${FOCUS_MAX + 1}つ以上の領域を掲げています。${c.label}を主力とする企業か、提供サービスの一つとして扱う企業かは、発注前にご確認いただくことをおすすめします。`}
         </p>
       </div>
 
       <p>
-        料金を公開しているのは判断できた<span className="num">{priceJudged}</span>社のうち<span className="num">{priceYes}</span>社、
-        実績を公開しているのは<span className="num">{casesYes}</span>社でした。
+        料金の公開有無を判断できた<span className="num">{priceJudged}</span>社のうち、料金を公開している企業は<span className="num">{priceYes}</span>社です。
+        実績を公開している企業は<span className="num">{casesYes}</span>社です。
       </p>
 
       {sp.length > 0 && (
         <>
-          <h2>{c.label}を含めて{FOCUS_MAX}領域以内に絞っている会社</h2>
+          <h2>{c.label}を含め、掲げている領域が{FOCUS_MAX}つ以内の企業</h2>
           <div className="grid">
             {sp.map((x) => (
               <a className="card" key={x.officialUrl} href={`/company/${slugOf(x)}/`}>
@@ -76,11 +76,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </>
       )}
 
-      <h2>{c.label}を掲げている全{rows.length}社</h2>
+      <h2>{c.label}を掲げている企業の一覧（{rows.length}社）</h2>
       <div className="scroll-x">
         <table className="data">
           <thead>
-            <tr><th style={{ width: '30%' }}>会社</th><th>料金</th><th>実績</th><th>掲げている領域</th><th>確認日</th></tr>
+            <tr><th style={{ width: '30%' }}>企業名</th><th>料金</th><th>実績</th><th>掲げている領域</th><th>確認日</th></tr>
           </thead>
           <tbody>
             {rows.map((x) => (
@@ -96,8 +96,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </table>
       </div>
       <p className="note">
-        ※「記載なし」は公式サイト上で確認できなかったという意味で、非公開と断定するものではありません。
-        当サイトは各社から掲載料を受け取っておらず、順位づけもしていません。
+        ※「記載なし」は、公式サイト上で記載を確認できなかったことを示すもので、非公開であると断定するものではありません。
+        当サイトは各社から掲載料を受け取っておらず、順位付けは行っていません。
       </p>
 
       <div className="chips" style={{ marginTop: 32 }}>
