@@ -72,3 +72,8 @@
   - `--new` 直後に `--only` dry の結果を service-facts.json に反映 → `--only` dry で 2社とも差分0。全社一括 dry は実施せず
 - 見送り（再挑戦の結果）: サイバーセキュリティクラウド（AIガバナンスアセスメントサービスは今日もプレスリリースのみで公式のサービスページなし。`/service/` の AI MONBAN はグループ会社欄の掲載で運営はデータサイン系）、PwC（AIガバナンス・Responsible AI のページは今日も curl で 403）、デロイト トーマツ（`/services/consulting/services/ai-governance.html` は 200 で内容も十分だが、提供法人が合同会社デロイト トーマツ／有限責任監査法人トーマツ／リスクアドバイザリーのどれかをページで特定できず、社名を確定できない＝次の候補）
 - precheck ✅ 全項目OK → source `9fc7688` → deploy `8c04751`（ai-service-deploy）→ 本番 sitemap 111 URL（CF 反映は push から約5分）・`/company/kpmg/` `/company/protiviti/` 200・AIガバナンス「企業22社」・データ基盤「企業27社」を確認。GSC sitemap 送信（00:35Z・pending。00:31Z に CF 反映前の 109 を取得済み）
+
+### 2026-10-16
+- GSC: 10/15 送信分の sitemap は 10/15 01:13Z に取得済み（submitted 111・errors 0・warnings 0）。URL検査で `/company/kpmg/` `/company/protiviti/` `/company/ridgelinez/` `/company/classmethod/` は全て「Submitted and indexed」。URL数は変わらないので再送信なし
+- **MBSD に ai-kenshu を追加（生成AI研修 28→29社・95社/111p のまま）**: 根拠 `mbsd.jp/solutions/ai/ai_education/`（AIセキュリティ教育＝セキュアAI eラーニング・ハンズオン・AIエージェントセキュリティハンズオン。LLMセキュリティ・プロンプトインジェクションを含む）。料金は詳細リンク先 jpsec.ai（© ChillStack/MBSD の共同運営）の 5万/15万円/人・60万円/名（税別）を facts に。`--only` dry 差分0。デロイトは `ai-governance.html` の担当者が合同会社デロイト トーマツ／監査法人トーマツ／サイバー合同会社に分かれ、今日も提供法人を特定できず見送り
+- precheck ✅ 全項目OK → source `e2eca9e` → deploy `eea629b` → 本番 生成AI研修「企業29社」・`/company/mbsd/` 200・sitemap 111 を確認
