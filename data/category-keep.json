@@ -60,7 +60,8 @@
    "ai-governance": "https://gmo-cybersecurity.com/service/ai/"
   },
   "三井物産セキュアディレクション株式会社": {
-   "ai-governance": "https://www.mbsd.jp/solutions/ai/"
+   "ai-governance": "https://www.mbsd.jp/solutions/ai/",
+   "ai-kenshu": "https://www.mbsd.jp/solutions/ai/ai_education/"
   },
   "有限会社バンブーハウス": {
    "aeo": "https://www.bamboo-h.com/ai-ready/",
@@ -187,7 +188,10 @@
   },
   "三井物産セキュアディレクション株式会社": {
    "casesCount": "公共・政府機関実績 70件以上（過去5年間の累計）",
-   "casesSource": "https://www.mbsd.jp/"
+   "casesSource": "https://www.mbsd.jp/",
+   "priceDisclosed": true,
+   "priceNote": "AIセキュリティ教育: 《入門》セキュアAI eラーニング 50,000円/人（ビジネス・マネジメント向け）・150,000円/人（エンジニア向け）／《実践》セキュアAI ハンズオントレーニング 600,000円/名／AIエージェントセキュリティハンズオン 600,000円/名（いずれも税別。ChillStack社と共同運営の jpsec.ai 掲載）。AIシステム診断・アドバイザリは料金の公開なし",
+   "priceSource": "https://jpsec.ai/e-learning/"
   },
   "有限会社バンブーハウス": {
    "priceDisclosed": true,

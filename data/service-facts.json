@@ -2057,14 +2057,16 @@
   "name": "三井物産セキュアディレクション株式会社",
   "officialUrl": "https://www.mbsd.jp/",
   "categories": [
-   "ai-governance"
+   "ai-governance",
+   "ai-kenshu"
   ],
   "categorySource": {
-   "ai-governance": "https://www.mbsd.jp/solutions/ai/"
+   "ai-governance": "https://www.mbsd.jp/solutions/ai/",
+   "ai-kenshu": "https://www.mbsd.jp/solutions/ai/ai_education/"
   },
-  "priceDisclosed": null,
-  "priceNote": null,
-  "priceSource": null,
+  "priceDisclosed": true,
+  "priceNote": "AIセキュリティ教育: 《入門》セキュアAI eラーニング 50,000円/人（ビジネス・マネジメント向け）・150,000円/人（エンジニア向け）／《実践》セキュアAI ハンズオントレーニング 600,000円/名／AIエージェントセキュリティハンズオン 600,000円/名（いずれも税別。ChillStack社と共同運営の jpsec.ai 掲載）。AIシステム診断・アドバイザリは料金の公開なし",
+  "priceSource": "https://jpsec.ai/e-learning/",
   "casesDisclosed": true,
   "casesCount": "公共・政府機関実績 70件以上（過去5年間の累計）",
   "casesSource": "https://www.mbsd.jp/",
