@@ -77,3 +77,11 @@
 - GSC: 10/15 送信分の sitemap は 10/15 01:13Z に取得済み（submitted 111・errors 0・warnings 0）。URL検査で `/company/kpmg/` `/company/protiviti/` `/company/ridgelinez/` `/company/classmethod/` は全て「Submitted and indexed」。URL数は変わらないので再送信なし
 - **MBSD に ai-kenshu を追加（生成AI研修 28→29社・95社/111p のまま）**: 根拠 `mbsd.jp/solutions/ai/ai_education/`（AIセキュリティ教育＝セキュアAI eラーニング・ハンズオン・AIエージェントセキュリティハンズオン。LLMセキュリティ・プロンプトインジェクションを含む）。料金は詳細リンク先 jpsec.ai（© ChillStack/MBSD の共同運営）の 5万/15万円/人・60万円/名（税別）を facts に。`--only` dry 差分0。デロイトは `ai-governance.html` の担当者が合同会社デロイト トーマツ／監査法人トーマツ／サイバー合同会社に分かれ、今日も提供法人を特定できず見送り
 - precheck ✅ 全項目OK → source `e2eca9e` → deploy `eea629b` → 本番 生成AI研修「企業29社」・`/company/mbsd/` 200・sitemap 111 を確認
+
+### 2026-10-16（夜）全文言のビジネス文書化（MediaXAI 指示・writing-standards.md §8）
+- 全ページ・全部品（h1/見出し・本文・注記・表見出し・カード・フッター・meta title/description・領域の説明文・OG画像・opendata の note）を「当サイトでは〜しています」型に統一。旧表現「1社ずつ見て比べる」「まず結論」「この調査でわかったこと／わからないこと」「あれは広告」「本業」「ふるい」「順位づけ」「推定値では埋めません」等は out/ で 0 件
+- 用語: 会社→企業（表見出し・h2・領域の説明文）。title は「AI開発・LLMO対策の発注先を公式サイトの情報で比較」（キーワード維持）
+- 機械的な崩れの修正: 領域を判定できなかった企業（アムール）の meta description が「掲げているのはです。」になっていた → 専用文。同ページの空の「領域判定の根拠」表・「同じ領域」見出しは領域0件のとき出さない。会社ページの「料金は<公開されている>状態です」型の文を、値ごとに文として組み立てる `status()` に変更
+- 手書きの priceNote 5件（LIG・Our AI面接・Advanced AI Partners・secondz・クラスメソッド）の「確認できていない／根拠にしない／確認できず」を です・ます に。**service-facts.json と category-keep.json の facts を同じ文に揃えた**（keep が `--rescore` で上書きするため片方だけ直すと戻る）。自動抽出の引用断片（「価格が異なるため、 お気軽にお問い合わせ」等）は出典の文言なので未変更
+- OG 画像を新文言で再生成し `v=20261016` に更新
+- precheck ✅ 全項目OK → source `6a334ea` → deploy `837186a` → 本番でトップ新文言・/category/ai-governance/・/company/mbsd/・/company/amour-inc/・/data/ 200・sitemap 111・新OG（157,046B）を確認
