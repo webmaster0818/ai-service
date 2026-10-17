@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CATEGORIES, inCategory, focused, FOCUS_MAX, slugOf, labelOf, SITE } from '@/lib/data'
-import { JsonLd, breadcrumb, itemListLd } from '@/lib/seo'
+import { JsonLd, breadcrumb, itemListLd, ogFor } from '@/lib/seo'
 
 export function generateStaticParams() {
   return CATEGORIES.filter((c) => inCategory(c.slug).length > 0).map((c) => ({ slug: c.slug }))
@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${c.label}を掲げている企業${rows.length}社の開示状況`,
     description: `${c.label}を公式サイトで掲げている${rows.length}社について、料金と実績の公開状況を個別に確認し、掲載しています。このうち${focused(slug).length}社は、掲げている領域が${FOCUS_MAX}つ以内です。`,
     alternates: { canonical: `${SITE.origin}/category/${slug}/` },
+    openGraph: ogFor(`${SITE.origin}/category/${slug}/`),
   }
 }
 

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import { companies, disclosure, CATEGORIES, inCategory, focused, FOCUS_MAX, breadthHistogram, slugOf, SITE } from '@/lib/data'
-import { JsonLd, websiteLd, itemListLd } from '@/lib/seo'
+import { JsonLd, websiteLd, itemListLd, ogFor } from '@/lib/seo'
 
 // ⚠️ トップにも自己canonicalを置く。無いと pages.dev 側のURLが正規と判断されうる。
 export const metadata: Metadata = {
   alternates: { canonical: `${SITE.origin}/` },
+    openGraph: ogFor(`${SITE.origin}/`),
 }
 
 export default function Home() {

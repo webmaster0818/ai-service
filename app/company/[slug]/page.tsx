@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { companies, findBySlug, slugOf, profileOf, CATEGORIES, labelOf, inCategory, SITE } from '@/lib/data'
 import Link from 'next/link'
-import { JsonLd, breadcrumb, companyLd } from '@/lib/seo'
+import { JsonLd, breadcrumb, companyLd, ogFor } from '@/lib/seo'
 
 export function generateStaticParams() {
   return companies().map((c) => ({ slug: slugOf(c) }))
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ? `${c.name}が公式サイトで掲げているのは${cs.slice(0, 3).map(labelOf).join('・')}ほか計${cs.length}領域です。料金と実績の公開状況を、確認日と出典URLを付して掲載しています。`
       : `${c.name}が公式サイトで掲げているのは${cats}です。料金と実績の公開状況を、確認日と出典URLを付して掲載しています。`,
     alternates: { canonical: `${SITE.origin}/company/${slug}/` },
+    openGraph: ogFor(`${SITE.origin}/company/${slug}/`),
   }
 }
 

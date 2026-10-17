@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { SITE, CATEGORIES } from '@/lib/data'
+import { OG_IMAGE } from '@/lib/seo'
 
 // ⚠️ ここに静的な alternates.canonical を書かない（子ページが継承して全ページがトップを指す事故になる）。
-// ⚠️ OG画像を差し替えたら v= を必ず上げる。/og-image.png は _headers で7日キャッシュさせており、
-//    同じURLのままだと Cloudflare のエッジに古い画像が残る（2026-10-02、差し替え後も
-//    独自ドメインだけ旧画像が返った。pages.dev は新しくなるので気づきにくい）。
-const OG_IMAGE = '/og-image.png?v=20261016'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.origin),
@@ -14,11 +11,11 @@ export const metadata: Metadata = {
   description: SITE.description,
   // OGPは1枚を全ページ共通で使う。会社ごとに画像を作ると、他社のロゴや版面を
   // 当サイトの成果物のように配ることになる。
+  // ⚠️ ここに openGraph.url を書かない（全ページが継承して og:url がトップを指す）。各ページで ogFor(canonical) を使う。
   openGraph: {
     type: 'website',
     siteName: SITE.name,
     locale: 'ja_JP',
-    url: `${SITE.origin}/`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: { card: 'summary_large_image', images: [OG_IMAGE] },

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { companies, disclosure, CATEGORIES, inCategory, specialists, focused, FOCUS_MAX, SITE } from '@/lib/data'
-import { JsonLd, breadcrumb } from '@/lib/seo'
+import { JsonLd, breadcrumb, ogFor } from '@/lib/seo'
 
 // ⚠️ 社数を文字で書かない。会社を足すと title・description・構造化データだけ古い数字が残る
 //    （2026-10-02、49社のまま66社になるところだった）。必ず companies().length から出す。
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     `AI開発・DXコンサル・LLMO対策などを掲げる${N}社の公式サイトを個別に確認し、料金と実績の開示状況を集計しています。集計方法と調査範囲を明記し、JSON・CSV形式で公開しています。`,
   alternates: { canonical: `${SITE.origin}/data/` },
+    openGraph: ogFor(`${SITE.origin}/data/`),
 }
 
 export default function Page() {
