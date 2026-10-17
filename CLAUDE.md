@@ -85,3 +85,8 @@
 - 手書きの priceNote 5件（LIG・Our AI面接・Advanced AI Partners・secondz・クラスメソッド）の「確認できていない／根拠にしない／確認できず」を です・ます に。**service-facts.json と category-keep.json の facts を同じ文に揃えた**（keep が `--rescore` で上書きするため片方だけ直すと戻る）。自動抽出の引用断片（「価格が異なるため、 お気軽にお問い合わせ」等）は出典の文言なので未変更
 - OG 画像を新文言で再生成し `v=20261016` に更新
 - precheck ✅ 全項目OK → source `6a334ea` → deploy `837186a` → 本番でトップ新文言・/category/ai-governance/・/company/mbsd/・/company/amour-inc/・/data/ 200・sitemap 111・新OG（157,046B）を確認
+
+### 2026-10-17（朝）
+- **GSC 表示半減（10/1〜7 749 → 10/8〜14 347）の切り分け: サイト側の事故なし**。減少 402 のうち 392 が単一クエリ「llmo対策コンサルバクリ株式会社」×`/company/bakuri/`（PC・掲載順位 10.6→10.9 で不変・クリック0）。このクエリは 9/30 から 1日 43〜100 表示が続き 10/9 に 19、10/10 に 5、以降0＝外部の検索需要（順位チェック等の機械的な検索とみられる）が止まっただけ。バクリを除くと 246 → 249 で横ばい。本番の robots・sitemap 111・canonical・noindex なし・主要ページ200・JSON-LD（Organization/BreadcrumbList）を確認
+- 期限切れ情報の点検: out/ と deploy の全114ページで、月表記つきタイトル（【2026年◯月】等）・キャンペーン・募集・開催日の記載なし。期限つき表現は AIセキュリティの「無料（先着10社限定）」1件のみで、公式 `aisecurity.co.jp/sixservice/quickairiskassessment/` で 10/17 時点も同じ記載を確認 → 変更なし・デプロイなし
+- 気づき: カテゴリページの `og:url` がトップ（`https://to-x-ai.com/`）になっている（canonical は正しい）
