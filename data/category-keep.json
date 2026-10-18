@@ -1,6 +1,9 @@
 {
  "_note": "手で確定した領域と根拠URL。fetch-service-facts.py が自動判定の結果にこれを上書きする（--rescore でも --new でも）。category-reject.json（外す）と対。自動巡回（トップ＋14ページ）の外にあるサービスページを根拠にした領域は、ここに書かないと --rescore で消える（2026-10-07 のソフトバンク ai-kenshu／ID chatbot で実測）。根拠はサービスページに限る（トップ・コラム・事例・プレスリリースは不可）。",
  "keep": {
+  "バクリ株式会社": {
+   "llmo": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/"
+  },
   "ソフトバンク株式会社": {
    "ai-governance": "https://www.softbank.jp/business/service/ai/governance-planning/",
    "ai-agent": "https://www.softbank.jp/business/service/ai/agentic-star/",
@@ -138,6 +141,9 @@
   }
  },
  "facts": {
+  "バクリ株式会社": {
+   "priceNote": "費用目安 月額 30万円〜 / 契約期間 3ヶ月〜"
+  },
   "株式会社Advanced AI Partners": {
    "priceDisclosed": false,
    "priceNote": "支援内容・企業規模によって大きく異なり、無料ヒアリング後に最適なプランと概算を提示（FAQ）。AIソリューションズは「固定価格パッケージ」と記載していますが、金額の公開は確認できませんでした",
