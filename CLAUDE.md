@@ -91,3 +91,10 @@
 - 期限切れ情報の点検: out/ と deploy の全114ページで、月表記つきタイトル（【2026年◯月】等）・キャンペーン・募集・開催日の記載なし。期限つき表現は AIセキュリティの「無料（先着10社限定）」1件のみで、公式 `aisecurity.co.jp/sixservice/quickairiskassessment/` で 10/17 時点も同じ記載を確認 → 変更なし・デプロイなし
 - 気づき: 下層ページ（category・company・data）の `og:url` がすべてトップ（`https://to-x-ai.com/`）になっている（canonical は正しい）
 - **og:url を各ページの canonical と同値に修正（coordinator 指示）**: layout の `openGraph.url` 固定値（トップ）を全ページが継承していた。`lib/seo.tsx` に `ogFor(url)` を新設し、トップ・data・category・company の各ページで canonical と同じ式を渡す（Next はページの openGraph が layout のものを丸ごと置き換えるので、画像・siteName も ogFor 内で入れる）。og:title・og:description は元からページ別。og:url≠canonical: 110 → 0（111ページ中）
+
+### 2026-10-18（朝）
+- **GSC 表示半減（10/2〜8 749 → 10/9〜15 310）の切り分け: サイト側の事故なし**（10/17 の結論と同じ原因）。減少 439 のうち 471（ページ別）が `/company/bakuri/`（508→37・掲載順位 10.6→10.5 で不変）、クエリでは「llmo対策コンサルバクリ株式会社」487→24。バクリを除くと 241→273 で増加。日別のバクリ除外値: 10/12〜15 は 55・38・49・52。10/16 31・10/17 12 は速報値（dataState=all）なので 10/20 頃に再確認（10/16 夜の全文言変更の影響を見る）
+- 本番点検: robots Allow・sitemap 111（deploy と一致）・sitemap 全111URLが 200／noindex 0／canonical 不一致 0・og:url ページ別
+- **バクリの内容改善（公式 `/service/ai-countermeasures_llmo-consulting/` を 10/18 に確認）**: 料金 「費用目安 月額 30万円」→ 公式表記「費用目安 月額 30万円〜 / 契約期間 3ヶ月〜」（〜 が抜けて固定額に読めていた）。LLMO対策の根拠URLをトップ → 同サービスページ（ページ名「AIO対策/LLMOコンサルティング」）。service-facts.json と category-keep.json（keep・facts）の両方に書いた。`--only バクリ` dry 差分0
+- 判断待ち（件数が変わるので未変更）: バクリの rag の根拠が AIO Lab のコラム `/aio-lab/gemini-seo/`（RAG はGoogleの仕組みの解説で、サービスではない）／aeo の根拠ページ（LLMOコンサル）に「AEO」の語がない（「AI検索最適化」のみ）
+- precheck ✅ 全項目OK → source `2865ec8` → deploy `c4bf8ba` → 本番 `/company/bakuri/` 新表記2・旧表記0・sitemap 111・opendata CSV 反映を確認
