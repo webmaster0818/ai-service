@@ -98,3 +98,11 @@
 - **バクリの内容改善（公式 `/service/ai-countermeasures_llmo-consulting/` を 10/18 に確認）**: 料金 「費用目安 月額 30万円」→ 公式表記「費用目安 月額 30万円〜 / 契約期間 3ヶ月〜」（〜 が抜けて固定額に読めていた）。LLMO対策の根拠URLをトップ → 同サービスページ（ページ名「AIO対策/LLMOコンサルティング」）。service-facts.json と category-keep.json（keep・facts）の両方に書いた。`--only バクリ` dry 差分0
 - 判断待ち（件数が変わるので未変更）: バクリの rag の根拠が AIO Lab のコラム `/aio-lab/gemini-seo/`（RAG はGoogleの仕組みの解説で、サービスではない）／aeo の根拠ページ（LLMOコンサル）に「AEO」の語がない（「AI検索最適化」のみ）
 - precheck ✅ 全項目OK → source `2865ec8` → deploy `c4bf8ba` → 本番 `/company/bakuri/` 新表記2・旧表記0・sitemap 111・opendata CSV 反映を確認
+
+### 2026-10-19（朝）
+- **GSC 再確認（07:00 点検の 693→299 と同じ指標＝日付合計・final、10/3〜9 vs 10/10〜16）**: 全体 693→299。`/company/bakuri/` 450→27（掲載順位 10.7→10.1）、クエリ「バクリ」436→26。**バクリを除くと 243→272（+12%）で減っていない**（10/18 の 241→273 と同じ傾向）。10/17 48・10/18 16 は速報値（all）のみ
+- **株式会社Ridge-iを追加（95→96社・112ページ・画像・音声認識AI 24→25・データ基盤 27→28）**。薄い領域（画像・音声認識AI）狙い
+  - 根拠 `/business/consulting/`（AI活用コンサルティング・AI開発サービス。外観検査AI「Ridge Inspection」等、AIモデル開発からシステム統合まで）＝ai-kaihatsu／`/business/generative/`（生成AI活用に向けたDX戦略の構築から設計・開発まで）＝dx-consul／`/business/satellite/`（人工衛星データAI解析サービス。衛星画像解析・物体検出、衛星データ解析を自動化するAIエージェント「Zeus」）＝gazo-onsei・ai-agent／`/business/data/`（データ基盤構築）＝data-kiban。rag（`/business` のAIラインナップ見出し「LLM・RAG・AIエージェント」のみ。本文は目的特化型LLMの開発・チューニング）は reject
+  - 料金はサービスページに記載なしで未確認、実績は `/business/consulting/` の開発事例。社名・設立 2016年7月29日・千代田区大手町・東証グロース（5572）はトップの会社概要
+  - `--new` 直後に `--only` dry の結果を service-facts.json に反映 → `--only` dry で差分0。全社一括 dry は実施せず
+  - バクリの rag・aeo（判断待ち）は未変更
