@@ -2386,5 +2386,31 @@
   "casesSource": "https://www.protiviti.com/jp-jp/artificial-intelligence-services",
   "pagesChecked": 15,
   "checkedAt": "2026-10-15"
+ },
+ {
+  "name": "株式会社Ridge-i",
+  "officialUrl": "https://ridge-i.com/",
+  "categories": [
+   "ai-kaihatsu",
+   "dx-consul",
+   "gazo-onsei",
+   "ai-agent",
+   "data-kiban"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://ridge-i.com/business/consulting/",
+   "dx-consul": "https://ridge-i.com/business/generative/",
+   "gazo-onsei": "https://ridge-i.com/business/satellite/",
+   "ai-agent": "https://ridge-i.com/business/satellite/",
+   "data-kiban": "https://ridge-i.com/business/data/"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://ridge-i.com/business/consulting/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-19"
  }
 ]
