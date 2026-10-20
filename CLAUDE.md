@@ -115,4 +115,4 @@
   - 料金は各ページ「個別にお見積り」→ priceDisclosed false（facts に登録）。実績は `/system/ai.html` の関連事例（ディップ・横浜銀行/東日本銀行）。社名・設立 2007年10月1日・千代田区平河町は `/corporate/outline.html`
   - 他に見た候補ページ: `/consulting/ai_risk_consulting.html`（生成AI活用システム リスク診断）・`/system/agent-365.html`（Microsoft Agent 365 の導入・統制支援。エージェント開発ではないため ai-agent にしない）
   - `--new` → keep/reject/facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
-- precheck ✅ 全項目OK → source `c5e960f` → deploy `7d6e7ea`
+- precheck ✅ 全項目OK → source `c5e960f` → deploy `7d6e7ea` → 本番（push から約10分で反映）`/company/lac/` 200・sitemap 113（ローカルと一致）・AIガバナンス「企業23社」・RAG「企業31社」・AI開発「企業49社」、旧値（22社/30社）0件。GSC sitemap 送信（00:29Z・pending。前回取得分は 112）
