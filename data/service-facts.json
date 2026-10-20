@@ -2412,5 +2412,27 @@
   "casesSource": "https://ridge-i.com/business/consulting/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-19"
+ },
+ {
+  "name": "株式会社ラック",
+  "officialUrl": "https://www.lac.co.jp/",
+  "categories": [
+   "ai-governance",
+   "ai-kaihatsu",
+   "rag"
+  ],
+  "categorySource": {
+   "ai-governance": "https://www.lac.co.jp/consulting/ai_guideline_rules.html",
+   "ai-kaihatsu": "https://www.lac.co.jp/system/ai.html",
+   "rag": "https://www.lac.co.jp/system/ai_sales_document_search.html"
+  },
+  "priceDisclosed": false,
+  "priceNote": "個別見積もりです（生成AI利用・開発ガイドライン策定支援・生成AI活用支援サービスの各ページの「価格」欄）。金額の掲載はありません",
+  "priceSource": "https://www.lac.co.jp/consulting/ai_guideline_rules.html",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.lac.co.jp/system/ai.html",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-20"
  }
 ]
