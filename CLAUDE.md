@@ -106,3 +106,13 @@
   - 料金はサービスページに記載なしで未確認、実績は `/business/consulting/` の開発事例。社名・設立 2016年7月29日・千代田区大手町・東証グロース（5572）はトップの会社概要
   - `--new` 直後に `--only` dry の結果を service-facts.json に反映 → `--only` dry で差分0。全社一括 dry は実施せず
   - バクリの rag・aeo（判断待ち）は未変更
+
+### 2026-10-20（朝）
+- **GSC 再確認（日付合計・ページ別でバクリ `/company/bakuri/` を除外）**: 確定値（final）は 10/17 まで。10/16 31・10/17 38（final）・10/18 34（速報・all）・10/19 22（速報・途中）。3日合計 10/16〜18 **103** は 10/13〜15 の 140 より −26% だが、10/10〜12 の 102 と同水準。10/13〜15 は `/company/aaip/` 17（10/13〜15 だけ 5・4・8）など一時的な山。週合計（バクリ除外）は 10/3〜9 245 → 10/10〜16 273。10/16 夜の文言変更・10/17 og:url 修正の後に下がり続ける形ではない。10/18 の final が出たら再確認
+  - バクリは別クエリ「aio対策llmoバクリ株式会社」で再増加（10/13〜15 6 → 10/16〜18 26）
+- **株式会社ラックを追加（96→97社・113ページ・AIガバナンス 22→23・RAG 30→31・AI開発 48→49）**。薄い領域（AIガバナンス）狙い
+  - 根拠 `/consulting/ai_guideline_rules.html`（生成AI利用・開発ガイドライン策定支援）＝ai-governance／`/system/ai.html`（生成AI活用支援サービス。生成AIをアプリケーションに組み込む・プロトタイプ開発からリリースまで）＝ai-kaihatsu／`/system/ai_sales_document_search.html`（生成AI 営業ドキュメント検索。社内資料を生成AIで検索、顧客のクラウド環境にカスタムメイドで構築）＝rag。ai-agent（LAC WATCH のコラム）は reject。dx-consul は付けていない（ai.html は開発の支援）
+  - 料金は各ページ「個別にお見積り」→ priceDisclosed false（facts に登録）。実績は `/system/ai.html` の関連事例（ディップ・横浜銀行/東日本銀行）。社名・設立 2007年10月1日・千代田区平河町は `/corporate/outline.html`
+  - 他に見た候補ページ: `/consulting/ai_risk_consulting.html`（生成AI活用システム リスク診断）・`/system/agent-365.html`（Microsoft Agent 365 の導入・統制支援。エージェント開発ではないため ai-agent にしない）
+  - `--new` → keep/reject/facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- precheck ✅ 全項目OK → source `c5e960f` → deploy `7d6e7ea`
