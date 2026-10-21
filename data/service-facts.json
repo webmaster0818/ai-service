@@ -2434,5 +2434,27 @@
   "casesSource": "https://www.lac.co.jp/system/ai.html",
   "pagesChecked": 15,
   "checkedAt": "2026-10-20"
+ },
+ {
+  "name": "EYストラテジー・アンド・コンサルティング株式会社",
+  "officialUrl": "https://www.ey.com/ja_jp/about-us/ey-strategy-and-consulting",
+  "categories": [
+   "data-kiban",
+   "dx-consul",
+   "ai-governance"
+  ],
+  "categorySource": {
+   "data-kiban": "https://www.ey.com/ja_jp/services/consulting/data-analytics-modernization",
+   "dx-consul": "https://www.ey.com/ja_jp/services/consulting/artificial-intelligence-consulting-services",
+   "ai-governance": "https://www.ey.com/ja_jp/services/consulting/ai-governance-services"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.ey.com/ja_jp/insights/consulting/practical-case-studies-of-ai-ready-data-preparation",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-21"
  }
 ]
