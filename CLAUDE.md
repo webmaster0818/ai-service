@@ -116,3 +116,13 @@
   - 他に見た候補ページ: `/consulting/ai_risk_consulting.html`（生成AI活用システム リスク診断）・`/system/agent-365.html`（Microsoft Agent 365 の導入・統制支援。エージェント開発ではないため ai-agent にしない）
   - `--new` → keep/reject/facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - precheck ✅ 全項目OK → source `c5e960f` → deploy `7d6e7ea` → 本番（push から約10分で反映）`/company/lac/` 200・sitemap 113（ローカルと一致）・AIガバナンス「企業23社」・RAG「企業31社」・AI開発「企業49社」、旧値（22社/30社）0件。GSC sitemap 送信（00:29Z・pending。前回取得分は 112）
+
+### 2026-10-21（朝）
+- **GSC 再確認（確定値 final は 10/18 まで。日付合計からクエリ「llmo対策コンサルバクリ株式会社」の表示を引いた値）: 横ばい〜増加で確定**。週合計 10/5〜11 **257** → 10/12〜18 **339**（+32%）。日別 10/12〜18 は 55・39・51・60・41・48・45（10/11 以降このクエリは0）。ページ別で `/company/bakuri/` を除いても 242 → 297。3日合計（ページ除外）10/10〜12 102・10/13〜15 139・10/16〜18 103 で、10/20 の速報値の結論と同じ。10/16 夜の文言変更・10/17 og:url 修正の後に下がり続ける形ではない。バクリの別クエリ（「aio対策llmoバクリ株式会社」等）は 10/15〜18 に 1日 8〜10。速報（all）は 10/19 43・10/20 18（途中）
+- **EYストラテジー・アンド・コンサルティング株式会社を追加（97→98社・114ページ・AIガバナンス 23→24・データ基盤 28→29・DXコンサル 61→62）**。薄い領域（AIガバナンス）狙い。デロイトで止まった「提供法人の特定」は、ページの「チーム」欄が同社の人だけのページに限ることで解決
+  - officialUrl は `ey.com/ja_jp/about-us/ey-strategy-and-consulting`（社名・所在地 千代田区有楽町・資本金 4億5千万円・人員数 4,429名（2026年5月1日現在）を確認）。slug は `ey`
+  - 根拠 `/services/consulting/ai-governance-services`（AIガバナンス態勢構築支援。生成AI利活用ガイドラインの整備、AI開発・運用のためのガバナンス。チームは同社リスク・コンサルティング パートナーのみ）＝ai-governance／`/services/consulting/artificial-intelligence-consulting-services`（AIコンサルティングサービス。AIの導入・拡張の要件定義から伴走。チームは同社 AI&データ）＝dx-consul／`/services/consulting/data-analytics-modernization`（AI&データ。「変化に強いデータ基盤の実装まで幅広く支援」。チームは全員同社）＝data-kiban
+  - 自動判定の根拠は差し替え: ai-governance・dx-consul は `/services/ai`（EY新日本の人も載るハブページ）、data-kiban は `/services/consulting/technology-solution-delivery`（SAP等の ERP 導入支援でデータ基盤ではない）だった
+  - 料金はサービスページに記載なしで未確認（priceDisclosed null）。実績は EYの事例 `/insights/consulting/practical-case-studies-of-ai-ready-data-preparation`（味の素のAIガバナンス・AI-Readyなデータ整備。プロジェクト担当は同社リスク・コンサルティング）
+  - `--new` → keep・facts 登録 → `--only` dry 差分0。全社一括 dry は実施せず。バクリの rag・aeo（判断待ち）は未変更
+- precheck ✅ 全項目OK → source `26e3974` → deploy `5b4e679` → 本番（push から約7分で反映）`/company/ey/` 200・sitemap 114（ローカルと一致）・AIガバナンス「企業24社」・データ基盤「企業29社」・DXコンサル「企業62社」、旧値（23/28/61社）0件・トップ 98社。GSC sitemap 送信（00:28Z・pending。前回取得分は 113）
