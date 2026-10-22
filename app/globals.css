@@ -65,3 +65,18 @@ table.data thead th { color: var(--ink); }
 
 footer.site { margin-top: 84px; border-top: 1px solid var(--line); background: var(--paper-2); padding: 32px 0 54px; }
 @media (max-width: 600px) { h1 { font-size: 23px; } .wrap { padding: 0 18px; } }
+
+/* 記事。本文は Markdown から生成するので、要素セレクタで整える */
+.article-list { display: grid; gap: 12px; margin: 20px 0; }
+.post-body { max-width: 760px; }
+.post-body h2 { margin-top: 52px; }
+.post-body ul, .post-body ol { padding-left: 1.4em; margin: 0 0 16px; }
+.post-body li { margin: 4px 0; }
+.post-body a { color: var(--accent); }
+.post-body blockquote { margin: 18px 0; padding: 4px 18px; border-left: 3px solid var(--line); color: var(--ink-soft); }
+.post-body table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 18px 0; display: block; overflow-x: auto; }
+.post-body th, .post-body td { border-bottom: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+.post-body th { background: var(--paper-2); white-space: nowrap; }
+.post-body code { font-size: 13px; background: var(--paper-2); padding: 1px 5px; }
+.sources { font-size: 13px; color: var(--ink-soft); padding-left: 1.4em; }
+.sources li { margin: 8px 0; word-break: break-all; }

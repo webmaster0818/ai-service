@@ -36,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav>
               {CATEGORIES.map((c) => <a key={c.slug} href={`/category/${c.slug}/`}>{c.label}</a>)}
               <a href="/data/">調査データ</a>
+              <a href="/articles/">記事</a>
             </nav>
           </div>
         </header>

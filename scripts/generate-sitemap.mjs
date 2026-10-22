@@ -19,10 +19,19 @@ const GENERIC = new Set(['www', 'about', 'corp', 'corporate', 'company', 'info',
 const slugOf = (c) => { try { const l = new URL(c.officialUrl).hostname.toLowerCase().split('.'); while (l.length > 2 && GENERIC.has(l[0])) l.shift(); return l[0] } catch { return c.name } }
 const urls = ['/', '/data/', ...CATS.filter(has).map(c => `/category/${c}/`), ...all.map(c => `/company/${slugOf(c)}/`)]
 const today = all.map(c => c.checkedAt).sort().pop()
+// 記事は前付けの updated（無ければ published）を lastmod にする。draft: true は出さない（lib/articles.ts と同じ規則）
+const ADIR = path.join(ROOT, 'content', 'articles')
+const arts = fs.existsSync(ADIR) ? fs.readdirSync(ADIR).filter(f => f.endsWith('.md')).map(f => {
+  const head = fs.readFileSync(path.join(ADIR, f), 'utf-8').split('\n---\n')[0]
+  const get = k => (head.match(new RegExp(`^${k}:\\s*(.*)$`, 'm')) || [])[1]?.trim()
+  return { url: `/articles/${f.replace(/\.md$/, '')}/`, lastmod: get('updated') || get('published'), draft: get('draft') === 'true' }
+}).filter(a => !a.draft) : []
+const lastmodOf = u => arts.find(a => a.url === u)?.lastmod || today
+if (arts.length) urls.push('/articles/', ...arts.map(a => a.url))
 
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map(u => `<url><loc>${ORIGIN}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n') + `\n</urlset>\n`)
+  urls.map(u => `<url><loc>${ORIGIN}${u}</loc><lastmod>${u === '/articles/' ? arts.map(a => a.lastmod).sort().pop() : lastmodOf(u)}</lastmod></url>`).join('\n') + `\n</urlset>\n`)
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`)
 
 const odir = path.join(OUT, 'opendata'); fs.mkdirSync(odir, { recursive: true })
