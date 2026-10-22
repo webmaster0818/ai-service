@@ -135,3 +135,9 @@
   - 料金・実績はサービスページで確認できず未確認（自動抽出の実績 `our-thinking.html` は記事一覧なので採らない）。`--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
   - 判断待ち: AI&Data ページの「Trustworthy AI」（AIガバナンスおよびリスクコントロールの方法論）は担当者が同社のみのページにあるが、詳細リンク先は3法人の `ai-governance.html`。これで ai-governance を付けるかは未決（今回は付けていない）
 - **「新規企業に company-facts が入らない」の原因**: `data/company-facts.json` は 9/5 の初回コミット以降一度も更新されておらず 8社のみ（99社中 91社が未登録＝会社ページの設立・従業員数・代表者欄と JSON-LD の foundingDate が出ない）。(1) 会社を足す手順（このファイル冒頭）に `fetch-company-facts.py` が入っていない (2) 同スクリプトに `--new` が無く、回すと全社を巡回し直してファイルを丸ごと書き換える (3) 抽出はラベル完全一致（設立/資本金/従業員数/所在地/上場/代表者）で3項目以上が条件・候補URLは12本まで。`--one` で試すと Ridge-i は取得できたが、ラック（`/corporate/outline.html` に届かない）とデロイト（「発足年月」「人員数」表記・法人ページが officialUrl）は取得0。各社の会社情報は作業ログに手で確認した値があるが、データには入っていない。ほか `lib/seo.tsx` の companyLd が `description` に代表者名を入れている
+
+### 2026-10-22（午後）記事コーナー新設・セキュリティ記事4本（MediaXAI 依頼「情報漏洩・脆弱性対応・PHP緊急脆弱性・Next.js・あるべき姿を記事化」・tomomi-2 指揮）
+- **記事コーナー `/articles/`**: `content/articles/<slug>.md`（前付け title/description/published/updated/related/sources。`sources:` は「- タイトル | URL」行。**sources が無いとビルドを止める**）→ `lib/articles.ts`（marked）→ `app/articles/page.tsx`・`[slug]/page.tsx`（Article＋BreadcrumbList。出典・関連領域・ほかの記事を自動で出す。本文 H1 は書かない）。sitemap は記事ごとに updated（無ければ published）を lastmod。`draft: true` は出さない。ヘッダーに「記事」
+- 原稿: ②PHP2Shell・③脆弱性対応の手順＝saburo-2、④Next.js と静的サイト・⑤AI時代のセキュリティ＝jiro-2。変換は `~/.openclaw/workspace/to-x-ai-articles/build-0205.py`・`build-0405.py`（原稿→前付け変換＋事実確認の修正を置換で適用）。①情報漏洩ニュースまとめ＝taro-2 待ち
+- 事実確認（サブエージェントで全出典を照合・約125件一致）で直したこと: 「公開前の攻撃の試み」は Amazon のみ／発見者は Wiz を含む複数／修正版公開時刻（23時）は予定として表記／memory_limit=-1 の緩和策を追加／CISA は「オフラインにすべき」・IPA は判断として区別／Next.js 55182 は関連脆弱性を含む最新修正版を React 告知で確認するよう追記／OWASP「確実に防げるか不明」はプロンプトインジェクションに限定
+- precheck ✅（description 160字超の2本を短縮）→ source d3ff836 → deploy 4226cf6 → 本番 sitemap 120・記事5URL 200 確認。GSC sitemap 送信 204・Indexing API 5/5 200
