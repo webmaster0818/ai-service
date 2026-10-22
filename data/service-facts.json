@@ -2456,5 +2456,27 @@
   "casesSource": "https://www.ey.com/ja_jp/insights/consulting/practical-case-studies-of-ai-ready-data-preparation",
   "pagesChecked": 15,
   "checkedAt": "2026-10-21"
+ },
+ {
+  "name": "合同会社デロイト トーマツ",
+  "officialUrl": "https://www.deloitte.com/jp/ja/about/group/deloitte-tohmatsu-llc.html",
+  "categories": [
+   "data-kiban",
+   "dx-consul",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "data-kiban": "https://www.deloitte.com/jp/ja/services/consulting/services/artificial-intelligence-and-data.html",
+   "dx-consul": "https://www.deloitte.com/jp/ja/services/consulting/services/artificial-intelligence-and-data.html",
+   "ai-kaihatsu": "https://www.deloitte.com/jp/ja/services/consulting/services/ai-factory.html"
+  },
+  "priceDisclosed": null,
+  "priceNote": null,
+  "priceSource": null,
+  "casesDisclosed": null,
+  "casesCount": null,
+  "casesSource": null,
+  "pagesChecked": 13,
+  "checkedAt": "2026-10-22"
  }
 ]
