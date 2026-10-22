@@ -126,3 +126,12 @@
   - 料金はサービスページに記載なしで未確認（priceDisclosed null）。実績は EYの事例 `/insights/consulting/practical-case-studies-of-ai-ready-data-preparation`（味の素のAIガバナンス・AI-Readyなデータ整備。プロジェクト担当は同社リスク・コンサルティング）
   - `--new` → keep・facts 登録 → `--only` dry 差分0。全社一括 dry は実施せず。バクリの rag・aeo（判断待ち）は未変更
 - precheck ✅ 全項目OK → source `26e3974` → deploy `5b4e679` → 本番（push から約7分で反映）`/company/ey/` 200・sitemap 114（ローカルと一致）・AIガバナンス「企業24社」・データ基盤「企業29社」・DXコンサル「企業62社」、旧値（23/28/61社）0件・トップ 98社。GSC sitemap 送信（00:28Z・pending。前回取得分は 113）
+
+### 2026-10-22（朝）
+- **合同会社デロイト トーマツを追加（98→99社・115ページ・データ基盤 29→30・DXコンサル 62→63・AI開発 49→50）**。10/15・10/16 に「提供法人を特定できない」で止まった件を、EY と同じ基準（ページの担当者欄が同社の人だけのサービスページに限る）で再確認
+  - officialUrl・社名は `deloitte.com/jp/ja/about/group/deloitte-tohmatsu-llc.html`（法人名 合同会社デロイト トーマツ／Deloitte Tohmatsu LLC・発足 2025年12月・人員数 約12,000名（子会社含む）・千代田区丸の内）。slug は `deloitte`
+  - 根拠 `/services/consulting/services/artificial-intelligence-and-data.html`（AI Strategy「AI戦略の策定」＝dx-consul、Analytics & Data Modernization「クラウドプラットフォームやビッグデータアーキテクチャを活用して、アナリティクスとデータのモダナイゼーションを支援」＝data-kiban。担当者10名全員が同社）／`/services/consulting/services/ai-factory.html`（AI Factory as a Service。PoC から本番環境での開発・業務適用、クイック基盤構築＝ai-kaihatsu。担当者2名とも同社）
+  - reject: ai-governance（`ai-governance.html` は今日も担当者が同社・有限責任監査法人トーマツ・デロイト トーマツ サイバー合同会社の3法人。`iso42001.html` も監査法人とサイバー）／ai-agent（自動判定の根拠が監査・保証業務の内部監査ページのニュース見出し）／chatbot（トップページ）
+  - 料金・実績はサービスページで確認できず未確認（自動抽出の実績 `our-thinking.html` は記事一覧なので採らない）。`--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+  - 判断待ち: AI&Data ページの「Trustworthy AI」（AIガバナンスおよびリスクコントロールの方法論）は担当者が同社のみのページにあるが、詳細リンク先は3法人の `ai-governance.html`。これで ai-governance を付けるかは未決（今回は付けていない）
+- **「新規企業に company-facts が入らない」の原因**: `data/company-facts.json` は 9/5 の初回コミット以降一度も更新されておらず 8社のみ（99社中 91社が未登録＝会社ページの設立・従業員数・代表者欄と JSON-LD の foundingDate が出ない）。(1) 会社を足す手順（このファイル冒頭）に `fetch-company-facts.py` が入っていない (2) 同スクリプトに `--new` が無く、回すと全社を巡回し直してファイルを丸ごと書き換える (3) 抽出はラベル完全一致（設立/資本金/従業員数/所在地/上場/代表者）で3項目以上が条件・候補URLは12本まで。`--one` で試すと Ridge-i は取得できたが、ラック（`/corporate/outline.html` に届かない）とデロイト（「発足年月」「人員数」表記・法人ページが officialUrl）は取得0。各社の会社情報は作業ログに手で確認した値があるが、データには入っていない。ほか `lib/seo.tsx` の companyLd が `description` に代表者名を入れている
