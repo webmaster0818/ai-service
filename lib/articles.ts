@@ -20,6 +20,9 @@ export type Article = {
   sources: Source[]
   html: string
   draft: boolean
+  // 冒頭の画像（public/ からのパス）。無い記事は出さない
+  image?: string
+  imageAlt?: string
 }
 
 const DIR = path.join(process.cwd(), 'content', 'articles')
@@ -35,7 +38,7 @@ function parse(file: string): Article {
     if (/^sources:\s*$/.test(line)) { inSources = true; continue }
     const s = line.match(/^\s*-\s*(.+?)\s*\|\s*(https?:\/\/\S+)\s*$/)
     if (inSources && s) { sources.push({ title: s[1], url: s[2] }); continue }
-    const kv = line.match(/^([a-z]+):\s*(.*)$/)
+    const kv = line.match(/^([a-zA-Z]+):\s*(.*)$/)
     if (kv) { inSources = false; meta[kv[1]] = kv[2].trim() }
   }
   for (const k of ['title', 'description', 'published']) {
@@ -53,6 +56,8 @@ function parse(file: string): Article {
     sources,
     html: marked.parse(m[2], { async: false }) as string,
     draft: meta.draft === 'true',
+    image: meta.image || undefined,
+    imageAlt: meta.imageAlt || undefined,
   }
 }
 

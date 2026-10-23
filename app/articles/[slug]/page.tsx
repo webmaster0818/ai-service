@@ -17,7 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: a.title,
     description: a.description,
     alternates: { canonical: url },
-    openGraph: { ...ogFor(url), type: 'article' as const },
+    openGraph: {
+      ...ogFor(url),
+      type: 'article' as const,
+      ...(a.image ? { images: [{ url: `${SITE.origin}${a.image}`, width: 1200, height: 630, alt: a.imageAlt || a.title }] } : {}),
+    },
   }
 }
 
@@ -43,6 +47,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       author: { '@type': 'Organization', name: `${SITE.name} 編集部`, url: `${SITE.origin}/` },
       publisher: { '@type': 'Organization', name: SITE.name, url: `${SITE.origin}/` },
       citation: a.sources.map((s) => s.url),
+      ...(a.image ? { image: `${SITE.origin}${a.image}` } : {}),
     },
   ]
 
@@ -54,6 +59,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <p className="note">
         公開 {a.published}{a.updated !== a.published ? `／更新 ${a.updated}` : ''}　{SITE.name} 編集部
       </p>
+      {a.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="post-hero" src={a.image} alt={a.imageAlt || a.title} width={1200} height={630} />
+      )}
       <div className="post-body" dangerouslySetInnerHTML={{ __html: a.html }} />
 
       <h2>出典</h2>

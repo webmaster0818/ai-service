@@ -77,6 +77,10 @@ footer.site { margin-top: 84px; border-top: 1px solid var(--line); background: v
 .post-body table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 18px 0; display: block; overflow-x: auto; }
 .post-body th, .post-body td { border-bottom: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
 .post-body th { background: var(--paper-2); white-space: nowrap; }
+.post-hero { display: block; width: 100%; max-width: 760px; height: auto; margin: 6px 0 28px; border: 1px solid var(--line); }
+.post-body figure { margin: 20px 0 24px; }
+.post-body figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.post-body figcaption { font-size: 12px; color: var(--ink-soft); margin-top: 6px; line-height: 1.6; }
 .post-body code { font-size: 13px; background: var(--paper-2); padding: 1px 5px; }
 .sources { font-size: 13px; color: var(--ink-soft); padding-left: 1.4em; }
 .sources li { margin: 8px 0; word-break: break-all; }
