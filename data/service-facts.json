@@ -2478,5 +2478,35 @@
   "casesSource": null,
   "pagesChecked": 13,
   "checkedAt": "2026-10-22"
+ },
+ {
+  "name": "株式会社課題解決プラットフォーム",
+  "officialUrl": "https://0120.co.jp/",
+  "categories": [
+   "llmo",
+   "ai-kaihatsu",
+   "ai-kenshu",
+   "gyomu-jidoka",
+   "chatbot",
+   "naisei-shien",
+   "rag"
+  ],
+  "categorySource": {
+   "llmo": "https://0120.co.jp/aio/",
+   "ai-kaihatsu": "https://0120.co.jp/ai-development/",
+   "ai-kenshu": "https://0120.co.jp/ai-training/",
+   "gyomu-jidoka": "https://0120.co.jp/ai-development/",
+   "chatbot": "https://0120.co.jp/ai-development/",
+   "naisei-shien": "https://0120.co.jp/ai-development/",
+   "rag": "https://0120.co.jp/ai-development/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対策（LLMO・AIO）はスタンダード月額300,000円・プレミアム月額500,000円（税抜・初期費用150,000円〜・最低6ヶ月）。AI受託開発は業務自動化ミニ開発300,000円〜・AI組込み開発800,000円〜、AI研修はライト（半日）150,000円/人〜（いずれも税抜）",
+  "priceSource": "https://0120.co.jp/aio/",
+  "casesDisclosed": false,
+  "casesCount": null,
+  "casesSource": "https://0120.co.jp/ai-development/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-23"
  }
 ]
