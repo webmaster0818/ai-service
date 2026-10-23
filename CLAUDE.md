@@ -141,3 +141,11 @@
 - 原稿: ②PHP2Shell・③脆弱性対応の手順＝saburo-2、④Next.js と静的サイト・⑤AI時代のセキュリティ＝jiro-2。変換は `~/.openclaw/workspace/to-x-ai-articles/build-0205.py`・`build-0405.py`（原稿→前付け変換＋事実確認の修正を置換で適用）。①情報漏洩ニュースまとめ＝taro-2 待ち
 - 事実確認（サブエージェントで全出典を照合・約125件一致）で直したこと: 「公開前の攻撃の試み」は Amazon のみ／発見者は Wiz を含む複数／修正版公開時刻（23時）は予定として表記／memory_limit=-1 の緩和策を追加／CISA は「オフラインにすべき」・IPA は判断として区別／Next.js 55182 は関連脆弱性を含む最新修正版を React 告知で確認するよう追記／OWASP「確実に防げるか不明」はプロンプトインジェクションに限定
 - precheck ✅（description 160字超の2本を短縮）→ source d3ff836 → deploy 4226cf6 → 本番 sitemap 120・記事5URL 200 確認。GSC sitemap 送信 204・Indexing API 5/5 200
+
+### 2026-10-23（朝）
+- **株式会社課題解決プラットフォームを追加（99→100社・123ページ・LLMO 29→30・生成AI研修 29→30・業務自動化 25→26・チャットボット 25→26・RAG 31→32・内製化 34→35・AI開発 50→51）**。AEO（22社・最も薄い）の候補を探す中で見つけた会社。AEO は付けていない
+  - officialUrl `0120.co.jp`（slug `0120`）。根拠 `/aio/`（AI検索対策（LLMO・AIO））＝llmo／`/ai-development/`（AI受託開発・業務自動化。社内ナレッジAI（RAG）・チャットボット・業務の自動化ツール、AI開発顧問の「社内メンバーの内製化支援」）＝ai-kaihatsu・rag・chatbot・gyomu-jidoka・naisei-shien／`/ai-training/`（法人向けAI研修・生成AI研修）＝ai-kenshu
+  - reject: aeo（/aio/ で「呼び名はLLMO・AIO・GEO・AEOなどに分かれ」と類義語の列挙のみ＝Faber と同じ扱い）／web-seisaku（自社実証事例の「外部のWeb制作会社には頼らず」）／ai-governance（研修FAQのAIリスク管理講習）／dx-consul（トップページ。FAQ では導入支援は研修と開発で行うと説明）
+  - 料金は公開（/aio/ スタンダード月30万・プレミアム月50万（税抜・初期15万〜・最低6ヶ月）、AI開発 30万〜/80万〜、研修 15万/人〜）を facts に。実績は /ai-development/ FAQ「お客様の導入事例は公開していません。公開している実績は、当社サイトでの実証」→ casesDisclosed false。社名・設立 2023年7月4日・西東京市は `/company/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- precheck ✅ 全項目OK → source `87a0faa` → deploy `d99bebf`
