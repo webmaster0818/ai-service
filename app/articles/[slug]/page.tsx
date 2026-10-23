@@ -30,7 +30,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const a = articleBySlug(slug)
   if (!a) notFound()
   const url = `${SITE.origin}/articles/${slug}/`
-  const others = allArticles().filter((x) => x.slug !== slug)
+  // ニュースまとめが増えても他の記事が「ほかの記事」から押し出されて孤立しないよう、
+  // 通常記事は全件・ニュースは最新3本と前後の回を出す
+  const all = allArticles()
+  const isNews = (s: string) => s.startsWith('news-')
+  const news = all.filter((x) => isNews(x.slug)).sort((x, y) => (x.slug < y.slug ? 1 : -1))
+  const i = news.findIndex((x) => x.slug === slug)
+  const pick = [
+    ...all.filter((x) => !isNews(x.slug)),
+    ...news.slice(0, 3),
+    ...(i >= 0 ? [news[i - 1], news[i + 1]] : []),
+  ].filter((x): x is NonNullable<typeof x> => !!x && x.slug !== slug)
+  const others = pick.filter((x, n) => pick.findIndex((y) => y.slug === x.slug) === n)
   const cats = a.related.map((s) => CATEGORIES.find((c) => c.slug === s)).filter((c): c is (typeof CATEGORIES)[number] => !!c)
 
   const ld = [
@@ -85,7 +96,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <>
           <h2>ほかの記事</h2>
           <div className="article-list">
-            {others.slice(0, 6).map((x) => (
+            {others.map((x) => (
               <a className="card" key={x.slug} href={`/articles/${x.slug}/`}>
                 <p className="t">{x.title}</p>
               </a>
