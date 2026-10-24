@@ -149,3 +149,12 @@
   - 料金は公開（/aio/ スタンダード月30万・プレミアム月50万（税抜・初期15万〜・最低6ヶ月）、AI開発 30万〜/80万〜、研修 15万/人〜）を facts に。実績は /ai-development/ FAQ「お客様の導入事例は公開していません。公開している実績は、当社サイトでの実証」→ casesDisclosed false。社名・設立 2023年7月4日・西東京市は `/company/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - precheck ✅ 全項目OK → source `87a0faa` → deploy `d99bebf`
+
+### 2026-10-24（朝）
+- **株式会社AliveCastを追加（100→101社・124ページ・AEO 22→23・Web制作 25→26）**。AEO（最も薄い領域）狙い。福岡市博多区のホームページ制作会社
+  - officialUrl `alivecast.co.jp`（slug `alivecast`）。根拠 `aeo-service.alivecast.co.jp/`（「福岡のAI検索最適化（AEO対策）サービス」。構造化データ・AIクローラー設定・E-E-A-T・FAQPage 等の実装と、ChatGPT・Gemini・Perplexity・Google AI Overview の引用測定）＝aeo／`/page/renewal.html`（ホームページリニューアル。標準単価に「AEO対策フルパッケージ 28万円」を含む）＝web-seisaku
+  - reject: llmo（「AI検索最適化」は AEO の言い換えとしてのみ。LLMO の語はコラム見出しのみ＝Advanced AI Partners と同じ扱い）／ai-kenshu（AEOページの実測表の質問例「AI研修・セミナーはどこが良い？」）／ai-kaihatsu（llms.txt 解説コラム）
+  - 料金は公開（AEO 無料診断・実装 10万円〜・月額 3万/10万/25万円〜（税別・目安）、リニューアル 10ページ規模 160万〜250万円）を facts に。実績は `/works`（件数の明記なし）。社名・設立 2005年8月17日・資本金 500万円は `/page/company.html`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+  - ⚠️ `fetch-service-facts.py --help` は引数を解釈せず**全社巡回の main() が走る**（今日誤って起動し、ファイル書き込み前に停止。データ変更なし）
+- precheck ✅ 全項目OK → source `5d93260` → deploy `8802105`
