@@ -2508,5 +2508,25 @@
   "casesSource": "https://0120.co.jp/ai-development/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-23"
+ },
+ {
+  "name": "株式会社AliveCast",
+  "officialUrl": "https://alivecast.co.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://aeo-service.alivecast.co.jp/",
+   "web-seisaku": "https://alivecast.co.jp/page/renewal.html"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO対策は無料診断 0円・実装パッケージ 10万円〜、月額プランはライト 月3万円〜・スタンダード 月10万円〜・フル運用 月25万円〜（税別・目安）。ホームページリニューアルは10ページ規模で160万〜250万円（標準単価の積算。AEO対策フルパッケージ 28万円を含む項目別の単価を公開）",
+  "priceSource": "https://aeo-service.alivecast.co.jp/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://alivecast.co.jp/works",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-24"
  }
 ]
