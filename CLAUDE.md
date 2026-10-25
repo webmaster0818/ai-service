@@ -158,3 +158,11 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
   - ⚠️ `fetch-service-facts.py --help` は引数を解釈せず**全社巡回の main() が走る**（今日誤って起動し、ファイル書き込み前に停止。データ変更なし）
 - precheck ✅ 全項目OK → source `5d93260` → deploy `8802105`
+
+### 2026-10-25（朝）
+- **株式会社フューチャースタンダードを追加（101→102社・128ページ・画像・音声認識AI 25→26・AIエージェント開発 37→38・AI開発 51→52）**。薄い領域（画像・音声認識AI。AEO 23・AIガバナンス 24 の次）狙い。台東区の映像解析AI（SCORER）の会社
+  - officialUrl `futurestandard.co.jp`（slug `futurestandard`）。根拠 `/business/ai/solutions`（映像解析AIソリューション・画像認識システム一覧。ナンバープレート認識・顔認証・転倒検知など27の解析技術）＝gazo-onsei／`/business/public`（公共向け映像AI事業。「映像AIモデルの開発・提供」、提供領域にAIアプリケーション開発・生成AI・LLM）＝ai-kaihatsu／`/business/ai/products/smartrounds`（防犯カメラAIエージェント Smart Rounds。プロンプトで解析条件を設定、導入設定まで同社）＝ai-agent（Ridge-i の Zeus と同じ扱い）
+  - reject: dx-consul（自動判定の根拠がトップページ。Craftive `/business/ai/craftive` は生成AIを使ったシステム受託開発でコンサルではない）
+  - 料金は公開（Smart Rounds 標準パッケージ 660万円（税込・カメラ40台構成例・年次 33万円）、交通量調査AIカメラ おまかせパック 55万円/台（税込・延べ2日間・関東））を facts に。受託開発の料金は未確認と明記。実績は `/cases`（件数の明記なし）。社名・設立 2014年3月4日・資本金 3,000万円・台東区台東は `/company`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- precheck ✅ 全項目OK → source `de1ee3d` → deploy `285892a` → 本番（push から約10分で反映）`/company/futurestandard/` 200・sitemap 128（ローカルと一致・新URL掲載）・画像・音声認識AI「企業26社」
