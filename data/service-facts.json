@@ -2528,5 +2528,27 @@
   "casesSource": "https://alivecast.co.jp/works",
   "pagesChecked": 15,
   "checkedAt": "2026-10-24"
+ },
+ {
+  "name": "株式会社フューチャースタンダード",
+  "officialUrl": "https://www.futurestandard.co.jp/",
+  "categories": [
+   "ai-kaihatsu",
+   "gazo-onsei",
+   "ai-agent"
+  ],
+  "categorySource": {
+   "ai-kaihatsu": "https://www.futurestandard.co.jp/business/public",
+   "gazo-onsei": "https://www.futurestandard.co.jp/business/ai/solutions",
+   "ai-agent": "https://www.futurestandard.co.jp/business/ai/products/smartrounds"
+  },
+  "priceDisclosed": true,
+  "priceNote": "映像解析パッケージ Smart Rounds（防犯カメラAIエージェント）標準パッケージ 6,600,000円（税込・カメラ40台／エッジPC1台／NVR1台の構成例。年次費用 330,000円（税込））、交通量調査AIカメラ おまかせパック 550,000円/台（税込・延べ2日間計測・関東エリア）。既存カメラ活用・長期計測などは個別見積もり。映像AIの受託開発の料金は公開を確認できませんでした",
+  "priceSource": "https://www.futurestandard.co.jp/business/ai/products/smartrounds",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.futurestandard.co.jp/cases",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-25"
  }
 ]
