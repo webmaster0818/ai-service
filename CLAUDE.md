@@ -166,3 +166,12 @@
   - 料金は公開（Smart Rounds 標準パッケージ 660万円（税込・カメラ40台構成例・年次 33万円）、交通量調査AIカメラ おまかせパック 55万円/台（税込・延べ2日間・関東））を facts に。受託開発の料金は未確認と明記。実績は `/cases`（件数の明記なし）。社名・設立 2014年3月4日・資本金 3,000万円・台東区台東は `/company`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - precheck ✅ 全項目OK → source `de1ee3d` → deploy `285892a` → 本番（push から約10分で反映）`/company/futurestandard/` 200・sitemap 128（ローカルと一致・新URL掲載）・画像・音声認識AI「企業26社」
+
+### 2026-10-26（朝）
+- **株式会社サイバーセキュリティクラウドを追加（102→103社・129ページ・AIガバナンス 24→25）**。薄い領域（AIガバナンス。AEO 23 の次）狙い。品川区のWebセキュリティ（WAF・脆弱性診断）の会社
+  - officialUrl `cscloud.co.jp`（slug `cscloud`）。根拠 `/ai-governance-assessment/`（AIガバナンスアセスメントサービス。社内のAI利用実態を調査し、セキュリティ・ガバナンス上のリスクを評価するコンサルティング。成果物は AI資産台帳・リスクヒートマップ・改善ロードマップ、標準期間 6〜8週間）＝ai-governance。専業（1領域）
+  - reject: dx-consul（根拠が `/service/` の自社製品一覧）／web-seisaku（根拠が `/partner/` の販売パートナー募集でパートナー候補に「Web制作会社」）
+  - ⚠️ `/service/` に載っている「AI MONBAN」（`ai-monban.com`・法人向けAIガバナンス基盤）は**提供元が株式会社DataSign**（同サイトのフッター・FAQ）なので根拠・料金に使っていない。「AI Optimeter」（`ai-optimeter.com`）は GEO 向けのアクセス解析ツールで AEO の明示なし＝aeo は付けていない
+  - 料金はアセスメントページに記載なし→ priceDisclosed null（「契約・見積の条件に応じて定める」の記載を priceNote に）。実績は同ページ「GRC領域の専門コンサルティングチーム 200社以上の企業支援実績」を、AIガバナンスに限った件数ではないと明記して casesCount に。社名・設立 2010年8月・品川区上大崎は `/about/company/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。バクリの rag・aeo・デロイト ai-governance（判断待ち）は未変更
+- precheck ✅ 全項目OK → source `df84203` → deploy `4faab75`
