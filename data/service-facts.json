@@ -2550,5 +2550,23 @@
   "casesSource": "https://www.futurestandard.co.jp/cases",
   "pagesChecked": 15,
   "checkedAt": "2026-10-25"
+ },
+ {
+  "name": "株式会社サイバーセキュリティクラウド",
+  "officialUrl": "https://www.cscloud.co.jp/",
+  "categories": [
+   "ai-governance"
+  ],
+  "categorySource": {
+   "ai-governance": "https://www.cscloud.co.jp/ai-governance-assessment/"
+  },
+  "priceDisclosed": null,
+  "priceNote": "AIガバナンスアセスメントサービスのページに料金の記載はありません（標準提供に含める範囲は契約・見積の条件に応じて定めると記載）",
+  "priceSource": "https://www.cscloud.co.jp/ai-governance-assessment/",
+  "casesDisclosed": true,
+  "casesCount": "GRC領域の専門コンサルティングチームの企業支援実績 200社以上（AIガバナンスアセスメントに限った件数ではありません）",
+  "casesSource": "https://www.cscloud.co.jp/ai-governance-assessment/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-26"
  }
 ]
