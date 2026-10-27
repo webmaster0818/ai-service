@@ -175,3 +175,11 @@
   - 料金はアセスメントページに記載なし→ priceDisclosed null（「契約・見積の条件に応じて定める」の記載を priceNote に）。実績は同ページ「GRC領域の専門コンサルティングチーム 200社以上の企業支援実績」を、AIガバナンスに限った件数ではないと明記して casesCount に。社名・設立 2010年8月・品川区上大崎は `/about/company/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。バクリの rag・aeo・デロイト ai-governance（判断待ち）は未変更
 - precheck ✅ 全項目OK → source `df84203` → deploy `4faab75`
+
+### 2026-10-27（朝）
+- **クーミル株式会社を追加（103→104社・133ページ・Web制作 26→27・LLMO 30→31）**。AEO／Web制作狙い。新宿区のホームページ制作会社。AEO は付けていない
+  - officialUrl `coomil.co.jp`（slug `coomil`）。根拠 `/service/llmo/`（LLMO・AIO対策コンサルティング。AI回答での言及・引用状況の調査、構造化データ等の基盤整備、運用代行）＝llmo／`/service/corporate-website/`（コーポレートサイト制作・企業サイト制作）＝web-seisaku。ほかに `/service/aio-website/`（AI検索（LLMO対策/AIO対策）に強いホームページ制作・50万/100万/200万円〜）もある
+  - reject: aeo（自動判定は /service/llmo/ の「AI回答」の一語。サービスページ・一覧・会社概要に AEO 表記なし＝仁頼と同じ扱い）／dx-consul（LLMO・AIO対策の定義文の「生成AIを活用した検索」）／naisei-shien（/service/wordpress/ の「Web運用の内製化・自走化」）
+  - 料金は公開（LLMO 診断15万・基盤整備30万・運用代行20万円〜、コーポレートサイト 70万/150万/300万円〜。いずれも「費用は一例」）を facts に。実績はトップ「対応実績は 800社以上」を Web制作・SEO 全体の数字と明記。社名・設立 2021年7月・資本金 500万円・新宿区西新宿は `/company/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず（夜間）
+- 見送り: デジタルベリー（`aio-taisaku.com`。トップの本文が短く今回は未精査＝次の AEO 候補）

@@ -2568,5 +2568,25 @@
   "casesSource": "https://www.cscloud.co.jp/ai-governance-assessment/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-26"
+ },
+ {
+  "name": "クーミル株式会社",
+  "officialUrl": "https://coomil.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "llmo": "https://coomil.co.jp/service/llmo/",
+   "web-seisaku": "https://coomil.co.jp/service/corporate-website/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "LLMO・AIO対策コンサルティング：診断 15万円〜・基盤整備 30万円〜・運用代行 20万円〜／コーポレートサイト制作：ベーシック 70万円〜・ビジネス 150万円〜・エンタープライズ 300万円〜（いずれも「費用は一例」と記載）",
+  "priceSource": "https://coomil.co.jp/service/llmo/",
+  "casesDisclosed": true,
+  "casesCount": "対応実績は 800社以上（Web制作・SEO・Webマーケティング全体の件数で、LLMO対策に限った件数ではありません）",
+  "casesSource": "https://coomil.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-27"
  }
 ]
