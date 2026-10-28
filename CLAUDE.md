@@ -183,3 +183,12 @@
   - 料金は公開（LLMO 診断15万・基盤整備30万・運用代行20万円〜、コーポレートサイト 70万/150万/300万円〜。いずれも「費用は一例」）を facts に。実績はトップ「対応実績は 800社以上」を Web制作・SEO 全体の数字と明記。社名・設立 2021年7月・資本金 500万円・新宿区西新宿は `/company/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず（夜間）
 - 見送り: デジタルベリー（`aio-taisaku.com`。トップの本文が短く今回は未精査＝次の AEO 候補）
+
+### 2026-10-28（朝）
+- **株式会社アドカルを追加（104→105社・137ページ・AEO 23→24・LLMO 31→32・DXコンサル 63→64・AI開発 52→53・AIエージェント開発 38→39・業務自動化 26→27・生成AI研修 30→31）**。AEO（最も薄い領域）狙い。千代田区紀尾井町の生成AI・LLMO・マーケティング支援の会社。候補は比較記事の掲載社名から拾い、公式サイトだけで確認した
+  - officialUrl `adcal-inc.com`（slug `adcal-inc`）。サービスページは別サブドメイン `genai.adcal-inc.com`（自動巡回は届かないので keep で指定）。根拠 `/llmo`（「LLMOコンサルティング（GEO/AIO/AEO/AI検索対策）」＝サービス名に AEO を明示。CREVIA と同じ扱い）＝aeo・llmo／`/`（生成AIコンサルティング・開発サービス）＝dx-consul・ai-kaihatsu／`/n8n`（n8n によるAIエージェント開発・業務の自動化）＝ai-agent・gyomu-jidoka／`/genai-training`（生成AI研修）＝ai-kenshu
+  - reject: naisei-shien（`/inhouse-genai` は広告運用・SEOのデジタルマーケティング内製化＝bon・クーミルと同じ扱い）／web-seisaku（根拠が llms.txt）。chatbot は生成AIコンサルのソリューション例「社内Q&Aのチャットボット作成」のみで付けていない
+  - 料金は公開（LLMO診断 20万円・継続 月20万円〜（税別）、研修 1名40万円（税抜・最低10名）、生成AI顧問 月5万/10万/30万円（税抜）、開発は都度見積もり）を facts に。実績は `/llmo` の事例（件数の明記なし）。社名・設立 2023年12月14日・親会社 株式会社ライダース・パブリシティは `/company-information/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 見送り: デジタルベリー（`aio-taisaku.com`。AIO対策のみで AEO の表記なし）、猫の手（`neko-te.co.jp`。AEO はグループ外メディアのレポートのみ）、Stock Value（AEO はトップのコラム見出しのみ。サービスは GEO/LLMO）
+

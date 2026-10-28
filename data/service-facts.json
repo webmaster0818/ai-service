@@ -2588,5 +2588,35 @@
   "casesSource": "https://coomil.co.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-27"
+ },
+ {
+  "name": "株式会社アドカル",
+  "officialUrl": "https://www.adcal-inc.com/",
+  "categories": [
+   "dx-consul",
+   "llmo",
+   "ai-agent",
+   "ai-kenshu",
+   "aeo",
+   "gyomu-jidoka",
+   "ai-kaihatsu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://genai.adcal-inc.com/",
+   "llmo": "https://genai.adcal-inc.com/llmo",
+   "ai-agent": "https://genai.adcal-inc.com/n8n",
+   "ai-kenshu": "https://genai.adcal-inc.com/genai-training",
+   "aeo": "https://genai.adcal-inc.com/llmo",
+   "gyomu-jidoka": "https://genai.adcal-inc.com/n8n",
+   "ai-kaihatsu": "https://genai.adcal-inc.com/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "LLMOコンサルティング：LLMO診断 20万円（スポット）・継続支援 月額20万円〜（税別）／生成AI研修：1名あたり 40万円（税抜・10時間程度・最低10名から）／生成AI顧問：月額5万円・10万円・30万円（税抜）。生成AIコンサルティング・開発と n8n によるAIエージェント開発は都度見積もりと記載しています",
+  "priceSource": "https://genai.adcal-inc.com/llmo",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://genai.adcal-inc.com/llmo",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-28"
  }
 ]

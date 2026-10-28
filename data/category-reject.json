@@ -230,6 +230,10 @@
    "aeo": "根拠が /service/llmo/ の「AI回答における自社・競合の調査」という説明文。サービスページに AEO の表記はなく、LLMO・AIO対策として提供している",
    "dx-consul": "根拠が /service/llmo/ の LLMO・AIO対策の定義文（「生成AIを活用した検索」）で、DX・AI導入のコンサルティングではない",
    "naisei-shien": "根拠が /service/wordpress/ の「Web運用の内製化・自走化までサポート」（Webサイト運用の引き継ぎ）で、AI・DXの内製化支援ではない"
+  },
+  "株式会社アドカル": {
+   "naisei-shien": "根拠が /service/ の一覧の「インハウス支援×生成AIによるDX」で、サービスページ（genai.adcal-inc.com/inhouse-genai）は広告運用・SEO対策などデジタルマーケティングの内製化支援。AI・DXの内製化支援ではない",
+   "web-seisaku": "根拠が /llms.txt（サイト説明用のテキストファイル）で、Web制作をサービスとして掲げるページはない。LLMO対策のFAQ「記事制作やページ改修まで依頼できますか」は既存ページの改善支援"
   }
  }
 }
