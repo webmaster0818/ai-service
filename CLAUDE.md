@@ -190,5 +190,5 @@
   - reject: naisei-shien（`/inhouse-genai` は広告運用・SEOのデジタルマーケティング内製化＝bon・クーミルと同じ扱い）／web-seisaku（根拠が llms.txt）。chatbot は生成AIコンサルのソリューション例「社内Q&Aのチャットボット作成」のみで付けていない
   - 料金は公開（LLMO診断 20万円・継続 月20万円〜（税別）、研修 1名40万円（税抜・最低10名）、生成AI顧問 月5万/10万/30万円（税抜）、開発は都度見積もり）を facts に。実績は `/llmo` の事例（件数の明記なし）。社名・設立 2023年12月14日・親会社 株式会社ライダース・パブリシティは `/company-information/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
-- 見送り: デジタルベリー（`aio-taisaku.com`。AIO対策のみで AEO の表記なし）、猫の手（`neko-te.co.jp`。AEO はグループ外メディアのレポートのみ）、Stock Value（AEO はトップのコラム見出しのみ。サービスは GEO/LLMO）
-
+- 見送り: デジタルベリー（`aio-taisaku.com`。AIO対策のみで AEO の表記なし）、猫の手（`neko-te.co.jp`。サービスページに AEO の表記なし。AEO は外部メディア（ecnomikata.com）掲載のレポートのみ）、Stock Value（AEO はトップのコラム見出しのみ。サービスは GEO/LLMO）
+- precheck ✅ 全項目OK → source `cf13f9b` → deploy `e0e6264`（CF 反映が20分止まったため空コミット `a4498d1` で再ビルド、その後約3分で反映）→ 本番 `/company/adcal-inc/` 200・sitemap 137（ローカルと一致・新URL掲載）・トップ 105社・AEO「企業24社」・LLMO「企業32社」ほか7領域の新件数を確認
