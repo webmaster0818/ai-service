@@ -2618,5 +2618,25 @@
   "casesSource": "https://genai.adcal-inc.com/llmo",
   "pagesChecked": 15,
   "checkedAt": "2026-10-28"
+ },
+ {
+  "name": "and media株式会社",
+  "officialUrl": "https://andmedia.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://andmedia.co.jp/aeo/",
+   "llmo": "https://andmedia.co.jp/aeo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO（AIO）対策：サポート費用 月額100,000円＋施策費用（AEO（AIO）設計 一括100,000円・構造化マークアップ実装 一括100,000円・外部メディア掲載 1掲載30,000円・プレスリリース配信 1本50,000円・SEO記事制作 1本30,000円。事例作成・SNS運用代行は要相談）。税込・税別の別は記載がなく、料金表では「ご相談時にご確認ください」としています",
+  "priceSource": "https://andmedia.co.jp/aeo/",
+  "casesDisclosed": true,
+  "casesCount": "累計支援実績 150社（SEO・AEO（AIO）支援全体の件数で、AEO対策に限った件数ではありません）",
+  "casesSource": "https://andmedia.co.jp/company/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-29"
  }
 ]

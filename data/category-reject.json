@@ -234,6 +234,13 @@
   "株式会社アドカル": {
    "naisei-shien": "根拠が /service/ の一覧の「インハウス支援×生成AIによるDX」で、サービスページ（genai.adcal-inc.com/inhouse-genai）は広告運用・SEO対策などデジタルマーケティングの内製化支援。AI・DXの内製化支援ではない",
    "web-seisaku": "根拠が /llms.txt（サイト説明用のテキストファイル）で、Web制作をサービスとして掲げるページはない。LLMO対策のFAQ「記事制作やページ改修まで依頼できますか」は既存ページの改善支援"
+  },
+  "and media株式会社": {
+   "web-seisaku": "根拠がトップページ。Web制作をサービスとして掲げるページはなく、/owned-lead/ はSEO集客のオウンドメディア運用、料金表の「ホームページ制作」は「その他のご相談」の要問い合わせのみ",
+   "dx-consul": "根拠がトップページ。DX・AI導入のコンサルティングではなく、SEO・AEO（AIO）支援の会社",
+   "data-kiban": "根拠が /price の「データ分析基盤構築」で、GA4・Looker Studio によるSEO効果測定の環境構築（/owned-lead/）。データ基盤の構築支援ではない",
+   "naisei-shien": "根拠が /ai-in-house-seo/ のSEO記事制作の内製化（制作OS）で、AI・DXの内製化支援ではない（bon・クーミル・アドカルと同じ扱い）",
+   "chatbot": "根拠が /feed/（ブログのRSS）で、チャットボットのサービスページはない"
   }
  }
 }
