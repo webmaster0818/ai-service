@@ -192,3 +192,12 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り: デジタルベリー（`aio-taisaku.com`。AIO対策のみで AEO の表記なし）、猫の手（`neko-te.co.jp`。サービスページに AEO の表記なし。AEO は外部メディア（ecnomikata.com）掲載のレポートのみ）、Stock Value（AEO はトップのコラム見出しのみ。サービスは GEO/LLMO）
 - precheck ✅ 全項目OK → source `cf13f9b` → deploy `e0e6264`（CF 反映が20分止まったため空コミット `a4498d1` で再ビルド、その後約3分で反映）→ 本番 `/company/adcal-inc/` 200・sitemap 137（ローカルと一致・新URL掲載）・トップ 105社・AEO「企業24社」・LLMO「企業32社」ほか7領域の新件数を確認
+
+### 2026-10-29（朝）
+- **and media株式会社を追加（105→106社・140ページ・AEO 24→25・LLMO 32→33）**。AEO（最も薄い領域）狙い。渋谷区恵比寿西の BtoB 向け SEO・AEO（AIO）支援会社。候補は比較記事（funnel-ai・it-trend 等）の掲載社名から拾い、公式サイトだけで確認した
+  - officialUrl `andmedia.co.jp`（slug `andmedia`）。根拠 `/aeo/`（「AEO（AIO）対策」サービス「and AEO」。AIでの推薦状況の分析、比較記事・プレスリリース・構造化データ・エンティティページ整理、AI推薦ログの監視）＝aeo・llmo（サービス名に AIO を明示。料金表 `/price` にも「LLMO（AIO）」メニューあり）
+  - reject: web-seisaku（根拠がトップ。`/owned-lead/` は SEO のオウンドメディア運用、料金表の「ホームページ制作」は「その他のご相談」の要問い合わせのみ）／dx-consul（トップ）／data-kiban（`/price` の「データ分析基盤構築」は GA4・Looker Studio の SEO 計測環境）／naisei-shien（`/ai-in-house-seo/` は SEO 記事制作の内製化＝bon・クーミル・アドカルと同じ扱い）／chatbot（根拠が `/feed/`）
+  - 料金は公開（`/aeo/`：サポート費用 月額10万円＋施策費用 AEO（AIO）設計 10万円・構造化マークアップ実装 10万円ほか。税込・税別の記載なし）を facts に。実績は `/company/` の「累計支援実績 150社」を SEO 全体の数字と明記。社名・設立 2019年4月15日・代表 鳥越 凌・渋谷区恵比寿西2-8-4 は `/company/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 見送り: Onono Corporation（`ononocorp.com`。AEO コンサルの記載が `/report/2026-05-08/`（お知らせ記事）のみでサービスページなし）、GMO NIKKO・ファーストイノベーション・ピースカンパニー・ウィルゲート・サクラサクマーケティング・NEXER・TierGEO・AIO総合研究所（調べたページに AEO 表記なし）
+- precheck ✅ 全項目OK → source `5812e4e` → deploy `3c1684c7`
