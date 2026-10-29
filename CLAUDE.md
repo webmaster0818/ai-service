@@ -200,4 +200,4 @@
   - 料金は公開（`/aeo/`：サポート費用 月額10万円＋施策費用 AEO（AIO）設計 10万円・構造化マークアップ実装 10万円ほか。税込・税別の記載なし）を facts に。実績は `/company/` の「累計支援実績 150社」を SEO 全体の数字と明記。社名・設立 2019年4月15日・代表 鳥越 凌・渋谷区恵比寿西2-8-4 は `/company/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り: Onono Corporation（`ononocorp.com`。AEO コンサルの記載が `/report/2026-05-08/`（お知らせ記事）のみでサービスページなし）、GMO NIKKO・ファーストイノベーション・ピースカンパニー・ウィルゲート・サクラサクマーケティング・NEXER・TierGEO・AIO総合研究所（調べたページに AEO 表記なし）
-- precheck ✅ 全項目OK → source `5812e4e` → deploy `3c1684c7`
+- precheck ✅ 全項目OK → source `5812e4e` → deploy `3c1684c7` → 本番（push から約18分で反映・空コミット不要）`/company/andmedia/` 200・sitemap 140（ローカルと一致・新URL掲載）・トップ 106社・AEO「企業25社」・LLMO「企業33社」。GSC sitemap 再送信 09:41（isPending）
