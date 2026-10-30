@@ -2638,5 +2638,27 @@
   "casesSource": "https://andmedia.co.jp/company/",
   "pagesChecked": 15,
   "checkedAt": "2026-10-29"
+ },
+ {
+  "name": "株式会社Cozies",
+  "officialUrl": "https://cozies.jp/",
+  "categories": [
+   "web-seisaku",
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://cozies.jp/service/ax/framer",
+   "aeo": "https://cozies.jp/service/marketing/geo",
+   "llmo": "https://cozies.jp/service/marketing/geo"
+  },
+  "priceDisclosed": null,
+  "priceNote": "LLMOコンサルティング（GEO/AEO/AIO/AI検索対策）のページに料金の記載はありません（自動抽出された「月額20万円」は広告運用代行のページの記載で、このサービスの料金ではありません）",
+  "priceSource": "https://cozies.jp/service/marketing/geo",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://cozies.jp/case",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-30"
  }
 ]

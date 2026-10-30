@@ -241,6 +241,10 @@
    "data-kiban": "根拠が /price の「データ分析基盤構築」で、GA4・Looker Studio によるSEO効果測定の環境構築（/owned-lead/）。データ基盤の構築支援ではない",
    "naisei-shien": "根拠が /ai-in-house-seo/ のSEO記事制作の内製化（制作OS）で、AI・DXの内製化支援ではない（bon・クーミル・アドカルと同じ扱い）",
    "chatbot": "根拠が /feed/（ブログのRSS）で、チャットボットのサービスページはない"
+  },
+  "株式会社Cozies": {
+   "gyomu-jidoka": "根拠がトップページ。メニューの「AI導入・業務自動化」のリンク先は /clickup（タスク管理SaaS ClickUp の導入・活用支援）で、業務自動化の構築をサービスとして説明するページはない",
+   "naisei-shien": "根拠が /service/marketing/ads（広告運用代行）の比較表「内製化も視野に入れられる」で、AI・DXの内製化支援ではない"
   }
  }
 }
