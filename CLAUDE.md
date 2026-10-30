@@ -201,3 +201,13 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り: Onono Corporation（`ononocorp.com`。AEO コンサルの記載が `/report/2026-05-08/`（お知らせ記事）のみでサービスページなし）、GMO NIKKO・ファーストイノベーション・ピースカンパニー・ウィルゲート・サクラサクマーケティング・NEXER・TierGEO・AIO総合研究所（調べたページに AEO 表記なし）
 - precheck ✅ 全項目OK → source `5812e4e` → deploy `3c1684c7` → 本番（push から約18分で反映・空コミット不要）`/company/andmedia/` 200・sitemap 140（ローカルと一致・新URL掲載）・トップ 106社・AEO「企業25社」・LLMO「企業33社」。GSC sitemap 再送信 09:41（isPending）
+
+### 2026-10-30（朝）
+- **株式会社Coziesを追加（106→107社・144ページ・AEO 25→26・LLMO 33→34・Web制作 27→28）**。AEO（最も薄い領域）狙い。文京区湯島のデジタルマーケティング会社。候補は比較記事（stockvalue・techsuite 等）と検索結果の社名から拾い、公式サイトだけで確認した
+  - officialUrl `cozies.jp`（slug `cozies`）。根拠 `/service/marketing/geo`（「LLMOコンサルティング(GEO/AEO/AIO/AI検索対策)」＝サービス名に AEO を明示。ページ内で AEO を「回答の出典に入る（ChatGPT検索 / Perplexity / AI Overview）」と LLMO と分けて定義。アドカル・CREVIA と同じ扱い）＝aeo・llmo／`/service/ax/framer`（Framerウェブ制作支援「AI時代のノーコードWeb制作ツール」「AX × Framer」）＝web-seisaku（クーミルの corporate-website と同じ扱い）。どちらも `/service` のサービス一覧からリンクあり
+  - reject: gyomu-jidoka（根拠がトップ。メニュー「AI導入・業務自動化」のリンク先は `/clickup`＝タスク管理SaaS ClickUp の導入・活用支援）／naisei-shien（`/service/marketing/ads` 広告運用代行の比較表「内製化も視野に入れられる」）
+  - 料金は LLMO コンサルのページに記載なし → priceDisclosed null（自動抽出の「月額20万円」は広告運用代行ページの値なので採らない）。実績は `/case`（3事例・広告運用/オウンドメディア。件数の明記なし）。社名・設立 2020年9月23日・文京区湯島2-2-1・代表 大野 真由美は `/about`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 次の AEO 候補: 株式会社Oz link（`ozlink.co.jp/aeo-lp/`「AIO/AEO対策コンサルティング」。AEO 専用LPで料金は個別見積もり。ただしトップ・`/service/` からのリンクなし＝独立LP。京都市中京区）
+- 見送り: デジタルアイデンティティ（`/service/seo/llmo/`）・メディアグロース（`/llmo-service/`）・センタード（`/service/llmo/`）・グラッドキューブ（トップ）＝いずれも AEO 表記なし
+- precheck ✅ 全項目OK → source `23b4f7f` → deploy `db583469`（news-20261030-08 は本文差分なし・ビルドハッシュのみ）
