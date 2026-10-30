@@ -210,4 +210,4 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 次の AEO 候補: 株式会社Oz link（`ozlink.co.jp/aeo-lp/`「AIO/AEO対策コンサルティング」。AEO 専用LPで料金は個別見積もり。ただしトップ・`/service/` からのリンクなし＝独立LP。京都市中京区）
 - 見送り: デジタルアイデンティティ（`/service/seo/llmo/`）・メディアグロース（`/llmo-service/`）・センタード（`/service/llmo/`）・グラッドキューブ（トップ）＝いずれも AEO 表記なし
-- precheck ✅ 全項目OK → source `23b4f7f` → deploy `db583469`（news-20261030-08 は本文差分なし・ビルドハッシュのみ）
+- precheck ✅ 全項目OK → source `23b4f7f` → deploy `db583469`（news-20261030-08 は本文差分なし・ビルドハッシュのみ）→ 本番（push から約8分で反映・空コミット不要）`/company/cozies/` 200・sitemap 144（ローカルと一致・新URL掲載）・トップ 107社・AEO「企業26社」・LLMO「企業34社」・Web制作「企業28社」（旧値 25/33/27社 0件）・news-20261030-08 200。GSC sitemap 再送信 09:31（isPending）
