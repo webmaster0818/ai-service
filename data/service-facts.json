@@ -2660,5 +2660,27 @@
   "casesSource": "https://cozies.jp/case",
   "pagesChecked": 15,
   "checkedAt": "2026-10-30"
+ },
+ {
+  "name": "株式会社LiKG",
+  "officialUrl": "https://likg.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://likg.co.jp/service/website-production/",
+   "aeo": "https://likg.co.jp/service/llmo-consulting/",
+   "llmo": "https://likg.co.jp/service/llmo-consulting/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "LLMOコンサルティング（GEO・AIO・AEO / AI検索対策）は LLMO診断プラン 10万円〜・LLMO×SEO コンサルティングプラン 30万円〜・EEAT強化記事制作 5万円/1記事（いずれも税別。調査費用は別途見積もり）。Webサイト制作はライトプラン 30万円〜（LP1ページ）・スタンダードプラン 120万円〜（サービスサイト10ページ）・アドバンスプラン 200万円〜（税込・税別の記載なし）",
+  "priceSource": "https://likg.co.jp/service/llmo-consulting/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://likg.co.jp/performance",
+  "pagesChecked": 15,
+  "checkedAt": "2026-10-31"
  }
 ]

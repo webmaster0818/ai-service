@@ -203,6 +203,11 @@
    "aeo": "https://cozies.jp/service/marketing/geo",
    "llmo": "https://cozies.jp/service/marketing/geo",
    "web-seisaku": "https://cozies.jp/service/ax/framer"
+  },
+  "株式会社LiKG": {
+   "aeo": "https://likg.co.jp/service/llmo-consulting/",
+   "llmo": "https://likg.co.jp/service/llmo-consulting/",
+   "web-seisaku": "https://likg.co.jp/service/website-production/"
   }
  },
  "facts": {
@@ -471,6 +476,14 @@
    "casesDisclosed": true,
    "casesCount": null,
    "casesSource": "https://cozies.jp/case"
+  },
+  "株式会社LiKG": {
+   "priceDisclosed": true,
+   "priceNote": "LLMOコンサルティング（GEO・AIO・AEO / AI検索対策）は LLMO診断プラン 10万円〜・LLMO×SEO コンサルティングプラン 30万円〜・EEAT強化記事制作 5万円/1記事（いずれも税別。調査費用は別途見積もり）。Webサイト制作はライトプラン 30万円〜（LP1ページ）・スタンダードプラン 120万円〜（サービスサイト10ページ）・アドバンスプラン 200万円〜（税込・税別の記載なし）",
+   "priceSource": "https://likg.co.jp/service/llmo-consulting/",
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://likg.co.jp/performance"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"
