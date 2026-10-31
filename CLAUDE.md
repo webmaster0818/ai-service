@@ -219,3 +219,4 @@
   - 料金は公開（LLMO診断 10万円〜・LLMO×SEO コンサル 30万円〜・EEAT強化記事 5万円/記事（税別・調査費用別途）、Webサイト制作 30万/120万/200万円〜（税表記なし））を facts に。実績は `/performance`（件数の明記なし）。社名・設立 2023年1月・資本金 100万円・代表 近藤 光生・渋谷区恵比寿西2-4-8 はトップの会社概要（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り（同じ比較記事の掲載社・調べたページに AEO 表記なし）: ブルースクレイ・ジャパン（トップ）・ホワイトリンク（トップ）・シード（トップ）・アイオイクス（`/service/seo-consulting/`）・SEデザイン・CoDigital・DCC（`/aio_service/`）・AtoZ design・ルーシー（`/services/ai-program`）・アマノート（`/service/content-marketing/llmo-consulting/`）・ステラジェント（`/ja/ai-search-dock`）。プエンテ「PUENTE AEO Booster」は AEO 対策 SaaS（ツール）で、支援会社ではないので未精査
+- precheck ✅ 全項目OK → source `11c513b` → deploy `3f43279a` → 本番（push から約6分で反映・空コミット不要）`/company/likg/` 200・sitemap 148（ローカルと一致・新URL掲載）・トップ 108社・AEO「企業27社」・LLMO「企業35社」・Web制作「企業29社」。計測リンク 0本（変更なし）。GSC sitemap 再送信 09:28（isPending）
