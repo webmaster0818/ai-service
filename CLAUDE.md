@@ -220,3 +220,13 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り（同じ比較記事の掲載社・調べたページに AEO 表記なし）: ブルースクレイ・ジャパン（トップ）・ホワイトリンク（トップ）・シード（トップ）・アイオイクス（`/service/seo-consulting/`）・SEデザイン・CoDigital・DCC（`/aio_service/`）・AtoZ design・ルーシー（`/services/ai-program`）・アマノート（`/service/content-marketing/llmo-consulting/`）・ステラジェント（`/ja/ai-search-dock`）。プエンテ「PUENTE AEO Booster」は AEO 対策 SaaS（ツール）で、支援会社ではないので未精査
 - precheck ✅ 全項目OK → source `11c513b` → deploy `3f43279a` → 本番（push から約6分で反映・空コミット不要）`/company/likg/` 200・sitemap 148（ローカルと一致・新URL掲載）・トップ 108社・AEO「企業27社」・LLMO「企業35社」・Web制作「企業29社」。計測リンク 0本（変更なし）。GSC sitemap 再送信 09:28（isPending）
+
+### 2026-11-01（朝）
+- **株式会社W-ENDLESSを追加（108→109社・149ページ・AEO 27→28・LLMO 35→36）**。AEO（最も薄い領域）狙い。大阪市西区新町（東京支社 恵比寿）のデジタルマーケティング（SEO・広告・オウンドメディア）会社。候補は大阪のAIO対策会社の比較記事（shopowner-support）の掲載社名から拾い、公式サイトだけで確認した
+  - officialUrl `www.w-endless.co.jp`（slug `w-endless`）。根拠 `/blog/servicelist/llmo-consulting/`（「LLMOコンサルティング（AIO/GEO/AEO・AI検索対策）」＝サービス名に AEO を明示。アドカル・Cozies・LiKG と同じ扱い。`/blog/servicelist/` のサービス一覧からリンクあり）＝aeo・llmo
+  - reject: web-seisaku（自動判定の根拠が `/message_history/` の沿革「創業時に…ホームページ制作などWEB領域の事業を展開」。現在のサービス一覧は LLMOコンサル・SEOコンサル・オウンドメディアのみ）
+  - 料金は公開（トライアル 30万円／3ヶ月・LLMO診断 15万円・LLMOコンサル 月30万円（プラン欄は最短3ヶ月、同ページ FAQ は「6か月から」と食い違い→両方を記載）・運用代行 月50万円〜・SEO＋LLMO 月80万円〜（税別））を facts に。実績は `/blog/achievement/`（SEO 支援事例。件数の明記なし）。社名・設立 2014年12月24日・資本金 900万円・従業員 74名（2025年11月時点）・代表 平峯 翔一は `/company/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+  - ⚠️ 今日も `fetch-service-facts.py -h` を誤って起動しかけ即停止（データ変更なし）。引数なしは全社巡回になるので、使い方は本ファイル冒頭を見る
+- 見送り: 売れるネット広告社（AEO施策「売れるAI最適化」の提供元・売れるAIマーケティング社は業務を SOBAプロジェクトへ移管済み。移管先の公式サイトに AEO 表記なし）、Tech Knowledge Base（Sighted は AEO 計測 SaaS。会社のサービスページは「AI認知モニタリング」で AEO 表記なし＝PUENTE と同じ扱い）、anadigi（ローカルビズ。AEO はプレスリリースのキーワードのみ・公式サイトに表記なし）、大阪の比較記事の他社（AIMA・AIOマーケティング・DY Growth Strategy・オレンジソフトウェア・S&Eパートナーズ・バリューエージェント・創希＝サービスページに AEO 表記なし。プレジャークリエーション `/llmo-ai/` は「LLMOはAIOやAEO、GEOなどと様々な呼ばれ方があります」の言い換え説明1回のみ＝サービスとしての AEO 明示ではない）
+- precheck ✅ 全項目OK → source `4f980b4` → deploy `583bada6`
