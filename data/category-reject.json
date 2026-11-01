@@ -251,6 +251,9 @@
    "data-kiban": "根拠が /service の CRM・ナーチャリング支援の紹介文「営業とマーケをつなぐデータ基盤構築」で、MA・CRM 運用の一部。データ基盤構築サービスのページはない（and media と同じ扱い）",
    "gyomu-jidoka": "根拠が /service/seo-consulting/ の SEO 支援事例（担当したコラムのテーマが「業務自動化」）",
    "naisei-shien": "根拠が /service/media-management/ のお悩み例「ライターチームを内製化」で、AI・DXの内製化支援ではない"
+  },
+  "株式会社W-ENDLESS": {
+   "web-seisaku": "根拠が /message_history/（沿革）の創業時の記述「風評対策、WEB広告、ホームページ制作などWEB領域の事業を展開」で、現在のサービス一覧（/blog/servicelist/：LLMOコンサル・SEOコンサル・オウンドメディア）にWeb制作のサービスページはない"
   }
  }
 }

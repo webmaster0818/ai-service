@@ -2682,5 +2682,25 @@
   "casesSource": "https://likg.co.jp/performance",
   "pagesChecked": 15,
   "checkedAt": "2026-10-31"
+ },
+ {
+  "name": "株式会社W-ENDLESS",
+  "officialUrl": "https://www.w-endless.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://www.w-endless.co.jp/blog/servicelist/llmo-consulting/",
+   "llmo": "https://www.w-endless.co.jp/blog/servicelist/llmo-consulting/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "LLMOコンサルティング（AIO/GEO/AEO・AI検索対策）はトライアルプラン 30万円／3ヶ月・LLMO診断プラン 15万円（単発）・LLMOコンサルティングプラン 月30万円（最短3ヶ月。同ページのFAQでは「月額30万円・6か月から」）・運用代行プラン 月50万円〜（最短3ヶ月）。SEO＋LLMOコンサルティングは月額80万円から（FAQ）。いずれも税別で、支援範囲やサイト規模により見積もりが異なる場合あり",
+  "priceSource": "https://www.w-endless.co.jp/blog/servicelist/llmo-consulting/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://www.w-endless.co.jp/blog/achievement/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-01"
  }
 ]
