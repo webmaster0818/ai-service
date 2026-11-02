@@ -242,3 +242,12 @@
 - 見送り: Owned（`/aio/` は AIO/LLMO 対策。AEO は FAQ の「LLMO・GEO・AEOと呼ばれることもあります」の言い換え1回のみ＝プレジャークリエーションと同じ扱い）、StockSun（`/service/llmo/`）・KAZET AI（`aio-llmo-overview.com`）・オロパス（`/brandchecker.html`＝SEOツールの機能）＝AEO 表記なし、テクロ（公式が 503）
 - precheck ✅ 全項目OK → source `8c3d63a` → deploy `188e670f`
 - 本番（push から約13分で反映・空コミット不要）`/company/triedge/` 200・sitemap 151（ローカルと一致・新URL掲載）・AEO「企業29社」・Web制作「企業30社」・生成AI研修「企業32社」・LLMO「企業36社」（変化なし）。計測リンク 0本
+
+### 2026-11-02（12:00 成長ルーチン）企業ページに「事業内容の答え」
+- **GSC（10/3〜10/30）**: バクリ系は全て `/company/bakuri/` 着地・クリック0（「llmo対策コンサルバクリ株式会社」437・10.8位／「aio対策llmoバクリ株式会社」112・10.0／「llmo対策 バクリ株式会社 コンサルティング」46・10.7／「llmo対策 aio バクリ株式会社」44・10.4 ほか）。「メディアリーチ」35・14.2／「株式会社メディアリーチ」26・17.6（`/company/mediareach/`）。「lionai」29・7.1（`/company/lion-ai/`）
+- **`data/company-summary.json` を新設**（slug ごとに title・h1・description・headline・rows[{label,text,source}]・checkedAt）。`lib/data.ts` の `summaryOf(slug)` → 企業ページはある企業だけ title/description/h1 を差し替え、h1 直下に出典つきの事業内容表を出す。fetch-service-facts.py はこのファイルを触らない（--rescore でも戻らない）。service-facts.json は未変更
+  - バクリ（公式 `/company/about/`・`/service/`・`/service/ai-countermeasures_llmo-consulting/` を 11/2 確認）: 事業内容・LLMO支援内容（1ヶ月目 戦略策定／2ヶ月目以降 内部最適化・llms.txt・構造化データ／外部施策／ナレッジ移管）・料金「月額 30万円〜 / 契約期間 3ヶ月〜」＋トライアル診断・6ヶ月〜推奨・依頼の流れ・所在地／代表。**rag・aeo（判断待ち）は未変更**
+  - メディアリーチ（`/company`・`/service`・`/seo-consulting/llmo-service`・`/seo-consulting`）: LLMO は DolphinX AIO 導入前提・金額は見積り・契約期間の縛りなし／SEO は月額20万円〜・6ヶ月以上
+  - ⚠️ 既存データの気づき（未変更・判断待ち）: メディアリーチの priceNote「月額20万円」は `/seo-consulting` の **SEOコンサルティング**の料金（LLMO は見積り）。LionAI は公式トップの会社案内で**運営会社が WONQ株式会社**（Lion AI はサービス名）で、トップに規模別の料金例（10万/30万/60万円・税抜・月20/60/120時間）があるのに priceDisclosed=false・社名「株式会社LionAI」。直すと社名表示・/data/ の集計が変わるので今回は触らず
+- title 変更: `/company/bakuri/`・`/company/mediareach/`（11/2）→ 11/9 まで title を変えない
+- precheck ✅ 151ページ全項目OK → source `8c28bcc` → deploy `73db1f5d`。sitemap・opendata は差分なし。計測リンク 0→0
