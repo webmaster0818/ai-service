@@ -231,3 +231,13 @@
 - 見送り: 売れるネット広告社（AEO施策「売れるAI最適化」の提供元・売れるAIマーケティング社は業務を SOBAプロジェクトへ移管済み。移管先の公式サイトに AEO 表記なし）、Tech Knowledge Base（Sighted は AEO 計測 SaaS。会社のサービスページは「AI認知モニタリング」で AEO 表記なし＝PUENTE と同じ扱い）、anadigi（ローカルビズ。AEO はプレスリリースのキーワードのみ・公式サイトに表記なし）、大阪の比較記事の他社（AIMA・AIOマーケティング・DY Growth Strategy・オレンジソフトウェア・S&Eパートナーズ・バリューエージェント・創希＝サービスページに AEO 表記なし。プレジャークリエーション `/llmo-ai/` は「LLMOはAIOやAEO、GEOなどと様々な呼ばれ方があります」の言い換え説明1回のみ＝サービスとしての AEO 明示ではない）
 - precheck ✅ 全項目OK → source `4f980b4` → deploy `583bada6`
 - 本番（push から約8分で反映・空コミット不要）`/company/w-endless/` 200・sitemap 149（ローカルと一致・新URL掲載）・トップ 109社・AEO「企業28社」・LLMO「企業36社」。計測リンク 0本（変更なし）
+
+### 2026-11-02（朝）
+- **株式会社トライエッジを追加（109→110社・151ページ・AEO 28→29・Web制作 29→30・生成AI研修 31→32）**。AEO（最も薄い領域）狙い。中央区銀座の BtoB マーケ・CRM（HubSpot ゴールド／Zoho 認定パートナー）支援会社で、2026年に AEO 事業を立ち上げ。候補は検索結果（「AEO対策」構造化データ・FAQ 実装の支援会社）から拾い、公式サイトだけで確認した
+  - officialUrl `triedge.co.jp`（slug `triedge`）。根拠 `/service/aeo`（「AEO対策（AI検索最適化）」構造化データ・FAQ設計・コンテンツ最適化・被引用〜商談化の測定）＝aeo／同ページの「Webサイト構築（AEO対応）」（作り直す形で実装まで当社。料金ページにも OPTION として掲載）＝web-seisaku／`/service/training`（ビジネスAI実践研修。Claude を実務で使う法人向け・2日間11時間）＝ai-kenshu。いずれも `/service` のサービス一覧からリンクあり
+  - reject: llmo（自動判定の根拠がトップの JSON-LD knowsAbout/serviceType。`/service/aeo` の本文は「AEO（AI検索最適化）」だけで LLMO は title タグのみ＝Advanced AI Partners と同じ扱い）
+  - 料金は公開（`/service/price`：AEO基盤 初期10万円＋月35万円・最低6ヶ月／可視化つき月45万円／Webサイト構築（AEO対応）月15万円〜／研修 1名40万円。税込・税別の記載なし）を facts に。実績は `/case`（HubSpot・Zoho の CRM 事例が中心）と「支援実績 140社超（2026年8月時点）」を全社の数字と明記。社名・設立 2011年9月21日・代表 中野 三四郎・中央区銀座1-12-4・法人番号 2011401016037 は `/company`（company-facts は判断待ちのため未登録）
+  - `/service/ai-staff`（AI社員＝チャット常駐・CRM連携・承認フローつきの業務AI）は「エージェント」の語がなく自動判定にも掛からないため ai-agent は付けていない（判断待ち）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 見送り: Owned（`/aio/` は AIO/LLMO 対策。AEO は FAQ の「LLMO・GEO・AEOと呼ばれることもあります」の言い換え1回のみ＝プレジャークリエーションと同じ扱い）、StockSun（`/service/llmo/`）・KAZET AI（`aio-llmo-overview.com`）・オロパス（`/brandchecker.html`＝SEOツールの機能）＝AEO 表記なし、テクロ（公式が 503）
+- precheck ✅ 全項目OK → source `8c3d63a` → deploy `188e670f`
