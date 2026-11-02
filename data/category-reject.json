@@ -254,6 +254,9 @@
   },
   "株式会社W-ENDLESS": {
    "web-seisaku": "根拠が /message_history/（沿革）の創業時の記述「風評対策、WEB広告、ホームページ制作などWEB領域の事業を展開」で、現在のサービス一覧（/blog/servicelist/：LLMOコンサル・SEOコンサル・オウンドメディア）にWeb制作のサービスページはない"
+  },
+  "株式会社トライエッジ": {
+   "llmo": "自動判定の根拠がトップ（JSON-LD の knowsAbout・serviceType に「LLMO対策」）。サービスページ /service/aeo は本文が「AEO（AI検索最適化）」のみで、LLMO の語は title タグにしかない（Advanced AI Partners と同じく AI検索最適化は AEO の見出しラベル扱い）"
   }
  }
 }

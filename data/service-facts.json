@@ -2702,5 +2702,27 @@
   "casesSource": "https://www.w-endless.co.jp/blog/achievement/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-01"
+ },
+ {
+  "name": "株式会社トライエッジ",
+  "officialUrl": "https://triedge.co.jp/",
+  "categories": [
+   "aeo",
+   "ai-kenshu",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://triedge.co.jp/service/aeo",
+   "ai-kenshu": "https://triedge.co.jp/service/training",
+   "web-seisaku": "https://triedge.co.jp/service/aeo"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO対策（AEO基盤）：初期費用（STEP0：診断・測定基盤の構築）100,000円＋月額350,000円（最低契約期間6ヶ月）。AI検索可視化オプションを足すと月額450,000円。Webサイト構築（AEO対応・作り直しでの実装）は月額150,000円〜（初期費用なし・最低6ヶ月）。ビジネスAI実践研修は1名400,000円（3〜10名・オフライン2日間計11時間）。無料AEO診断あり。税込・税別の記載なし",
+  "priceSource": "https://triedge.co.jp/service/price",
+  "casesDisclosed": true,
+  "casesCount": "支援実績 140社超（2026年8月時点。HubSpot・Zoho の CRM 導入支援を含む全社の数字で、AEO対策に限った件数ではありません）",
+  "casesSource": "https://triedge.co.jp/case",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-02"
  }
 ]
