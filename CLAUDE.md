@@ -241,3 +241,4 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 見送り: Owned（`/aio/` は AIO/LLMO 対策。AEO は FAQ の「LLMO・GEO・AEOと呼ばれることもあります」の言い換え1回のみ＝プレジャークリエーションと同じ扱い）、StockSun（`/service/llmo/`）・KAZET AI（`aio-llmo-overview.com`）・オロパス（`/brandchecker.html`＝SEOツールの機能）＝AEO 表記なし、テクロ（公式が 503）
 - precheck ✅ 全項目OK → source `8c3d63a` → deploy `188e670f`
+- 本番（push から約13分で反映・空コミット不要）`/company/triedge/` 200・sitemap 151（ローカルと一致・新URL掲載）・AEO「企業29社」・Web制作「企業30社」・生成AI研修「企業32社」・LLMO「企業36社」（変化なし）。計測リンク 0本
