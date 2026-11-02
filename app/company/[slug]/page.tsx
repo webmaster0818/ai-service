@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { companies, findBySlug, slugOf, profileOf, CATEGORIES, labelOf, inCategory, SITE } from '@/lib/data'
+import { companies, findBySlug, slugOf, profileOf, summaryOf, CATEGORIES, labelOf, inCategory, SITE } from '@/lib/data'
 import Link from 'next/link'
 import { JsonLd, breadcrumb, companyLd, ogFor } from '@/lib/seo'
 
@@ -14,6 +14,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!c) return {}
   const cs = c.categories || []
   const cats = cs.map(labelOf).join('・')
+  // 社名＋サービス名で検索されている企業は、data/company-summary.json の title・description を使う
+  const sm = summaryOf(slug)
+  if (sm) return {
+    title: sm.title,
+    description: sm.description,
+    alternates: { canonical: `${SITE.origin}/company/${slug}/` },
+    openGraph: ogFor(`${SITE.origin}/company/${slug}/`),
+  }
   return {
     title: `${c.name}が公式サイトで掲げている領域と開示状況`,
     // ⚠️ 領域を14に増やしたら、全部並べる書き方では説明文が120字を超えた（17社）。
@@ -46,6 +54,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const c = findBySlug(slug)
   if (!c) notFound()
   const p = profileOf(c.name)
+  const sm = summaryOf(slug)
   const cats = c.categories || []
   const isSpecialist = cats.length === 1
 
@@ -68,7 +77,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <article>
       <JsonLd data={ld} />
       <p className="note" style={{ marginTop: 28 }}><a href="/">トップ</a> ／ {c.name}</p>
-      <h1>{c.name}が公式サイトで掲げている領域</h1>
+      <h1>{sm ? sm.h1 : `${c.name}が公式サイトで掲げている領域`}</h1>
+
+      {sm && (<>
+        <p className="lead">{sm.headline}</p>
+        <div className="scroll-x">
+          <table className="data">
+            <tbody>
+              {sm.rows.map((r) => (
+                <tr key={r.label}>
+                  <th>{r.label}</th>
+                  <td>
+                    {r.text}
+                    <div className="src">出典：<a href={r.source} rel="noopener noreferrer nofollow" target="_blank">{r.source}</a></div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="note">確認日：{sm.checkedAt}（公式サイトの記載をもとに当サイトがまとめています。最新の内容・料金は公式サイトでご確認ください）</p>
+      </>)}
 
       <div className="verdict">
         <div className="tag">確認結果</div>

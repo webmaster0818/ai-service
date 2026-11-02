@@ -1,0 +1,76 @@
+{
+ "_note": "企業ページの冒頭に「事業内容の答え」を出す企業だけを手で書く（slug ごと）。値はすべて公式サイトのサービスページ・会社概要で checkedAt に確認したもの。fetch-service-facts.py はこのファイルを読み書きしない。title を変えたら 7日間は変えない",
+ "bakuri": {
+  "title": "バクリ株式会社のLLMO対策・AIO対策コンサルティングの内容と料金",
+  "h1": "バクリ株式会社のLLMO対策（AIO対策）コンサルティングと事業内容",
+  "description": "バクリ株式会社（渋谷区神宮前）は、AIO対策／LLMOコンサルティングとマーケティング内製化支援を提供しています。支援内容（戦略策定・サイト内部の実装・外部施策・内製化）、費用目安 月額30万円〜／契約期間3ヶ月〜を公式サイトの記載から掲載しています。",
+  "headline": "バクリ株式会社は、ChatGPT・Gemini・Google AI Overview 向けの「AIO対策 / LLMOコンサルティング」と、マーケティングの内製化支援を提供している企業です。",
+  "rows": [
+   {
+    "label": "事業内容",
+    "text": "会社概要の記載は「インハウス、内製化支援、Web担当サポート、Web担当支援、Webコンサルティング」です。サービス一覧には、マーケティング内製化支援・AIO対策 / LLMOコンサルティング・CMOコンサルティング支援・Webグロース支援・改善コンサルティングが掲載されています。",
+    "source": "https://www.bakuri.co.jp/company/about/"
+   },
+   {
+    "label": "LLMO対策の支援内容",
+    "text": "1ヶ月目に戦略策定・基盤構築（競合分析、対策するプロンプトの調査・策定、ロードマップとモニタリングダッシュボードの作成）を行い、2ヶ月目以降は、サイト内部の最適化（AIが理解しやすいサイト構造への改修、llms.txt の設置、構造化データの最適化）、外部施策（Wikipedia 等の外部データベースの構築、プレスリリースや SNS を通じたサイテーション獲得）、運用・モニタリングと社内へのナレッジ移管を行うと記載されています。",
+    "source": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/"
+   },
+   {
+    "label": "料金・契約期間",
+    "text": "費用目安は「月額 30万円〜 / 契約期間 3ヶ月〜」です。単月の「トライアル診断プラン」があり、よくある質問では、本格的な支援プランは6ヶ月〜を推奨すると記載されています。",
+    "source": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/"
+   },
+   {
+    "label": "依頼の流れ",
+    "text": "お問い合わせ後、2営業日以内に連絡・ヒアリング → 簡易AIO診断と戦略ロードマップの提示 → 提案・見積り → 秘密保持契約・業務委託契約の締結、の順です。",
+    "source": "https://www.bakuri.co.jp/service/ai-countermeasures_llmo-consulting/"
+   },
+   {
+    "label": "所在地・代表者",
+    "text": "〒150-0001 東京都渋谷区神宮前 1-5-8 神宮前タワービルディング 14 階／代表取締役 荒川 大史",
+    "source": "https://www.bakuri.co.jp/company/about/"
+   }
+  ],
+  "checkedAt": "2026-11-02"
+ },
+ "mediareach": {
+  "title": "株式会社メディアリーチのSEO・LLMO（AIO）コンサルティングの内容と料金",
+  "h1": "株式会社メディアリーチのSEO・LLMO（AIO）コンサルティングと事業内容",
+  "description": "株式会社メディアリーチ（大阪市北区）は、SEOコンサルティングとLLMO（AIO）コンサルティング、自社SaaS「DolphinX」を提供しています。支援内容、料金（SEOは月額20万円〜・LLMOは見積り）、所在地を公式サイトの記載から掲載しています。",
+  "headline": "株式会社メディアリーチは、SEOコンサルティングと、自社ツール「DolphinX AIO」の計測データを使う LLMO（AIO）コンサルティングを提供している企業です。",
+  "rows": [
+   {
+    "label": "事業内容",
+    "text": "会社情報の記載は「デジタルマーケティング事業、メディア事業、SaaS事業」です。サービス一覧には、SEOコンサルティング・SEO内製化・インハウス支援・法人向けSEO研修・LLMO（AIO）コンサルティング・LLMO調査・戦略策定・AIO・LLMO内製化支援と、SaaS の DolphinX SEO／DolphinX AIO が掲載されています。",
+    "source": "https://mediareach.co.jp/service"
+   },
+   {
+    "label": "LLMO対策の支援内容",
+    "text": "DolphinX AIO の日次計測（ChatGPT・Gemini・Perplexity 等での自社・競合の推薦率・引用率）をもとに、想定プロンプト20〜40件の設計・登録、毎月の優先改善方針の提示、作成物へのレビュー、構造化データ（JSON-LD）の実装アドバイス、定例MTG・レポーティングを行うと記載されています。記事制作・外部メディアへの掲載打診・PR TIMES リリースの作成は実行代行オプションです。本サービスは DolphinX AIO の導入が前提です。",
+    "source": "https://mediareach.co.jp/seo-consulting/llmo-service"
+   },
+   {
+    "label": "LLMO対策の料金・契約",
+    "text": "LLMO（AIO）コンサルティングの費用は、よくある質問で「規模・対応AI範囲・ご依頼メニューによって変動」「無料相談でお見積り」と記載されており、金額の掲載はありません。契約は「違約金なしで途中解約も自由」「契約期間の縛りなし」と記載されています。",
+    "source": "https://mediareach.co.jp/seo-consulting/llmo-service"
+   },
+   {
+    "label": "SEOコンサルティングの料金",
+    "text": "SEOコンサルティング（継続支援）は「月額20万円〜・6ヶ月以上」、大規模サイト（DB型）SEOコンサルティングは「月額40万円〜・6ヶ月以上」と掲載されています。",
+    "source": "https://mediareach.co.jp/seo-consulting"
+   },
+   {
+    "label": "依頼の流れ",
+    "text": "お問い合わせ（1営業日以内に返信）→ ヒアリング・無料相談（60〜90分・オンライン可）→ 提案 → 契約 → キックオフで支援開始、の順です。",
+    "source": "https://mediareach.co.jp/seo-consulting/llmo-service"
+   },
+   {
+    "label": "所在地・代表者",
+    "text": "大阪本社 〒530-0012 大阪府大阪市北区芝田2-8-11 共栄ビル3F（ほかに大阪 中津・東京 渋谷区道玄坂、米国・英国に拠点）／代表取締役 松村 俊樹／設立 2021年12月（創業 2015年10月）",
+    "source": "https://mediareach.co.jp/company"
+   }
+  ],
+  "checkedAt": "2026-11-02"
+ }
+}

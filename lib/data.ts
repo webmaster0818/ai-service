@@ -153,3 +153,18 @@ export const SITE = {
   description:
     'AI開発・DXコンサル・LLMO対策などを手がける企業について、各社の公式サイトを個別に確認し、料金と実績の開示状況を横断的に集計しています。他社の比較記事は情報源としていません。',
 }
+
+/** 企業ページ冒頭の「事業内容の答え」（data/company-summary.json に手で書いた企業だけ）。無ければ undefined。 */
+export type CompanySummary = {
+  title: string
+  h1: string
+  description: string
+  headline: string
+  rows: { label: string; text: string; source: string }[]
+  checkedAt: string
+}
+let scache: Record<string, CompanySummary> | null = null
+export function summaryOf(slug: string): CompanySummary | undefined {
+  if (!scache) scache = read<Record<string, CompanySummary>>('company-summary.json')
+  return slug.startsWith('_') ? undefined : scache![slug]
+}
