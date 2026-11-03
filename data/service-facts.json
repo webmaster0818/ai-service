@@ -2724,5 +2724,39 @@
   "casesSource": "https://triedge.co.jp/case",
   "pagesChecked": 15,
   "checkedAt": "2026-11-02"
+ },
+ {
+  "name": "株式会社ウェスタナ",
+  "officialUrl": "https://www.westana.co.jp/",
+  "categories": [
+   "aeo",
+   "ai-kaihatsu",
+   "web-seisaku",
+   "dx-consul",
+   "ai-kenshu",
+   "gyomu-jidoka",
+   "llmo",
+   "rag",
+   "chatbot"
+  ],
+  "categorySource": {
+   "aeo": "https://www.westana.co.jp/web-marketing/aeo/",
+   "ai-kaihatsu": "https://www.westana.co.jp/ai/development/",
+   "web-seisaku": "https://www.westana.co.jp/ai/nanopico/",
+   "dx-consul": "https://www.westana.co.jp/ai/consulting/",
+   "ai-kenshu": "https://www.westana.co.jp/ai/ai-seminar/",
+   "gyomu-jidoka": "https://www.westana.co.jp/ai/consulting/",
+   "llmo": "https://www.westana.co.jp/web-marketing/aeo/",
+   "rag": "https://www.westana.co.jp/ai/development/",
+   "chatbot": "https://www.westana.co.jp/ai/development/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO・AIO対策は一律の金額なし（無料診断のうえ範囲を相談）。AIコンサルティング 月額10万円〜（税別）／AI顧問サービス 月額50,000円（税別・最低6ヶ月・月1回2時間）／AIシステム開発 ライト10万円〜・スタンダード50万円〜・エンタープライズ（RAG構築等）要相談（税別・目安）／AI×ウェブサイト構築 nanopico 初期0円・月額7,000円（税別・2026年9月現在）。ホームページ制作は初期50万円〜（/web-marketing/ の料金目安・税込税別の記載なし）",
+  "priceSource": "https://www.westana.co.jp/ai/consulting/",
+  "casesDisclosed": true,
+  "casesCount": "AIゼロイチセミナー 延べ950社・1,400名超が受講（公式 /ai/ の記載。セミナー受講の数で、AEO対策の支援件数ではありません）",
+  "casesSource": "https://www.westana.co.jp/ai/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-03"
  }
 ]
