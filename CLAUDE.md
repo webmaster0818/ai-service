@@ -251,3 +251,12 @@
   - ⚠️ 既存データの気づき（未変更・判断待ち）: メディアリーチの priceNote「月額20万円」は `/seo-consulting` の **SEOコンサルティング**の料金（LLMO は見積り）。LionAI は公式トップの会社案内で**運営会社が WONQ株式会社**（Lion AI はサービス名）で、トップに規模別の料金例（10万/30万/60万円・税抜・月20/60/120時間）があるのに priceDisclosed=false・社名「株式会社LionAI」。直すと社名表示・/data/ の集計が変わるので今回は触らず
 - title 変更: `/company/bakuri/`・`/company/mediareach/`（11/2）→ 11/9 まで title を変えない
 - precheck ✅ 151ページ全項目OK → source `8c28bcc` → deploy `73db1f5d`。sitemap・opendata は差分なし。計測リンク 0→0
+
+### 2026-11-03（朝）
+- **株式会社ウェスタナを追加（110→111社・sitemap 154→155・AEO 29→30・LLMO 36→37・Web制作 30→31・AI開発 53→54・DXコンサル 64→65・生成AI研修 32→33・業務自動化 27→28・RAG 32→33・チャットボット 26→27）**。AEO（最も薄い領域）狙い。神戸市東灘区（六甲アイランド）の中小企業向け AI導入支援・Webマーケティング会社。候補は検索結果（神戸の AEO 対策）から拾い、公式サイトだけで確認した
+  - officialUrl `www.westana.co.jp`（slug `westana`）。根拠 `/web-marketing/aeo/`（グローバルナビ「AEO・AIO対策」。現状診断→設計→伴走運用→内製化、FAQ・構造化データ・明快な定義）＝aeo・llmo（サービス名に AIO を明示。and media と同じ扱い）／`/ai/development/`（AIシステム開発・料金表にライト「簡易AIチャットボット構築」・エンタープライズ「RAG構築」）＝ai-kaihatsu・chatbot・rag／`/ai/consulting/`（AIコンサルティング・メニュー「業務のAI化」＝見積書・FAX注文書入力・メール仕分け等）＝dx-consul・gyomu-jidoka／`/ai/ai-seminar/`（AIゼロイチセミナー＝社内研修）＝ai-kenshu／`/ai/nanopico/`（AI×ウェブサイト構築サービス）＝web-seisaku
+  - reject: naisei-shien（AEO ページの「04 内製化」＝AEO ノウハウを残す伴走の説明。bon と同じ扱い）／gazo-onsei（開発事例と対応技術表の「写真認識」のみ。料金表・サービス区分に画像認識のメニューなし）。`/ai/development/` の対応技術表に「AIエージェント」があるが自動判定に掛からず ai-agent は付けていない（判断待ち）
+  - 料金は公開（AIコンサル 月10万円〜・AI顧問 月5万円・最低6ヶ月・AI開発 10万/50万円〜・nanopico 月7,000円（いずれも税別）。AEO・AIO対策は一律の金額なし）を facts に。実績は `/ai/` の「AIゼロイチセミナー 延べ950社・1,400名超」をセミナー受講の数と明記。社名・設立 2019年6月28日・代表 井上 勝典・神戸市東灘区向洋町中6-9 は `/about/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+  - ⚠️ 作業中に `fetch-service-facts.py --help` を実行したところ引数解釈が無く**全社巡回（main）が始まった**。数社分の取得で kill し、service-facts.json は最後に一括で書く作りのため未変更（git diff で確認）。このスクリプトに --help は無い
+- 見送り: アイティクラウド（ITreview。AEO は「レビューサイト掲載の効果」の訴求で、AEO記事・AEO分析コンサルはプレスリリースのみ・サービスページなし）、フィードフォース（Answer IO は AI検索計測ツールで AEO 表記なし）、Charlesworth（`/jp/answer-engine-optimization` に AEO サービスページあり。ただし契約主体は英国法人 Charlesworth Publishing Services Ltd で日本の会社ではない＝判断待ち）、盛田一成（design-bureau.yokohama `/aeo/`。個人のコンサルタントで法人ではない）、Aurant Technologies・アシスト（AEO 表記なし）
