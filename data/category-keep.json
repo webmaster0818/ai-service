@@ -228,6 +228,11 @@
    "gyomu-jidoka": "https://www.westana.co.jp/ai/consulting/",
    "ai-kenshu": "https://www.westana.co.jp/ai/ai-seminar/",
    "web-seisaku": "https://www.westana.co.jp/ai/nanopico/"
+  },
+  "株式会社カンドウコーポレーション": {
+   "aeo": "https://can-do.co.jp/service/aeo/",
+   "llmo": "https://can-do.co.jp/service/aeo/",
+   "web-seisaku": "https://can-do.co.jp/service/"
   }
  },
  "facts": {
@@ -528,6 +533,14 @@
    "casesDisclosed": true,
    "casesCount": "AIゼロイチセミナー 延べ950社・1,400名超が受講（公式 /ai/ の記載。セミナー受講の数で、AEO対策の支援件数ではありません）",
    "casesSource": "https://www.westana.co.jp/ai/"
+  },
+  "株式会社カンドウコーポレーション": {
+   "priceDisclosed": true,
+   "priceNote": "AI検索対策（AEO・LLMO）の金額はサービスページ・よくある質問に記載がありません。ホームページ制作の目安はランディングページ 30万円〜・コーポレートサイト 80万円〜・採用サイトや大規模サイト 150万円〜です（よくある質問の記載。税込・税別の記載なし）",
+   "priceSource": "https://can-do.co.jp/faq/phase/web_4/",
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://can-do.co.jp/works/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"

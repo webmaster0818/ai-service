@@ -260,3 +260,12 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
   - ⚠️ 作業中に `fetch-service-facts.py --help` を実行したところ引数解釈が無く**全社巡回（main）が始まった**。数社分の取得で kill し、service-facts.json は最後に一括で書く作りのため未変更（git diff で確認）。このスクリプトに --help は無い
 - 見送り: アイティクラウド（ITreview。AEO は「レビューサイト掲載の効果」の訴求で、AEO記事・AEO分析コンサルはプレスリリースのみ・サービスページなし）、フィードフォース（Answer IO は AI検索計測ツールで AEO 表記なし）、Charlesworth（`/jp/answer-engine-optimization` に AEO サービスページあり。ただし契約主体は英国法人 Charlesworth Publishing Services Ltd で日本の会社ではない＝判断待ち）、盛田一成（design-bureau.yokohama `/aeo/`。個人のコンサルタントで法人ではない）、Aurant Technologies・アシスト（AEO 表記なし）
+
+### 2026-11-04（朝）
+- **株式会社カンドウコーポレーションを追加（111→112社・sitemap 155→156・AEO 30→31・LLMO 37→38・Web制作 31→32）**。AEO（最も薄い領域）狙い。広島市西区のホームページ制作会社。候補は検索結果（AEO対策の FAQ ページ `/faq/ai-search/aeo_4/`）から拾い、公式サイトだけで確認した
+  - officialUrl `can-do.co.jp`（slug `can-do`）。根拠 `/service/aeo/`（AI最適化。提供サービス「AI検索対策（AEO・LLMO）」・FAQ・構造化データ設計・AI検索診断。AEO と LLMO を分けて定義）＝aeo・llmo／`/service/`（サービス一覧。成果物に Webサイト制作・採用サイト制作・LP制作）＝web-seisaku。会社概要の事業内容にも「AEO対策」「LLMO・GEO対策」あり
+  - reject: dx-consul（自動判定の根拠がトップ。`/service/dx/` の提供サービスはサイト診断・リニューアル提案・コンテンツ設計・運用サポート＝Webサイトの運用改善）
+  - 料金は公開扱い（`/faq/phase/web_4/`：LP 30万円〜・コーポレートサイト 80万円〜・採用サイトや大規模サイト 150万円〜の目安。税込・税別の記載なし）。AI検索対策の金額はサービスページ・FAQ に記載なしと priceNote に明記（AI検索 FAQ を含む 68 ページで「万円」を確認）。実績は `/works/`（件数の明記なし）。社名・設立 平成3年2月15日・資本金 2,600万円・従業員 9名・代表 福原勘二／小田英男・広島市西区三篠町は `/about/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 2本（news-20261029-08・news-20261104-08）はコミットせず、draft のため out/ にも出ていない
+- 見送り: エイチリンク（`/service/llmo-consulting/`。「AIO対策・LLMO対策・AEO・GEOは、呼び方が違うだけでほぼ同じ」の言い換え説明のみ）、シーズプラス（csplus.jp。AEO はブログ記事のみ・トップに表記なし）、Bridge（検索結果の `/llmo/` は LLMO・GEO・AIO 表記）
+- 次の AEO 候補（未精査）: 福岡ECサイト（`/business/ai-search-engine/ai-search-engine/` に「AIO・LLMO・AEO・GEO・エンティティ設計・SEO」を連動して対策と記載）。Lifunext（トップに AEO 表記なし。`/llmo-consulting/` は未確認）

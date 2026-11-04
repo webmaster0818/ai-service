@@ -2758,5 +2758,27 @@
   "casesSource": "https://www.westana.co.jp/ai/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-03"
+ },
+ {
+  "name": "株式会社カンドウコーポレーション",
+  "officialUrl": "https://can-do.co.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://can-do.co.jp/service/aeo/",
+   "web-seisaku": "https://can-do.co.jp/service/",
+   "llmo": "https://can-do.co.jp/service/aeo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対策（AEO・LLMO）の金額はサービスページ・よくある質問に記載がありません。ホームページ制作の目安はランディングページ 30万円〜・コーポレートサイト 80万円〜・採用サイトや大規模サイト 150万円〜です（よくある質問の記載。税込・税別の記載なし）",
+  "priceSource": "https://can-do.co.jp/faq/phase/web_4/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://can-do.co.jp/works/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-04"
  }
 ]
