@@ -269,3 +269,4 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 2本（news-20261029-08・news-20261104-08）はコミットせず、draft のため out/ にも出ていない
 - 見送り: エイチリンク（`/service/llmo-consulting/`。「AIO対策・LLMO対策・AEO・GEOは、呼び方が違うだけでほぼ同じ」の言い換え説明のみ）、シーエスプラス（csplus.jp。AEO はブログ記事のみ・トップに表記なし）、Bridge（検索結果の `/llmo/` は LLMO・GEO・AIO 表記）
 - 次の AEO 候補（未精査）: 福岡ECサイト（`/business/ai-search-engine/ai-search-engine/` に「AIO・LLMO・AEO・GEO・エンティティ設計・SEO」を連動して対策と記載）。Lifunext（トップに AEO 表記なし。`/llmo-consulting/` は未確認）
+- precheck ✅ 全項目OK → source `686e6e6` → deploy `e1859b61` → 本番（push から約5分で反映・空コミット不要）`/company/can-do/` 200・sitemap 156（ローカルと一致・新URL掲載）・トップ 112社・AEO「企業31社」・LLMO「企業38社」・Web制作「企業32社」（旧値 30/37/31社 0件）。draft 2本は本番 404。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/4
