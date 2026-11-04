@@ -267,5 +267,5 @@
   - reject: dx-consul（自動判定の根拠がトップ。`/service/dx/` の提供サービスはサイト診断・リニューアル提案・コンテンツ設計・運用サポート＝Webサイトの運用改善）
   - 料金は公開扱い（`/faq/phase/web_4/`：LP 30万円〜・コーポレートサイト 80万円〜・採用サイトや大規模サイト 150万円〜の目安。税込・税別の記載なし）。AI検索対策の金額はサービスページ・FAQ に記載なしと priceNote に明記（AI検索 FAQ を含む 68 ページで「万円」を確認）。実績は `/works/`（件数の明記なし）。社名・設立 平成3年2月15日・資本金 2,600万円・従業員 9名・代表 福原勘二／小田英男・広島市西区三篠町は `/about/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 2本（news-20261029-08・news-20261104-08）はコミットせず、draft のため out/ にも出ていない
-- 見送り: エイチリンク（`/service/llmo-consulting/`。「AIO対策・LLMO対策・AEO・GEOは、呼び方が違うだけでほぼ同じ」の言い換え説明のみ）、シーズプラス（csplus.jp。AEO はブログ記事のみ・トップに表記なし）、Bridge（検索結果の `/llmo/` は LLMO・GEO・AIO 表記）
+- 見送り: エイチリンク（`/service/llmo-consulting/`。「AIO対策・LLMO対策・AEO・GEOは、呼び方が違うだけでほぼ同じ」の言い換え説明のみ）、シーエスプラス（csplus.jp。AEO はブログ記事のみ・トップに表記なし）、Bridge（検索結果の `/llmo/` は LLMO・GEO・AIO 表記）
 - 次の AEO 候補（未精査）: 福岡ECサイト（`/business/ai-search-engine/ai-search-engine/` に「AIO・LLMO・AEO・GEO・エンティティ設計・SEO」を連動して対策と記載）。Lifunext（トップに AEO 表記なし。`/llmo-consulting/` は未確認）
