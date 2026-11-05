@@ -26,7 +26,15 @@ const arts = fs.existsSync(ADIR) ? fs.readdirSync(ADIR).filter(f => f.endsWith('
   const get = k => (head.match(new RegExp(`^${k}:\\s*(.*)$`, 'm')) || [])[1]?.trim()
   return { url: `/articles/${f.replace(/\.md$/, '')}/`, lastmod: get('updated') || get('published'), draft: get('draft') === 'true' }
 }).filter(a => !a.draft) : []
-const lastmodOf = u => arts.find(a => a.url === u)?.lastmod || today
+// 会社・領域ページは全ページ一律の today にしない（1社足すたびに全ページの lastmod が動いてしまう）。
+// 会社＝その会社の確認日（事業内容の答えを足した会社はその確認日も見る）、領域＝所属する会社の確認日の最大。
+const SUMMARY = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'company-summary.json'), 'utf-8'))
+const newest = (dates) => dates.filter(Boolean).sort().pop()
+const pageLastmod = new Map([
+  ...all.map(c => [`/company/${slugOf(c)}/`, newest([c.checkedAt, SUMMARY[slugOf(c)]?.checkedAt])]),
+  ...CATS.filter(has).map(cat => [`/category/${cat}/`, newest(all.filter(c => (c.categories || []).includes(cat)).map(c => c.checkedAt))]),
+])
+const lastmodOf = u => arts.find(a => a.url === u)?.lastmod || pageLastmod.get(u) || today
 if (arts.length) urls.push('/articles/', ...arts.map(a => a.url))
 
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'),

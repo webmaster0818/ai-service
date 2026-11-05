@@ -270,3 +270,13 @@
 - 見送り: エイチリンク（`/service/llmo-consulting/`。「AIO対策・LLMO対策・AEO・GEOは、呼び方が違うだけでほぼ同じ」の言い換え説明のみ）、シーエスプラス（csplus.jp。AEO はブログ記事のみ・トップに表記なし）、Bridge（検索結果の `/llmo/` は LLMO・GEO・AIO 表記）
 - 次の AEO 候補（未精査）: 福岡ECサイト（`/business/ai-search-engine/ai-search-engine/` に「AIO・LLMO・AEO・GEO・エンティティ設計・SEO」を連動して対策と記載）。Lifunext（トップに AEO 表記なし。`/llmo-consulting/` は未確認）
 - precheck ✅ 全項目OK → source `686e6e6` → deploy `e1859b61` → 本番（push から約5分で反映・空コミット不要）`/company/can-do/` 200・sitemap 156（ローカルと一致・新URL掲載）・トップ 112社・AEO「企業31社」・LLMO「企業38社」・Web制作「企業32社」（旧値 30/37/31社 0件）。draft 2本は本番 404。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/4
+
+### 2026-11-05（朝）
+- **福岡ECサイト株式会社を追加（112→113社・sitemap 158→159・AEO 31→32・LLMO 38→39・Web制作 32→33）**。AEO（最も薄い領域）狙い。福岡市博多区の EC サイト制作・AI検索対策の会社。候補は前回の見送り欄から
+  - officialUrl `fukuoka-ecsite.co.jp`（slug `fukuoka-ecsite`）。根拠 `/business/ai-search-engine/ai-search-engine/`（事業内容「AI検索 集客エンジン」。「AIO・LLMO・AEO・GEO・エンティティ設計・SEO」を連動して対策と明記し、FAQ で AEO の定義と自社の施策も記載）＝aeo・llmo／`/business/new-production/service_newcreate/`（ECサイト・Webサイトの新規制作。AIに理解・引用されやすいサイト制作を明記）＝web-seisaku
+  - reject: dx-consul・naisei-shien（自動判定の根拠がコラム `/ai-search-lab/ai-search/ai-search-company-recommend/`。内製化の語は他社の紹介で、自社のサービスページに DX・内製化の記載なし）。`/business/fukuoka-system-development/` は EC 周りのシステム開発で AI 開発の記載なし＝ai-kaihatsu は付けていない
+  - 料金は公開（`/ai-search-lab/ai-search-service/`：月3万/7万/20万円＋初期費用10万円。税込・税別の記載なし。プランの差は AI 記事生成の本数とレポート）。EC・Web制作の金額は記載なし。`/ai-search-plans/`（「料金・機能を詳しく見る」のリンク先）は 11/5 時点で 404。実績は `/business/ecsite/service_fukuokaecsite/` の「EC制作・支援実績 300社以上」を EC 全体の数字と明記。「AI検索流入 368%」は自社サイトの自己申告なので載せていない。社名・設立 2022年8月19日・代表 鳥井敏史・福岡市博多区は `/company/about/corporate_about/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 見送り: Lifunext（`/llmo-consulting/`・トップ・会社情報とも AEO の表記なし。LLMO のみ＝AEO の候補から外す。月20万円〜・初期診断25万円〜の記載あり）
+- **`/articles/ai-era-security/` の FAQ を修正（点検 C3）**：「当サイトでは、…管理しやすいと考えます」→「社内で使ってよいサービスと…管理しやすくなります」。読者への助言が当サイトの実施に読めたため。前付けに `updated: 2026-11-05`
+- **`scripts/generate-sitemap.mjs` の lastmod を修正**：会社・領域ページが全ページ一律で最新の確認日になり、1社足すたびに約130ページの lastmod が動いていた。会社＝その会社の確認日（company-summary の確認日も見る）、領域＝所属企業の確認日の最大、トップ・/data/＝全体の最大に変更。11/5 時点は 131 ページ分の 11-04 が実際の確認日に戻る

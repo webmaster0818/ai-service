@@ -2780,5 +2780,27 @@
   "casesSource": "https://can-do.co.jp/works/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-04"
+ },
+ {
+  "name": "福岡ECサイト株式会社",
+  "officialUrl": "https://fukuoka-ecsite.co.jp/",
+  "categories": [
+   "web-seisaku",
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "web-seisaku": "https://fukuoka-ecsite.co.jp/business/new-production/service_newcreate/",
+   "aeo": "https://fukuoka-ecsite.co.jp/business/ai-search-engine/ai-search-engine/",
+   "llmo": "https://fukuoka-ecsite.co.jp/business/ai-search-engine/ai-search-engine/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対策はスターター 月3万円（AI記事生成 月60本）・グロース 月7万円（同150本）・プロフェッショナル 月20万円（同720本）で、初期費用 10万円（全プラン共通・初回のみ）です（税込・税別の記載なし）。ECサイト・Webサイト制作の金額はサービスページに記載がなく、規模や機能により異なるとしています",
+  "priceSource": "https://fukuoka-ecsite.co.jp/ai-search-lab/ai-search-service/",
+  "casesDisclosed": true,
+  "casesCount": "EC制作・支援の実績 300社以上（AI検索対策のみの数字ではありません）",
+  "casesSource": "https://fukuoka-ecsite.co.jp/business/ecsite/service_fukuokaecsite/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-05"
  }
 ]
