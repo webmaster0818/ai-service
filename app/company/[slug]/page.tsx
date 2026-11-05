@@ -65,7 +65,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const nearby = all.slice(Math.max(0, i - 3), i + 4).filter((x) => slugOf(x) !== slug)
 
   const ld = [
-    companyLd(c),
+    // ldWebPage の企業だけ、JSON-LD の WebPage 名・更新日を title と確認日に揃える（bakuri・mediareach は 10日ルールのため未適用）
+    companyLd(c, sm?.ldWebPage ? { name: sm.title, dateModified: sm.checkedAt } : undefined),
     breadcrumb([
       { name: 'トップ', url: '/' },
       ...(cats[0] ? [{ name: labelOf(cats[0]), url: `/category/${cats[0]}/` }] : []),

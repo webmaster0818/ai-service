@@ -78,7 +78,7 @@ export function itemListLd(name: string, urls: string[]) {
  * 創業日・従業員数は自由記述（「2007年1月15日」「268名」）なので、
  * foundingDate / numberOfEmployees の型に合うものだけを機械可読にする。
  */
-export function companyLd(c: Company) {
+export function companyLd(c: Company, page?: { name: string; dateModified: string }) {
   const p = profileOf(c.name)
   const founded = p?.founded?.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/)
   const employees = p?.employees?.match(/^([\d,]+)\s*名/)
@@ -106,8 +106,8 @@ export function companyLd(c: Company) {
       '@type': 'WebPage',
       '@id': `${SITE.origin}/company/${slugOf(c)}/`,
       url: `${SITE.origin}/company/${slugOf(c)}/`,
-      name: `${c.name}が公式サイトで掲げている領域と開示状況`,
-      dateModified: c.checkedAt,
+      name: page?.name ?? `${c.name}が公式サイトで掲げている領域と開示状況`,
+      dateModified: page?.dateModified ?? c.checkedAt,
     },
   }
 }

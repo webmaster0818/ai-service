@@ -162,6 +162,7 @@ export type CompanySummary = {
   headline: string
   rows: { label: string; text: string; source: string }[]
   checkedAt: string
+  ldWebPage?: boolean
 }
 let scache: Record<string, CompanySummary> | null = null
 export function summaryOf(slug: string): CompanySummary | undefined {

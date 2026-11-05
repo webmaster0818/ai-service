@@ -105,7 +105,8 @@
     "source": "https://www.lion-ai.co.jp/"
    }
   ],
-  "checkedAt": "2026-11-05"
+  "checkedAt": "2026-11-05",
+  "ldWebPage": true
  },
  "anotete": {
   "title": "株式会社アノテテ（ANOTETE）の事業内容・サービスと料金",
@@ -149,7 +150,8 @@
     "source": "https://anotete.co.jp/"
    }
   ],
-  "checkedAt": "2026-11-05"
+  "checkedAt": "2026-11-05",
+  "ldWebPage": true
  },
  "jinrai": {
   "title": "株式会社仁頼（じんらい）の事業内容・GEO Hackの料金と所在地",
@@ -188,6 +190,7 @@
     "source": "https://jinrai.co.jp/about/"
    }
   ],
-  "checkedAt": "2026-11-05"
+  "checkedAt": "2026-11-05",
+  "ldWebPage": true
  }
 }

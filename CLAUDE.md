@@ -289,3 +289,4 @@
   - 仁頼: GEO Hack 4プラン・Webサイト制作の参考価格帯・AI FIT・依頼の流れ・所在地。title/h1 に読み「じんらい」
 - ⚠️ 判断待ち（未変更・11/2 から継続）: LionAI の service-facts（社名「株式会社LionAI」・priceDisclosed=false・priceNote の断片）。直すと社名表示・一覧・JSON-LD・/data/ の集計が変わる。それまで同ページの確認結果欄と JSON-LD は旧社名・旧判定のまま
 - title 変更: `/company/lion-ai/`・`/company/anotete/`・`/company/jinrai/`（11/5）→ 11/12 まで title を変えない
+- 本番確認で JSON-LD の WebPage 名が旧 title・dateModified が旧確認日のまま（`lib/seo.tsx` の companyLd は summary を見ていない）と判明 → company-summary に `ldWebPage: true` を新設し、3社だけ title・確認日に揃えた。**バクリ・メディアリーチは 10日ルールのため未適用（旧名・2026-09-23 のまま。11/12 以降に `ldWebPage` を足す）**
