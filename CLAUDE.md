@@ -290,3 +290,16 @@
 - ⚠️ 判断待ち（未変更・11/2 から継続）: LionAI の service-facts（社名「株式会社LionAI」・priceDisclosed=false・priceNote の断片）。直すと社名表示・一覧・JSON-LD・/data/ の集計が変わる。それまで同ページの確認結果欄と JSON-LD は旧社名・旧判定のまま
 - title 変更: `/company/lion-ai/`・`/company/anotete/`・`/company/jinrai/`（11/5）→ 11/12 まで title を変えない
 - 本番確認で JSON-LD の WebPage 名が旧 title・dateModified が旧確認日のまま（`lib/seo.tsx` の companyLd は summary を見ていない）と判明 → company-summary に `ldWebPage: true` を新設し、3社だけ title・確認日に揃えた。**バクリ・メディアリーチは 10日ルールのため未適用（旧名・2026-09-23 のまま。11/12 以降に `ldWebPage` を足す）**
+
+### 2026-11-05（16:00 遅れ挽回ルーチン）7社に「事業内容の答え」
+- **GSC（10/6〜11/2）**: 「エクサプラザ」11@7.4（`/company/explaza/`）／「queue株式会社」8@15.9（`/company/queue-tech/`）／JetB の評判語 7@7.9（`/company/jetb/`）／「advanced ai partners」7@10.0（`/company/aaip/`）／「株式会社ai native」7@9.0（`/company/ai-native/`）／「株式会社風音屋」6@9.5（`/company/kazaneya/`）／「アムール株式会社」4@15.8（`/company/amour-inc/`）
+- `data/company-summary.json` に7社を追加（title・h1・description・冒頭の出典つき表・`ldWebPage: true`。公式を 11/5 確認）。service-facts.json・category-keep.json・評点類は未変更。`--rescore` は未実行。7社とも 10/26 以降の変更なし（git log で確認）。sitemap の差分は7社の lastmod のみ
+  - エクスプラザ: Palma プロ 月2,000円／名（税抜）・法人は個別提案、AIPM研修（全4回・各2時間・料金は問い合わせ）。「エクサプラザ」は公式ページで確認できないと「社名の表記」行に明記（title には入れていない）。`partner.explaza.jp` は JS 描画なので Chrome headless で確認
+  - Queue: 料金は個別見積もり。自社発表の効果値（AI引用改善率 +460% 等）は載せていない
+  - JetB: 評判語は title・本文に入れず、「評判を調べている方へ」行で当サイトは評判を評価しないと明記。Our AI面接（定額制・契約1年・金額掲載なし）・特商法の解約条件。比較記事の「月額換算 7.5万円〜」は第三者の情報なので不採用（従来の方針と同じ）
+  - AAIP: 費用は無料ヒアリング後に概算。固定価格パッケージと記載があるが金額の掲載なし
+  - AI Native: AX パートナーシップ 月300万円〜・CMS Migration 50万/150万/300万円〜（保守 月5〜20万円）
+  - 風音屋: 金額の掲載なし
+  - アムール: 月10万/30万/50万円（税抜）・初期無料・最低6ヶ月
+- ⚠️ 判断待ち（未変更）: AI Native の service-facts「ライトプラン 750,000 円」「実績 19社」は 11/5 の公式で見当たらない（同ページの表に明記）／アムールは categories 空・料金未確認のままだが公式は AIO/LLMO 専業で料金公開（llmo 等を付けると領域の社数と /data/ が変わる）／エクスプラザの料金欄・風音屋の実績欄も表と食い違う（表に明記）
+- title 変更: 上記7社（11/5）→ 11/12 まで title を変えない
