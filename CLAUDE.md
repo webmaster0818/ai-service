@@ -280,3 +280,12 @@
 - 見送り: Lifunext（`/llmo-consulting/`・トップ・会社情報とも AEO の表記なし。LLMO のみ＝AEO の候補から外す。月20万円〜・初期診断25万円〜の記載あり）
 - **`/articles/ai-era-security/` の FAQ を修正（点検 C3）**：「当サイトでは、…管理しやすいと考えます」→「社内で使ってよいサービスと…管理しやすくなります」。読者への助言が当サイトの実施に読めたため。前付けに `updated: 2026-11-05`
 - **`scripts/generate-sitemap.mjs` の lastmod を修正**：会社・領域ページが全ページ一律で最新の確認日になり、1社足すたびに約130ページの lastmod が動いていた。会社＝その会社の確認日（company-summary の確認日も見る）、領域＝所属企業の確認日の最大、トップ・/data/＝全体の最大に変更。11/5 時点は 131 ページ分の 11-04 が実際の確認日に戻る
+
+### 2026-11-05（12:00 成長ルーチン）LionAI・アノテテ・仁頼に「事業内容の答え」
+- **GSC（10/6〜11/2）**: 「lionai」29@7.1（`/company/lion-ai/`）／「anotete」23@7.3・「あのテテ」10@9.8（`/company/anotete/`）／「株式会社仁頼」23@6.0（`/company/jinrai/`）。いずれもクリック0・社名検索
+- `data/company-summary.json` に3社を追加（title・h1・description・冒頭の出典つき表。公式を 11/5 確認）。service-facts.json・category-keep.json・評点類は未変更。`--rescore` は未実行
+  - LionAI: 公式の会社案内は **WONQ株式会社**（Lion AI はサービス名）。規模別の料金例 10万/30万/60万円（税抜・20/60/120時間/月）・見積り制・導入の流れ・福岡市中央区天神。title/h1 は「Lion AI（LionAI）」＋ WONQ の表記（「株式会社LionAI」は公式で確認できないので使わない）。表の「運営会社」「料金例」行に、当サイト掲載名と下部の料金欄が古い判定であることを明記
+  - アノテテ: Tebot 3プラン（年間契約時）・ShareMind・Claude Code導入支援・Boost Dev の納期・所在地。「あのテテ」は公式ページで確認できないと「社名の表記」行に明記（title には入れていない）
+  - 仁頼: GEO Hack 4プラン・Webサイト制作の参考価格帯・AI FIT・依頼の流れ・所在地。title/h1 に読み「じんらい」
+- ⚠️ 判断待ち（未変更・11/2 から継続）: LionAI の service-facts（社名「株式会社LionAI」・priceDisclosed=false・priceNote の断片）。直すと社名表示・一覧・JSON-LD・/data/ の集計が変わる。それまで同ページの確認結果欄と JSON-LD は旧社名・旧判定のまま
+- title 変更: `/company/lion-ai/`・`/company/anotete/`・`/company/jinrai/`（11/5）→ 11/12 まで title を変えない
