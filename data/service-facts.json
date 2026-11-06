@@ -2802,5 +2802,29 @@
   "casesSource": "https://fukuoka-ecsite.co.jp/business/ecsite/service_fukuokaecsite/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-05"
+ },
+ {
+  "name": "アズ・マーケティング株式会社",
+  "officialUrl": "https://az-mark.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku",
+   "chatbot",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://az-mark.jp/service/aeo-llmo/",
+   "web-seisaku": "https://az-mark.jp/service/web-creation/",
+   "chatbot": "https://az-mark.jp/service/saas-product/",
+   "llmo": "https://az-mark.jp/service/aeo-llmo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO/LLMO対策とWebサイト制作は金額の掲載がなく、個別見積りです（AEO/LLMO対策は最低6ヶ月契約が基本）。公開されている金額は自社ツールのもので、AI引用計測の AIMention は Free 0円・Starter 月4,980円・Pro 月14,800円・Agency 月39,800円（税込）、AIチャットボットの AIComms は月19,800円・79,800円・148,000円（税抜）とカスタム見積りです",
+  "priceSource": "https://www.aimention.jp/",
+  "casesDisclosed": true,
+  "casesCount": "延べ100社以上のマーケティング支援（AEO/LLMO対策のみの数字ではありません）",
+  "casesSource": "https://az-mark.jp/case/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-06"
  }
 ]

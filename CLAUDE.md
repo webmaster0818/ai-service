@@ -303,3 +303,11 @@
   - アムール: 月10万/30万/50万円（税抜）・初期無料・最低6ヶ月
 - ⚠️ 判断待ち（未変更）: AI Native の service-facts「ライトプラン 750,000 円」「実績 19社」は 11/5 の公式で見当たらない（同ページの表に明記）／アムールは categories 空・料金未確認のままだが公式は AIO/LLMO 専業で料金公開（llmo 等を付けると領域の社数と /data/ が変わる）／エクスプラザの料金欄・風音屋の実績欄も表と食い違う（表に明記）
 - title 変更: 上記7社（11/5）→ 11/12 まで title を変えない
+
+### 2026-11-06（朝）
+- **アズ・マーケティング株式会社を追加（113→114社・sitemap 160→161・AEO 32→33・LLMO 39→40・Web制作 33→34・チャットボット 27→28）**。AEO（最も薄い領域）狙い。埼玉県越谷市のマーケティング支援会社。候補は Yahoo 検索から拾い、公式サイトだけで確認した
+  - officialUrl `az-mark.jp`（slug `az-mark`）。根拠 `/service/aeo-llmo/`（「AEO/LLMO対策」。8施策・FAQ で AEO と LLMO を定義し一体で提供）＝aeo・llmo／`/service/web-creation/`（コーポレート・採用・サービスサイト・LP の制作）＝web-seisaku／`/service/saas-product/`（自社の AIチャットボット AIComms）＝chatbot
+  - reject: rag（`/service/product-development/` の「生成AI・LLM・RAG・AIエージェント等」は実装技術の列挙）。同じ箇所の ai-kaihatsu・ai-agent は自動判定に掛かっておらず付けていない
+  - 料金は公開扱い。ただし AEO/LLMO対策・Web制作は個別見積り（AEO/LLMO は最低6ヶ月契約が基本）で、金額は自社ツールのみ（AIMention 税込・`/tokusho` で確認／AIComms 税抜・`aicomms.jp/pricing`）と priceNote に明記。実績は `/case/` の「延べ100社以上のマーケティング支援」を全体の数字と明記。「引用率」等の自社発表の効果値は載せていない。社名・設立 2024年7月1日・代表 菊地真人・越谷市は `/about/`（company-facts は判断待ちのため未登録）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 6本は全て `draft: true` で、コミットせず out/ にも出ていない。news-20261106-08 は out/ にあり
+- 見送り: ウェスタナ・AliveCast は掲載済み。deca.marketing（ギブリー）は AEO 表記あり、料金は個別見積もり、事例の掲載なしで未精査（`/service/marketing/aeo/`）＝次の候補。IT-cares（`it-cares.biz/aeo/service/`）は AEO サービスページあり、法人格は未確認＝次の候補。Oz link は判断待ちで使っていない
