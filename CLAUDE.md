@@ -311,3 +311,4 @@
   - 料金は公開扱い。ただし AEO/LLMO対策・Web制作は個別見積り（AEO/LLMO は最低6ヶ月契約が基本）で、金額は自社ツールのみ（AIMention 税込・`/tokusho` で確認／AIComms 税抜・`aicomms.jp/pricing`）と priceNote に明記。実績は `/case/` の「延べ100社以上のマーケティング支援」を全体の数字と明記。「引用率」等の自社発表の効果値は載せていない。社名・設立 2024年7月1日・代表 菊地真人・越谷市は `/about/`（company-facts は判断待ちのため未登録）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 6本は全て `draft: true` で、コミットせず out/ にも出ていない。news-20261106-08 は out/ にあり
 - 見送り: ウェスタナ・AliveCast は掲載済み。deca.marketing（ギブリー）は AEO 表記あり、料金は個別見積もり、事例の掲載なしで未精査（`/service/marketing/aeo/`）＝次の候補。IT-cares（`it-cares.biz/aeo/service/`）は AEO サービスページあり、法人格は未確認＝次の候補。Oz link は判断待ちで使っていない
+- precheck ✅ 全項目OK → source `cb0048f` → deploy `2dd7ff9c` → 本番（push から約16分で反映・空コミット不要）`/company/az-mark/` 200・sitemap 161（ローカルと一致・新URL掲載）・トップ 114社・AEO「企業33社」・LLMO「企業40社」・Web制作「企業34社」・チャットボット「企業28社」（旧値 0件）。draft 6本は本番 404・news-20261106-08 は 200。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/6
