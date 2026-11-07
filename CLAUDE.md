@@ -312,3 +312,13 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。`content/articles/` の未追跡 draft 6本は全て `draft: true` で、コミットせず out/ にも出ていない。news-20261106-08 は out/ にあり
 - 見送り: ウェスタナ・AliveCast は掲載済み。deca.marketing（ギブリー）は AEO 表記あり、料金は個別見積もり、事例の掲載なしで未精査（`/service/marketing/aeo/`）＝次の候補。IT-cares（`it-cares.biz/aeo/service/`）は AEO サービスページあり、法人格は未確認＝次の候補。Oz link は判断待ちで使っていない
 - precheck ✅ 全項目OK → source `cb0048f` → deploy `2dd7ff9c` → 本番（push から約16分で反映・空コミット不要）`/company/az-mark/` 200・sitemap 161（ローカルと一致・新URL掲載）・トップ 114社・AEO「企業33社」・LLMO「企業40社」・Web制作「企業34社」・チャットボット「企業28社」（旧値 0件）。draft 6本は本番 404・news-20261106-08 は 200。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/6
+
+### 2026-11-07（朝）
+- **株式会社ギブリーを追加（114→115社・sitemap 165→166・AEO 33→34・Web制作 34→35・チャットボット 28→29・AIエージェント開発 39→40・AI開発 54→55・DXコンサル 65→66・内製化 35→36・生成AI研修 33→34）**。AEO（最も薄い領域）狙い。渋谷区のコンサルティング・システム開発会社で、AEO は同社のマーケティングDX事業 DECA（`deca.marketing`。フッターに運営企業 `givery.co.jp`・© Givery, Inc.）が提供
+  - officialUrl `givery.co.jp`（slug `givery`）。根拠 `deca.marketing/service/marketing/aeo/`（AEOコンサルティング。診断・方針・実装・定点観測）＝aeo／`deca.marketing/service/marketing/cms-migration/`（Givery Next for CMS。WordPress移行・AI検索対策Web構築、情報設計を含むリニューアルにも対応）＝web-seisaku／`deca.marketing/service/contactcenter/chatbot/`（チャットボットの構築・運用）＝chatbot／`givery.co.jp/services/ai-lab/`（生成AI活用コンサルティング・PoC〜本番の開発支援・内製化支援・生成AI研修）＝dx-consul・ai-kaihatsu・naisei-shien・ai-kenshu／`gomana.ai/service/agent/`（AIエージェント構築支援。© Givery, Inc.）＝ai-agent
+  - reject: gyomu-jidoka（自動判定の根拠が `/company/` の役員経歴）
+  - 付けていないもの: llmo（AEO ページの「GEO・LLMOと呼ばれることもあります」は言い換え説明で、Advanced AI Partners・AliveCast と同じ扱い）／rag（自動判定に掛からず。`/services/` の「RAGチューニング」、`/services/ai-lab/` の「RAG研修」、チャットボットの「ナレッジ検索（RAG）」はある）。`givery-consulting.com` は別法人（株式会社ギブリーコンサルティング）なので根拠にしていない
+  - 料金は公開扱い。ただし AEO・Givery Next for CMS は個別見積りで、金額は Givery AI 顧問（月33万円〜・月165万円〜・税込）のみと priceNote に明記。実績は `deca.marketing/cases/`（AEO の事例ではない）と `/services/ai-lab/` の「1,000社超の生成AI導入・活用支援」を AEO のみの数字ではないと明記。AEO ページの自社実測「627回／日」等は載せていない
+  - **`data/company-facts.json` に登録**（9社目）: 設立 2009年4月28日・資本金 5,000万円・従業員等 581名（グループ全体・2025年6月現在）・代表 井手 高志・渋谷区南平台町は `givery.co.jp/company/`（11/7 確認）。従業員数は「従業員等」で始まるので JSON-LD の numberOfEmployees には出ない（グループ全体の数字なので出さなくてよい）。既存の未登録社は埋めていない
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- 次の候補: アイティーケアーズ合同会社（`it-cares.biz`。宇都宮市大通り3-5-18-4F・代表 鈴木 茂樹・2016年法人化は `/company`）。`/aeo/service/`（AEO対策サービス）に AEO の明示あり、`/price` に AEO 内部調整提示書 2万円・改善 9万円〜・AEO＋SEO 月2.9万円（税別）、`/works` に制作実績 300件以上。11/7 時点で基準を満たす（1社の枠のため未追加）

@@ -132,5 +132,23 @@
    "生成AI": false
   },
   "checkedAt": "2026-08-07"
+ },
+ {
+  "name": "株式会社ギブリー",
+  "officialUrl": "https://givery.co.jp/",
+  "infoPageUrl": "https://givery.co.jp/company/",
+  "founded": "2009年4月28日",
+  "capital": "5,000万円",
+  "employees": "従業員等 581名（グループ全体／契約社員、アルバイト、業務委託契約者を含む・2025年6月現在）",
+  "hq": "〒150-0036 東京都渋谷区南平台町15-13 帝都渋谷ビル7・8F",
+  "representative": "井手 高志",
+  "mentions": {
+   "AEO": true,
+   "LLMO": true,
+   "GEO": true,
+   "AIO": true,
+   "生成AI": true
+  },
+  "checkedAt": "2026-11-07"
  }
 ]

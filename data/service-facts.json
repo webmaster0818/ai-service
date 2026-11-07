@@ -2826,5 +2826,37 @@
   "casesSource": "https://az-mark.jp/case/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-06"
+ },
+ {
+  "name": "株式会社ギブリー",
+  "officialUrl": "https://givery.co.jp/",
+  "categories": [
+   "dx-consul",
+   "ai-agent",
+   "ai-kaihatsu",
+   "naisei-shien",
+   "chatbot",
+   "aeo",
+   "web-seisaku",
+   "ai-kenshu"
+  ],
+  "categorySource": {
+   "dx-consul": "https://givery.co.jp/services/ai-lab/",
+   "ai-agent": "https://gomana.ai/service/agent/",
+   "ai-kaihatsu": "https://givery.co.jp/services/ai-lab/",
+   "naisei-shien": "https://givery.co.jp/services/ai-lab/",
+   "chatbot": "https://deca.marketing/service/contactcenter/chatbot/",
+   "aeo": "https://deca.marketing/service/marketing/aeo/",
+   "web-seisaku": "https://deca.marketing/service/marketing/cms-migration/",
+   "ai-kenshu": "https://givery.co.jp/services/ai-lab/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEOコンサルティングとWeb構築（Givery Next for CMS）は金額の掲載がなく、個別見積りです。公開されている金額は生成AIの技術アドバイザリー「Givery AI 顧問」のもので、チャット対応プラン 月33万円〜・AI戦略パートナープラン 月165万円〜（いずれも税込）です",
+  "priceSource": "https://givery.co.jp/services/ai_advisor/",
+  "casesDisclosed": true,
+  "casesCount": "1,000社超の生成AI導入・活用支援（AEO対策のみの数字ではありません）",
+  "casesSource": "https://deca.marketing/cases/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-07"
  }
 ]
