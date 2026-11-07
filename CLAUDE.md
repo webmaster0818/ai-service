@@ -322,3 +322,4 @@
   - **`data/company-facts.json` に登録**（9社目）: 設立 2009年4月28日・資本金 5,000万円・従業員等 581名（グループ全体・2025年6月現在）・代表 井手 高志・渋谷区南平台町は `givery.co.jp/company/`（11/7 確認）。従業員数は「従業員等」で始まるので JSON-LD の numberOfEmployees には出ない（グループ全体の数字なので出さなくてよい）。既存の未登録社は埋めていない
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 次の候補: アイティーケアーズ合同会社（`it-cares.biz`。宇都宮市大通り3-5-18-4F・代表 鈴木 茂樹・2016年法人化は `/company`）。`/aeo/service/`（AEO対策サービス）に AEO の明示あり、`/price` に AEO 内部調整提示書 2万円・改善 9万円〜・AEO＋SEO 月2.9万円（税別）、`/works` に制作実績 300件以上。11/7 時点で基準を満たす（1社の枠のため未追加）
+- precheck ✅ 全項目OK → source `c037b4e` → deploy `ac75f7f0` → 本番（push から約9分で反映・空コミット不要）`/company/givery/` 200・sitemap 166（ローカルと一致・新URL掲載）・トップ 115社・AEO「企業34社」ほか8領域の新件数（旧値 0件）・設立欄と JSON-LD foundingDate 2009-04-28。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/7
