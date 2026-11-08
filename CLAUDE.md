@@ -332,3 +332,4 @@
   - 料金は公開（`/price`：AEO内部調整提示書 2万円・AEO対策改善・最適化 9万円〜・AEO＋SEO 月2.9万円（いずれも税別）、ホームページ制作 8万円〜（税表記なし））を facts に。実績は `/works` の「300件以上のホームページ制作・リニューアル・Web支援」を AEO のみの数字ではないと明記
   - **`data/company-facts.json` に登録**（10社目）: 設立「2016年（合同会社として法人化。2009年に代表が個人事業として開始）」・代表 鈴木 茂樹・宇都宮市大通り3-5-18-4F は `/company`（11/8 確認）。設立日・資本金・従業員数は掲載なし（設立は年のみなので JSON-LD foundingDate は出ない）。mentions は AEO のみ true
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
+- precheck ✅ 全項目OK → source `3893f31` → deploy `1856918a` → 本番（push から約5分で反映・空コミット不要）`/company/it-cares/` 200・sitemap 168（ローカルと一致・新URL掲載）・トップ 116社・AEO「企業35社」・Web制作「企業36社」（旧値 0件）・設立欄・代表者欄。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/8 09:24（isPending）
