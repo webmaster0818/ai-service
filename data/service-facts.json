@@ -2858,5 +2858,25 @@
   "casesSource": "https://deca.marketing/cases/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-07"
+ },
+ {
+  "name": "アイティーケアーズ合同会社",
+  "officialUrl": "https://it-cares.biz/",
+  "categories": [
+   "aeo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://it-cares.biz/aeo/service/",
+   "web-seisaku": "https://it-cares.biz/homepage-development"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO対策は ① AEO内部調整提示書の発行 20,000円 ② AEO対策改善・最適化 90,000円〜 ③ AEO対策＋SEO対策プラン 月29,000円（いずれも税別）。ホームページ制作は 80,000円〜（税表記なし）。内容やページ数・機能追加により変動する目安です",
+  "priceSource": "https://it-cares.biz/price",
+  "casesDisclosed": true,
+  "casesCount": "300件以上のホームページ制作・リニューアル・Web支援（AEO対策のみの数字ではありません）",
+  "casesSource": "https://it-cares.biz/works",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-08"
  }
 ]

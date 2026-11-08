@@ -323,3 +323,12 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - 次の候補: アイティーケアーズ合同会社（`it-cares.biz`。宇都宮市大通り3-5-18-4F・代表 鈴木 茂樹・2016年法人化は `/company`）。`/aeo/service/`（AEO対策サービス）に AEO の明示あり、`/price` に AEO 内部調整提示書 2万円・改善 9万円〜・AEO＋SEO 月2.9万円（税別）、`/works` に制作実績 300件以上。11/7 時点で基準を満たす（1社の枠のため未追加）
 - precheck ✅ 全項目OK → source `c037b4e` → deploy `ac75f7f0` → 本番（push から約9分で反映・空コミット不要）`/company/givery/` 200・sitemap 166（ローカルと一致・新URL掲載）・トップ 115社・AEO「企業34社」ほか8領域の新件数（旧値 0件）・設立欄と JSON-LD foundingDate 2009-04-28。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/7
+
+### 2026-11-08（朝）
+- **アイティーケアーズ合同会社（IT-cares）を追加（115→116社・sitemap 167→168・AEO 34→35・Web制作 35→36）**。AEO（最も薄い領域）狙い。宇都宮市のホームページ制作・SEO・AEO対策の会社。候補は 11/7 の「次の候補」から。公式サイトを 11/8 に確認
+  - officialUrl `it-cares.biz`（slug `it-cares`）。根拠 `/aeo/service/`（「AEO対策サービス」。FAQ設計・情報構造の整理・サービス説明の具体化・内部リンク・導線の再設計。グローバルナビ「AEO対策」）＝aeo／`/homepage-development`（企業サイト・店舗サイト・サービスサイト・LP の制作）＝web-seisaku
+  - reject: dx-consul（自動判定の根拠がトップの「AI導入支援など…ご相談にも対応」の一文。AI導入・DX のサービスページなし。`/web-consulting` は Web施策のコンサル）
+  - 付けていないもの: llmo（調べた9ページに LLMO・GEO・AIO・生成AI の語なし）
+  - 料金は公開（`/price`：AEO内部調整提示書 2万円・AEO対策改善・最適化 9万円〜・AEO＋SEO 月2.9万円（いずれも税別）、ホームページ制作 8万円〜（税表記なし））を facts に。実績は `/works` の「300件以上のホームページ制作・リニューアル・Web支援」を AEO のみの数字ではないと明記
+  - **`data/company-facts.json` に登録**（10社目）: 設立「2016年（合同会社として法人化。2009年に代表が個人事業として開始）」・代表 鈴木 茂樹・宇都宮市大通り3-5-18-4F は `/company`（11/8 確認）。設立日・資本金・従業員数は掲載なし（設立は年のみなので JSON-LD foundingDate は出ない）。mentions は AEO のみ true
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更

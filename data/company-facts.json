@@ -150,5 +150,21 @@
    "生成AI": true
   },
   "checkedAt": "2026-11-07"
+ },
+ {
+  "name": "アイティーケアーズ合同会社",
+  "officialUrl": "https://it-cares.biz/",
+  "infoPageUrl": "https://it-cares.biz/company",
+  "founded": "2016年（合同会社として法人化。2009年に代表が個人事業として開始）",
+  "hq": "〒320-0811 栃木県宇都宮市大通り3-5-18-4F",
+  "representative": "鈴木 茂樹",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-08"
  }
 ]
