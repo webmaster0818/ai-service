@@ -258,6 +258,11 @@
   "アイティーケアーズ合同会社": {
    "aeo": "https://it-cares.biz/aeo/service/",
    "web-seisaku": "https://it-cares.biz/homepage-development"
+  },
+  "ECマーケティング株式会社": {
+   "aeo": "https://ecmarketing.co.jp/service/promotion/seo/",
+   "llmo": "https://ecmarketing.co.jp/service/promotion/seo/",
+   "web-seisaku": "https://ecmarketing.co.jp/service/production/webdesign/"
   }
  },
  "facts": {
@@ -598,6 +603,14 @@
    "casesDisclosed": true,
    "casesCount": "300件以上のホームページ制作・リニューアル・Web支援（AEO対策のみの数字ではありません）",
    "casesSource": "https://it-cares.biz/works"
+  },
+  "ECマーケティング株式会社": {
+   "priceDisclosed": null,
+   "priceNote": "SEO/LLMO/AEO対策サービスのページに料金の記載はありません（関連サービスの LLMO弱点洗い出し調査も料金は「お問い合わせください」）",
+   "priceSource": "https://ecmarketing.co.jp/service/promotion/seo/",
+   "casesDisclosed": true,
+   "casesCount": "制作実績500社超（Web制作・Webマーケティング支援全体の件数で、AEO対策に限った件数ではありません）",
+   "casesSource": "https://ecmarketing.co.jp/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"

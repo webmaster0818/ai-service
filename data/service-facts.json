@@ -2878,5 +2878,27 @@
   "casesSource": "https://it-cares.biz/works",
   "pagesChecked": 15,
   "checkedAt": "2026-11-08"
+ },
+ {
+  "name": "ECマーケティング株式会社",
+  "officialUrl": "https://ecmarketing.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://ecmarketing.co.jp/service/promotion/seo/",
+   "llmo": "https://ecmarketing.co.jp/service/promotion/seo/",
+   "web-seisaku": "https://ecmarketing.co.jp/service/production/webdesign/"
+  },
+  "priceDisclosed": null,
+  "priceNote": "SEO/LLMO/AEO対策サービスのページに料金の記載はありません（関連サービスの LLMO弱点洗い出し調査も料金は「お問い合わせください」）",
+  "priceSource": "https://ecmarketing.co.jp/service/promotion/seo/",
+  "casesDisclosed": true,
+  "casesCount": "制作実績500社超（Web制作・Webマーケティング支援全体の件数で、AEO対策に限った件数ではありません）",
+  "casesSource": "https://ecmarketing.co.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-09"
  }
 ]

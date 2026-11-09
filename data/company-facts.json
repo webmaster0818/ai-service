@@ -166,5 +166,22 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-08"
+ },
+ {
+  "name": "ECマーケティング株式会社",
+  "officialUrl": "https://ecmarketing.co.jp/",
+  "infoPageUrl": "https://ecmarketing.co.jp/corporate/profile/",
+  "founded": "2010年12月",
+  "capital": "1,000万円",
+  "hq": "〒105-0013 東京都港区浜松町2-1-13 芝エクセレントビル7F",
+  "representative": "中山 高志",
+  "mentions": {
+   "AEO": true,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": true,
+   "生成AI": true
+  },
+  "checkedAt": "2026-11-09"
  }
 ]

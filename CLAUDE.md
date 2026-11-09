@@ -337,3 +337,10 @@
 ### 2026-11-09（朝）
 - **deca.marketing は見送り（重複）**: 11/6 の「次の候補」に残っていた deca.marketing は、11/7 に追加した株式会社ギブリーのマーケティングDX事業 DECA のサイトだった。11/9 に公式を再確認：`/about/` の「運営会社 株式会社ギブリー」（渋谷区南平台町15-13 帝都渋谷ビル8F）・フッター「© Givery, Inc.」、`/service/marketing/aeo/`（AEO（AI検索対策）コンサルティング）は 200。この AEO ページは既にギブリーの aeo の根拠（category-keep.json）で、本番 `/company/givery/` にも掲載済み。別会社として足すと同じ会社が2行になるので追加しない。データ・本番の変更なし（116社・AEO 35社・sitemap 168 のまま）。ギブリーの company-facts（判断待ち A/B）は未変更
 - 11/6・11/7 の「次の候補」はこれで両方消化（IT-cares は 11/8 に追加済み）。AEO の次の候補は未選定
+- **ECマーケティング株式会社を追加（116→117社・sitemap 168→169・AEO 35→36・LLMO 40→41・Web制作 36→37）**。AEO（最も薄い領域）狙い。港区浜松町の Webマーケティング支援・サイト制作会社。候補は Yahoo 検索「AEO対策 会社」の2ページ目（`ecmarketing.co.jp`）。公式サイトを 11/9 に確認
+  - officialUrl `ecmarketing.co.jp`（slug `ecmarketing`）。根拠 `/service/promotion/seo/`（「SEO/LLMO/AEO対策サービス」。サービス名・パンくず・グローバルナビに AEO を明示、本文は LLMO の視点を取り入れたコンサルティング）＝aeo・llmo／`/service/production/webdesign/`（戦略的Webサイト制作。コーポレート・サービス・EC・採用サイト）＝web-seisaku
+  - reject: dx-consul（自動判定の根拠がトップ。`/service/strategic-operation/webmarketing-dx/` は Webマーケティング（CVR改善）のコンサルで AI導入ではない）／naisei-shien（根拠が業界別の制作事例一覧）
+  - 料金はサービスページに記載なし→ priceDisclosed null（自動抽出の「月額 29ドル〜」は ECサイト構築ページのカート利用料なので不採用）。実績はトップ「制作実績500社超」を AEO のみの数字ではないと明記
+  - **`data/company-facts.json` に登録**（11社目）: 設立 2010年12月・資本金 10,000,000円（1,000万円と表記）・代表 中山 高志・港区浜松町2-1-13 芝エクセレントビル7F は `/corporate/profile/`（11/9 確認）。従業員数は掲載なし。設立は年月のみなので foundingDate は出ない。mentions は AEO・LLMO・AIO・生成AI が true（GEO はトップ・サービス・会社概要に無し）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
+  - 同じ検索で見た他社: Speee・CINC・PLAN-B・アドマノ・アズ・マーケティング・AliveCast・トライエッジ・イノーバ・LANY は掲載済み。Oz link は判断待ち。techsuite（AI検索パートナーズ）は TechSuite 掲載済み
