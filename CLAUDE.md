@@ -344,3 +344,4 @@
   - **`data/company-facts.json` に登録**（11社目）: 設立 2010年12月・資本金 10,000,000円（1,000万円と表記）・代表 中山 高志・港区浜松町2-1-13 芝エクセレントビル7F は `/corporate/profile/`（11/9 確認）。従業員数は掲載なし。設立は年月のみなので foundingDate は出ない。mentions は AEO・LLMO・AIO・生成AI が true（GEO はトップ・サービス・会社概要に無し）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
   - 同じ検索で見た他社: Speee・CINC・PLAN-B・アドマノ・アズ・マーケティング・AliveCast・トライエッジ・イノーバ・LANY は掲載済み。Oz link は判断待ち。techsuite（AI検索パートナーズ）は TechSuite 掲載済み
+- precheck ✅ 全項目OK → source `e23ea6b` → deploy `c61e4375` → 本番（push から約12分で反映・空コミット不要）`/company/ecmarketing/` 200・sitemap 169（ローカルと一致・新URL掲載）・トップ 117社・AEO「企業36社」・LLMO「企業41社」・Web制作「企業37社」（旧値 0件）・設立欄・代表者欄。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/9
