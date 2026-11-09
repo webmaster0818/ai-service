@@ -333,3 +333,7 @@
   - **`data/company-facts.json` に登録**（10社目）: 設立「2016年（合同会社として法人化。2009年に代表が個人事業として開始）」・代表 鈴木 茂樹・宇都宮市大通り3-5-18-4F は `/company`（11/8 確認）。設立日・資本金・従業員数は掲載なし（設立は年のみなので JSON-LD foundingDate は出ない）。mentions は AEO のみ true
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
 - precheck ✅ 全項目OK → source `3893f31` → deploy `1856918a` → 本番（push から約5分で反映・空コミット不要）`/company/it-cares/` 200・sitemap 168（ローカルと一致・新URL掲載）・トップ 116社・AEO「企業35社」・Web制作「企業36社」（旧値 0件）・設立欄・代表者欄。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/8 09:24（isPending）
+
+### 2026-11-09（朝）
+- **deca.marketing は見送り（重複）**: 11/6 の「次の候補」に残っていた deca.marketing は、11/7 に追加した株式会社ギブリーのマーケティングDX事業 DECA のサイトだった。11/9 に公式を再確認：`/about/` の「運営会社 株式会社ギブリー」（渋谷区南平台町15-13 帝都渋谷ビル8F）・フッター「© Givery, Inc.」、`/service/marketing/aeo/`（AEO（AI検索対策）コンサルティング）は 200。この AEO ページは既にギブリーの aeo の根拠（category-keep.json）で、本番 `/company/givery/` にも掲載済み。別会社として足すと同じ会社が2行になるので追加しない。データ・本番の変更なし（116社・AEO 35社・sitemap 168 のまま）。ギブリーの company-facts（判断待ち A/B）は未変更
+- 11/6・11/7 の「次の候補」はこれで両方消化（IT-cares は 11/8 に追加済み）。AEO の次の候補は未選定
