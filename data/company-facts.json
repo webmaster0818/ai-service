@@ -183,5 +183,22 @@
    "生成AI": true
   },
   "checkedAt": "2026-11-09"
+ },
+ {
+  "name": "株式会社ファーストイノベーション",
+  "officialUrl": "https://www.f-innovations.co.jp/",
+  "infoPageUrl": "https://www.f-innovations.co.jp/company/",
+  "founded": "2016年12月19日",
+  "capital": "1,000万円",
+  "hq": "〒104-0053 東京都中央区晴海3-13-1 DEUX TOURS EASTタワー52F",
+  "representative": "木ノ根 雄志",
+  "mentions": {
+   "AEO": false,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": true,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-10"
  }
 ]

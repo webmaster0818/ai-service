@@ -2900,5 +2900,31 @@
   "casesSource": "https://ecmarketing.co.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-09"
+ },
+ {
+  "name": "株式会社ファーストイノベーション",
+  "officialUrl": "https://www.f-innovations.co.jp/",
+  "categories": [
+   "llmo",
+   "web-seisaku",
+   "ai-agent",
+   "aeo",
+   "gyomu-jidoka"
+  ],
+  "categorySource": {
+   "llmo": "https://www.f-innovations.co.jp/service/llmo/",
+   "web-seisaku": "https://www.f-innovations.co.jp/service/hp/",
+   "ai-agent": "https://www.f-innovations.co.jp/service/lumina/",
+   "aeo": "https://querya.jp/aeo",
+   "gyomu-jidoka": "https://www.f-innovations.co.jp/service/sysytem/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO対策のページ（QUERYA）に金額の掲載はありません。QUERYA の料金ページでは AIO 対策の3プラン（Lite 初期費用30万円・月額10万円／Standard 初期費用50万円・月額30万円／Premium 初期費用80万円・月額50万円、すべて税別）を掲載しています。ファーストイノベーション公式の LLMO対策は月額10万円〜、ホームページ制作は50万円〜（いずれも税込・税別の記載なし）です",
+  "priceSource": "https://querya.jp/support",
+  "casesDisclosed": false,
+  "casesCount": null,
+  "casesSource": "https://querya.jp/cases",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-10"
  }
 ]

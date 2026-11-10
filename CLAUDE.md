@@ -345,3 +345,13 @@
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
   - 同じ検索で見た他社: Speee・CINC・PLAN-B・アドマノ・アズ・マーケティング・AliveCast・トライエッジ・イノーバ・LANY は掲載済み。Oz link は判断待ち。techsuite（AI検索パートナーズ）は TechSuite 掲載済み
 - precheck ✅ 全項目OK → source `e23ea6b` → deploy `c61e4375` → 本番（push から約12分で反映・空コミット不要）`/company/ecmarketing/` 200・sitemap 169（ローカルと一致・新URL掲載）・トップ 117社・AEO「企業36社」・LLMO「企業41社」・Web制作「企業37社」（旧値 0件）・設立欄・代表者欄。計測リンク 0本（変更なし）。GSC sitemap 再送信 11/9
+
+### 2026-11-10（朝）
+- **株式会社ファーストイノベーションを追加（117→118社・sitemap 169→170・AEO 36→37・LLMO 41→42・Web制作 37→38・AIエージェント開発 40→41・業務自動化 28→29）**。AEO（最も薄い領域）狙い。中央区晴海の Web制作・マーケティング会社。候補は Yahoo 検索「AEO対策サービス 料金 税別」（2ページ目）から拾った QUERYA（`querya.jp`）。10/29 に「調べたページに AEO 表記なし」で見送った会社だが、運営する SEO・AIO・LLMO 専門メディア兼支援サービス QUERYA に AEO のサービスページができていた。公式サイトを 11/10 に確認
+  - officialUrl `www.f-innovations.co.jp`（slug `f-innovations`）。根拠 `querya.jp/aeo`（「AEO対策（回答エンジン最適化）」。質問と検索意図の整理・結論と根拠・FAQ/比較/手順・表示と案内の改善の支援範囲と成果物。`querya.jp/services` の分野別サービスに AEO対策）＝aeo。QUERYA の運営は `querya.jp/company`「株式会社ファーストイノベーションが運営する」＋会社概要（社名・代表・設立・所在地が公式と一致）、`f-innovations.co.jp/service/llmo/` から `querya.jp` へリンクあり＝ギブリーの deca と同じ扱い／`/service/llmo/`（LLMO対策・月額10万円〜）＝llmo／`/service/hp/`（ホームページ制作 50万円〜）＝web-seisaku／`/service/lumina/`（AIエージェント導入 Lumina・月額5万円〜）＝ai-agent／`/service/sysytem/`（システム構築の「AI・業務自動化」）＝gyomu-jidoka
+  - ⚠️ 自動判定の aeo の根拠 `f-innovations.co.jp/service/llmo/` は「関連情報」欄のニュース見出し（TechSuite のプレスリリース）の AEO で、根拠にしていない（keep で querya.jp/aeo に差し替え）
+  - reject: dx-consul（自動判定の根拠がトップ。AIコンサル Optis は AI を使った月次の事業相談と制作支援）
+  - 料金は公開（QUERYA `/support`：AIO 3プラン 初期30万/50万/80万円・月額10万/30万/50万円（すべて税別）、LLMO 月額10万円〜・HP制作 50万円〜（税表記なし））。AEO のページに金額なしと priceNote に明記。実績は `querya.jp/cases` が自社サイト・自社サービス・代表者の情報設計の例のみで、顧客の支援実績・件数の掲載なし→ casesDisclosed false
+  - **`data/company-facts.json` に登録**（12社目）: 設立 2016年12月19日・資本金 10,000,000円（1,000万円と表記）・代表 木ノ根 雄志・中央区晴海3-13-1 DEUX TOURS EASTタワー52F は `/company/`（11/10 確認）。従業員数は掲載なし。mentions は会社概要ページの本文で判定（AEO は QUERYA 側にのみあるため false。生 HTML だと JSON-LD の「ImageObject」に GEO が誤一致するので本文で数えた）
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
+- 見送り（同じ調査で見た社）: IR（札幌・`irw.jp/aeo/` は URL のみ aeo で本文は AIO 対策）、セブンアイズ（`llmo-1.com` は AEO を概念として説明するのみ）、ひとのて（`hitonote.co.jp` は AEO がコラムのみ・サービスページ seo/consulting/web/content に表記なし）、KAMERAD・From North・SEO Dash（トップに AEO 表記なし）。次の候補（未精査）: WEBRAIN（高槻市・`webrain.co.jp/service/seo/` に「SEO・AEO（AI）対策」と月額プラン。和文の法人名が未確認）

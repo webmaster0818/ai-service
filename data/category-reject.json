@@ -281,6 +281,9 @@
   "ECマーケティング株式会社": {
    "dx-consul": "自動判定の根拠がトップページ。DXのサービスページ /service/strategic-operation/webmarketing-dx/ は Webマーケティング（CVR改善・ユーザビリティ）のコンサルティングで、AI導入の支援ではない",
    "naisei-shien": "自動判定の根拠が業界別の制作事例一覧 /projects/biz/service/ で、AI活用の内製化支援のサービスページではない"
+  },
+  "株式会社ファーストイノベーション": {
+   "dx-consul": "自動判定の根拠がトップページ。AIコンサル Optis（/service/optis/）は AI を使った月次の事業相談と WEB・SNS・資料の制作支援で、業務のデジタル化・AI導入の支援を掲げたサービスページではない"
   }
  }
 }
