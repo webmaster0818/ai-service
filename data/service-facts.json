@@ -2926,5 +2926,27 @@
   "casesSource": "https://querya.jp/cases",
   "pagesChecked": 15,
   "checkedAt": "2026-11-10"
+ },
+ {
+  "name": "株式会社ウィブレイン",
+  "officialUrl": "https://webrain.co.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://webrain.co.jp/service/seo/",
+   "web-seisaku": "https://webrain.co.jp/service/",
+   "llmo": "https://webrain.co.jp/service/seo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "SEO・AEO（AI）対策の更新運用プラン（月額）は MEO・SEO・AEO（AI）運用 33,000円（税込）／MEO・SEO（AEO・AI）・SNS運用 39,600円（税込）／HP・SEO・AEO運用 55,000円（税込）／MEO・SEO/AEO（AI）・SNS運用 55,000円（税込）。システム使用のため最低半年の契約で、北摂地域は10%割引。ホームページ制作の料金は内容・ページ数・機能により個別見積りです",
+  "priceSource": "https://webrain.co.jp/service/seo/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://webrain.co.jp/hpworks/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-11"
  }
 ]

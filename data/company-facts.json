@@ -200,5 +200,21 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-10"
+ },
+ {
+  "name": "株式会社ウィブレイン",
+  "officialUrl": "https://webrain.co.jp/",
+  "infoPageUrl": "https://webrain.co.jp/about/",
+  "founded": "2013年6月1日",
+  "hq": "〒569-0077 大阪府高槻市野見町4-6-2F",
+  "representative": "来栖 秀長",
+  "mentions": {
+   "AEO": true,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-11"
  }
 ]
