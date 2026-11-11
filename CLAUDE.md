@@ -355,3 +355,10 @@
   - **`data/company-facts.json` に登録**（12社目）: 設立 2016年12月19日・資本金 10,000,000円（1,000万円と表記）・代表 木ノ根 雄志・中央区晴海3-13-1 DEUX TOURS EASTタワー52F は `/company/`（11/10 確認）。従業員数は掲載なし。mentions は会社概要ページの本文で判定（AEO は QUERYA 側にのみあるため false。生 HTML だと JSON-LD の「ImageObject」に GEO が誤一致するので本文で数えた）
   - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
 - 見送り（同じ調査で見た社）: IR（札幌・`irw.jp/aeo/` は URL のみ aeo で本文は AIO 対策）、セブンアイズ（`llmo-1.com` は AEO を概念として説明するのみ）、ひとのて（`hitonote.co.jp` は AEO がコラムのみ・サービスページ seo/consulting/web/content に表記なし）、KAMERAD・From North・SEO Dash（トップに AEO 表記なし）。次の候補（未精査）: WEBRAIN（高槻市・`webrain.co.jp/service/seo/` に「SEO・AEO（AI）対策」と月額プラン。和文の法人名が未確認）
+
+### 2026-11-11（朝）
+- **株式会社ウィブレイン（WEBRAIN）を追加（118→119社・sitemap 172→173・AEO 37→38・LLMO 42→43・Web制作 38→39）**。AEO（最も薄い領域）狙い。大阪府高槻市のホームページ制作・SEO/MEO・SNS運用の会社。候補は 11/10 の「次の候補」。Yahoo 検索「AI検索対策 高槻」でも公式が出ることを確認。公式サイトを 11/11 に確認
+  - officialUrl `webrain.co.jp`（slug `webrain`）。根拠 `/service/seo/`（「SEO・AEO (AI)対策」。グローバルナビ・ページ題に AEO、AIに伝わるコンテンツ設計・構造化データ・FAQ/HowTo 等の支援内容、FAQ で「SEO・MEO・AEO・GEO・LLMO」を対策すると明記）＝aeo・llmo／`/service/`（ホームページ制作：新規・リニューアル・LP・採用ページ・WordPress）＝web-seisaku
+  - 料金は公開（`/service/seo/`：更新運用プラン 月額 33,000円／39,600円／55,000円／55,000円（税込）・最低半年契約・北摂地域10%割引）。ホームページ制作は個別見積り（`/about/` FAQ）。実績は `/hpworks/`（件数の明記なし）。「前年比3.2倍」「1.8倍」等の自社発表の効果値は載せていない
+  - **`data/company-facts.json` に登録**（13社目）: 設立 2013年6月1日・代表 来栖 秀長・高槻市野見町4-6-2F は `/about/` 会社概要（11/11 確認）。資本金・従業員数は掲載なし。mentions は会社概要ページの本文で AEO・LLMO が true
+  - `--new` → keep・facts → `--only` dry の結果を反映 → `--only` dry 差分0。reject なし。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
