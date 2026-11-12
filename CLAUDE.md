@@ -391,3 +391,4 @@
 - JSON-LD: 2社に `ldWebPage: true`（WebPage 名＝表示中の title、dateModified＝2026-11-12）。summary のある企業で ldWebPage が無いのはこの2社だけだった（他13社は設定済み・summary の無い企業は既定の title と JSON-LD 名が一致）ので、テンプレート（`app/company/[slug]/page.tsx`）は変更なし
 - 本文・JSON-LD の差分は2ページのみ（全178ページの表示テキストと JSON-LD を deploy と比較）。sitemap は2URLの lastmod のみ。service-facts.json・category-keep.json は未変更（バクリの rag・aeo 判断待ちは未変更）
 - title 変更: `/company/bakuri/`（11/12）→ 11/19 まで title を変えない
+- precheck ✅ 178ページ全項目OK → source `f2d1dc5` → deploy `839f3d18` → 本番（push から約3分で反映）2URLで新 title・法人番号・JSON-LD（WebPage 名＝title・dateModified 2026-11-12）を確認、旧 title・旧 JSON-LD 名 0件。sitemap 178（lastmod の変化は2URLのみ）。計測リンク 0→0。下部「確認結果」表の確認日 2026-09-23 は service-facts の巡回日なので未変更
