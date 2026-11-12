@@ -275,6 +275,11 @@
    "aeo": "https://webrain.co.jp/service/seo/",
    "llmo": "https://webrain.co.jp/service/seo/",
    "web-seisaku": "https://webrain.co.jp/service/"
+  },
+  "株式会社BOZUP": {
+   "aeo": "https://bozup.co.jp/web-service/",
+   "llmo": "https://bozup.co.jp/web-service/",
+   "web-seisaku": "https://bozup.co.jp/web-service/"
   }
  },
  "facts": {
@@ -639,6 +644,14 @@
    "casesDisclosed": true,
    "casesCount": null,
    "casesSource": "https://webrain.co.jp/hpworks/"
+  },
+  "株式会社BOZUP": {
+   "priceDisclosed": true,
+   "priceNote": "AI検索対策サイト制作（SEO・MEO・AEO）は制作費 120,000円〜（税別・初回のみ）、月額 20,000円〜（税別・MEO・AEO運用、ドメイン・サーバー費、月1回の更新を含む）。オプションは追加ページ 12,000円ほか（税別）。広告費は別途です",
+   "priceSource": "https://bozup.co.jp/web-service/",
+   "casesDisclosed": true,
+   "casesCount": null,
+   "casesSource": "https://bozup.co.jp/works/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"

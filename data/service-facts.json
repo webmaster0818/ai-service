@@ -2948,5 +2948,27 @@
   "casesSource": "https://webrain.co.jp/hpworks/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-11"
+ },
+ {
+  "name": "株式会社BOZUP",
+  "officialUrl": "https://bozup.co.jp/",
+  "categories": [
+   "aeo",
+   "web-seisaku",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://bozup.co.jp/web-service/",
+   "web-seisaku": "https://bozup.co.jp/web-service/",
+   "llmo": "https://bozup.co.jp/web-service/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対策サイト制作（SEO・MEO・AEO）は制作費 120,000円〜（税別・初回のみ）、月額 20,000円〜（税別・MEO・AEO運用、ドメイン・サーバー費、月1回の更新を含む）。オプションは追加ページ 12,000円ほか（税別）。広告費は別途です",
+  "priceSource": "https://bozup.co.jp/web-service/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://bozup.co.jp/works/",
+  "pagesChecked": 10,
+  "checkedAt": "2026-11-12"
  }
 ]

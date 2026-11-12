@@ -216,5 +216,21 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-11"
+ },
+ {
+  "name": "株式会社BOZUP",
+  "officialUrl": "https://bozup.co.jp/",
+  "infoPageUrl": "https://bozup.co.jp/company/",
+  "founded": "2013年5月2日",
+  "hq": "〒231-0021 神奈川県横浜市中区日本大通７ 合人社横浜日本大通７ビル４Ｆ",
+  "representative": "笹田 祐介",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-12"
  }
 ]
