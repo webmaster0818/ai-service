@@ -383,3 +383,11 @@
   - `--new` → keep・facts → `--only` dry の結果を反映 → `--only` dry 差分0。reject なし。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
 - 見送り（同じ調査で見た社）: カバズワース（kaba-design.jp。`/about/` に「AEO対策・GEO対策・AI検索対策にも力を入れています」とあるが、AEO のサービスページ・料金がなく法人格も未確認＝次の候補）、くるみ（`/services/aio-llmo` は AIO/LLMO のみ。AEO はブログのみ）、Mesut（名古屋。トップ・`/mentori-aio/` は SEO・AIO）、ソニーネットワークコミュニケーションズ（AEO はブログのみ・`/service/` に AEO なし）、one-clue（仙台。制作 Q&A で AIO/AEO/LLMO 対策の可否に触れるのみ）
 - **点検 C3 `/company/jetb/`＝誤検知**：「当サイトでは社数を検証していません」は否定（免責）の文。主張は JetB 公式トップの「累計 3,000社 以上の導入実績」を帰属・出典つきで引用したもので、11/12 も公式トップに同じ記載。変更なし
+
+### 2026-11-12（12:00 成長ルーチン）バクリ・メディアリーチの冒頭表を公式・国税庁と照合、JSON-LD を title・確認日に
+- **GSC（10/13〜11/9）**: `/company/bakuri/`「llmo対策プロ バクリ株式会社」758@6.4・「aio対策llmoバクリ株式会社」669@6.2・「llmo対策 バクリ株式会社 コンサルティング」46@10.7・「llmo対策 aio バクリ株式会社」44@10.4（計1,585表示・クリック0）／`/company/mediareach/`「メディアリーチ」33@15.8・「株式会社メディアリーチ」29@17.6
+- バクリ（公式 トップ・`/company/about/`・`/service/`・`/service/ai-countermeasures_llmo-consulting/`・サイトマップと国税庁を 11/12 確認）: 公式サービス名は「AIO対策 / LLMOコンサルティング」（無料相談は「AIO対策 / LLMO 無料相談会」）。**「LLMO対策プロ」は公式サイトで確認できず**＝title・h1 には入れず、表の「サービス名の表記」行に確認できなかったと明記。title/h1/description を公式サービス名＋料金（月額30万円〜・3ヶ月〜・トライアル診断）に。支援内容を現行の公式の区分（内部最適化・コンテンツ改修／外部施策・エンティティ強化／運用・モニタリング・内製化）に更新、公開事例2件・主要お取引先・法人番号 7011001148341 を追加。⚠️ 国税庁では**本店所在地が 2026/9/15 に渋谷区神宮前→新宿区納戸町へ変更**（公式の会社概要は神宮前のまま）＝両方を表に明記
+- メディアリーチ（`/company`・`/seo-consulting/llmo-service`・`/seo-consulting` と国税庁を 11/12 確認）: 既存の表は公式と一致。法人番号 1120001242446（国税庁の商号・本店所在地と一致）・資本金 500万円（2026年3月時点）・LLMO支援実績「117社超（2026年4月末）／SEO 300社以上」（同社の発表値と明記）を追加。description に法人番号。title は変更なし
+- JSON-LD: 2社に `ldWebPage: true`（WebPage 名＝表示中の title、dateModified＝2026-11-12）。summary のある企業で ldWebPage が無いのはこの2社だけだった（他13社は設定済み・summary の無い企業は既定の title と JSON-LD 名が一致）ので、テンプレート（`app/company/[slug]/page.tsx`）は変更なし
+- 本文・JSON-LD の差分は2ページのみ（全178ページの表示テキストと JSON-LD を deploy と比較）。sitemap は2URLの lastmod のみ。service-facts.json・category-keep.json は未変更（バクリの rag・aeo 判断待ちは未変更）
+- title 変更: `/company/bakuri/`（11/12）→ 11/19 まで title を変えない
