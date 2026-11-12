@@ -374,3 +374,12 @@
 - 落ちたページ（トップ・category/naisei-shien・company/webridge 各 1→0）は偶然の範囲として未調査・未変更
 - title 変更: 上記5URL（11/11）→ 11/18 まで title を変えない
 - precheck ✅ 174ページ全項目OK → source `e6504be` → deploy `0787a6f8` → 本番（push から約10分で反映・空コミット不要）5URLで新 title・法人番号/要点表を確認、旧 title 0件。sitemap 174（ローカルと一致・lastmod の変化は5URLのみ）。計測リンク 0→0
+
+### 2026-11-12（朝）
+- **株式会社BOZUPを追加（119→120社・sitemap 177→178・AEO 38→39・LLMO 43→44・Web制作 39→40）**。AEO（最も薄い領域）狙い。横浜市中区（長野にも拠点）の店舗向け Web制作・MEO・動画広告の会社。候補は Yahoo 検索「"AEO対策" 料金プラン 制作会社 横浜」（未使用の語）。公式サイトを 11/12 に確認
+  - officialUrl `bozup.co.jp`（slug `bozup`）。根拠 `/web-service/`（「AEO / AI Search Optimization」。サービス項目「02 — AEO：AEO対策（AIに発見・引用される設計）」、LLMO（構造化データ・NAP統一・llms.txt）→AIO（MEO）→AEO（FAQ・Answer-first）の3段階を分けて定義し全段階を実装すると明記、料金表「AI検索対策サイト制作」）＝aeo・llmo・web-seisaku（自動判定の aeo・web-seisaku の根拠はトップ → keep で /web-service/ に差し替え）
+  - 料金は公開（制作費 120,000円〜・月額 20,000円〜（MEO・AEO運用込み）・すべて税別）を facts に。⚠️ 自動抽出の「月額30〜50万円」は `/online-ad/`（動画広告）の値なので不採用。実績は `/works/`（件数の明記なし）
+  - **`data/company-facts.json` に登録**（14社目）: 設立 2013年5月2日・代表 笹田 祐介・横浜市中区日本大通７ 合人社横浜日本大通７ビル４Ｆ は `/company/`（11/12 確認）。資本金・従業員数は掲載なし。mentions は会社概要の本文で AEO のみ true（事業内容「AI検索対策サイト・LP制作（SEO・MEO・AEO）」）
+  - `--new` → keep・facts → `--only` dry の結果を反映 → `--only` dry 差分0。reject なし。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
+- 見送り（同じ調査で見た社）: カバズワース（kaba-design.jp。`/about/` に「AEO対策・GEO対策・AI検索対策にも力を入れています」とあるが、AEO のサービスページ・料金がなく法人格も未確認＝次の候補）、くるみ（`/services/aio-llmo` は AIO/LLMO のみ。AEO はブログのみ）、Mesut（名古屋。トップ・`/mentori-aio/` は SEO・AIO）、ソニーネットワークコミュニケーションズ（AEO はブログのみ・`/service/` に AEO なし）、one-clue（仙台。制作 Q&A で AIO/AEO/LLMO 対策の可否に触れるのみ）
+- **点検 C3 `/company/jetb/`＝誤検知**：「当サイトでは社数を検証していません」は否定（免責）の文。主張は JetB 公式トップの「累計 3,000社 以上の導入実績」を帰属・出典つきで引用したもので、11/12 も公式トップに同じ記載。変更なし
