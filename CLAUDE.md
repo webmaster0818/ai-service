@@ -392,3 +392,14 @@
 - 本文・JSON-LD の差分は2ページのみ（全178ページの表示テキストと JSON-LD を deploy と比較）。sitemap は2URLの lastmod のみ。service-facts.json・category-keep.json は未変更（バクリの rag・aeo 判断待ちは未変更）
 - title 変更: `/company/bakuri/`（11/12）→ 11/19 まで title を変えない
 - precheck ✅ 178ページ全項目OK → source `f2d1dc5` → deploy `839f3d18` → 本番（push から約3分で反映）2URLで新 title・法人番号・JSON-LD（WebPage 名＝title・dateModified 2026-11-12）を確認、旧 title・旧 JSON-LD 名 0件。sitemap 178（lastmod の変化は2URLのみ）。計測リンク 0→0。下部「確認結果」表の確認日 2026-09-23 は service-facts の巡回日なので未変更
+
+### 2026-11-13（朝）
+- **株式会社ロックスライフを追加（120→121社・sitemap 182→183・AEO 39→40・LLMO 44→45）**。AEO（最も薄い領域）狙い。港区虎ノ門のデジタルマーケティング・CMO代行の会社。候補は Yahoo 検索「GEO対策 AEO対策 支援 会社」（未使用の語）の8位に公式ページ。公式サイトを 11/13 に確認
+  - officialUrl `rocks-life.jp`（slug `rocks-life`）。根拠 `/aeo-geo/`（「AI検索最適化（AEO・GEO）対策サービス」。AI引用診断・技術実装（llms.txt・構造化データ）・コンテンツ制作・サイテーション施策・月次レポート、AEO/GEO/LLMO の比較表）＝aeo・llmo（自動判定の根拠はトップ → keep で /aeo-geo/ に差し替え）
+  - reject: ai-kenshu（自動判定の根拠 `/ai-answer-url-analysis-english-school/` は英会話教室5校の AI 回答 URL を分析した自社調査記事で、研修サービスではない）
+  - 料金は公開（AI検索通信簿 初回 55,000円・改善ロードマップ 初回 55,000円・Pro 継続改善プラン 月額 165,000円（すべて税込）・実制作費/媒体費は別途）を facts に。実績は `/aeo-geo/` の「お客様の声」1件（件数の明記なし）
+  - **`data/company-facts.json` に登録**（15社目）: 創業 2015年6月（公式の表記は「創業」なので founded に「（創業）」と付記）・資本金 4,800,000円・代表 古谷隆一・港区虎ノ門1-17-1 虎ノ門ヒルズビジネスタワー15階 はトップの「法人概要」（専用の会社概要ページなし・11/13 確認）。従業員数は HTML コメントアウトされた非表示行なので載せていない。mentions はトップ本文で AEO・GEO が true
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。ギブリーの company-facts（判断待ち A/B）は未変更
+- 見送り・未精査（同じ調査で見た社）: Synapse Arrows（自社の「おすすめ10選」記事のみ確認）、コネクテッドワン・ブリッジワールド（AEO はコラムのみ確認・サービスページ未精査）。「生成AI検索 最適化 支援 AEO」は解説記事が中心で新しい候補なし
+- precheck ✅ 183ページ全項目OK → source `fd4dd39` → deploy `48287965`。計測リンク 0→0
+- 本番（push 09:21 → 09:44 に反映・約23分・空コミット不要）: `/company/rocks-life/` 200・料金/代表/根拠URL 表示、`/category/aeo/` に掲載・40社表記、sitemap 183（ローカルと一致）。Indexing API 1本 200（tomomi-2 枠はこれで 0/55）
