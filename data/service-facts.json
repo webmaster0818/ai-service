@@ -2970,5 +2970,25 @@
   "casesSource": "https://bozup.co.jp/works/",
   "pagesChecked": 10,
   "checkedAt": "2026-11-12"
+ },
+ {
+  "name": "株式会社ロックスライフ",
+  "officialUrl": "https://rocks-life.jp/",
+  "categories": [
+   "aeo",
+   "llmo"
+  ],
+  "categorySource": {
+   "aeo": "https://rocks-life.jp/aeo-geo/",
+   "llmo": "https://rocks-life.jp/aeo-geo/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索通信簿（現状診断）初回のみ 55,000円／AI検索 改善ロードマップ 初回のみ 55,000円／AI検索通信簿 Pro 継続改善プラン 月額 165,000円（すべて税込）。サイト改修・記事制作・PR・メディア掲載等の実制作費・媒体費は別途",
+  "priceSource": "https://rocks-life.jp/aeo-geo/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://rocks-life.jp/aeo-geo/",
+  "pagesChecked": 12,
+  "checkedAt": "2026-11-13"
  }
 ]

@@ -232,5 +232,22 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-12"
+ },
+ {
+  "name": "株式会社ロックスライフ",
+  "officialUrl": "https://rocks-life.jp/",
+  "infoPageUrl": "https://rocks-life.jp/",
+  "founded": "2015年6月（創業）",
+  "capital": "4,800,000円",
+  "hq": "〒105-6415 東京都港区虎ノ門1-17-1 虎ノ門ヒルズビジネスタワー15階",
+  "representative": "古谷隆一",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": true,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-13"
  }
 ]
