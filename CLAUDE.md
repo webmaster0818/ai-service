@@ -403,3 +403,12 @@
 - 見送り・未精査（同じ調査で見た社）: Synapse Arrows（自社の「おすすめ10選」記事のみ確認）、コネクテッドワン・ブリッジワールド（AEO はコラムのみ確認・サービスページ未精査）。「生成AI検索 最適化 支援 AEO」は解説記事が中心で新しい候補なし
 - precheck ✅ 183ページ全項目OK → source `fd4dd39` → deploy `48287965`。計測リンク 0→0
 - 本番（push 09:21 → 09:44 に反映・約23分・空コミット不要）: `/company/rocks-life/` 200・料金/代表/根拠URL 表示、`/category/aeo/` に掲載・40社表記、sitemap 183（ローカルと一致）。Indexing API 1本 200（tomomi-2 枠はこれで 0/55）
+
+### 2026-11-14（朝）
+- **AEO 候補3社はすべて見送り（会社の追加なし・121社のまま）**。公式サイトを 11/14 に確認
+  - Synapse Arrows（`synapsearrows.com`。Synapse Arrows Pte. Ltd.＝シンガポール法人・UEN 202308737G）: `/services/ai-aeo/` は URL に aeo とあるが、本文・title は「AI映え診断の有料プラン」で AEO の表記なし（AEO は JSON-LD の knowsAbout のみ）。検索結果に残る旧 title「AEO/LLMO対策の料金」は現行ページにない
+  - コネクティッドワン（`connected-one.world`。株式会社コネクティッドビレッジ・平塚市）: サイト作成ツール（ファネルビルダー）の SaaS。`/seo-ai-search`（機能ページ）・トップ・会社概要に AEO の表記なし。AEO はブログ記事（`/blog/aeo-guide` 等）と ebook のポップアップ名のみ（10/26 と同じ判断）
+  - ブリッジワールド（`bridge-world.jp`。株式会社Bridge）: サービスは `/llmo/`「LLMOコンサルティング｜LLMO・GEO・AIO対策」。AEO は本文で「AIが直接回答を返す面（AEO）も…初期調査でスコープを決めたうえでご提案」と対象面として触れる1か所のみで、サービス名・ナビに AEO なし。AEO の専用ページはコラム（`/seo/column/aeo/`）のみ
+- 追加で見た候補: 株式会社BoostX（`boostx-inc.com/ai-search-optimization/`「AI検索指名獲得パック」LLMO / GEO / AEO / AIO・初期22万＋月額22万円〜（税込）・最低6ヶ月。福岡市博多区・設立 2025年6月17日）。AEO は明記されているが、トップ・`/service/`（7つのサービス）・会社概要の事業内容のどこからもリンク・記載がない独立LP＝Oz link と同じ形なので判断待ち。データは追加後に戻した（未変更）
+- **and media の料金欄を公式の現行プランに更新（判断不要・公式と食い違う値）**: `/aeo/` の料金が「サポート費用 月額10万円＋施策費用」から「and AEO」4プラン（Monitor 月5万・Guide 月15万・Action 月30万・Scale 月50万円〜、初月総額30万円・Monitor は初期施策任意、すべて税抜・最低6か月）に変わっていた。category-keep の facts と service-facts の priceNote を差し替え、`--only` dry 差分0。実績欄（`/company/` 累計支援実績150社）は 11/14 も同じで未変更
+- precheck ✅ 187ページ全項目OK → source `4b60c4b` → deploy `c383abe1`（表示テキスト・JSON-LD の差分は `/company/andmedia/` と opendata の2ファイルのみ）。計測リンク 0→0
