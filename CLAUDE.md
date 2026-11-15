@@ -412,3 +412,14 @@
 - 追加で見た候補: 株式会社BoostX（`boostx-inc.com/ai-search-optimization/`「AI検索指名獲得パック」LLMO / GEO / AEO / AIO・初期22万＋月額22万円〜（税込）・最低6ヶ月。福岡市博多区・設立 2025年6月17日）。AEO は明記されているが、トップ・`/service/`（7つのサービス）・会社概要の事業内容のどこからもリンク・記載がない独立LP＝Oz link と同じ形なので判断待ち。データは追加後に戻した（未変更）
 - **and media の料金欄を公式の現行プランに更新（判断不要・公式と食い違う値）**: `/aeo/` の料金が「サポート費用 月額10万円＋施策費用」から「and AEO」4プラン（Monitor 月5万・Guide 月15万・Action 月30万・Scale 月50万円〜、初月総額30万円・Monitor は初期施策任意、すべて税抜・最低6か月）に変わっていた。category-keep の facts と service-facts の priceNote を差し替え、`--only` dry 差分0。実績欄（`/company/` 累計支援実績150社）は 11/14 も同じで未変更
 - precheck ✅ 187ページ全項目OK → source `4b60c4b` → deploy `c383abe1`（表示テキスト・JSON-LD の差分は `/company/andmedia/` と opendata の2ファイルのみ）。計測リンク 0→0
+
+### 2026-11-15（朝）
+- **株式会社LUCRISを追加（121→122社・sitemap 191→192・AEO 40→41・LLMO 45→46・Web制作 40→41・生成AI研修 34→35・業務自動化 29→30）**。AEO（最も薄い領域）狙い。滋賀県大津市（コラボしが21）の中小企業向け AI活用・システム開発・HP制作の会社（設立 2025年12月10日）。候補は Yahoo 検索「"AEO対策" サービス 中小企業 株式会社」（未使用の語）の9位 `lucris.jp/aeo/`。公式サイトを 11/15 に確認
+  - officialUrl `lucris.jp`（slug `lucris`）。根拠 `/aeo/`（「AI検索対策（AEO対策支援）」。グローバルナビ・フッターの SERVICE に「AEO対策支援（AI検索対策）」、title に「AEO・AIO・LLMO」、5つのAI・検索での定点観測と改善の支援内容）＝aeo・llmo／`/marketing/`（HPリニューアル・新規制作）＝web-seisaku／`/ai-support/`（AI活用研修・自社業務を教材にした演習型）＝ai-kenshu／`/automation/`（業務効率化—システム開発／業務自動化）＝gyomu-jidoka（自動判定の aeo・ai-kenshu・gyomu-jidoka の根拠はトップ → keep で各サービスページに差し替え）
+  - reject: dx-consul・naisei-shien（自動判定の根拠が `/feed/`＝コラムの RSS。サービスページに DX・内製化支援の記載なし）
+  - 料金は公開（`/aeo/`：初期の土台づくり 50万円＋観測 月5万／運用 月10万／集客 月20万円（すべて税別・最低6ヶ月））を facts に。HP制作・AI研修・システム開発は「料金はご相談の際にご案内」。実績はトップの WORKS（社名なしの導入事例2件＋自社の AEO 実証1件。件数の明記なし）→ casesDisclosed true・casesSource トップ。効果値（40H→4H 等）は載せていない
+  - **`data/company-facts.json` に登録**（16社目）: 設立 2025年12月10日・滋賀県大津市打出浜2-1 コラボしが21 B19 は `/about/`（11/15 確認）。代表者欄は `/about/` に無いので空（トップの「創設者 諏訪将志」は肩書が代表ではないため不採用）。資本金・従業員数は掲載なし。mentions は `/about/` 本文で AEO のみ true
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。BoostX・Oz link・ギブリーの company-facts（判断待ち）は未変更
+- 見送り・未精査（同じ調査で見た社）: Makutane（`makutane.co.jp/aeo/`「AEO・LLMO対策」がナビにある。法人格・会社概要は未確認＝次の候補）、SeekNext（福岡・`/service/seo` に AEO 表記なし）、MEcreate（名古屋・`/service/seo/` に AEO 表記なし）
+- **点検 C3 `/company/jetb/`＝誤検知**（11/12 と同じ）：「当サイトでは社数を検証していません」は否定（免責）の文。JetB 公式トップの「累計 3,000社 以上の導入実績」は 11/15 も同じ記載。変更なし
+- precheck ✅ 192ページ全項目OK → source `8fe3843` → deploy `7aee0de3`（表示差分は新ページ `/company/lucris/` と一覧・件数のみ）。計測リンク 0→0
