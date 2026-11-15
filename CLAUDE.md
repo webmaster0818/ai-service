@@ -423,3 +423,14 @@
 - 見送り・未精査（同じ調査で見た社）: Makutane（`makutane.co.jp/aeo/`「AEO・LLMO対策」がナビにある。法人格・会社概要は未確認＝次の候補）、SeekNext（福岡・`/service/seo` に AEO 表記なし）、MEcreate（名古屋・`/service/seo/` に AEO 表記なし）
 - **点検 C3 `/company/jetb/`＝誤検知**（11/12 と同じ）：「当サイトでは社数を検証していません」は否定（免責）の文。JetB 公式トップの「累計 3,000社 以上の導入実績」は 11/15 も同じ記載。変更なし
 - precheck ✅ 192ページ全項目OK → source `8fe3843` → deploy `7aee0de3`（表示差分は新ページ `/company/lucris/` と一覧・件数のみ）。計測リンク 0→0
+
+### 2026-11-15（12:00 成長ルーチン）5社の冒頭表を公式と照合、仁頼・Queue に法人番号（国税庁）
+- **GSC（10/16〜11/12）**: 「lionai」29@6.3（lion-ai）／「株式会社仁頼」29@6.0（jinrai）／「anotete」16@7.7・「あのテテ」10@9.4（anotete）／「jetb やばい」16@10.3c3（jetb）／「queue株式会社」12@18.2c1（queue-tech）
+- 11/5 の冒頭表を各社公式（11/15 取得）と照合: **5社とも料金・所在地・サービス名に差なし**（LionAI=WONQ・10万/30万/60万円、仁頼 GEO Hack 4プラン・AI FIT・Web制作、アノテテ Tebot/ShareMind/Claude Code/Boost Dev、JetB 会社概要・3,000社・Our AI面接 定額/1年、Queue 個別見積もり・会社概要）
+- 変更（company-summary のみ・checkedAt 2026-11-15・sitemap は2URLの lastmod のみ）:
+  - 仁頼: 公式 /about/ に掲載の法人番号 4020001148080 を国税庁（商号・フリガナ ジンライ・本店）と照合して追記、代表者の読み、事業内容の現行表記（GEO Hack Suite の開発・提供が加わった）。description に法人番号
+  - Queue: 国税庁の商号「Ｑｕｅｕｅ株式会社」・フリガナ キュー・法人番号 2010001243743・本店（会社概要と一致）を社名の表記行に。title/h1 に読み「（キュー）」、description に法人番号。同名の別法人の記載は一次情報で確認できず書いていない
+- 変更なし: lion-ai・anotete（「あのテテ」は社名の表記行に既にあり）・jetb（評判語を書かない方針を維持）
+- 競合比較: WebSearch は米国向けの結果で、「株式会社仁頼」は公式＋企業DB（salesnow 等・法人番号つき）、「queue株式会社」は企業DB・別の Queue 社、lionai/anotete/jetb は無関係の英語結果のみ
+- title 変更: `/company/queue-tech/`（11/15）→ 11/22 まで title を変えない
+- precheck ✅ 192ページ全項目OK → source `7297b2a` → deploy `e39f161a`（表示テキスト差分は2ページのみ）→ 本番（約2分で反映）新 title・法人番号・フリガナを確認、旧 title 0件。sitemap 192。計測リンク 0→0
