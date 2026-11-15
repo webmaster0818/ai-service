@@ -249,5 +249,20 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-13"
+ },
+ {
+  "name": "株式会社LUCRIS",
+  "officialUrl": "https://lucris.jp/",
+  "infoPageUrl": "https://lucris.jp/about/",
+  "founded": "2025年12月10日",
+  "hq": "滋賀県大津市打出浜2-1 コラボしが21 B19",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-15"
  }
 ]

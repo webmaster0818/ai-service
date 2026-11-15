@@ -287,6 +287,10 @@
   },
   "株式会社ロックスライフ": {
    "ai-kenshu": "自動判定の根拠 /ai-answer-url-analysis-english-school/ は英会話教室5校の AI 回答 URL を分析した自社調査の記事（メディア掲載）で、AI 研修のサービスページではない。公式のサービスは CMO代行と AI検索最適化（AEO・GEO）のみ"
+  },
+  "株式会社LUCRIS": {
+   "dx-consul": "自動判定の根拠が /feed/（コラム記事の RSS）。サービスページ（/automation/・/ai-support/・/marketing/・/aeo/）に DX・デジタル化の支援を掲げた記載なし",
+   "naisei-shien": "自動判定の根拠が /feed/（コラム記事の RSS）。サービスページに内製化支援の記載なし（/aeo/ の「6ヶ月後に社内で自走」は AEO 運用の継続方法の選択肢）"
   }
  }
 }

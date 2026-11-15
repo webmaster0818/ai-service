@@ -2990,5 +2990,31 @@
   "casesSource": "https://rocks-life.jp/aeo-geo/",
   "pagesChecked": 12,
   "checkedAt": "2026-11-13"
+ },
+ {
+  "name": "株式会社LUCRIS",
+  "officialUrl": "https://lucris.jp/",
+  "categories": [
+   "aeo",
+   "ai-kenshu",
+   "gyomu-jidoka",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://lucris.jp/aeo/",
+   "ai-kenshu": "https://lucris.jp/ai-support/",
+   "gyomu-jidoka": "https://lucris.jp/automation/",
+   "llmo": "https://lucris.jp/aeo/",
+   "web-seisaku": "https://lucris.jp/marketing/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AI検索対策（AEO）：初期の土台づくり 50万円（全プラン共通）＋月次運用 観測プラン 月額5万円／運用プラン 月額10万円／集客プラン 月額20万円（すべて税別・最低6ヶ月）。初期の土台づくりのみの単発依頼も可。HP制作・AI研修・システム開発は「料金はご相談の際にご案内」で金額の掲載なし",
+  "priceSource": "https://lucris.jp/aeo/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://lucris.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-15"
  }
 ]
