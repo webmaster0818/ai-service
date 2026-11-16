@@ -444,3 +444,4 @@
   - ⚠️ `fetch-service-facts.py --help` は引数なし扱いで全社巡回が始まる（最後に service-facts.json を全上書き）。誤って起動したら書き出し前に止める（11/16 は途中で停止・差分なしを確認）
 - 点検（11/16）: to-x-ai.com の指摘 0件
 - precheck ✅ 197ページ全項目OK → source `96d8ad6` → deploy `7413507e`（追加は `/company/makutane/`・ほかはビルドID と一覧・件数）。計測リンク 0→0
+- 本番（push 09:22 → 09:37 に反映・約15分・空コミット不要）: `/company/makutane/` 200・代表/料金/根拠URL 表示、`/category/aeo/` に掲載・42社表記、sitemap 197（ローカルと一致）。Indexing 枠は 0/55（使い切り）→ GSC に sitemap 再送（成功）
