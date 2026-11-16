@@ -3016,5 +3016,27 @@
   "casesSource": "https://lucris.jp/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-15"
+ },
+ {
+  "name": "株式会社Makutane",
+  "officialUrl": "https://makutane.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://makutane.co.jp/aeo/",
+   "llmo": "https://makutane.co.jp/aeo/",
+   "web-seisaku": "https://makutane.co.jp/service/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO・LLMO／AI検索対策と広告運用は「課題と支援範囲に応じた個別見積もり」で金額の掲載なし。Web集客・制作の運用支援 月1万円〜（業務・作業量で見積もり。HP・LPの新規制作は別途見積もり）、テレアポ アポ単価3万円（すべて税別）",
+  "priceSource": "https://makutane.co.jp/service/",
+  "casesDisclosed": true,
+  "casesCount": null,
+  "casesSource": "https://makutane.co.jp/works/",
+  "pagesChecked": 14,
+  "checkedAt": "2026-11-16"
  }
 ]

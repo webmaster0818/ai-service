@@ -264,5 +264,22 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-15"
+ },
+ {
+  "name": "株式会社Makutane",
+  "officialUrl": "https://makutane.co.jp/",
+  "infoPageUrl": "https://makutane.co.jp/company/",
+  "founded": "2026年2月26日",
+  "capital": "100万円",
+  "hq": "〒530-0001 大阪府大阪市北区梅田1-1-3 大阪駅前第3ビル 29F",
+  "representative": "尾方修治",
+  "mentions": {
+   "AEO": true,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-16"
  }
 ]
