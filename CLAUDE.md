@@ -434,3 +434,13 @@
 - 競合比較: WebSearch は米国向けの結果で、「株式会社仁頼」は公式＋企業DB（salesnow 等・法人番号つき）、「queue株式会社」は企業DB・別の Queue 社、lionai/anotete/jetb は無関係の英語結果のみ
 - title 変更: `/company/queue-tech/`（11/15）→ 11/22 まで title を変えない
 - precheck ✅ 192ページ全項目OK → source `7297b2a` → deploy `e39f161a`（表示テキスト差分は2ページのみ）→ 本番（約2分で反映）新 title・法人番号・フリガナを確認、旧 title 0件。sitemap 192。計測リンク 0→0
+
+### 2026-11-16（朝）
+- **株式会社Makutaneを追加（122→123社・sitemap 196→197・AEO 41→42・LLMO 46→47・Web制作 41→42）**。AEO（最も薄い領域）狙い。11/15 に見送り・未精査として残した次候補。大阪市北区梅田の集客支援会社（設立 2026年2月26日）。公式サイトを 11/16 に確認
+  - officialUrl `makutane.co.jp`（slug `makutane`）。根拠 `/aeo/`（「AEO・LLMO対策｜AI検索最適化」。グローバルナビ・フッターの SERVICE に「AEO・LLMO／AI検索対策」、`/service/` で「主力サービス 01」。調査・設計／改善提案／制作・実装／観測・改善の4工程と成果物の表、AEO・GEO・LLMO・AIO の用語表）＝aeo・llmo／`/service/`（Webの実務支援「HP・LP制作・クリエイティブ」）＝web-seisaku（自動判定の根拠はすべてトップ → keep で差し替え）。reject なし
+  - 料金: AEO・LLMO と広告運用は「課題と支援範囲に応じた個別見積もり」で金額なし。`/service/` の Web集客・制作の運用支援 月1万円〜・テレアポ アポ単価3万円（税別）が公開されているので priceDisclosed true（priceNote に AEO は金額なしと明記）。実績は `/works/`（鉄板日和。ごいち の SNS・MEO 支援＋自社サイトの AEO 実装ショーケース。件数の明記なし）→ casesDisclosed true。売上倍率等の効果値は載せていない
+  - **`data/company-facts.json` に登録**（17社目）: 設立 2026年2月26日・資本金 100万円・代表取締役 尾方修治・〒530-0001 大阪市北区梅田1-1-3 大阪駅前第3ビル 29F は `/company/`（11/16 確認）。従業員数は掲載なし。mentions は `/company/` 本文で AEO・LLMO が true
+  - `--new` → keep・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。BoostX・Oz link・ギブリーの company-facts（判断待ち）は未変更
+  - ⚠️ `fetch-service-facts.py --help` は引数なし扱いで全社巡回が始まる（最後に service-facts.json を全上書き）。誤って起動したら書き出し前に止める（11/16 は途中で停止・差分なしを確認）
+- 点検（11/16）: to-x-ai.com の指摘 0件
+- precheck ✅ 197ページ全項目OK → source `96d8ad6` → deploy `7413507e`（追加は `/company/makutane/`・ほかはビルドID と一覧・件数）。計測リンク 0→0
