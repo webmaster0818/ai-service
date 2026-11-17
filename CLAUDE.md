@@ -445,3 +445,13 @@
 - 点検（11/16）: to-x-ai.com の指摘 0件
 - precheck ✅ 197ページ全項目OK → source `96d8ad6` → deploy `7413507e`（追加は `/company/makutane/`・ほかはビルドID と一覧・件数）。計測リンク 0→0
 - 本番（push 09:22 → 09:37 に反映・約15分・空コミット不要）: `/company/makutane/` 200・代表/料金/根拠URL 表示、`/category/aeo/` に掲載・42社表記、sitemap 197（ローカルと一致）。Indexing 枠は 0/55（使い切り）→ GSC に sitemap 再送（成功）
+
+### 2026-11-17（15:00 やり直しルーチン）
+- **株式会社BLJを追加（123→124社・sitemap 200→201・AEO 42→43・LLMO 47→48・Web制作 42→43）**。AEO（最も薄い領域）狙い。大阪市西区西本町の SEO対策専門会社。候補は Yahoo 検索「AEO対策サービス 株式会社 会社概要 大阪」（未使用の語）の1位 `bankluck-japan.co.jp/aio/`。公式サイトを 11/17 に確認
+  - officialUrl `www.bankluck-japan.co.jp`（slug `bankluck-japan`）。根拠 `/aio/`（「AI検索対策（AEO・LLMO・AI SEO）」。ページ題・見出しに AEO、グローバルナビ「AI対策」のリンク先、4つの施策と FAQ）＝aeo・llmo／`/webdesign/`（WEBサイト制作・制作実績）＝web-seisaku（自動判定の根拠はすべてトップ → keep で差し替え）。reject なし
+  - 料金: `/aio/`・`/webdesign/` に金額なし、`/seo/` の FAQ は「施策内容を精査した上で料金を提示」→ priceDisclosed null（ECマーケティングと同じ扱い）。実績は `/aio/` の「500社以上のクライアント」を全社の数字と明記。SEO事例の「+591%」等の効果値は載せていない
+  - **`data/company-facts.json` に登録**（18社目）: 設立 2012年5月・代表取締役 梶井 雄介・〒550-0005 大阪市西区西本町1丁目2-1 AXIS本町ビル4F は `/company/`（11/17 確認・住所は公式表記のまま）。資本金・従業員数は掲載なし。mentions は `/company/` 本文（事業内容「AI対策(LLMO/GEO)事業」）で LLMO・GEO が true（全ページ共通のフッターの「AIO」見出しは数えていない）
+  - `--new` → keep・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。BoostX（明日既定案で見送り）・Oz link・ギブリーの company-facts（判断待ち）は未変更
+- 見送り（同じ調査で見た社）: KOKORASHI AI（`kokorashi.com/services/ai-seo-aeo` に「SEO・AEO対策」・AI活用ページ制作 30万円〜の目安あり。ただし `/tokusho` の販売業者は屋号「KOKORASHI AI」・運営統括責任者は個人名で法人格なし＝個人事業。盛田一成と同じ扱いで対象外）、ファインドユニーク（`/llmo/` の AEO は title の併記のみ）、STSデジタル・つなぎ手・STAR SPARK・aaam・CommunityCreate・ブランディングワークス・アイ・セプト・メディアクロス（サービス/料金ページに AEO 表記なし）、EMPLAY（AEO 1回のみ・サービス名は AIO/LLMO）
+- ⚠️ 手元に他セッションの未コミット記事（`content/articles/news-20261117-15.md` ほか）があったため、HEAD＋自分の data 4ファイルだけの worktree（/tmp）でビルドして出した（未完成の記事を本番に出さないため）。worktree は削除済み
+- precheck ✅ 201ページ全項目OK → source `c515eae` → deploy `547a1dd3`（表示テキストの差分は新ページと一覧・件数のみ）。計測リンク 0→0。`__next*.txt` 混入 0
