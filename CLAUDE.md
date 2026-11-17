@@ -455,3 +455,4 @@
 - 見送り（同じ調査で見た社）: KOKORASHI AI（`kokorashi.com/services/ai-seo-aeo` に「SEO・AEO対策」・AI活用ページ制作 30万円〜の目安あり。ただし `/tokusho` の販売業者は屋号「KOKORASHI AI」・運営統括責任者は個人名で法人格なし＝個人事業。盛田一成と同じ扱いで対象外）、ファインドユニーク（`/llmo/` の AEO は title の併記のみ）、STSデジタル・つなぎ手・STAR SPARK・aaam・CommunityCreate・ブランディングワークス・アイ・セプト・メディアクロス（サービス/料金ページに AEO 表記なし）、EMPLAY（AEO 1回のみ・サービス名は AIO/LLMO）
 - ⚠️ 手元に他セッションの未コミット記事（`content/articles/news-20261117-15.md` ほか）があったため、HEAD＋自分の data 4ファイルだけの worktree（/tmp）でビルドして出した（未完成の記事を本番に出さないため）。worktree は削除済み
 - precheck ✅ 201ページ全項目OK → source `c515eae` → deploy `547a1dd3`（表示テキストの差分は新ページと一覧・件数のみ）。計測リンク 0→0。`__next*.txt` 混入 0
+- 本番（push 15:10。15:13 に xnews の deploy が重なり、30分反映なし → 15:40 空コミット `2c97eedc` で再ビルド → 15:41 反映）: `/company/bankluck-japan/` 200・代表/設立/根拠URL/料金欄 表示、`/category/aeo/` に掲載・43社表記（旧42社 0件）、トップ 124社、sitemap 202（deploy と一致・xnews 15時の記事を含む）。Indexing API は 429 → GSC に sitemap 再送（204）
