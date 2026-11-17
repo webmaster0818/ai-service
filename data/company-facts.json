@@ -281,5 +281,21 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-16"
+ },
+ {
+  "name": "株式会社BLJ",
+  "officialUrl": "https://www.bankluck-japan.co.jp/",
+  "infoPageUrl": "https://www.bankluck-japan.co.jp/company/",
+  "founded": "2012年5月",
+  "hq": "〒550-0005 大阪市西区西本町1丁目2-1 AXIS本町ビル4F",
+  "representative": "梶井 雄介",
+  "mentions": {
+   "AEO": false,
+   "LLMO": true,
+   "GEO": true,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-17"
  }
 ]

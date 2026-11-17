@@ -296,6 +296,11 @@
    "aeo": "https://makutane.co.jp/aeo/",
    "llmo": "https://makutane.co.jp/aeo/",
    "web-seisaku": "https://makutane.co.jp/service/"
+  },
+  "株式会社BLJ": {
+   "aeo": "https://www.bankluck-japan.co.jp/aio/",
+   "llmo": "https://www.bankluck-japan.co.jp/aio/",
+   "web-seisaku": "https://www.bankluck-japan.co.jp/webdesign/"
   }
  },
  "facts": {
@@ -692,6 +697,14 @@
    "casesDisclosed": true,
    "casesCount": null,
    "casesSource": "https://makutane.co.jp/works/"
+  },
+  "株式会社BLJ": {
+   "priceDisclosed": null,
+   "priceNote": "AI検索対策（AEO・LLMO・AI SEO）とWEBサイト制作のページに料金の記載はありません（SEO対策のページの FAQ は「施策内容を精査した上で料金を提示」）",
+   "priceSource": "https://www.bankluck-japan.co.jp/seo/",
+   "casesDisclosed": true,
+   "casesCount": "500社以上のクライアント（SEO対策を含む全社の数字で、AEO対策に限った件数ではありません）",
+   "casesSource": "https://www.bankluck-japan.co.jp/aio/"
   }
  },
  "_note_facts": "\"facts\" は手で確定した料金欄・実績欄（priceDisclosed / priceNote / priceSource / casesDisclosed / casesCount / casesSource）。survey() の自動抽出（正規表現の一致箇所60字）を --rescore が丸ごと書き直すため、ここに書かないと手修正が戻る（2026-10-09 の dry-run で 9社17フィールドが戻ることを実測）。値は公式ページを読んで確定したものだけ。アムール・Beyont の差分は手修正ではなく巡回結果の揺れなので登録しない（--rescore --dry の表示で都度確認する）。"

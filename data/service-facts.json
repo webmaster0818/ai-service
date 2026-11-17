@@ -3038,5 +3038,27 @@
   "casesSource": "https://makutane.co.jp/works/",
   "pagesChecked": 14,
   "checkedAt": "2026-11-16"
+ },
+ {
+  "name": "株式会社BLJ",
+  "officialUrl": "https://www.bankluck-japan.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://www.bankluck-japan.co.jp/aio/",
+   "llmo": "https://www.bankluck-japan.co.jp/aio/",
+   "web-seisaku": "https://www.bankluck-japan.co.jp/webdesign/"
+  },
+  "priceDisclosed": null,
+  "priceNote": "AI検索対策（AEO・LLMO・AI SEO）とWEBサイト制作のページに料金の記載はありません（SEO対策のページの FAQ は「施策内容を精査した上で料金を提示」）",
+  "priceSource": "https://www.bankluck-japan.co.jp/seo/",
+  "casesDisclosed": true,
+  "casesCount": "500社以上のクライアント（SEO対策を含む全社の数字で、AEO対策に限った件数ではありません）",
+  "casesSource": "https://www.bankluck-japan.co.jp/aio/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-17"
  }
 ]
