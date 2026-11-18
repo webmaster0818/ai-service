@@ -297,5 +297,23 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-17"
+ },
+ {
+  "name": "株式会社cantik",
+  "officialUrl": "https://cantik.co.jp/",
+  "infoPageUrl": "https://cantik.co.jp/about/",
+  "founded": "2022年9月5日",
+  "capital": "9,100,000円",
+  "employees": "21名（業務委託も含む）",
+  "hq": "〒252-0314 神奈川県相模原市南区南台5-21-17 セレス南台203号",
+  "representative": "東海林 武朗",
+  "mentions": {
+   "AEO": false,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": true,
+   "生成AI": true
+  },
+  "checkedAt": "2026-11-18"
  }
 ]

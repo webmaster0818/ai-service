@@ -3060,5 +3060,27 @@
   "casesSource": "https://www.bankluck-japan.co.jp/aio/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-17"
+ },
+ {
+  "name": "株式会社cantik",
+  "officialUrl": "https://cantik.co.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://cantik.co.jp/aio/",
+   "llmo": "https://cantik.co.jp/aio/",
+   "web-seisaku": "https://cantik.co.jp/web/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "ラクラクAI検索対策（AIO・AEO・GEO・LLMO対策）はお試しAIO 月9,800円（質問20問）・王道AIO 月19,800円（質問50問・FAQ・構造化データを月2ページ改修）。金額はすべて税別・質問数と対象ページ数により変動、初期費用0円",
+  "priceSource": "https://cantik.co.jp/aio/",
+  "casesDisclosed": true,
+  "casesCount": "直近3年で415件を制作（ホームページ制作の件数で、AI検索対策に限った件数ではありません）",
+  "casesSource": "https://cantik.co.jp/aio/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-18"
  }
 ]
