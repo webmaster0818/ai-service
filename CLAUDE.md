@@ -456,3 +456,16 @@
 - ⚠️ 手元に他セッションの未コミット記事（`content/articles/news-20261117-15.md` ほか）があったため、HEAD＋自分の data 4ファイルだけの worktree（/tmp）でビルドして出した（未完成の記事を本番に出さないため）。worktree は削除済み
 - precheck ✅ 201ページ全項目OK → source `c515eae` → deploy `547a1dd3`（表示テキストの差分は新ページと一覧・件数のみ）。計測リンク 0→0。`__next*.txt` 混入 0
 - 本番（push 15:10。15:13 に xnews の deploy が重なり、30分反映なし → 15:40 空コミット `2c97eedc` で再ビルド → 15:41 反映）: `/company/bankluck-japan/` 200・代表/設立/根拠URL/料金欄 表示、`/category/aeo/` に掲載・43社表記（旧42社 0件）、トップ 124社、sitemap 202（deploy と一致・xnews 15時の記事を含む）。Indexing API は 429 → GSC に sitemap 再送（204）
+
+### 2026-11-18（朝）
+- **BoostX は追加しない（既定案の実行＝変更なし）**。11/14 質問・11/17 宣言、MediaXAI の回答なし。独立LPのみ AEO 明記のため。データ・本番とも未変更
+- **株式会社cantikを追加（124→125社・sitemap 205→206・AEO 43→44・LLMO 48→49・Web制作 43→44）**。AEO（最も薄い領域）狙い。神奈川県相模原市のホームページ制作会社。候補は Yahoo 検索「AEO対策 llms.txt 構造化データ 実装 プラン 円」（未使用の語）の5位 `cantik.co.jp/aio/`。公式サイトを 11/18 に確認
+  - officialUrl `cantik.co.jp`（slug `cantik`）。根拠 `/aio/`（「ラクラクAI検索対策（AIO・AEO・GEO・LLMO対策）」。グローバルナビの事業・サービスに掲載、AIO/AEO/GEO/LLMO の4視点の表で AEO 行に「料金、対応地域、予約方法、選び方などを具体的に記載…構造化データを整えます」）＝aeo・llmo／`/web/`（ホームページ制作）＝web-seisaku（自動判定の根拠はすべてトップ → keep で差し替え）
+  - reject: ai-kaihatsu・dx-consul・ai-kenshu（自動判定の根拠はトップの制作実績一覧の顧客の業種名「AIツール開発の…サイト制作」「DXコンサルの…」「生成AIの研修・開発…のコーポレートサイト制作」。該当のサービスページなし）
+  - 料金は公開（`/aio/`：お試しAIO 月9,800円・王道AIO 月19,800円、税別・初期費用0円）を facts に。実績は `/aio/` の「直近3年で415件を制作」をホームページ制作の件数と明記。「Googleの口コミ 5.0」と GSC 掲載順位の自社実験値は載せていない
+  - **`data/company-facts.json` に登録**（19社目）: 設立 2022年9月5日・資本金 9,100,000円・従業員 21名（業務委託も含む）・代表 東海林 武朗・〒252-0314 神奈川県相模原市南区南台5-21-17 セレス南台203号 は `/about/`（11/18 確認）。HTML コメントアウトされた行（執行役員 等）は使っていない。mentions は `/about/` 本文で AIO・生成AI が true
+  - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず。Oz link・ギブリーの company-facts（判断待ち）は未変更
+- 見送り（同じ調査で見た社）: ディーアイシー（群馬・`/service/support` の AEO は GEO/LLMO/AIO/AEO の用語説明のみ）、AI Hack（AEO は「AIO は…AEO とも呼ばれます」の言い換えのみ）、Heiso Digital（`heiso.io` の AEO リニューアルは台湾系サイトで日本法人・会社概要を確認できず）、Japan Planning Communications（ad-market.jp。AEO はブログのみ）、検索順位の海賊（サービスは AIO コンサルで AEO 表記なし）、エールシステム（AEO 表記なし）
+- ⚠️ 手元に他セッションの未追跡記事（content/articles/news-*.md 10本超）があるため、11/17 と同じく HEAD＋自分の data 5ファイルだけの worktree（/tmp/acn-wt）でビルドして出した
+- precheck ✅ 206ページ全項目OK → source `a4bd9fe` → deploy `31e1dd9f`（表示テキストの差分は新ページ・一覧・件数・lastmod のみ）。計測リンク 0→0。`__next*.txt` 混入 0
+- 本番（push 09:34 → 09:57 に反映・約23分・空コミット不要）: `/company/cantik/` 200・代表/設立/料金/根拠URL 表示、`/category/aeo/` に掲載・44社表記（旧43社 0件）、トップ 125社、sitemap 206（deploy と一致）。Indexing 枠は 55/55（使い切り）→ GSC に sitemap 再送（成功）
