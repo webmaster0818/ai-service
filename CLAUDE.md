@@ -469,3 +469,9 @@
 - ⚠️ 手元に他セッションの未追跡記事（content/articles/news-*.md 10本超）があるため、11/17 と同じく HEAD＋自分の data 5ファイルだけの worktree（/tmp/acn-wt）でビルドして出した
 - precheck ✅ 206ページ全項目OK → source `a4bd9fe` → deploy `31e1dd9f`（表示テキストの差分は新ページ・一覧・件数・lastmod のみ）。計測リンク 0→0。`__next*.txt` 混入 0
 - 本番（push 09:34 → 09:57 に反映・約23分・空コミット不要）: `/company/cantik/` 200・代表/設立/料金/根拠URL 表示、`/category/aeo/` に掲載・44社表記（旧43社 0件）、トップ 125社、sitemap 206（deploy と一致）。Indexing 枠は 55/55（使い切り）→ GSC に sitemap 再送（成功）
+
+### 2026-11-18（12:00 成長ルーチン）アノテテ・AI Market の冒頭
+- **アノテテ**（「anotete」88@6.9・「あのてて」22・「アノテテ」17、クリック0）: title/h1「株式会社アノテテ（anotete・あのてて）とは｜…」、description・headline に読み・anotete.co.jp・公式の自己紹介「伴走型のAI実装パートナー」。国税庁 法人番号公表サイトで 1120001245894・フリガナ「アノテテ」・堂島浜を確認し「所在地・代表者・法人番号」行に。Tebot/ShareMind/Claude Code/Boost Dev の料金・納期は 11/18 公式で再照合し一致（事実は不変）。checkedAt 11-18
+- **AI Market**（「ai market」10@15.2）: company-summary を新設。AI Market は **BizTech株式会社**（豊島区東池袋・法人番号 7010401146748＝国税庁で確認）が運営する AI会社の選定・紹介サービス（公式）。紹介実績 1,000社超・掲載AI企業 100社超。下部の領域判定の根拠ページは「◯◯に強い企業」の紹介記事である旨を注記
+- ⚠️ 判断待ち（未変更）: AI Market の service-facts（掲載名「株式会社AI Market」・13領域の keep）。公式で社名は確認できず、根拠ページは他社紹介記事＝本来は「AI会社の紹介サービス」で領域掲載の対象か要判断。直すと13領域の一覧・件数・/data/ が変わる
+- precheck ✅（206頁）・計測リンク 0→0・表示テキストが変わったのは2ページ・sitemap lastmod は2URLのみ
