@@ -489,3 +489,15 @@
 - 他セッションの未追跡記事があるため HEAD の worktree（/tmp/acn-wt）でビルド。precheck ✅ 207頁・計測リンク 0→0。表示テキストの差分は5ページ＋title が出る一覧・前後記事4ページのみ。sitemap lastmod は5URL
 - source `5b17966` → deploy `2bbe5c70`（16:07 push → 16:08 反映）。本番 ?cb= で新しい値・旧ラベル 0件・sitemap 207 を確認
 - 次の候補: KB5131090 の表に PowerShell 署名の UTF-8 検証の厳格化（公式 Improvements にあり。競合 NinjaOne が掲載）を足す余地
+
+### 2026-11-19（朝）
+- **Tabi Life株式会社を追加（125→126社・sitemap 210→211・AEO 44→45・DXコンサル 66→67）**。AEO（最も薄い領域）狙い。横浜市中区のホスピタリティテクノロジー企業（設立 2020年6月）。候補は Yahoo 検索「cotomu AEO 診断」（未使用の語。kansei-link の費用まとめに出た社名から辿った）の4位 `tabilife.co.jp/aeo/`。公式サイトを 11/19 に確認
+  - officialUrl `tabilife.co.jp`（slug `tabilife`）。根拠 `/aeo/`（「AEO：AIに選ばれる」。グローバルナビの先頭に AEO、AEO監査（150問×ChatGPT/Gemini×5回）・改善ブリーフ・AI Profile（aeofacts.ai）・再監査の5段階、提供 Tabi Life株式会社）＝aeo／`/products/it-consulting/`（ITコンサルティング「DX戦略の立案からシステム設計、オフショア開発…一貫して支援」）＝dx-consul（自動判定の根拠はトップ → keep で差し替え）。llmo は付けていない（/aeo/ に LLMO・GEO・AIO の表記なし）
+  - reject: web-seisaku（根拠はトップ FAQ の補助金説明に出る「ウェブサイト制作」）・data-kiban（根拠はトップ FAQ の IFHA 加盟施設向け導入後サポートの「データ分析支援」）
+  - 料金: `/aeo/` は「料金は市場と業種に応じて設定します」で金額なし → priceDisclosed null（BLJ と同じ扱い）。実績は `/case-studies/` FAQ の「日本国内で400以上、ベトナムで15以上の施設に導入」をプロダクトの導入施設数と明記。/aeo/ の「4,000+ 件の検証済みファクト」は載せていない
+  - **`data/company-facts.json` に登録**（20社目）: 設立 2020年6月・資本金 87,000,000円・従業員数 8人・代表取締役 山中隼人・〒231-0015 神奈川県横浜市中区尾上町5丁目77 吉住ビル 3F は `/about/`（11/19 確認）。mentions は `/about/` 本文で AEO のみ true（「AIO」は役職名 CAIO の一致なので false）
+- **company-facts 未登録だったトライエッジを登録**（21社目）: 設立 2011年9月21日・代表取締役CEO 中野 三四郎・〒104-0061 東京都中央区銀座1-12-4 N&E BLD. 7階 は `/company`（11/19 確認・11/2 の記録と一致）。資本金・従業員数は掲載なし。mentions は AEO のみ true。残りの未登録（LiKG・W-ENDLESS・ウェスタナ・カンドウ・福岡ECサイト・アズ・マーケティング、and media・Cozies）は未変更
+- 見送り（同じ調査で見た社）: Mesut（名古屋・トップに AEO 表記なし。サービスは AIO/LLMO）、くるみ（curumi.co.jp。/services/aio-llmo・/solutions/marketing/llmo・/lp/llmo に AEO 表記なし、AEO はブログのみ）、スタンドアロー（`/service/aio-aeo-chatgpt-ads` はアプリ向け AIO で AEO は2回のみ・未精査）
+- `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
+- ⚠️ 手元に他セッションの未追跡記事があるため、HEAD だけの worktree（/tmp/acn-wt）でビルドして出した
+- precheck ✅ 211ページ全項目OK → source `0d1ca37` → deploy `d188d5ec`。計測リンク 0→0。`__next*.txt` 混入 0
