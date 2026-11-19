@@ -315,5 +315,39 @@
    "生成AI": true
   },
   "checkedAt": "2026-11-18"
+ },
+ {
+  "name": "Tabi Life株式会社",
+  "officialUrl": "https://tabilife.co.jp/",
+  "infoPageUrl": "https://tabilife.co.jp/about/",
+  "founded": "2020年6月",
+  "capital": "87,000,000円",
+  "employees": "8人",
+  "hq": "〒231-0015 神奈川県横浜市中区尾上町5丁目77 吉住ビル 3F",
+  "representative": "山中隼人",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-19"
+ },
+ {
+  "name": "株式会社トライエッジ",
+  "officialUrl": "https://triedge.co.jp/",
+  "infoPageUrl": "https://triedge.co.jp/company",
+  "founded": "2011年9月21日",
+  "hq": "〒104-0061 東京都中央区銀座1-12-4 N&E BLD. 7階",
+  "representative": "中野 三四郎",
+  "mentions": {
+   "AEO": true,
+   "LLMO": false,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-19"
  }
 ]

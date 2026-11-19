@@ -3082,5 +3082,25 @@
   "casesSource": "https://cantik.co.jp/aio/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-18"
+ },
+ {
+  "name": "Tabi Life株式会社",
+  "officialUrl": "https://tabilife.co.jp/",
+  "categories": [
+   "aeo",
+   "dx-consul"
+  ],
+  "categorySource": {
+   "aeo": "https://tabilife.co.jp/aeo/",
+   "dx-consul": "https://tabilife.co.jp/products/it-consulting/"
+  },
+  "priceDisclosed": null,
+  "priceNote": "AEOサービスのページは「料金は市場と業種に応じて設定します」で金額の記載はありません（ITコンサルティングもプロジェクトの内容や体制に応じた見積り）",
+  "priceSource": "https://tabilife.co.jp/aeo/",
+  "casesDisclosed": true,
+  "casesCount": "日本国内で400以上、ベトナムで15以上の施設に導入（ホテル・飲食・イベント向けプロダクトの導入施設数で、AEOに限った件数ではありません）",
+  "casesSource": "https://tabilife.co.jp/case-studies/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-19"
  }
 ]
