@@ -511,3 +511,13 @@
 - **ロックスライフ**（「株式会社ロックスライフ」17@7.6）: 11/13 新規追加のページだが親の指定で着手。company-summary を新設（title は作成から7日以内のため従来と同じ文字列で固定、h1「株式会社ロックスライフとは｜事業内容・所在地・AI検索最適化の料金」、description・headline・5行の出典つき表、ldWebPage）。値は公式 rocks-life.jp（法人概要: 創業 2015年6月・資本金 4,800,000円・虎ノ門ヒルズビジネスタワー15階・代表 古谷隆一・事業内容 デジタルマーケティング・PR／CMO代行／AEO・GEO事業）、/aeo-geo/・/cmo/（相談役 月30万円・おまかせ 月60万円 税抜・6ヶ月から）、国税庁 法人番号公表サイト（3010701030977・フリガナ ロックスライフ・2016-09-23 ウィズダムナイルから商号変更）を 11/20 確認。従業員数「10名」は公式 HTML のコメントアウト内なので使っていない
 - **誤記訂正**: /aeo-geo/ の「AI検索 改善ロードマップ」が 11/13 キャッシュの 55,000円 → 11/20 公式 110,000円（税込）。category-keep.json と service-facts.json の priceNote を直した（--rescore 未実行）
 - 他セッションの未追跡記事があるため HEAD の worktree（/tmp/g1120/tox-work/wt・作業後削除）でビルド。precheck ✅ 214頁・計測リンク 0→0・表示テキストが変わったのは rocks-life のみ・sitemap lastmod は1URL。source `a9e7a30` → deploy `368fdf32`（12:26 push → 12:27 には反映）
+
+### 2026-11-20（16:00 遅れ挽回ルーチン）ファーストイノベーション・divx・ジオコード・ノーコード総合研究所の冒頭
+- company-summary を4社に新設（title/h1/description/headline・4〜5行の出典つき表・ldWebPage）。値は各社公式と国税庁 法人番号公表サイト（`/tmp/c1120/tox-work/nta.sh` で POST 検索 → `henkorireki-johoto.html?selHouzinNo=`）を 11/20 確認
+  - **ファーストイノベーション**（「ファーストイノベーション media」164@53・「first innovation media」62）: 運営メディア行＝公式サイト内「自社メディア」（/media/）・用語辞典・別サイト QUERYA（querya.jp「株式会社ファーストイノベーションが運営する検索・AI最適化の専門メディア」・統括責任者 木ノ根雄志）。オウンドメディア制作（受託）100万円〜。法人番号 3010001180432（同じ商号の別法人が多数ある旨も明記）。title/h1 に英字表記 First Innovation
+  - **divx**（「divx」45@43・「divxとは」17@37）: 事業内容・プロダクト10件（/service-line）・会社概要（設立 2021-01-20・資本金 2,000万円・株主 株式会社div）・法人番号 8011001138168（フリガナ ディブエックス）・動画の DivX（DivX, LLC・divx.com）とは別法人の注記。⚠️ divx.co.jp は JS 描画のため headless Chrome（`--virtual-time-budget=8000 --dump-dom`）で取得。会社概要は `/about/company`
+  - **ジオコード**（「ジオコード」24@40・「ジオコード seo」13@45）: 会社概要の事業内容・SEO の料金（通常プラン 15万円〜、組み合わせ例 月30万/20万/20万円〜・税の記載なし）・SEO 向け Web制作 300万/200万円〜・法人番号 4010401094677。下部の料金欄（Web開発 初期15万・月5万円〜）は未変更
+  - **ノーコード総合研究所**（「ノーコード総合研究所」5@14）: **nocoderi.co.jp は ai-devlab.co.jp に転送され、公式の会社名は「株式会社AI開発ラボ」**。国税庁は 7011003017437・商号 ノーコード総合研究所のまま（本店所在地は公式と一致、2024-07-19 に EarlyWolf から商号変更の履歴）。summary は両方を明記。⚠️ 判断待ち: サイト全体の掲載名（service-facts の companyName・一覧）・officialUrl を AI開発ラボ／ai-devlab.co.jp に変えるか（一覧・領域ページ9領域に波及するため未変更）
+- 風音屋・AAIP は 11/05 に冒頭の要点表あり＝変更なし
+- 他セッションの未追跡記事があるため HEAD の worktree（/tmp/c1120/tox-work/wt）でビルド。precheck ✅ 215頁・計測リンク 0→0・表示テキストの差分は4ページ＋sitemap lastmod 4URL。source `97b38f4` → deploy `b09dc830`（16:08 push → 16:11 反映、本番 ?cb= で新 title 4件・旧 title 0件・sitemap 215）
+- 落ちたページ（queue-tech・TOP・naisei-shien・araya・fixer・gixo・go-spiral・mediareach・webridge）は 11/18 の判定と同じ
