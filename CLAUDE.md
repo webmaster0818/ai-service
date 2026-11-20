@@ -501,3 +501,8 @@
 - `--new` → keep・reject・facts → `--only` dry の結果を反映 → `--only` dry 差分0。全社一括 dry は実施せず
 - ⚠️ 手元に他セッションの未追跡記事があるため、HEAD だけの worktree（/tmp/acn-wt）でビルドして出した
 - precheck ✅ 211ページ全項目OK → source `0d1ca37` → deploy `d188d5ec`。計測リンク 0→0。`__next*.txt` 混入 0
+
+### 2026-11-20（朝）
+- **点検 C3 2件を直した**: `/articles/news-20261119-08/`「当サイトでは、抽出結果を業務に使っている場合は…おすすめします」→「抽出結果を業務に使っている場合は、切り替え後の出力を確認してください。」／`/articles/news-20261119-14/`「当サイトでは、外部のメール配信サービスを使っている場合は…おすすめします」→「外部のメール配信サービスを利用している企業は、…不要な保存を減らしてください。」。「当サイトでは、〜を使っている」と続くため、当サイトの利用体験と読める。他記事に同じ型（「当サイトでは、…利用している／公開している…」）が5件ある（news-20261119-08 Synology、news-20261119-14 Claude・デモ用アカウント、news-20261118-18、news-20261120-08）。指定外なので未変更
+- **AEO 企業の追加は見送り**（Yahoo 検索は使わず WebSearch で「アンサーエンジン最適化」「Answer Engine Optimization 対策 支援」「AEO対策サービス 提供開始 2026」「AEO支援/AEOコンサル」「AEO agency Tokyo」）。見た社: Arstruct（AEO は自社 SaaS「集客ラクダ」の機能のみ＝コネクティッドワンと同じ扱い）、Re-BIRTH（re-birth-ai.com がメンテナンス中で確認できず）、サングローブ（/aio-hp/ の AEO は関連記事タイトルのみ）、NTT東日本（AI検索対策パックに AEO 表記なし）、Dr.AISEO（AISEO/LLMO の計測 SaaS）、ベクトル（AEO ページなし・旧 owned ページ 404）、CooSy・Zenken（キャククル比較記事で LLMO/AIO のみ）。Speee・CINC・LANY・Onono・売れるネット広告社・AI Hack は掲載済みまたは過去に見送り済み
+- 他セッションの未追跡記事があるため HEAD の worktree（/tmp/acn-wt）でビルド。precheck ✅ 214頁・計測リンク 0→0・`__next*.txt` 0。表示テキストの差分は2ページのみ。source `15608e0` → deploy `2d68a65c`
