@@ -349,5 +349,21 @@
    "生成AI": false
   },
   "checkedAt": "2026-11-19"
+ },
+ {
+  "name": "株式会社IDEATECH",
+  "officialUrl": "https://ideatech.jp/",
+  "infoPageUrl": "https://ideatech.jp/info/company/",
+  "founded": "2010年2月（株式会社ベイニッチとして創業。2021年9月に株式会社IDEATECHに社名変更）",
+  "hq": "〒107-0062 東京都港区南青山2丁目11番17号 第一法規ビル3階",
+  "representative": "石川 友夫",
+  "mentions": {
+   "AEO": false,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": true
+  },
+  "checkedAt": "2026-11-21"
  }
 ]

@@ -3102,5 +3102,29 @@
   "casesSource": "https://tabilife.co.jp/case-studies/",
   "pagesChecked": 15,
   "checkedAt": "2026-11-19"
+ },
+ {
+  "name": "株式会社IDEATECH",
+  "officialUrl": "https://ideatech.jp/",
+  "categories": [
+   "aeo",
+   "llmo",
+   "ai-kenshu",
+   "web-seisaku"
+  ],
+  "categorySource": {
+   "aeo": "https://ideatech.jp/service/x-questions/",
+   "llmo": "https://ideatech.jp/service/idea-llmo/",
+   "ai-kenshu": "https://ideatech.jp/service/idea-ai/",
+   "web-seisaku": "https://ideatech.jp/service/idea-design/"
+  },
+  "priceDisclosed": true,
+  "priceNote": "AEO（X-Questions）・LLMO（IDEA LLMO）は金額の掲載なし。Webサイト構築（IDEA DESIGN）は初期構築 LP 10万円〜・小規模サイト/オウンドメディア 30万円〜・コーポレートサイト 50万円〜、初回の分析 50万円、運用 月5万円〜（すべて税別）。生成AI研修（IDEA AI・e-ラーニング全21コマ）は 1人330,000円（税込）",
+  "priceSource": "https://ideatech.jp/service/idea-design/",
+  "casesDisclosed": true,
+  "casesCount": "支援企業数 800社以上（会社全体のBtoBマーケティング支援の件数で、AEOに限った件数ではありません）",
+  "casesSource": "https://ideatech.jp/",
+  "pagesChecked": 15,
+  "checkedAt": "2026-11-21"
  }
 ]
