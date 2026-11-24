@@ -365,5 +365,22 @@
    "生成AI": true
   },
   "checkedAt": "2026-11-21"
+ },
+ {
+  "name": "株式会社LiKG",
+  "officialUrl": "https://likg.co.jp/",
+  "infoPageUrl": "https://likg.co.jp/",
+  "founded": "2023年1月",
+  "capital": "100万円",
+  "hq": "〒150-0021 東京都渋谷区恵比寿西2丁目4番8号ウィンド恵比寿ビル8F",
+  "representative": "近藤 光生",
+  "mentions": {
+   "AEO": false,
+   "LLMO": true,
+   "GEO": false,
+   "AIO": false,
+   "生成AI": false
+  },
+  "checkedAt": "2026-11-24"
  }
 ]
