@@ -528,3 +528,10 @@
 - **メディアリーチ**: 冒頭に「会社の特定（同名の法人）」行（国税庁で「メディアリーチ」「メディア・リーチ」部分一致 1件のみ・指定 2021-12-14・英文社名 MEDIA REACH, Inc.・メディアレーダーとは別）、「DolphinX AIO の料金」行（dolphinx.jp/aio/pricing：ライト 3万・プロ 5万・ビジネス 10万円/月 税別・6ヶ月契約、12ヶ月で 2.7万/4.5万/8.5万円、初期0円・14日無料）。h1「株式会社メディアリーチとは｜…」・headline・description 更新、title は変えていない
 - 競合: WebSearch（US）「LLMO対策プロ バクリ株式会社」は stock-sun の LLMO 対策記事（5社・バクリの掲載なし）・沖プロ「LLMOプロ」（別会社のプラン名）など。「LLMO対策プロ」をバクリのサービス名とする一次情報は見つからない
 - HEAD の worktree（/tmp/g1122/tox-work/wt）でビルド。precheck ✅ 222頁・計測リンク 0→0・表示テキストの差分は2ページ・sitemap lastmod 2URL。source `3a051a2` → deploy `ba346acec`（12:21 push → 12:24 反映、本番 ?cb= で新 title・新行あり、旧 title・旧確認日 0件）
+
+### 2026-11-24（朝）既定案：LiKG を company-facts に登録
+- **`data/company-facts.json` に株式会社LiKGを登録**（23社目・11/23 宣言の既定案）: 公式トップ（`likg.co.jp/` の「会社概要」ブロック。`/company` は 404、`/about/` は代表メッセージ）を 11/24 に確認＝設立 2023年1月・資本金 100万円・代表取締役社長 近藤 光生・〒150-0021 東京都渋谷区恵比寿西2丁目4番8号ウィンド恵比寿ビル8F（公式は郵便番号を「1500021」と表記）。従業員数は掲載なし（空欄）。mentions はトップ本文で LLMO のみ true（AEO・GEO・AIO・生成AI は 0 件）。10/31 の記録と同じ値
+- 表示の変化は `/company/likg/` の会社表に「設立」「代表者」行と「会社情報の出典」が出ただけ（資本金・所在地は画面に出ない作り）。JSON-LD の Organization に description（代表者名）が入る＝既存の登録社と同じ挙動
+- 残りの未登録（W-ENDLESS・ウェスタナ・カンドウ・福岡ECサイト・アズ・マーケティング、and media・Cozies）は未変更
+- 点検 C3（news-20261123-14/18/21「当サイトでは…」）は 11/20 の A/B 判断待ちと同型のため変更なし
+- 他セッションの未追跡記事があるため HEAD の worktree（/tmp/tox1124/wt・作業後削除）でビルド。precheck ✅ 229頁・計測リンク 0→0・`__next*.txt` 0・表示テキストの差分は1ページ・sitemap 差分なし。source `e030a2f` → deploy `4ba94e1cb`（09:18 push → 09:24 反映・本番 ?cb= で設立/代表者行あり）。Indexing 1本（/company/likg/）
