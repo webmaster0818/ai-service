@@ -329,7 +329,9 @@
    "casesSource": "https://www.aaip.co.jp/case-studies"
   },
   "株式会社デジライズ": {
-   "casesCount": "導入企業数600社"
+   "casesCount": "導入企業数600社",
+   "priceNote": "AX人材養成講座（6か月）の受講料は1名24万円（税別・10名から開講）。人材開発支援助成金を使った場合の実質負担は1名9万円（中小企業）・14万円（大企業）（支給限度額での試算・後払い・受給は保証されない、と公式に記載）。AI WORKS 365（法人向けAIリスキリング）は人数・契約期間・支援範囲に応じた個別見積り（2026-11-26 確認）",
+   "priceSource": "https://digirise.ai/business/ai-academy/"
   },
   "カラクリ株式会社": {
    "priceNote": "初期費用 Navigate ナビゲーション設定 50 万円〜"
