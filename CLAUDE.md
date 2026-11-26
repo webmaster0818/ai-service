@@ -547,3 +547,11 @@
 - 料金欄の数字が出典ページに無い社を、priceDisclosed true の50社で機械照合（priceSource を curl・priceNote の数字が本文に無いもの）→ 9社が該当（AI Native・デジライズ・MBSD・課題解決プラットフォーム・フューチャースタンダード・LiKG・ウェスタナ・アズ・マーケティング・IDEATECH）。AI Native 以外の多くは別ページの値を併記しているための見かけの不一致の可能性が高い（未精査）
 - **デジライズ**: 旧値「月額約2.3万円 × 6ヶ月（実質14万円」（10/2 の `/business/reskilling/`。キャッシュには助成金プランの記載あり）は 11/26 の同ページに無く、現行は AI WORKS 365 が「人数・契約期間・支援範囲に応じて見積り」。料金は `/business/ai-academy/`（AX人材養成講座）に公開：受講料 1名24万円（税別・10名から・6か月）、人材開発支援助成金で実質 9万円（中小）・14万円（大企業）。priceNote・priceSource を service-facts と category-keep の facts の両方に書き、確認日を priceNote 末尾に付けた（checkedAt は実績欄と共用なので未変更）。priceDisclosed は true のまま＝件数・集計は不変。`--rescore --dry --only デジライズ` 差分0
 - HEAD の worktree（/tmp/tox1126/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0。表示テキストの差分は `/company/digirise/` のみ。source `e3a6ac0` → deploy `95d4a8023`（09:24 push → 09:45 反映・約21分・空コミット不要。本番 ?cb= で新表記あり・旧「2.3万円」0件）
+
+### 2026-11-26（12:00 成長ルーチン）cantik の冒頭：「AI creator 合同会社CANTIK」とは別法人
+- **GSC（11/10〜11/23）**: `/company/cantik/`「ai creator 合同会社cantik」68@8.2・クリック0（このクエリのみ）。11/18 の新規追加以降の変更なし（git log で確認）・title 変更履歴なし
+- **検索意図の正体**: 2026-11-23 公開の MV「嘘クセェんだよ / 溝口UG」（チバニャンの波動チャンネル）の説明欄「映像 : AI creator 合同会社CANTIK」（YouTube @CANTIK_GDGS）。公式 `cantik-hp.vercel.app`（© 合同会社CANTIK・AI×人力の映像制作/システム開発・代表 飯野 貴遥・川崎市麻生区高石3-10-12）と国税庁（合同会社ＣＡＮＴＩＫ・チャンティック・6020003022298・2022-08-26 指定・多摩区から2回移転）で確認＝**当サイト掲載の株式会社cantik（相模原・2021001076959・フリガナ チャンティ）とは別法人**。「cantik」を含む商号は国税庁で12件。cantik.co.jp に「AI Creator」の表記なし
+- company-summary を新設（checkedAt 11-26・ldWebPage）。title「株式会社cantik（チャンティ）とは｜相模原のHP制作・AI検索対策の料金と「合同会社CANTIK」との違い」、h1・description・headline・5行（合同会社CANTIKとの違い／事業内容／ラクラクAI検索対策の料金 9,800・19,800円 税別・初期0円・1年契約／会社概要／法人番号・インボイス番号一致）。**合同会社CANTIK を当サイトの掲載企業としては扱っていない**（区別のための行のみ）。service-facts・category-keep は未変更
+- 競合比較: WebSearch は US 結果のみで、日本の上位は取れず（YouTube の MV 以外に合同会社CANTIK の記載なし）
+- HEAD の worktree（/tmp/g1126/to-x-ai-work/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0・`__next*.txt` 0・表示テキストの差分は `/company/cantik/` のみ・sitemap lastmod 1URL。source `233c41d` → deploy `2724f4984`（12:23 push）
+- title 変更: `/company/cantik/`（11/26）→ 12/3 まで title を変えない
