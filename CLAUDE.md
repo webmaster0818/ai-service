@@ -542,3 +542,8 @@
 - 残した「当サイトでは」：出典の定型文、「当サイトでは考えます」等の見解文（ai-era-security・leak-news-2026・php2shell・nextjs-static-site-security）、news-20261102-14/18 の「…を当サイトでは勧めます（当サイトの見解）」2件（見解と明記・利用体験と読めない）、news-20261106-08「記事本文を開けなかった」
 - news-20261124-21・20261125-08 は同型なし（「…確かめてください」型）。xnews/README.md の文体指定に「当サイトでは〜」が残っている（生成側は未変更）
 - 他セッションの未追跡記事があるため HEAD の worktree（/tmp/tox1125/wt）でビルド。precheck ✅ 233頁・計測リンク 0→0・`__next*.txt` 0・表示テキストの差分は24ページのみ。source `cd6293f` → deploy `cfd673a54`
+
+### 2026-11-26（朝）料金欄の出典照合：デジライズ
+- 料金欄の数字が出典ページに無い社を、priceDisclosed true の50社で機械照合（priceSource を curl・priceNote の数字が本文に無いもの）→ 9社が該当（AI Native・デジライズ・MBSD・課題解決プラットフォーム・フューチャースタンダード・LiKG・ウェスタナ・アズ・マーケティング・IDEATECH）。AI Native 以外の多くは別ページの値を併記しているための見かけの不一致の可能性が高い（未精査）
+- **デジライズ**: 旧値「月額約2.3万円 × 6ヶ月（実質14万円」（10/2 の `/business/reskilling/`。キャッシュには助成金プランの記載あり）は 11/26 の同ページに無く、現行は AI WORKS 365 が「人数・契約期間・支援範囲に応じて見積り」。料金は `/business/ai-academy/`（AX人材養成講座）に公開：受講料 1名24万円（税別・10名から・6か月）、人材開発支援助成金で実質 9万円（中小）・14万円（大企業）。priceNote・priceSource を service-facts と category-keep の facts の両方に書き、確認日を priceNote 末尾に付けた（checkedAt は実績欄と共用なので未変更）。priceDisclosed は true のまま＝件数・集計は不変。`--rescore --dry --only デジライズ` 差分0
+- HEAD の worktree（/tmp/tox1126/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0。表示テキストの差分は `/company/digirise/` のみ。source `e3a6ac0` → deploy `95d4a8023`（09:24 push → 09:45 反映・約21分・空コミット不要。本番 ?cb= で新表記あり・旧「2.3万円」0件）
