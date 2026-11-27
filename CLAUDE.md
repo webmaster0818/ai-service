@@ -555,3 +555,11 @@
 - 競合比較: WebSearch は US 結果のみで、日本の上位は取れず（YouTube の MV 以外に合同会社CANTIK の記載なし）
 - HEAD の worktree（/tmp/g1126/to-x-ai-work/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0・`__next*.txt` 0・表示テキストの差分は `/company/cantik/` のみ・sitemap lastmod 1URL。source `233c41d` → deploy `2724f4984`（12:23 push）
 - title 変更: `/company/cantik/`（11/26）→ 12/3 まで title を変えない
+
+### 2026-11-27（朝）料金欄の出典照合（続き）：課題解決プラットフォーム・フューチャースタンダード
+- 11/26 の機械照合 9社のうち未対応7社（MBSD・課題解決プラットフォーム・フューチャースタンダード・LiKG・ウェスタナ・アズ・マーケティング・IDEATECH）から確認日の古い2社を公式で照合（11/27 curl）
+- **課題解決プラットフォーム（実際に食い違い）**: `/aio/` の LLMO・AIO 料金（30万/50万円・初期15万円〜・最低6か月・税抜）は一致。`/ai-development/` は「業務自動化ミニ開発 30万円〜・AI組込み開発 80万円〜」が無くなり、業務改善AI「一緒に作る」月30万円（税抜・最低3か月・以降1か月単位・AI利用料は別）／「開発を任せる」個別見積もりに。`/ai-training/` は「研修は単体ではお受けしていません」（11/11 から）。service-facts・category-keep の priceNote を差し替え（確認日つき・priceDisclosed true のまま）。company-summary も、業務改善AIの料金行、AI研修行の「下部の料金欄は旧記載」の注記削除、`/company/` から消えた料金目安を `/shobai-ai/`（MEO 月49,800/59,800円・初期15万円・最低期間なし・税抜）と `/video/`（運用 月30万円〜・税抜）の2行に、事業内容の表記・受付時間 9:00〜18:00 を現行に。checkedAt 11-27。title・h1 は不変
+- **フューチャースタンダード（見かけの不一致）**: Smart Rounds 660万円・年次33万円（税込）は priceSource と一致。交通量調査おまかせパック 55万円/台（税込）は別ページ `/business/ai/products/traffic-volume-survey-ai-camera-entrusted-pack` の値で、同ページでも一致 → priceNote にそのページと確認日を追記しただけ
+- ⚠️ 判断待ち（未変更）: 課題解決プラットフォームの ai-kenshu 領域（根拠 `/ai-training/` が研修を単体で受けないと明記。外すと領域の社数・/data/ が変わる）
+- `--rescore --dry --only` 2社とも差分0。「当サイトでは、…おすすめ」再発チェック：追跡ファイルで news-20261122-21（draft・11/25 18時の xnews コミットで追加）に3か所 → 「当サイトでは、」を外した（本番未公開）。公開中の HTML は news-20261102-14/18 の見解明記2件のみ（11/25 から残置）
+- HEAD の worktree（/tmp/tox1127/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0。表示テキストの差分は `/company/0120/`・`/company/futurestandard/` のみ・sitemap lastmod 1URL。source `bb509fe` → deploy `a8a061ff3`（09:59 push → 10:09 反映）。Indexing 2本 200
