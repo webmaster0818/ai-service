@@ -2065,7 +2065,7 @@
    "ai-kenshu": "https://www.mbsd.jp/solutions/ai/ai_education/"
   },
   "priceDisclosed": true,
-  "priceNote": "AIセキュリティ教育: 《入門》セキュアAI eラーニング 50,000円/人（ビジネス・マネジメント向け）・150,000円/人（エンジニア向け）／《実践》セキュアAI ハンズオントレーニング 600,000円/名／AIエージェントセキュリティハンズオン 600,000円/名（いずれも税別。ChillStack社と共同運営の jpsec.ai 掲載）。AIシステム診断・アドバイザリは料金の公開なし",
+  "priceNote": "AIセキュリティ教育: 《入門》セキュアAI eラーニング 50,000円/人（ビジネス・マネジメント向け）・150,000円/人（エンジニア向け）／《実践》セキュアAI ハンズオントレーニング 600,000円/名／AIエージェントセキュリティハンズオン 600,000円/名（いずれも税別。ChillStack社と共同運営の jpsec.ai 掲載）。AIシステム診断・アドバイザリは料金の公開なし。《入門》の金額は出典ページ、《実践》セキュアAI ハンズオントレーニングの金額は jpsec.ai/training/、AIエージェントセキュリティハンズオンの金額は jpsec.ai/ai-agent-training/ に記載（2026-11-28 確認）",
   "priceSource": "https://jpsec.ai/e-learning/",
   "casesDisclosed": true,
   "casesCount": "公共・政府機関実績 70件以上（過去5年間の累計）",
@@ -2675,7 +2675,7 @@
    "llmo": "https://likg.co.jp/service/llmo-consulting/"
   },
   "priceDisclosed": true,
-  "priceNote": "LLMOコンサルティング（GEO・AIO・AEO / AI検索対策）は LLMO診断プラン 10万円〜・LLMO×SEO コンサルティングプラン 30万円〜・EEAT強化記事制作 5万円/1記事（いずれも税別。調査費用は別途見積もり）。Webサイト制作はライトプラン 30万円〜（LP1ページ）・スタンダードプラン 120万円〜（サービスサイト10ページ）・アドバンスプラン 200万円〜（税込・税別の記載なし）",
+  "priceNote": "LLMOコンサルティング（GEO・AIO・AEO / AI検索対策）は LLMO診断プラン 10万円〜・LLMO×SEO コンサルティングプラン 30万円〜・EEAT強化記事制作 5万円/1記事（いずれも税別。調査費用は別途見積もり）。Webサイト制作はライトプラン 30万円〜（LP1ページ）・スタンダードプラン 120万円〜（サービスサイト10ページ）・アドバンスプラン 200万円〜（税込・税別の記載なし）。LLMOコンサルティングの金額は出典ページ、Webサイト制作の金額は同社の /service/website-production/ に記載（2026-11-28 確認）",
   "priceSource": "https://likg.co.jp/service/llmo-consulting/",
   "casesDisclosed": true,
   "casesCount": null,
