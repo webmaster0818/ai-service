@@ -563,3 +563,11 @@
 - ⚠️ 判断待ち（未変更）: 課題解決プラットフォームの ai-kenshu 領域（根拠 `/ai-training/` が研修を単体で受けないと明記。外すと領域の社数・/data/ が変わる）
 - `--rescore --dry --only` 2社とも差分0。「当サイトでは、…おすすめ」再発チェック：追跡ファイルで news-20261122-21（draft・11/25 18時の xnews コミットで追加）に3か所 → 「当サイトでは、」を外した（本番未公開）。公開中の HTML は news-20261102-14/18 の見解明記2件のみ（11/25 から残置）
 - HEAD の worktree（/tmp/tox1127/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0。表示テキストの差分は `/company/0120/`・`/company/futurestandard/` のみ・sitemap lastmod 1URL。source `bb509fe` → deploy `a8a061ff3`（09:59 push → 10:09 反映）。Indexing 2本 200
+
+### 2026-11-28（朝）料金欄の出典照合（続き）：MBSD・LiKG
+- 11/26 の機械照合の未対応5社（MBSD・LiKG・ウェスタナ・アズ・マーケティング・IDEATECH）から確認日の古い2社（MBSD 10/10・LiKG 10/31）を公式で照合（11/28 curl）。**2社とも値は一致＝見かけの不一致**（別ページの金額を併記していた）
+- **MBSD**: `jpsec.ai/e-learning/`（概論 50,000円/人・エンジニア向け 150,000円/人・税別）、`jpsec.ai/training/`（《実践》ハンズオン 600,000円/名・税別・2日間・定員12名）、`jpsec.ai/ai-agent-training/`（600,000円/名・税別）で一致。`/solutions/ai/` に AIシステム診断の金額なしも一致 → priceNote に掲載ページと確認日を追記
+- **LiKG**: `/service/llmo-consulting/`（10万円〜・30万円〜・5万円/1記事 +税）、`/service/website-production/`（30万・120万・200万円〜・税表記なし）で一致 → priceNote に掲載ページと確認日を追記
+- service-facts・category-keep の両方。`--rescore --dry --only` 2社とも差分0（checkedAt のみ）。priceDisclosed 不変
+- 「当サイトでは…おすすめ／勧め」再発チェック（文単位・content 全体＋deploy の HTML）：新規 0。残るのは news-20261102-14/18 の見解明記2件のみ（11/25 から残置）
+- HEAD の worktree（/tmp/tox1128/wt）でビルド。precheck ✅ 235頁・計測リンク 0→0。表示テキストの差分は `/company/mbsd/`・`/company/likg/` のみ・sitemap 差分なし。source `469dcca` → deploy `9842ab387`（10:00 push）
